@@ -4,8 +4,8 @@ class Home
 {
 	public function __construct($request)
 	{
-		$view = new DefaultView();
-		$view->responseCode(200, "Request OK");
-		$view->routeInfo();
+		$view = new TemplateView();
+		$view->loadTemplate('index.template.html');
+		$view->render();
 	}
 }

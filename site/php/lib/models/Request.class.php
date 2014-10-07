@@ -110,7 +110,7 @@ class Request
 		$this->sections = $s;
 		
 		$s = $this->path;
-		if($s[strlen($s)-1] == '/')
+		if(Request::read(strlen($s)-1, $s, '') == '/')
 		{
 			$this->file = false;
 		}
@@ -189,9 +189,14 @@ class Request
 	
 	static function get($name, $default)
 	{
-		if (isset($_GET[$name]))
+		return Request::read($name, $_GET, $default);
+	}
+	
+	static function read($name, $array, $default)
+	{
+		if (isset($array[$name]))
 		{
-			return $_GET[$name];
+			return $array[$name];
 		}
 		
 		return $default;
