@@ -29,6 +29,16 @@ logo {
 	height: 80px;
 }
 
+logo > a {
+	display: block;
+	width: 200px;
+	height: 85%;
+	margin: auto;
+}
+logo > a:hover {
+	border-bottom: 3px solid #538830;
+}
+
 navigation {
 	border-top: 3px solid #538830;
 	background: #FEFEFE;
