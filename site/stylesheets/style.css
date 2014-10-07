@@ -1,0 +1,268 @@
+/* Site specific fonts, colours, and box sizes */
+html, body {
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 90%;
+	
+	background: #FEFEFE;
+}
+
+content {
+	background: #FEFEFE;
+}
+
+hidden {
+	display: none;
+}
+
+heading {
+	text-transform: uppercase;
+}
+
+heading, version, copyright {
+	font-family: Trebuchet MS, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+logo {
+	display: block;
+	background: url('../images/mkv25-logo.png') no-repeat transparent center center;
+	width: 200px;
+	height: 80px;
+}
+
+navigation {
+	border-top: 3px solid #538830;
+	background: #FEFEFE;
+	height: 80px;
+}
+
+navigation > content > links {
+	display: block;
+	position: absolute;
+	top: 30px;
+	left: 220px;
+	height: 80px;
+	z-index: 1;
+}
+
+navigation > content > links > a {
+	font-size: 18px;
+	color: #538830;
+	padding: 10px;
+	margin: 10px 10px;
+	text-transform: uppercase;
+	
+	text-decoration: none;
+	border-radius: 5px;
+}
+
+navigation > content > links > a:visited {
+	text-decoration: none;
+}
+
+navigation > content > links > a:hover {
+	background: #EEE;
+}
+
+banner {
+	display: block;
+	position: relative;
+	background: #538830 no-repeat center center;
+	background-size: cover;
+	height: 300px;
+	margin-bottom: 10px;
+}
+
+banner.one {
+	background-image: url('../images/banner.jpg');
+}
+
+banner.two {
+	background-image: url('../images/banner_2.jpg');
+}
+
+banner.three {
+	background-image: url('../images/banner_3.jpg');
+}
+
+banner >  tint {
+	display: block;
+	position: absolute;
+	background: rgba(0, 0, 0, 0.7);
+	width: 100%;
+	top: 10px;
+	height: 280px;
+}
+
+banner > group > heading {
+	text-transform: none;
+	font-size: 52px;
+	font-weight: normal;
+	color: white;
+	padding-top: 80px;
+}
+
+banner > group > p {
+	font-size: 28px;
+	color: #EFEFEF;
+	padding-top: 20px;
+	line-height: 1.3;
+}
+
+.drop-shadow {
+	text-shadow: -1px -1px 0 #666666, 1px -1px 0 #666666, -1px 1px 0 #666666, 1px 1px 0 #666666, 2px 2px 5px rgba(0,0,0,0.8)
+}
+
+navigation > content > heading {
+	padding: 5px 0 0 300px;
+}
+
+footer {
+	color: #EFEFEF;
+	background: #212121;
+	background: linear-gradient(to bottom, #333333, #212121);
+	padding: 20px;
+	border-top: 3px solid #424242;
+}
+footer > content {
+	background: none;
+}
+
+version {
+	display: block;
+}
+
+copyright {
+	display: block;
+	text-align: center;
+	font-size: 14px;
+}
+
+column > heading, content > heading {
+	font-size: 150%;
+}
+
+column > p, content {
+	text-align: justify;
+}
+
+ul > li {
+	text-align: left;
+}
+
+column > content > ul.square {
+	margin-left: 20px;
+}
+
+column > content, content > content {
+	background: rgba(0, 0, 0, 0.1);
+}
+
+.center {
+	text-align: center;
+}
+
+footer > content > icons {
+	display: block;
+	position: absolute;
+	margin: 0 auto;
+	right: 0;
+	top: -13px;
+}
+
+a.icon {
+	display: inline-block;
+	width: 48px;
+	height: 48px;
+	background: transparent no-repeat center center; 
+	margin-bottom: 2px;
+}
+
+a.icon:hover {
+	border-bottom: 2px solid #CACACA;
+	margin-bottom: 0;
+}
+
+a.github { background-image: url('../images/github_x32.png'); }
+a.twitter { background-image: url('../images/twitter_x32.png'); }
+
+/* Default box sizes */
+@media only screen {
+	body { }
+	column > content { overflow: hidden; }
+	column.double > content { height: 200px; }
+	column.triple > content { height: 250px; }
+	column.quad > content { height: 300px; }
+	
+	column.quad > content > heading { text-align: center; }
+}
+
+/* Portrait design for a width of 768px */
+@media only screen and (min-width: 768px) and (max-width: 999px) {
+	body { }
+	column.double > content { height: 270px; }
+	column.triple > content { height: 330px; }
+	column.quad > content { height: 410px; }
+	
+	column.quad > content > heading { font-size: 130%; }
+	navigation > content > links > a { margin: 10px -1px; }
+}
+
+/* Portrait design for a width of 320px */
+@media only screen and (max-width: 767px) {
+	body { }
+	column.double > content { height: auto; }
+	column.triple > content { height: auto; }
+	column.quad > content { height: auto; }
+	
+	column.quad > content > heading { font-size: 130%; }
+	logo { width: 100%; height: 70px; }
+	
+	navigation { height: 120px; }
+	navigation > content { height: 80px; }
+	navigation > content > links {
+		display: block;
+		position: relative;
+		height: auto;
+		margin: auto;
+		top: auto;
+		left: auto;
+		background: #FEFEFE;
+		border-radius: 0 0 8px 8px;
+		width: 70%; 
+	}
+	navigation > content > links > a { display: block; text-align: center; margin: 0 auto; border-radius: 8px; }
+	navigation > content > links { background: #FEFEFE url('../images/navigation.png') no-repeat center top; cursor: pointer; padding-top: 40px; }
+	navigation > content > links.collapsed { height: 40px; padding-top: 0; }
+	navigation > content > links.collapsed > a { display: none; }
+	
+	footer > content > icons { display: block; position: relative; text-align: center; top: 0; left: 0; }
+
+/* Portrait design for a width of 480px */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	body { }
+	column.double > content { height: auto; }
+	column.triple > content { height: auto; }
+	column.quad > content { height: auto; }
+	
+	column.quad > content > heading { font-size: 130%; }
+	logo { width: 100%; height: 70px; }
+	
+	navigation > content { height: 80px; }
+	navigation > content > links {
+		display: block;
+		position: relative;
+		height: auto;
+		margin: auto;
+		top: auto;
+		left: auto;
+		background: #FEFEFE;
+		border-radius: 0 0 8px 8px;
+		width: 50%; 
+	}
+	navigation > content > links > a { display: block; text-align: center; margin: 0 auto; border-radius: 8px; }
+	navigation > content > links { background: #FEFEFE url('../images/navigation.png') no-repeat center top; cursor: pointer; padding-top: 40px; }
+	navigation > content > links.collapsed { height: 40px; padding-top: 0; }
+	navigation > content > links.collapsed > a { display: none; }
+	
+	footer > content > icons { display: block; position: relative; text-align: center; top: 0; left: 0; }
+}
