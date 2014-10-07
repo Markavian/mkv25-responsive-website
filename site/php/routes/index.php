@@ -4,12 +4,12 @@ require('./autoloader.php');
 
 $routes = array();
 
-$routes['index'] = 'Index';
+$routes['home'] = 'Home';
 
 $basePath = getenv('MKV25_SITE_BASE');
 
 $request = new Request($basePath);
-$path = $request->path ? $request->path : 'index';
+$path = $request->path ? $request->path : 'home';
 
 if(isset($routes[$path]))
 {
