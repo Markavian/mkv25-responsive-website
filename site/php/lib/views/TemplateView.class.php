@@ -27,6 +27,12 @@ class TemplateView
 		$this->template->set('{META_DESCRIPTION}', $value);
 	}
 	
+	public function eyecatch($title, $description)
+	{
+		$this->template->set('{EYECATCH_TITLE}', $title);
+		$this->template->set('{EYECATCH_DESCRIPTION}', $description);
+	}
+	
 	public function baseUrl($value='')
 	{
 		$this->template->set('{BASE_URL}', $value);

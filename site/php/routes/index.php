@@ -5,6 +5,7 @@ require('./autoloader.php');
 $routes = array();
 
 $routes['home'] = 'Home';
+$routes['subpath/test'] = 'Home';
 
 $basePath = getenv('MKV25_SITE_BASE');
 

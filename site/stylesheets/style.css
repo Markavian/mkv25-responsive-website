@@ -235,6 +235,7 @@ a.twitter { background-image: url('../images/twitter_x32.png'); }
 	navigation > content > links.collapsed { height: 40px; padding-top: 0; }
 	navigation > content > links.collapsed > a { display: none; }
 	
+	banner > group > heading { font-size: 36px; }
 	footer > content > icons { display: block; position: relative; text-align: center; top: 0; left: 0; }
 
 /* Portrait design for a width of 480px */
@@ -264,5 +265,6 @@ a.twitter { background-image: url('../images/twitter_x32.png'); }
 	navigation > content > links.collapsed { height: 40px; padding-top: 0; }
 	navigation > content > links.collapsed > a { display: none; }
 	
+	banner > group > heading { font-size: 42px; }
 	footer > content > icons { display: block; position: relative; text-align: center; top: 0; left: 0; }
 }
