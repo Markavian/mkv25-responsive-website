@@ -2,51 +2,84 @@
 
 class TemplateView
 {
-	const TEMPLATE_DIRECTORY = '../../../';
-
 	var $template;
-	var $keys;
+	var $columns;
 	
 	public function __construct()
 	{
 		$this->keys = array();
+		$this->columns = array();
 		
-		$this->set('{TITLE}', 'No Title');
+		$this->template = new Template('index.template.html');
+		
+		$this->title();
+		$this->description();
+		$this->baseUrl();
 	}
 	
-	public function loadTemplate($name)
+	public function title($value='No title')
 	{
-		$path = TemplateView::TEMPLATE_DIRECTORY . $name;
-		if (file_exists($path))
-		{
-			$this->template = file_get_contents($path);
-		}
-		else
-		{
-			throw new Exception('Template not found: ' . $name);
-		}
+		$this->template->set('{TITLE}', $value);
 	}
 	
-	public function set($key, $value)
+	public function description($value='No description')
 	{
-		$this->keys[$key] = $value;
+		$this->template->set('{META_DESCRIPTION}', $value);
+	}
+	
+	public function baseUrl($value='')
+	{
+		$this->template->set('{BASE_URL}', $value);
+	}
+	
+	public function addSingleColumn($content)
+	{
+		$this->addColumn($content, 'single');
+	}
+	
+	public function addDoubleColumns($first, $second)
+	{
+		$this->addColumn($first,  'double', true);
+		$this->addColumn($second, 'double');
+	}
+	
+	public function addTripleColumns($first, $second, $third)
+	{
+		$this->addColumn($first,  'triple', true);
+		$this->addColumn($second, 'triple');
+		$this->addColumn($third,  'triple');
+	}
+	
+	public function addQuadColumns($first, $second, $third, $fourth)
+	{
+		$this->addColumn($first,  'quad', true);
+		$this->addColumn($second, 'quad');
+		$this->addColumn($third,  'quad');
+		$this->addColumn($fourth, 'quad');
+	}
+	
+	private function addColumn($content, $type, $first=false)
+	{
+		$column = new ContentColumn($content, $type, $first);
+		$this->columns[] = $column;
 	}
 	
 	public function render()
 	{
-		$output = $this->template;
-		$output = TemplateView::removeTabs($output);
+		$this->template->set('{COLUMN_BODY}', $this->renderColumns());
 		
-		foreach($this->keys as $key => $value)
-		{
-			$output = str_replace($key, $value, $output);
-		}
-		
-		echo $output;
+		echo $this->template->expand();
 	}
 	
-	public static function removeTabs($string)
+	function renderColumns()
 	{
-		return str_replace("\t", "  ", $string);
+		$output = '';
+		
+		foreach ($this->columns as $index => $column)
+		{
+			$output .= $column->render();
+		}
+		
+		return $output;
 	}
 }
