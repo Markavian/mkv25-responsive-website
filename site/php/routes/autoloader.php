@@ -22,7 +22,7 @@ function __autoload($className)
 		return;
 	}
 	
-	throw new MissingException('Unable to load class ' . $name);
+	throw new Exception('Unable to load class ' . $className);
 }
 
 function load_class($folder, $className, $extention='.class.php')

@@ -2,6 +2,34 @@
 
 require('./autoloader.php');
 
-$view = new DefaultView();
-$view->responseCode(404, 'File not found, no route set');
-$view->routeInfo();
+$routes = array();
+
+$routes['index'] = 'Index';
+
+$basePath = getenv('MKV25_SITE_BASE');
+
+$request = new Request($basePath);
+$path = $request->path ? $request->path : 'index';
+
+if(isset($routes[$path]))
+{
+	$controllerClass = $routes[$path];
+	
+	try
+	{
+		$controller = new $controllerClass($request);
+	}
+	catch (Exception $exception)
+	{
+		$view = new DefaultView();
+		$view->responseCode(501, 'Error creating controller ' . $controllerClass);
+		$view->displayException($exception);
+		$view->routeInfo();
+	}
+}
+else
+{
+	$view = new DefaultView();
+	$view->responseCode(404, 'File not found, no route set');
+	$view->routeInfo();
+}
