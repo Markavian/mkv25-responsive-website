@@ -25,9 +25,9 @@ function __autoload($className)
 	throw new MissingException('Unable to load class ' . $name);
 }
 
-function load_class($folder, $className)
+function load_class($folder, $className, $extention='.class.php')
 {
-	$path = $folder . $className . '.class.php';
+	$path = $folder . $className . $extention;
 	if (file_exists($path))
 	{
 		require_once($path);
