@@ -36,7 +36,7 @@
 		</content>
 	</navigation>
 	
-	<banner>
+	<banner class="{BANNER_TYPE}">
 		<tint></tint>
 		<hidden>Banner Image</hidden>
 		<group class="page-block drop-shadow">
@@ -88,11 +88,6 @@
 		var banner = getFirstTag(document, "banner");
 		
 		navigation.addEventListener("click", toggleNavigation);
-		
-		var bannerTypes = ["one", "two", "three"];
-		var now = new Date();
-		var bannerType = bannerTypes[now.getTime() % bannerTypes.length];
-		banner.classList.add(bannerType);
 		
 	</script>
 	

@@ -15,6 +15,7 @@ class TemplateView
 		$this->title();
 		$this->description();
 		$this->baseUrl();
+		$this->banner();
 	}
 	
 	public function title($value='No title')
@@ -31,6 +32,11 @@ class TemplateView
 	{
 		$this->template->set('{EYECATCH_TITLE}', $title);
 		$this->template->set('{EYECATCH_DESCRIPTION}', $description);
+	}
+	
+	public function banner($value='')
+	{
+		$this->template->set('{BANNER_TYPE}', $value);
 	}
 	
 	public function baseUrl($value='')

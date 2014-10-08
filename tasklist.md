@@ -6,7 +6,6 @@ Bugs
 
 In progress
 -----------
-+ Allow banner image to be set based from controller, via template - visually engage the user at each turn
 
 Improvements based on User Feedback
 -----------------------------------
@@ -16,6 +15,9 @@ Improvements
 + Change language to represent our
 - Add an about page in footer - who are we, me, John Beech, and my alter-ego Markavian.
 - Add markdown support to load in text from templates
+- Use DOM formatter to prettify tabbing in XML
+- Add copyright line to banner photo
+- Embed latest tweets on blog page
 
 Missing Features
 ----------------

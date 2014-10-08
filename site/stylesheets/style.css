@@ -22,6 +22,7 @@ heading, version, copyright {
 	font-family: Trebuchet MS, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+/* The site logo */
 logo {
 	display: block;
 	background: url('../images/mkv25-logo.png') no-repeat transparent center center;
@@ -39,6 +40,7 @@ logo > a:hover {
 	border-bottom: 3px solid #538830;
 }
 
+/* Navigation along the top */
 navigation {
 	border-top: 3px solid #538830;
 	background: #FEFEFE;
@@ -73,6 +75,11 @@ navigation > content > links > a:hover {
 	background: #EEE;
 }
 
+navigation > content > heading {
+	padding: 5px 0 0 300px;
+}
+
+/* Banner image block */
 banner {
 	display: block;
 	position: relative;
@@ -82,17 +89,30 @@ banner {
 	margin-bottom: 10px;
 }
 
-banner.one {
-	background-image: url('../images/banner.jpg');
+banner.home {
+	background-image: url('../images/banner_war.jpg');
 }
 
-banner.two {
-	background-image: url('../images/banner_2.jpg');
+banner.blog {
+	background-image: url('../images/banner_raindrops.jpg');
 }
 
-banner.three {
-	background-image: url('../images/banner_3.jpg');
+banner.showcase {
+	background-image: url('../images/banner_turret.jpg');
 }
+
+banner.open-source {
+	background-image: url('../images/banner_vines.jpg');
+}
+
+banner.forums {
+	background-image: url('../images/banner_wier.jpg');
+}
+
+banner.store {
+	background-image: url('../images/banner_splash.jpg');
+}
+
 
 banner >  tint {
 	display: block;
@@ -119,14 +139,16 @@ banner > group > p {
 	line-height: 1.3;
 }
 
+/* General styles */
 .drop-shadow {
 	text-shadow: -1px -1px 0 #666666, 1px -1px 0 #666666, -1px 1px 0 #666666, 1px 1px 0 #666666, 2px 2px 5px rgba(0,0,0,0.8)
 }
 
-navigation > content > heading {
-	padding: 5px 0 0 300px;
+.center {
+	text-align: center;
 }
 
+/* Footer */
 footer {
 	color: #EFEFEF;
 	background: #212121;
@@ -134,42 +156,9 @@ footer {
 	padding: 20px;
 	border-top: 3px solid #424242;
 }
+
 footer > content {
 	background: none;
-}
-
-version {
-	display: block;
-}
-
-copyright {
-	display: block;
-	text-align: center;
-	font-size: 14px;
-}
-
-column > heading, content > heading {
-	font-size: 150%;
-}
-
-column > p, content {
-	text-align: justify;
-}
-
-ul > li {
-	text-align: left;
-}
-
-column > content > ul.square {
-	margin-left: 20px;
-}
-
-column > content, content > content {
-	background: rgba(0, 0, 0, 0.1);
-}
-
-.center {
-	text-align: center;
 }
 
 footer > content > icons {
@@ -180,6 +169,7 @@ footer > content > icons {
 	top: -13px;
 }
 
+/* Icons links */
 a.icon {
 	display: inline-block;
 	width: 48px;
@@ -195,6 +185,38 @@ a.icon:hover {
 
 a.github { background-image: url('../images/github_x32.png'); }
 a.twitter { background-image: url('../images/twitter_x32.png'); }
+
+/* Other specialist tags */
+version {
+	display: block;
+}
+
+copyright {
+	display: block;
+	text-align: center;
+	font-size: 14px;
+}
+
+ul > li {
+	text-align: left;
+}
+
+/* Column styling */
+column > heading, content > heading {
+	font-size: 150%;
+}
+
+column > p, content {
+	text-align: justify;
+}
+
+column > content > ul.square {
+	margin-left: 20px;
+}
+
+column > content, content > content {
+	background: rgba(0, 0, 0, 0.1);
+}
 
 /* Default box sizes */
 @media only screen {
