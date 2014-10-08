@@ -3,6 +3,7 @@ Task List
 
 Bugs
 ----
+- History link from About page goes to a 404 page
 
 In progress
 -----------
@@ -10,10 +11,10 @@ In progress
 Improvements based on User Feedback
 -----------------------------------
 
+
 Improvements
 ------------
-+ Change language to represent our
-- Add an about page in footer - who are we, me, John Beech, and my alter-ego Markavian.
++ Change language to represent our goals instead of my goals
 - Add markdown support to load in text from templates
 - Use DOM formatter to prettify tabbing in XML
 - Add copyright line to banner photo
@@ -21,6 +22,7 @@ Improvements
 
 Missing Features
 ----------------
++ History Page - reassure visitors that we've been doing this for a while
 + Showcase - promote our existing games and prototypes
 + Open source section - promote the good work that mkv25.net does
 + Store - enable a sale of a game

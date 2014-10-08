@@ -9,3 +9,4 @@ $routes['showcase'] = 'Showcase';
 $routes['open-source'] = 'OpenSource';
 $routes['forums'] = 'Forums';
 $routes['store'] = 'Store';
+$routes['about'] = 'About';

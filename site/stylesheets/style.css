@@ -113,6 +113,9 @@ banner.store {
 	background-image: url('../images/banner_splash.jpg');
 }
 
+banner.about {
+	background-image: url('../images/banner_fate.jpg');
+}
 
 banner >  tint {
 	display: block;
@@ -185,6 +188,7 @@ a.icon:hover {
 
 a.github { background-image: url('../images/github_x32.png'); }
 a.twitter { background-image: url('../images/twitter_x32.png'); }
+a.about { background-image: url('../images/about_x32.png'); }
 
 /* Other specialist tags */
 version {
@@ -221,10 +225,10 @@ column > content, content > content {
 /* Default box sizes */
 @media only screen {
 	body { }
+	column.double > content { height: auto; }
+	column.triple > content { height: auto; }
+	column.quad > content { height: auto; }
 	column > content { overflow: hidden; }
-	column.double > content { height: 200px; }
-	column.triple > content { height: 250px; }
-	column.quad > content { height: 300px; }
 	
 	column.quad > content > heading { text-align: center; }
 }
@@ -232,9 +236,9 @@ column > content, content > content {
 /* Portrait design for a width of 768px */
 @media only screen and (min-width: 768px) and (max-width: 999px) {
 	body { }
-	column.double > content { height: 270px; }
-	column.triple > content { height: 330px; }
-	column.quad > content { height: 410px; }
+	column.double > content { height: auto; }
+	column.triple > content { height: auto; }
+	column.quad > content { height: auto; }
 	
 	column.quad > content > heading { font-size: 130%; }
 	navigation > content > links > a { margin: 10px -1px; }
