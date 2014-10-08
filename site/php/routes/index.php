@@ -4,6 +4,10 @@ require('./autoloader.php');
 require('./routes.php');
 
 $basePath = getenv('MKV25_SITE_BASE');
+if($basePath == '')
+{
+	$basePath = '/';
+}
 
 $request = new Request($basePath);
 $path = $request->path ? $request->path : 'home';

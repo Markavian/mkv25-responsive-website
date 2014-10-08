@@ -1,31 +1,14 @@
 DirectoryIndex site/php/routes/index.php
 
-<IfModule mod_rewrite.c>
-	Require all granted
+Require all granted
 
-	RewriteEngine on
-	RewriteCond %{HTTP_HOST} ^mkv25.net$
-	RewriteCond %{REQUEST_FILENAME} !-f
-	RewriteCond %{REQUEST_FILENAME} !-d
-	RewriteRule ^([^?]*)$ site/php/routes/index.php [NC,L,QSA,E=MKV25_SITE_BASE:/]
-	RewriteBase /
-	
-	RewriteCond %{HTTP_HOST} ^mkv25.net$
-	RewriteRule .* - [E=MKV25_SITE_BASE:/]
-	
-</IfModule>
+RewriteEngine on
+RewriteBase /mkv25/
 
-<IfModule mod_rewrite.c>
-	Require all granted
+RewriteCond %{HTTP_HOST} ^localhost|chii$
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^?]*)$ site/php/routes/index.php [NC,L,QSA]
 
-	RewriteEngine on
-	RewriteCond %{HTTP_HOST} ^localhost|chii$
-	RewriteCond %{REQUEST_FILENAME} !-f
-	RewriteCond %{REQUEST_FILENAME} !-d
-	RewriteRule ^([^?]*)$ site/php/routes/index.php [NC,L,QSA,E=MKV25_SITE_BASE:/mkv25/]
-	RewriteBase /mkv25/
-	
-	RewriteCond %{HTTP_HOST} ^localhost|chii$
-	RewriteRule .* - [E=MKV25_SITE_BASE:/mkv25/]
-	
-</IfModule>
+RewriteCond %{HTTP_HOST} ^localhost|chii$
+RewriteRule .* - [E=MKV25_SITE_BASE:/mkv25/]

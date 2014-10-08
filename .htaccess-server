@@ -1,0 +1,13 @@
+DirectoryIndex site/php/routes/index.php
+
+Options +FollowSymLinks -MultiViews
+
+RewriteEngine On 
+
+RewriteCond %{HTTP_HOST} ^stage.mkv25.net|mkv25.net$
+RewriteCond %{REQUEST_FILENAME} -f [NC,OR]  
+RewriteCond %{REQUEST_FILENAME} -d [NC]
+RewriteRule .* - [L] 
+
+RewriteCond %{HTTP_HOST} ^stage.mkv25.net|mkv25.net$
+RewriteRule .* site/php/routes/index.php [NC]
