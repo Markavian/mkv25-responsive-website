@@ -89,33 +89,14 @@ banner {
 	margin-bottom: 10px;
 }
 
-banner.home {
-	background-image: url('../images/banner_war.jpg');
-}
-
-banner.blog {
-	background-image: url('../images/banner_raindrops.jpg');
-}
-
-banner.showcase {
-	background-image: url('../images/banner_turret.jpg');
-}
-
-banner.open-source {
-	background-image: url('../images/banner_vines.jpg');
-}
-
-banner.forums {
-	background-image: url('../images/banner_wier.jpg');
-}
-
-banner.store {
-	background-image: url('../images/banner_splash.jpg');
-}
-
-banner.about {
-	background-image: url('../images/banner_fate.jpg');
-}
+banner.home { background-image: url('../images/banner_war.jpg'); }
+banner.blog { background-image: url('../images/banner_raindrops.jpg'); }
+banner.showcase { background-image: url('../images/banner_turret.jpg'); }
+banner.open-source { background-image: url('../images/banner_vines.jpg'); }
+banner.forums { background-image: url('../images/banner_wier.jpg'); }
+banner.store { background-image: url('../images/banner_splash.jpg'); }
+banner.about { background-image: url('../images/banner_fate.jpg'); }
+banner.history { background-image: url('../images/banner_doorway.jpg'); }
 
 banner >  tint {
 	display: block;

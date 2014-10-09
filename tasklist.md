@@ -3,7 +3,7 @@ Task List
 
 Bugs
 ----
-- History link from About page goes to a 404 page
+
 
 In progress
 -----------
@@ -14,6 +14,7 @@ Improvements based on User Feedback
 
 Improvements
 ------------
++ Flatten drop down menu onto same line as mkv25.net logo instead of stacked vertically
 + Change language to represent our goals instead of my goals
 - Add markdown support to load in text from templates
 - Use DOM formatter to prettify tabbing in XML
@@ -36,7 +37,6 @@ Release Tasks
 - Consider migrating existing content and URLs into new template
 - Switch existing website over to new website
 - Migrate no adverts page
-- Migrate history page
 - Dispose of the comments system
 
 

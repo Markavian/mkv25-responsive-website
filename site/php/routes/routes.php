@@ -10,3 +10,4 @@ $routes['open-source'] = 'OpenSource';
 $routes['forums'] = 'Forums';
 $routes['store'] = 'Store';
 $routes['about'] = 'About';
+$routes['history'] = 'History';
