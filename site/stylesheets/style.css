@@ -91,13 +91,14 @@ navigation > content > links > a.store {
 	text-transform: none;
 	
 	padding: 5px 10px;
-	background: #FFDD55;
+	background: #FF6611;
 	background-image: linear-gradient(to bottom, #FF6611, #FF6655);
 	border-radius: 7px;
 	border: 1px solid #EE4400;
 }
 
 navigation > content > links > a.store:hover {
+	background: #FC5500;
 	background-image: linear-gradient(to bottom, #FC5500, #FC4400);
 }
 
