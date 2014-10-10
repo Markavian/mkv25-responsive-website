@@ -8,13 +8,13 @@ Bugs
 In progress
 -----------
 
+
+
 Improvements based on User Feedback
 -----------------------------------
 
-
 Improvements
 ------------
-+ Flatten drop down menu onto same line as mkv25.net logo instead of stacked vertically
 + Change language to represent our goals instead of my goals
 - Add markdown support to load in text from templates
 - Use DOM formatter to prettify tabbing in XML
@@ -33,6 +33,7 @@ Missing Features
 
 Release Tasks
 -------------
+- Add HTTPS support to website
 - Create CI job to push changes up to live website
 - Consider migrating existing content and URLs into new template
 - Switch existing website over to new website

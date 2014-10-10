@@ -18,9 +18,14 @@ heading {
 	text-transform: uppercase;
 }
 
+/* Fonts */
 heading, version, copyright {
-	font-family: Trebuchet MS, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: Trebuchet MS,  Helvetica, "HelveticaNeue", "Helvetica Neue", Arial, sans-serif;
 }
+navigation {
+	font-family: Helvetica, "HelveticaNeue", "Helvetica Neue", Arial, sans-serif;
+}
+
 
 /* The site logo */
 logo {
@@ -37,7 +42,7 @@ logo > a {
 	margin: auto;
 }
 logo > a:hover {
-	border-bottom: 3px solid #538830;
+	border-bottom: 3px solid #88B765;
 }
 
 /* Navigation along the top */
@@ -50,33 +55,58 @@ navigation {
 navigation > content > links {
 	display: block;
 	position: absolute;
-	top: 30px;
+	top: 15px;
 	left: 220px;
 	height: 80px;
 	z-index: 1;
 }
 
 navigation > content > links > a {
-	font-size: 18px;
-	color: #538830;
-	padding: 10px;
+	font-size: 14px;
+	color: #999;
+	padding: 6px 0;
+	margin: 0 4px 10px 4px;
 	margin: 10px 10px;
 	text-transform: uppercase;
-	
 	text-decoration: none;
-	border-radius: 5px;
 }
 
 navigation > content > links > a:visited {
 	text-decoration: none;
+	color: #999;
 }
 
 navigation > content > links > a:hover {
-	background: #EEE;
+	color: #538830;
 }
 
 navigation > content > heading {
 	padding: 5px 0 0 300px;
+}
+
+navigation > content > links > a.store {
+	display: inline-block;
+	font-size: 15px;
+	color: white;
+	text-transform: none;
+	
+	padding: 5px 10px;
+	background: #FFDD55;
+	background-image: linear-gradient(to bottom, #FF6611, #FF6655);
+	border-radius: 7px;
+	border: 1px solid #EE4400;
+}
+
+navigation > content > links > a.store:hover {
+	background-image: linear-gradient(to bottom, #FC5500, #FC4400);
+}
+
+navigation > content > links > a.store > icon {
+	display: inline-block;
+	width: 23px;
+	height: 19px;
+	vertical-align: middle;
+	background: transparent url('../images/store.png') no-repeat top left;
 }
 
 /* Banner image block */
@@ -222,7 +252,40 @@ column > content, content > content {
 	column.quad > content { height: auto; }
 	
 	column.quad > content > heading { font-size: 130%; }
-	navigation > content > links > a { margin: 10px -1px; }
+	navigation > content > links > a { }
+}
+
+/* Portrait design for a width of 480px */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	body { }
+	column.double > content { height: auto; }
+	column.triple > content { height: auto; }
+	column.quad > content { height: auto; }
+	
+	column.quad > content > heading { font-size: 130%; }
+	logo { height: 70px; }
+	
+	navigation { height: auto; }
+	navigation > content { height: auto; }
+	navigation > content > links {
+		display: block;
+		position: relative;
+		height: auto;
+		padding: 5px 0;
+		margin-bottom: 5px;
+		top: auto;
+		left: auto;
+		background: none;
+		border-top: 1px solid #CCC;
+	}
+	navigation > content > navicon { display: block; position: absolute; top: 10px; right: 0; width: 50px; height: 50px; background: url('../images/navigation.png') no-repeat center center; cursor: pointer; }
+	navigation > content > links { background: #FEFEFE; }
+	navigation > content > links > a { display: block; text-align: left; border-radius: 8px; margin: 10px 0; }
+	navigation > content > links.collapsed { display: none; }
+	
+	banner > group > heading { font-size: 36px; padding-top: 60px; }
+	banner > group > p { font-size: 24px; }
+	footer > content > icons { display: block; position: relative; text-align: center; top: 0; left: 0; }
 }
 
 /* Portrait design for a width of 320px */
@@ -233,58 +296,28 @@ column > content, content > content {
 	column.quad > content { height: auto; }
 	
 	column.quad > content > heading { font-size: 130%; }
-	logo { width: 100%; height: 70px; }
+	logo { height: 70px; }
 	
-	navigation { height: 120px; }
-	navigation > content { height: 80px; }
+	navigation { height: auto; }
+	navigation > content { height: auto; }
 	navigation > content > links {
 		display: block;
 		position: relative;
 		height: auto;
-		margin: auto;
+		padding: 5px 0;
+		margin-bottom: 5px;
 		top: auto;
 		left: auto;
-		background: #FEFEFE;
-		border-radius: 0 0 8px 8px;
-		width: 70%; 
+		background: none;
+		border-top: 1px solid #CCC;
+		border-bottom: 1px solid #CCC;
 	}
-	navigation > content > links > a { display: block; text-align: center; margin: 0 auto; border-radius: 8px; }
-	navigation > content > links { background: #FEFEFE url('../images/navigation.png') no-repeat center top; cursor: pointer; padding-top: 40px; }
-	navigation > content > links.collapsed { height: 40px; padding-top: 0; }
-	navigation > content > links.collapsed > a { display: none; }
+	navigation > content > navicon { display: block; position: absolute; top: 10px; right: 0; width: 50px; height: 50px; background: url('../images/navigation.png') no-repeat center center; cursor: pointer; }
+	navigation > content > links { background: #FEFEFE; }
+	navigation > content > links > a { display: block; text-align: left; border-radius: 8px; margin: 10px 0; }
+	navigation > content > links.collapsed { display: none; }
 	
 	banner > group > heading { font-size: 36px; padding-top: 40px; }
-	banner > group > p { font-size: 24px; }
-	footer > content > icons { display: block; position: relative; text-align: center; top: 0; left: 0; }
-
-/* Portrait design for a width of 480px */
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-	body { }
-	column.double > content { height: auto; }
-	column.triple > content { height: auto; }
-	column.quad > content { height: auto; }
-	
-	column.quad > content > heading { font-size: 130%; }
-	logo { width: 100%; height: 70px; }
-	
-	navigation > content { height: 80px; }
-	navigation > content > links {
-		display: block;
-		position: relative;
-		height: auto;
-		margin: auto;
-		top: auto;
-		left: auto;
-		background: #FEFEFE;
-		border-radius: 0 0 8px 8px;
-		width: 50%; 
-	}
-	navigation > content > links > a { display: block; text-align: center; margin: 0 auto; border-radius: 8px; }
-	navigation > content > links { background: #FEFEFE url('../images/navigation.png') no-repeat center top; cursor: pointer; padding-top: 40px; }
-	navigation > content > links.collapsed { height: 40px; padding-top: 0; }
-	navigation > content > links.collapsed > a { display: none; }
-	
-	banner > group > heading { font-size: 36px; padding-top: 60px; }
 	banner > group > p { font-size: 24px; }
 	footer > content > icons { display: block; position: relative; text-align: center; top: 0; left: 0; }
 }
