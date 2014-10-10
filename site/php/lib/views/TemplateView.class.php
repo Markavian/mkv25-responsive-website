@@ -72,7 +72,9 @@ class TemplateView
 	
 	private function addColumn($content, $type, $first=false)
 	{
-		$column = new ContentColumn($content, $type, $first);
+		$parsedown = new Parsedown();
+		$markdownHtml = $parsedown->text($content);
+		$column = new ContentColumn($markdownHtml, $type, $first);
 		$this->columns[] = $column;
 	}
 	

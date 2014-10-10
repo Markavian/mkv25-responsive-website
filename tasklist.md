@@ -15,11 +15,12 @@ Improvements based on User Feedback
 
 Improvements
 ------------
-+ Change language to represent our goals instead of my goals
 - Add markdown support to load in text from templates
++ Change language to represent our goals instead of my goals
 - Use DOM formatter to prettify tabbing in XML
 - Add copyright line to banner photo
 - Embed latest tweets on blog page
+- Add high-resolution icons and logos to support retina quality mobile devices
 
 Missing Features
 ----------------

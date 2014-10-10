@@ -1,6 +1,6 @@
 <?php
 
-function __autoload($className)
+function autoload_mkv25($className)
 {
 	if (load_class('../lib/controllers/', $className))
 	{
@@ -21,9 +21,18 @@ function __autoload($className)
 	{
 		return;
 	}
-	
-	throw new Exception('Unable to load class ' . $className);
 }
+
+function autoload_parsedown($className)
+{
+	if (load_class('../lib/external/parsedown/', $className, '.php'))
+	{
+		return;
+	}
+}
+
+spl_autoload_register("autoload_mkv25");
+spl_autoload_register("autoload_parsedown");
 
 function load_class($folder, $className, $extention='.class.php')
 {
