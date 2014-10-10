@@ -8,7 +8,7 @@ module.exports = function(grunt) {
 	// files to upload and exclude
 	var FTP_LOCAL_FOLDER = "../";
 	var FTP_DEST_FOLDER = "";
-	var FTP_EXCLUSIONS = ['.ftp*', '.git*', '.hta*', 'deploy', '*.fdproj', 'tasklist.md'];
+	var FTP_EXCLUSIONS = ['.ftp*', '.git*', '.hta*', 'deploy', '*.fdproj', 'tasklist.md', 'readme.md'];
 
 	// load plugins
 	grunt.loadNpmTasks('grunt-ftp-deploy');
