@@ -19,13 +19,14 @@ heading {
 }
 
 /* Fonts */
-heading, version, copyright {
+heading, version, copyright,
+h1, h2, h3, h4, h5, h6 {
 	font-family: Trebuchet MS,  Helvetica, "HelveticaNeue", "Helvetica Neue", Arial, sans-serif;
 }
+
 navigation {
 	font-family: Helvetica, "HelveticaNeue", "Helvetica Neue", Arial, sans-serif;
 }
-
 
 /* The site logo */
 logo {
