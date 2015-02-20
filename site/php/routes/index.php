@@ -10,6 +10,8 @@ if($basePath == '')
 }
 
 $environment = getenv('SERVER_ENV');
+$environment = $environment ? $environment : 'stage';
+
 require('./environment/environment.' . $environment . '.config.php');
 
 $request = new Request($basePath);

@@ -56,7 +56,6 @@ class AuthLogin
 		$response = false;
 
 		set_error_handler(function ($errno, $errstr, $errfile, $errline, array $errcontext) {
-			$this->error = $errstr;
 		});
 		$response = file_get_contents($url, false, $context);
 		$response = json_decode($response, true);
@@ -99,7 +98,7 @@ class AuthLogin
 			}
 		}
 		else {
-			$this->screenResult = $this->error;
+			$this->screenResult = 'Unable to retrieve login details.';
 		}
 	}
 
