@@ -1,5 +1,7 @@
 DirectoryIndex site/php/routes/index.php
 
+SetEnv SERVER_ENV "local"
+
 Require all granted
 
 RewriteEngine on

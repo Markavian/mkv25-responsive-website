@@ -7,7 +7,8 @@ Bugs
 
 In progress
 -----------
-
++ Add config based on environment
++ Add login and logut using Clef
 
 
 Improvements based on User Feedback

@@ -1,3 +1,5 @@
 .ftppass
 
 node_modules
+.sublime
+/site/php/routes/environment/secret.config.php

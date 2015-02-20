@@ -7,6 +7,9 @@ class TemplateView
 	
 	public function __construct()
 	{
+		global $CLEF_AUTH;
+		global $CLEF_PATHS;
+
 		$this->keys = array();
 		$this->columns = array();
 		
@@ -16,6 +19,8 @@ class TemplateView
 		$this->description();
 		$this->baseUrl();
 		$this->banner();
+		$this->template->set('{CLEF_APP_ID}', $CLEF_AUTH['appId']);
+		$this->template->set('{CLEF_REDIRECT_URL}', $CLEF_PATHS['redirectUrl']);
 	}
 	
 	public function title($value='No title')

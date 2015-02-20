@@ -11,3 +11,5 @@ $routes['forums'] = 'Forums';
 $routes['store'] = 'Store';
 $routes['about'] = 'About';
 $routes['history'] = 'History';
+$routes['auth/logout'] = 'AuthLogout';
+$routes['auth/login'] = 'AuthLogin';

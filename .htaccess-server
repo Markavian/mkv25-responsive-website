@@ -1,5 +1,7 @@
 DirectoryIndex site/php/routes/index.php
 
+SetEnv SERVER_ENV "stage"
+
 Options +FollowSymLinks -MultiViews
 
 RewriteEngine On 

@@ -9,6 +9,9 @@ if($basePath == '')
 	$basePath = '/';
 }
 
+$environment = getenv('SERVER_ENV');
+require('./environment/environment.' . $environment . '.config.php');
+
 $request = new Request($basePath);
 $path = $request->path ? $request->path : 'home';
 

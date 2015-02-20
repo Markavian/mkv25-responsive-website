@@ -111,6 +111,11 @@ navigation > content > links > a.store > icon {
 	background: transparent url('../images/store.png') no-repeat top left;
 }
 
+navigation > content > links > a.login {
+	float: right;
+	padding: 0;
+}
+
 /* Banner image block */
 banner {
 	display: block;
@@ -254,7 +259,9 @@ column > content, content > content {
 	column.quad > content { height: auto; }
 	
 	column.quad > content > heading { font-size: 130%; }
+	
 	navigation > content > links > a { }
+	navigation > content > links > a.login { display: none; }
 }
 
 /* Portrait design for a width of 480px */
@@ -317,6 +324,7 @@ column > content, content > content {
 	navigation > content > navicon { display: block; position: absolute; top: 10px; right: 0; width: 50px; height: 50px; background: url('../images/navigation.png') no-repeat center center; cursor: pointer; }
 	navigation > content > links { background: #FEFEFE; }
 	navigation > content > links > a { display: block; text-align: left; border-radius: 8px; margin: 10px 0; }
+	navigation > content > links > a.login { float: none; }
 	navigation > content > links.collapsed { display: none; }
 	
 	banner > group > heading { font-size: 36px; padding-top: 40px; }
