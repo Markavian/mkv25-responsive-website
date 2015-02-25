@@ -18,6 +18,11 @@ class AuthLogin
 		$view->banner('login');
 
 		$view->addSingleColumn('Result: ' . $this->screenResult);
+
+		$auth = new Auth();
+		$user = $auth->getUserByUsername('Markavian');
+		$databaseResult = $user->username . ', ' . $user->email . ', ' . $user->dateLastLogin . ', ' . $user->accessLevel;
+		$view->addSingleColumn('Result: ' . $databaseResult);
 		
 		$view->render();
 	}
