@@ -6,11 +6,21 @@ class AuthLogin
 	{
 		$auth = new Auth();
 
+		// Do a special Clef login if a code is set:
 		if(isset($_GET['code'])) {
 			$this->handleClefLogin($auth);
 		}
 		else {
-			$this->clefResult = 'Just another day.';
+			$this->clefResult = 'Nothing to tune in to.';
+		}
+
+		// Do a normal login check:
+		$user = $auth->getCurrentUser();
+		if($user->isValidSession()) {
+			$authResult = $user->username . ', Email: ' . $user->email . ', Last login: ' . $user->dateLastLogin . ', Access level: ' . $user->accessLevel;
+		}
+		else {
+			$authResult = 'User is not logged in. TODO: provide username and password form?';
 		}
 
 		$view = new TemplateView();
@@ -20,10 +30,6 @@ class AuthLogin
 		$view->banner('login');
 
 		$view->addSingleColumn('Clef Result: ' . $this->clefResult);
-
-		$user = $auth->getCurrentUser();
-
-		$authResult = $user->username . ', Email: ' . $user->email . ', Last login: ' . $user->dateLastLogin . ', Access level: ' . $user->accessLevel . ', Session: ' . $user->isValidSession();
 		$view->addSingleColumn('Auth Result: ' . $authResult);
 		
 		$view->render();
