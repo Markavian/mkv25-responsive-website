@@ -156,7 +156,9 @@ class Auth
 			$_SESSION['mkv_user_id'] = $user->username;
 		}
 
-		echo 'Logged in user: ' . $user->displayName() . ' (' . $user->username . ')';
+		$userId = $user->username;
+		$query = sprintf("UPDATE `dfma_users` SET dateLastLogin=NOW() WHERE username='%s' LIMIT 1", $userId);
+		$result = $this->sql->query($query, 'logIn:' . $userId);
 
 		Auth::$currentUser = $user;
 
