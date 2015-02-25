@@ -52,8 +52,8 @@ class Auth
 		$accessLevel = 1;
 
 		$query = sprintf("INSERT INTO `dfma_users`"
-			. "(username, clefId, nickname, dateSignup, email)"
-			. " VALUES ('%s', '%s', '%s', NOW(), '%s')",
+			. "(username, clefId, nickname, dateSignup, accessLevel, email)"
+			. " VALUES ('%s', '%s', '%s', NOW(), '%s', %s')",
 			$username, $clefId, $nickname, $accessLevel, $email);
 
 		$result = $this->sql->query($query, 'clefSignup:' . $clefId);
