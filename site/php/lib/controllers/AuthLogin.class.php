@@ -4,11 +4,13 @@ class AuthLogin
 {
 	public function __construct($request)
 	{
+		$auth = new Auth();
+
 		if(isset($_GET['code'])) {
-			$this->handleClefLogin();
+			$this->handleClefLogin($auth);
 		}
 		else {
-			$this->screenResult = 'Just another day.';
+			$this->clefResult = 'Just another day.';
 		}
 
 		$view = new TemplateView();
@@ -17,17 +19,17 @@ class AuthLogin
 		$view->eyecatch('Login', "Right, lets get you logged in...");
 		$view->banner('login');
 
-		$view->addSingleColumn('Result: ' . $this->screenResult);
+		$view->addSingleColumn('Clef Result: ' . $this->clefResult);
 
-		$auth = new Auth();
-		$user = $auth->getUserByUsername('Markavian');
-		$databaseResult = $user->username . ', ' . $user->email . ', ' . $user->dateLastLogin . ', ' . $user->accessLevel;
-		$view->addSingleColumn('Result: ' . $databaseResult);
+		$user = $auth->getCurrentUser();
+
+		$authResult = $user->username . ', ' . $user->email . ', ' . $user->dateLastLogin . ', ' . $user->accessLevel;
+		$view->addSingleColumn('Auth Result: ' . $authResult);
 		
 		$view->render();
 	}
 
-	function handleClefLogin() {
+	function handleClefLogin($siteAuth) {
 
 		global $CLEF_AUTH;
 
@@ -84,7 +86,7 @@ class AuthLogin
 
 				if ($response && $response['success']) {
 					$user_info = $response['info'];
-					$this->screenResult = implode($user_info, ', ');
+					$this->clefResult = implode($user_info, ', ');
 					// {
 					//   id: '12345',
 					//   first_name: 'Jesse',
@@ -93,17 +95,17 @@ class AuthLogin
 					//   email: 'jesse@getclef.com'
 					// }
 
-					$auth = new Auth();
+					$siteAuth->clefLogin($user_info['id'], $user_info['first_name'], $user_info['email']);
 
 				} else {
-					$this->screenResult = $response['error'];
+					$this->clefResult = $response['error'];
 				}
 			} else {
-				$this->screenResult = $response['error'];
+				$this->clefResult = $response['error'];
 			}
 		}
 		else {
-			$this->screenResult = 'Unable to retrieve login details.';
+			$this->clefResult = 'Unable to retrieve login details.';
 		}
 	}
 
