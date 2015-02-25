@@ -160,9 +160,10 @@ class Auth
 		$query = sprintf("UPDATE `dfma_users` SET dateLastLogin=NOW() WHERE username='%s' LIMIT 1", $userId);
 		$result = $this->sql->query($query, 'logIn:' . $userId);
 
-		Auth::$currentUser = $user;
+		$now = new DateTime();
+		$user->dateLastLogin = $now->format('Y-m-d H:i:s');
 
-		// TODO: Update last login date
+		Auth::$currentUser = $user;
 	}
 
 	public function logOutClefUser($clefId)
@@ -184,6 +185,8 @@ class Auth
 		$result = $this->sql->query($query, 'logOut:' . $userId);
 
 		session_destroy();
+
+		Auth::$currentUser = new User();
 	}
 
 	public static function sanitizeId($id) 

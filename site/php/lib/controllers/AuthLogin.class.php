@@ -23,7 +23,7 @@ class AuthLogin
 
 		$user = $auth->getCurrentUser();
 
-		$authResult = $user->username . ', ' . $user->email . ', ' . $user->dateLastLogin . ', ' . $user->accessLevel;
+		$authResult = $user->username . ', Email: ' . $user->email . ', Last login: ' . $user->dateLastLogin . ', Access level: ' . $user->accessLevel . ', Session: ' . $user->isValidSession();
 		$view->addSingleColumn('Auth Result: ' . $authResult);
 		
 		$view->render();
