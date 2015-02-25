@@ -16,9 +16,15 @@ class Auth
 
 	// Requires: ALTER TABLE  `dfma_users` ADD  `dateLoggedOut` DATETIME NOT NULL AFTER  `dateLastLogin` ;
 	// Requires: ALTER TABLE  `dfma_users` ADD  `clefId` BIGINT( 20 ) NOT NULL AFTER  `email` ;
+	// Requires: ALTER TABLE  `dfma_users` ADD  `nickname` VARCHAR( 16 ) NOT NULL AFTER  `username` ;
+	// Requires: ALTER TABLE  `dfma_users` ADD INDEX (  `clefId` ) ;
 	public function clefLogin($clefId, $firstName=false, $email=false)
 	{
 		$user = $this->getUserByClefId($clefId);
+		if(!$user) {
+			$user = $this->createClefAccount($clefId, $firstName, $email);
+		}
+
 		$this->logIn($user);
 	}
 
@@ -32,6 +38,27 @@ class Auth
 		if($this->sql->num_rows('clefLogin:' . $clefId) == 1)
 		{
 			$user = $this->createUserFromDatabaseResult($result);
+		}
+
+		return $user;
+	}
+
+	function createClefAccount($clefId, $firstName, $email)
+	{
+		$user = false;
+
+		$username = 'C' . substr(md5($clefId), 0, 15);
+		$nickname = substr($firstName, 0, 16);
+		$accessLevel = 1;
+
+		$query = sprintf("INSERT INTO `dfma_users`"
+			. "(username, clefId, nickname, dateSignup, email)"
+			. " VALUES ('%s', '%s', '%s', NOW(), '%s')",
+			$username, $clefId, $nickname, $accessLevel, $email);
+
+		$result = $this->sql->query($query, 'clefSignup:' . $clefId);
+		if($this->sql->insert_id() == $username) {
+			$user = $this->getUserByClefId($clefId);
 		}
 
 		return $user;
@@ -77,6 +104,7 @@ class Auth
 		$username = $result['username'];
 
 		$user = new User($username);
+		$user->nickname      = $result['nickname'];
 		$user->md5password   = $result['md5password'];
 		$user->dateSignup    = $result['dateSignup'];
 		$user->dateLastLogin = $result['dateLastLogin'];
@@ -84,6 +112,8 @@ class Auth
 		$user->email         = $result['email'];
 		$user->clefId        = $result['clefId'];
 		$user->accessLevel   = $result['accessLevel'];
+
+		return $user;
 	}
 
 	function checkSession()
@@ -101,8 +131,9 @@ class Auth
 		}
 
 		if($user) {
-			$this->currentUser = $user;
+			Auth::$currentUser = $user;
 		}
+
 	}
 
 	public function getCurrentUser()
@@ -125,9 +156,19 @@ class Auth
 			$_SESSION['mkv_user_id'] = $user->username;
 		}
 
+		echo 'Logged in user: ' . $user->displayName() . ' (' . $user->username . ')';
+
 		Auth::$currentUser = $user;
 
 		// TODO: Update last login date
+	}
+
+	public function logOutClefUser($clefId)
+	{
+		$user = $this->getUserByClefId($clefId);
+		if($user) {
+			$this->logOut($user);
+		}
 	}
 
 	public function logOut($user)
@@ -136,7 +177,11 @@ class Auth
 			return;
 		}
 
-		// TODO: Update the logged out date
+		$userId = $user->username;
+		$query = sprintf("UPDATE `dfma_users` SET dateLoggedOut=NOW() WHERE username='%s' LIMIT 1", $userId);
+		$result = $this->sql->query($query, 'logOut:' . $userId);
+
+		session_destroy();
 	}
 
 	public static function sanitizeId($id) 

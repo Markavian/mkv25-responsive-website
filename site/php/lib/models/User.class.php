@@ -3,6 +3,7 @@
 class User {
 	
 	var $username;
+	var $nickname;
 	var $md5password;
 	var $dateSignup;
 	var $dateLastLogin;
@@ -14,6 +15,7 @@ class User {
 	public function __construct($username='unknown')
 	{
 		$this->username      = $username;
+		$this->nickname      = false;
 		$this->md5password   = false;
 		$this->dateSignup    = false;
 		$this->dateLastLogin = false;
@@ -29,8 +31,12 @@ class User {
 		{
 			if($this->dateLoggedOut)
 			{
+				// Convert dates to unix timestamps
+				$lastLogin = new DateTime($this->dateLastLogin);
+				$loggedOut = new DateTime($this->dateLoggedOut);
+
 				// User may have been logged out
-				return ($this->dateLastLogin >= $this->dateLoggedOut);
+				return ($lastLogin >= $loggedOut);
 			}
 
 			// Last login within sensible range
@@ -39,6 +45,11 @@ class User {
 
 		// Date last logged in invalid
 		return false;
+	}
+
+	public function displayName()
+	{
+		return ($this->nickname) ? $this->nickname : $this->username;
 	}
 
 }

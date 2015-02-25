@@ -43,14 +43,25 @@ class AuthLogout
 				// }
 
 				$clef_id = $response['clef_id'];
-				$logoutResult = $clef_id;
+
+				$siteAuth = new Auth();
+				$siteAuth->logOut($clef_id);
+				$logoutResult = 'Logged out Clef user: ' . $clef_id;
 			}
 			else {
 				$logoutResult = $response['error'];
 			}
 		}
 		else {
-			$logoutResult = 'Nothing to do';
+			$siteAuth = new Auth();
+			$user = $siteAuth->getCurrentUser();
+			if($user) {
+				$siteAuth->logOut($user);
+				$logoutResult = 'All done.';
+			}
+			else {
+				$logoutResult = 'Nothing to do';
+			}
 		}
 		
 		$view = new TemplateView();

@@ -296,9 +296,9 @@ class Sql
 		}
 	}
 	
-	// Return number of affected rows from result set $name
+	// Return number of affected rows from the last query
 	function affected() {
-			return @mysql_affected_rows();
+		return @mysql_affected_rows();
 	}
 
 	// Free result set

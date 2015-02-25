@@ -19,6 +19,9 @@ $path = $request->path ? $request->path : 'home';
 
 if(isset($routes[$path]))
 {
+	session_start();
+	$auth = new Auth();
+
 	$controllerClass = $routes[$path];
 	
 	try

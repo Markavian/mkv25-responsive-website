@@ -21,6 +21,12 @@ class TemplateView
 		$this->banner();
 		$this->template->set('{CLEF_APP_ID}', $CLEF_AUTH['appId']);
 		$this->template->set('{CLEF_REDIRECT_URL}', $CLEF_PATHS['redirectUrl']);
+
+		$auth = new Auth();
+		$user = $auth->getCurrentUser();
+		$sessionUserDetails = $user->isValidSession() ? 'Session user: ' . $user->displayName() . ' (' . $user->username . ')' : '';
+		
+		$this->template->set('{SESSION_USER_DETAILS}', $sessionUserDetails);
 	}
 	
 	public function title($value='No title')
