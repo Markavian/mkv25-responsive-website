@@ -7,7 +7,6 @@ Bugs
 
 In progress
 -----------
-+ Connect Clef login and logout to database
 
 
 Improvements based on User Feedback
