@@ -7,9 +7,6 @@ class TemplateView
 	
 	public function __construct()
 	{
-		global $CLEF_AUTH;
-		global $CLEF_PATHS;
-
 		$this->keys = array();
 		$this->columns = array();
 		
@@ -19,14 +16,11 @@ class TemplateView
 		$this->description();
 		$this->baseUrl();
 		$this->banner();
-		$this->template->set('{CLEF_APP_ID}', $CLEF_AUTH['appId']);
-		$this->template->set('{CLEF_REDIRECT_URL}', $CLEF_PATHS['redirectUrl']);
 
 		$auth = new Auth();
 		$user = $auth->getCurrentUser();
-		$sessionUserDetails = $user->isValidSession() ? 'Session user: ' . $user->displayName() . ' (' . $user->username . ')' : '';
-		
-		$this->template->set('{SESSION_USER_DETAILS}', $sessionUserDetails);
+		$signInLinks = new SignInLinks($user);
+		$this->template->set('{SIGN_IN_LINKS}', $signInLinks->render());
 	}
 	
 	public function title($value='No title')
