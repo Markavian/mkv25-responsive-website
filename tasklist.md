@@ -7,8 +7,7 @@ Bugs
 
 In progress
 -----------
-+ Add config based on environment
-+ Add login and logut using Clef
++ Connect Clef login and logout to database
 
 
 Improvements based on User Feedback

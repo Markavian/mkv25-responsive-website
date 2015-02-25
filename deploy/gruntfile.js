@@ -8,7 +8,9 @@ module.exports = function(grunt) {
 	// files to upload and exclude
 	var FTP_LOCAL_FOLDER = "../";
 	var FTP_DEST_FOLDER = "";
-	var FTP_EXCLUSIONS = ['.ftp*', '.git*', '.hta*', 'deploy', '*.fdproj', 'tasklist.md', 'readme.md'];
+	var FTP_EXCLUSIONS_COMMON = ['.ftp*', '.git*', '.hta*', 'deploy', '*.fdproj', 'tasklist.md', 'readme.md', '.sublime'];
+	var FTP_EXCLUSIONS_IMAGES = FTP_EXCLUSIONS_COMMON.concat(['*.png', '*.jpg', '*.psp']);
+	var FTP_EXCLUSIONS_NON_IMAGES = FTP_EXCLUSIONS_COMMON.concat(['*.php', '*.md', '*.css', '*.html']);
 
 	// load plugins
 	grunt.loadNpmTasks('grunt-ftp-deploy');
@@ -19,7 +21,7 @@ module.exports = function(grunt) {
 		pkg: grunt.file.readJSON('package.json'),
 
 		"ftp-deploy": {
-			stage: {
+			"stage-code": {
 				auth: {
 					host: FTP_HOST,
 					port: 21,
@@ -27,9 +29,21 @@ module.exports = function(grunt) {
 				},
 				src: FTP_LOCAL_FOLDER,
 				dest: FTP_DEST_FOLDER,
-				exclusions: FTP_EXCLUSIONS
+				exclusions: FTP_EXCLUSIONS_IMAGES,
+				verbose: true
 			},
-			live: {
+			"stage-assets": {
+				auth: {
+					host: FTP_HOST,
+					port: 21,
+					authKey: FTP_USER_STAGE
+				},
+				src: FTP_LOCAL_FOLDER,
+				dest: FTP_DEST_FOLDER,
+				exclusions: FTP_EXCLUSIONS_NON_IMAGES,
+				verbose: true
+			},
+			"live": {
 				auth: {
 					host: FTP_HOST,
 					port: 21,
@@ -37,12 +51,15 @@ module.exports = function(grunt) {
 				},
 				src: FTP_LOCAL_FOLDER,
 				dest: FTP_DEST_FOLDER,
-				exclusions: FTP_EXCLUSIONS
+				exclusions: FTP_EXCLUSIONS_COMMON,
+				verbose: true
 			}
 		}
 	});
 	
 	// Default task(s).
-	grunt.registerTask('stage', ['ftp-deploy:stage']);
+	grunt.registerTask('stage-code', ['ftp-deploy:stage-code']);
+	grunt.registerTask('stage-assets', ['ftp-deploy:stage-assets']);
+	grunt.registerTask('stage-full', ['stage-code', 'stage-assets']);
 	grunt.registerTask('release', ['ftp-deploy:live']);
 }
