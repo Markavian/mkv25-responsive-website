@@ -128,14 +128,14 @@ banner {
 
 banner.home { background-image: url('../images/banner_war.jpg'); }
 banner.blog { background-image: url('../images/banner_raindrops.jpg'); }
-banner.showcase { background-image: url('../images/banner_turret.jpg'); }
+banner.showcase { background-image: url('../images/banner_showcase.png'); background-size: auto; }
 banner.open-source { background-image: url('../images/banner_vines.jpg'); }
 banner.forums { background-image: url('../images/banner_wier.jpg'); }
 banner.store { background-image: url('../images/banner_splash.jpg'); }
 banner.about { background-image: url('../images/banner_fate.jpg'); }
 banner.history { background-image: url('../images/banner_doorway.jpg'); }
 
-banner >  tint {
+banner > tint {
 	display: block;
 	position: absolute;
 	background: rgba(0, 0, 0, 0.7);
@@ -151,6 +151,7 @@ banner > group > heading {
 	color: white;
 	padding-top: 80px;
 	line-height: 1.3;
+	margin-left: 15px;
 }
 
 banner > group > p {
@@ -158,6 +159,23 @@ banner > group > p {
 	color: #EFEFEF;
 	padding-top: 20px;
 	line-height: 1.3;
+	margin-left: 15px;
+}
+
+/* Short banner variation */
+banner.short { height: 100px; }
+banner.short > tint { height: 80px; }
+banner.short > group > heading {
+	font-size: 48px;
+	padding-top: 18px;
+}
+banner.short > group > p {
+	display: none;
+}
+
+/* White tint variation */
+banner.white-tint > tint {
+	background: rgba(255, 255, 255, 0.6);
 }
 
 /* General styles */
@@ -262,6 +280,7 @@ column > content, content > content {
 	
 	navigation > content > links > a { }
 	navigation > content > links > a.login { display: none; }
+	navigation > content > links > a.logout { display: none; }
 }
 
 /* Portrait design for a width of 480px */

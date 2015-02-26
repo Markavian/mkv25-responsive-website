@@ -14,6 +14,7 @@ Improvements based on User Feedback
 
 Improvements
 ------------
++ Create short banner template for pages across the site
 - Add markdown support to load in text from templates
 + Change language to represent our goals instead of my goals
 - Use DOM formatter to prettify tabbing in XML

@@ -4,7 +4,7 @@ $routes = array();
 $routes['subpath/test'] = 'Home';
 
 $routes['home'] = 'Home';
-$routes['blog'] = 'Blog';
+$routes['news'] = 'News';
 $routes['showcase'] = 'Showcase';
 $routes['open-source'] = 'OpenSource';
 $routes['forums'] = 'Forums';
