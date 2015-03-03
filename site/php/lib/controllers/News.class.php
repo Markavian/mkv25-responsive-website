@@ -9,33 +9,16 @@ class News
 		$view->title('News');
 		$view->eyecatch('News', 'A blog about game development, software, and technology.');
 		$view->banner('blog short');
-		
-		$view->addSingleColumn('
-Title
-=====
-Blog content not wired up to database.
 
-* Relate
-* Relief
-* Educate
-* Support
-* Create
+		// Get articles from database
+		$reader = new ArticleReader();
+		$articles = $reader->getManyArticles();
 
-A point of interest
--------------------
-And above all, have fun.
-
-### Fun
-
-Playful things and support.
-
-### Games
-
-Things to do on cold days and *dark* ~~nights~~ days.
-
-Visit http://mkv25.net/blog for more details, and check out [our store](http://mkv25.net/store)!
-
-');
+		foreach($articles as $key=>$article)
+		{
+			$content = $article->renderFullArticle();
+			$view->addArticle($content);
+		}
 		
 		$view->render();
 	}

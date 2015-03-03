@@ -159,17 +159,6 @@ class Sql
 		}
 	}
 
-	// Return is_array? state of next row in result set $name
-	function next( $name = "", $record_name = "" ) {
-	
-		if( $record_name == '' ) {
-			$this->record = mysql_fetch_array($this->result[$name]);
-		} else {
-			$this->record[$record_name] = mysql_fetch_array($this->result[$name]);
-		}
-		return is_array( $this->record );
-	}
-
 	// Fetch an associative array of results, from specified identifier
 	function fetch($name = "") {
 		// Fetch array

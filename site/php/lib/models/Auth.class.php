@@ -4,6 +4,8 @@ class Auth
 {
 	static $currentUser;
 
+	var $sql;
+
 	public function __construct()
 	{
 		$this->sql = Sql::getInstance();

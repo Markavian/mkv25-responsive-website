@@ -345,3 +345,18 @@ column > content, content > content {
 	banner > group > p { font-size: 24px; }
 	footer > content > icons { display: block; position: relative; text-align: center; top: 0; left: 0; }
 }
+
+/* QBB / UBB Code */
+blockquote {background-color:#EFEFEF; border:solid 1px #999999; margin: 0 0 10px 0; }
+blockquote pre {background-color:#E0E0E0; border-top:solid 1px #999999; margin:0; padding: 0 0 0 10px; overflow: scroll;
+	font-family: Lucida Console, Courier New, sans-serif; 
+	font-style: normal;
+	font-size: 12px;
+	line-height: 1.5em
+ }
+.me   {color:red;     font-weight:bold;}
+.edit {color:#999999; font-weight:normal; font-family:courier new;font-size:12px;}
+a.file { margin: 0; padding: 0; }
+a.file > .icon { display: block; width: 16px; height: 16px; float: left; background: url('../images/file_icons.png') no-repeat top left; margin: 3px 5px 3px 10px; }
+a.file > .icon > b { display: none; }
+a.file > .label { }

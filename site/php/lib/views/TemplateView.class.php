@@ -49,6 +49,12 @@ class TemplateView
 		$this->template->set('{BASE_URL}', $value);
 	}
 	
+	public function addArticle($content)
+	{
+		$column = new ContentColumn($content, 'single', true);
+		$this->columns[] = $column;
+	}
+	
 	public function addSingleColumn($content)
 	{
 		$this->addColumn($content, 'single');
