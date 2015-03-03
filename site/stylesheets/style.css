@@ -128,7 +128,7 @@ banner {
 
 banner.home { background-image: url('../images/banner_war.jpg'); }
 banner.blog { background-image: url('../images/banner_raindrops.jpg'); }
-banner.showcase { background-image: url('../images/banner_showcase.png'); background-size: auto; }
+banner.showcase { background-image: url('../images/banner_showcase.png'); background-size: auto; background-repeat: repeat-x; }
 banner.open-source { background-image: url('../images/banner_vines.jpg'); }
 banner.forums { background-image: url('../images/banner_wier.jpg'); }
 banner.store { background-image: url('../images/banner_splash.jpg'); }
@@ -164,18 +164,13 @@ banner > group > p {
 
 /* Short banner variation */
 banner.short { height: 100px; }
-banner.short > tint { height: 80px; }
+banner.short > tint { height: 92px; top: 4px; }
 banner.short > group > heading {
 	font-size: 48px;
 	padding-top: 18px;
 }
 banner.short > group > p {
 	display: none;
-}
-
-/* White tint variation */
-banner.white-tint > tint {
-	background: rgba(255, 255, 255, 0.6);
 }
 
 /* General styles */
