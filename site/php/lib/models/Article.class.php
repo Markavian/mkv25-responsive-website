@@ -92,7 +92,7 @@ class Article
 	{
 		global $SHOWCASE;
 
-		if(!$this->startsWith($contentUrl, 'http'))
+		if($contentUrl && !$this->startsWith($contentUrl, 'http'))
 		{
 			$contentUrl = $SHOWCASE['baseUrl'] . $this->contentUrl;
 		}
