@@ -109,6 +109,7 @@ class Article
 	{
 		ob_start();
 		$description = stripslashes($description);
+		$posttime = strtotime($postdate);
 		
 		echo "<heading>$name</heading>";
 
@@ -121,17 +122,17 @@ class Article
 			<?php
 		}
 		
-		if($postdate)
+		if($posttime)
 		{
 			?>
-		<p class="date">Posted: <?php echo $postdate; ?></p>
+		<p class="date">Posted: <?php echo date('Y/m/d H:m:s', $posttime); ?></p>
 			<?php
 		}
 		
 		if($url)
 		{
 			?>
-		<p class="date">Posted: <?php echo $url; ?></p>
+		<p class="date">Content URL: <?php echo $url; ?></p>
 			<?php
 		}
 
@@ -139,6 +140,7 @@ class Article
 		if($type == 'iframe')
 		{
 			?> 
+			<!--
 			<div class="media">
 			<?php
 			if($width > 0 && $height > 0)
@@ -147,11 +149,12 @@ class Article
 				?>
 				<iframe src="<?php echo $url?>" frameborder="0" scrolling="no" style="width: <?php echo $width?>px; height: <?php echo $height?>px;"> 
 			<?php } else { ?>
-				<iframe src="<?php echo $url?>" frameborder="0" scrolling="no" style="width: 460px; height: 340px;"> 
+				<iframe src="<?php echo $url?>" frameborder="0" scrolling="no" style="width: 100%; height: 340px;"> 
 			<?php } ?>
 				<p>You need to activate IFRAMEs to view this content.</p> 
 				</iframe>
 			</div>
+			!-->
 			<?php echo "\n"?> 
 			<?php
 		}
@@ -183,12 +186,12 @@ class Article
 		if($url)
 		{
 		?> 
-		<p style="text-align: right;">
+		<p>
 		<?php if($type == 'applet') { ?>
-			<a class="tool sourcecode" href="http://mkv25.net/applets/<?php echo $url?>/<?php echo $url?>.pde" target="_blank" style="float: right; margin: 4px;"><b>Source code</b></a>
-			<a class="tool newwindow" href="http://mkv25.net/applets/<?php echo $url?>" target="_blank" style="float: right; margin: 4px;"><b>Open in new window</b></a>
+			<a class="tool sourcecode" href="http://mkv25.net/applets/<?php echo $url?>/<?php echo $url?>.pde" target="_blank"><b>Source code</b></a>
+			<a class="tool newwindow" href="http://mkv25.net/applets/<?php echo $url?>" target="_blank"><b>Open content in new tab</b></a>
 		<?php } else { ?>
-			<a class="tool newwindow" href="<?php echo $url?>" target="_blank" style="float: right; margin: 4px;"><b>Open in new window</b></a>
+			<a class="tool newwindow" href="<?php echo $url?>" target="_blank"><b>Open content in new tab</b></a>
 		<?php } ?>
 		</p> 
 		<?php

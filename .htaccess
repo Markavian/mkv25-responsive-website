@@ -7,10 +7,10 @@ Require all granted
 RewriteEngine on
 RewriteBase /mkv25/
 
-RewriteCond %{HTTP_HOST} ^localhost|chii$
+RewriteCond %{HTTP_HOST} ^localhost|chii|192.168.1.76$
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^([^?]*)$ site/php/routes/index.php [NC,L,QSA]
 
-RewriteCond %{HTTP_HOST} ^localhost|chii$
+RewriteCond %{HTTP_HOST} ^localhost|chii|192.168.1.76$
 RewriteRule .* - [E=MKV25_SITE_BASE:/mkv25/]

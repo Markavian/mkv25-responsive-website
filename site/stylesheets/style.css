@@ -347,12 +347,23 @@ column > content, content > content {
 }
 
 /* QBB / UBB Code */
-blockquote {background-color:#EFEFEF; border:solid 1px #999999; margin: 0 0 10px 0; }
-blockquote pre {background-color:#E0E0E0; border-top:solid 1px #999999; margin:0; padding: 0 0 0 10px; overflow: scroll;
+div.article.content > p,
+div.article.content > h2,
+div.article.content > h3,
+div.article.content > h4 {
+	margin-top: 10px;
+}
+div.article.content > h2,
+div.article.content > h3,
+div.article.content > h4 {
+	font-size: 145%;
+}
+blockquote {background-color:#EFEFEF; margin: 0 0 10px 0; padding-bottom: 15px; }
+blockquote pre {background-color:#E0E0E0; border-top:solid 2px #999999; margin:0; padding: 0 0 0 10px; overflow: auto;
 	font-family: Lucida Console, Courier New, sans-serif; 
 	font-style: normal;
 	font-size: 12px;
-	line-height: 1.5em
+	line-height: 1.7em
  }
 .me   {color:red;     font-weight:bold;}
 .edit {color:#999999; font-weight:normal; font-family:courier new;font-size:12px;}
