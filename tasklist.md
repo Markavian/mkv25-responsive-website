@@ -7,7 +7,8 @@ Bugs
 
 In progress
 -----------
-
+- Migrate existing content and URLs into new template
+- Migrate all scrapbook content over...
 
 Improvements based on User Feedback
 -----------------------------------
@@ -36,7 +37,6 @@ Release Tasks
 -------------
 - Add HTTPS support to website
 - Create CI job to push changes up to live website
-- Consider migrating existing content and URLs into new template
 - Switch existing website over to new website
 - Migrate no adverts page
 - Dispose of the comments system
