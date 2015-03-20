@@ -16,13 +16,27 @@ require('./environment/environment.' . $environment . '.config.php');
 
 $request = new Request($basePath);
 $path = $request->path ? $request->path : 'home';
+$section = $request->section;
 
 if(isset($routes[$path]))
 {
+	renderPath($routes[$path], $request);
+}
+else if(isset($routes[$section]))
+{
+	renderPath($routes[$section], $request);
+}
+else
+{
+	$view = new DefaultView();
+	$view->responseCode(404, 'File not found, no route set');
+	$view->routeInfo();
+}
+
+function renderPath($controllerClass, $request)
+{
 	session_start();
 	$auth = new Auth();
-
-	$controllerClass = $routes[$path];
 	
 	try
 	{
@@ -35,10 +49,4 @@ if(isset($routes[$path]))
 		$view->displayException($exception);
 		$view->routeInfo();
 	}
-}
-else
-{
-	$view = new DefaultView();
-	$view->responseCode(404, 'File not found, no route set');
-	$view->routeInfo();
 }

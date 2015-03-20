@@ -11,5 +11,6 @@ $routes['forums'] = 'Forums';
 $routes['store'] = 'Store';
 $routes['about'] = 'About';
 $routes['history'] = 'History';
+$routes['scrapbook'] = 'Scrapbook';
 $routes['auth/logout'] = 'AuthLogout';
 $routes['auth/login'] = 'AuthLogin';

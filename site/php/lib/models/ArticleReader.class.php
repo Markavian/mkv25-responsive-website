@@ -9,6 +9,13 @@ class ArticleReader
 		$this->sql = Sql::getInstance();
 	}
 
+	public function getArticleByUrlName($urlName)
+	{
+		$article = $this->getContentByUrlName($urlName);
+
+		return $article;
+	}
+
 	public function getArticles()
 	{
 		$articles = $this->getContentByCategory('article', 5);
@@ -34,6 +41,23 @@ class ArticleReader
 		$contentItems = $this->getContentForQuery($query, $queryName);
 	
 		return $contentItems;
+	}
+
+	function getContentByUrlName($urlName)
+	{
+		$content = false;
+
+		$limit = 1;
+		$query = sprintf("SELECT * FROM `shw_content` WHERE urlname = '%s' ORDER BY postdate DESC LIMIT %d", $urlName, $limit);
+		$queryName = "contentByUrlName:$urlName";
+
+		$contentItems = $this->getContentForQuery($query, $queryName);
+		if(count($contentItems) == 1)
+		{
+			$content = $contentItems[0];
+		}
+
+		return $content;
 	}
 
 	function getContentByCategory($category)

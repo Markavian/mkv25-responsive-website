@@ -47,6 +47,7 @@ class Article
 		$this->name           = $row['name'];
 		$this->hits           = $row['hits'];
 		$this->description    = $row['description'];
+		$this->keywords       = $row['keywords'];
 		$this->type           = $row['type'];
 
 		$this->contentUrl     = $row['url'];
@@ -128,33 +129,23 @@ class Article
 		<p class="date">Posted: <?php echo date('Y/m/d H:m:s', $posttime); ?></p>
 			<?php
 		}
-		
-		if($url)
-		{
-			?>
-		<p class="date">Content URL: <?php echo $url; ?></p>
-			<?php
-		}
-
 
 		if($type == 'iframe')
 		{
 			?> 
-			<!--
 			<div class="media">
 			<?php
 			if($width > 0 && $height > 0)
 			{
-				if($width > 460) $width = 460;
+				$width = '100%';
 				?>
 				<iframe src="<?php echo $url?>" frameborder="0" scrolling="no" style="width: <?php echo $width?>px; height: <?php echo $height?>px;"> 
-			<?php } else { ?>
+		<?php } else { ?>
 				<iframe src="<?php echo $url?>" frameborder="0" scrolling="no" style="width: 100%; height: 340px;"> 
-			<?php } ?>
+		<?php } ?>
 				<p>You need to activate IFRAMEs to view this content.</p> 
 				</iframe>
 			</div>
-			!-->
 			<?php echo "\n"?> 
 			<?php
 		}
