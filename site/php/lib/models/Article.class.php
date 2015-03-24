@@ -121,9 +121,7 @@ class Article
 			$articleTitle = $article->name;
 
 			echo <<<END
-<a href="$articleUrl" title="$articleTitle">
-	<icon style="background: url('$iconUrl') no-repeat center center;"></icon>
-</a>
+<a href="$articleUrl" title="$articleTitle"><icon style="background: url('$iconUrl') no-repeat center center;"></icon></a>
 END;
 		}
 

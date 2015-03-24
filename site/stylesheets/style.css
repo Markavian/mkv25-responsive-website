@@ -373,6 +373,10 @@ a.file > .icon > b { display: none; }
 a.file > .label { }
 
 /* Showcase icon links */
+iconlist { 
+	display: block;
+	height: 100px;
+}
 iconlist > a {
 	display: inline-block;
 	margin-right: 10px;
