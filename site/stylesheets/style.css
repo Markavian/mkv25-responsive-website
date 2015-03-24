@@ -168,6 +168,7 @@ banner.short > tint { height: 92px; top: 4px; }
 banner.short > group > heading {
 	font-size: 48px;
 	padding-top: 18px;
+	white-space: nowrap;
 }
 banner.short > group > p {
 	display: none;
