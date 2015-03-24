@@ -17,7 +17,7 @@ class News
 		foreach($articles as $key=>$article)
 		{
 			$content = $article->renderFullArticle();
-			$view->addArticle($content);
+			$view->addSingleHTMLColumn($content);
 		}
 		
 		$view->render();

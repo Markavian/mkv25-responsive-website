@@ -10,6 +10,8 @@ class Scrapbook
 
 		if($article) 
 		{
+			$linkedArticles = $reader->getArticlesForIdArray($article->linkedArticles);
+
 			$view = new TemplateView();
 			$view->baseUrl($request->base);
 			$view->title($article->name);
@@ -17,9 +19,17 @@ class Scrapbook
 			$view->banner('scrapbook short');
 
 			$content = $article->renderFullArticle();
-			$view->addArticle($content);
-		}
+			$view->addSingleHTMLColumn($content);
 
-		$view->render();
+			$linkedContent = Article::renderLinks($linkedArticles);
+			$view->addSingleHTMLColumn($linkedContent);
+			$view->render();
+		}
+		else
+		{
+			$view = new DefaultView();
+			$view->responseCode(404, 'Article not found');
+			$view->routeInfo();
+		}
 	}
 }

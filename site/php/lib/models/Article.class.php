@@ -106,6 +106,32 @@ class Article
 	    return $needle === "" || strrpos($haystack, $needle, -strlen($haystack)) !== FALSE;
 	}
 
+	public static function renderLinks($articles)
+	{
+		global $SHOWCASE, $basePath;
+
+		ob_start();
+		echo "<heading>Related</heading>";
+		echo "<iconlist>";
+		
+		foreach ($articles as $key=>$article)
+		{
+			$iconUrl = $SHOWCASE['iconPath'] . $article->displayIcon;
+			$articleUrl = $basePath . 'scrapbook/' . $article->urlname;
+			$articleTitle = $article->name;
+
+			echo <<<END
+<a href="$articleUrl" title="$articleTitle">
+	<icon style="background: url('$iconUrl') no-repeat center center;"></icon>
+</a>
+END;
+		}
+
+		echo "</iconlist>";
+
+		return ob_get_clean();
+	}
+
 	public static function renderArticle($name, $type, $width, $height, $url, $category, $description, $postdate=false, $simpleMode=false, $icon_url=false)
 	{
 		ob_start();

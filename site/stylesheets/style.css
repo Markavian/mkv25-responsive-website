@@ -371,3 +371,19 @@ a.file { margin: 0; padding: 0; }
 a.file > .icon { display: block; width: 16px; height: 16px; float: left; background: url('../images/file_icons.png') no-repeat top left; margin: 3px 5px 3px 10px; }
 a.file > .icon > b { display: none; }
 a.file > .label { }
+
+/* Showcase icon links */
+iconlist > a {
+	display: inline-block;
+	margin-right: 10px;
+	padding: 2px;
+}
+iconlist > a > icon {
+	display: block;
+	width: 96px;
+	height: 96px;
+}
+
+iconlist > a:hover {
+	background: white;
+}

@@ -30,6 +30,13 @@ class ArticleReader
 		return $articles;
 	}
 
+	public function getArticlesForIdArray($idArray)
+	{
+		$articles = $this->getContentByIDs($idArray);
+
+		return $articles;
+	}
+
 	function getLatestContent()
 	{
 		$contentItems = array();
@@ -70,6 +77,31 @@ class ArticleReader
 			$limit = 5;
 			$query = sprintf("SELECT * FROM `shw_content` WHERE category = '%s' ORDER BY postdate DESC LIMIT %d", $category, $limit);
 			$queryName = "contentByCategory:$category";
+
+			$contentItems = $this->getContentForQuery($query, $queryName);
+		}
+
+		return $contentItems;
+	}
+
+	function getContentByIDs($idArray)
+	{
+		$contentItems = array();
+
+		$allowedCategories = array('flash', 'article', 'artwork', 'experimental', 'java', '');
+		if(count($idArray) > 0)
+		{
+			$idMatchers = '';
+			foreach($idArray as $key=>$id)
+			{
+				if($idMatchers != '')
+					$idMatchers .= ' || ';
+
+				$idMatchers .= sprintf("id = '%d'", $id);
+			}
+			$limit = 5;
+			$query = sprintf("SELECT * FROM `shw_content` WHERE %s ORDER BY postdate DESC LIMIT %d", $idMatchers, $limit);
+			$queryName = "getContentByIDs:" . implode($idArray);
 
 			$contentItems = $this->getContentForQuery($query, $queryName);
 		}
