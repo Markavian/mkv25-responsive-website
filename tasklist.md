@@ -6,10 +6,20 @@ Bugs
 
 In progress
 -----------
-- Migrate existing content and URLs into new template
++ Populate news with relevant content
 
 Improvements based on User Feedback
 -----------------------------------
+
+Missing Features
+----------------
++ History Page - reassure visitors that we've been doing this for a while
++ Showcase - promote our existing games and prototypes
++ Open source section - promote the good work that mkv25.net does
++ Store - enable a sale of a game
++ Forum - allow users to register for help and support, and discuss ideas
++ Blog - promote our skills and knowledge as a software engineer and indie game developer
++ Home page - promote other areas of the site, twitter feed, store sales, games, and open source projects
 
 Improvements
 ------------
@@ -21,16 +31,6 @@ Improvements
 - Embed latest tweets on blog page
 - Add high-resolution icons and logos to support retina quality mobile devices
 - Migrate no adverts page
-
-Missing Features
-----------------
-+ History Page - reassure visitors that we've been doing this for a while
-+ Showcase - promote our existing games and prototypes
-+ Open source section - promote the good work that mkv25.net does
-+ Store - enable a sale of a game
-+ Forum - allow users to register for help and support, and discuss ideas
-+ Blog - promote our skills and knowledge as a software engineer and indie game developer
-+ Home page - promote other areas of the site, twitter feed, store sales, games, and open source projects
 
 Release Tasks
 -------------
