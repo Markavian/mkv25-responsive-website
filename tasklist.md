@@ -3,12 +3,11 @@ Task List
 
 Bugs
 ----
-
+- Displaying flash content in an iframe causes an automatic download on Android - convert to SWFObject.
 
 In progress
 -----------
 - Migrate existing content and URLs into new template
-- Migrate all scrapbook content over...
 
 Improvements based on User Feedback
 -----------------------------------
