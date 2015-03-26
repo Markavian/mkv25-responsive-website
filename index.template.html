@@ -16,6 +16,10 @@
 	<link rel="stylesheet" href="site/stylesheets/layout.css">
 	<link rel="stylesheet" href="site/stylesheets/style.css">
 
+	<!-- JavaScript -->
+	<script type="text/javascript" src="site/scripts/navigation.js"></script>
+	<script type="text/javascript" src="site/scripts/swfobject.js"></script>
+
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
@@ -63,36 +67,7 @@
 	</footer>
 
 	<script type="text/javascript">
-		function getFirstTag(search, name)
-		{
-			return search.getElementsByTagName(name)[0];
-		}
-		
-		function toggleNavigation(event)
-		{
-			if(links.className == "")
-			{
-				links.className = "collapsed";
-			}
-			else
-			{
-				links.className = "";
-			}
-		}
-		
-		function hideNavigation(event)
-		{
-			links.className = "collapsed";
-			document.removeEventListener("click", hideNavigation);
-		}
-	
-		var navicon = getFirstTag(document, "navicon");
-		var navigation = getFirstTag(document, "navigation");
-		var links = getFirstTag(navigation, "links");
-		var banner = getFirstTag(document, "banner");
-		
-		navicon.addEventListener("click", toggleNavigation);
-		
+		registerNavigationToggle();
 	</script>
 	
 </body>

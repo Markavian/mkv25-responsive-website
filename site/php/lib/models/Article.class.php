@@ -130,6 +130,33 @@ END;
 		return ob_get_clean();
 	}
 
+	private static function renderFlashContent($contentUrl, $contentId='flash', $width="100%", $height=400)
+	{
+		// Remove non-alpha numeric characters from ID
+		$contentId = 'flash-' . removeNonAlphaNumericCharactersFrom($contentId);
+
+		$height = ($height) ? $height . 'px' : '340px';
+
+		ob_start();
+		echo <<<END
+		<object id="$contentId" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="$width" height="$height">
+	        <param name="movie" value="$contentUrl" />
+	        <!--[if !IE]>-->
+	        <object type="application/x-shockwave-flash" data="$contentUrl" width="$width" height="$height">
+	        <!--<![endif]-->
+	        	<p>Alternative content</p>
+	        <!--[if !IE]>-->
+	        </object>
+	        <!--<![endif]-->
+     	</object>
+    	
+    	<script type="text/javascript">
+    		swfobject.registerObject("$contentId", "9.0.115", "site/scripts/expressInstall.swf");
+    	</script>
+END;
+		return ob_get_clean();
+	}
+
 	public static function renderArticle($name, $type, $width, $height, $url, $category, $description, $postdate=false, $simpleMode=false, $icon_url=false)
 	{
 		ob_start();
@@ -156,22 +183,29 @@ END;
 
 		if($type == 'iframe')
 		{
-			?> 
-			<div class="media">
-			<?php
-			if($width > 0 && $height > 0)
+			if(endsWith($url, '.swf'))
 			{
-				$width = '100%';
-				?>
-				<iframe src="<?php echo $url?>" frameborder="0" scrolling="no" style="width: <?php echo $width?>px; height: <?php echo $height?>px;"> 
-		<?php } else { ?>
-				<iframe src="<?php echo $url?>" frameborder="0" scrolling="no" style="width: 100%; height: 340px;"> 
-		<?php } ?>
-				<p>You need to activate IFRAMEs to view this content.</p> 
-				</iframe>
-			</div>
-			<?php echo "\n"?> 
-			<?php
+				echo Article::renderFlashContent($url, $name, '100%', $height);
+			}
+			else
+			{
+				?> 
+			<div class="media">
+				<?php
+				if($width > 0 && $height > 0)
+				{
+					$width = '100%';
+					?>
+					<iframe src="<?php echo $url?>" frameborder="0" scrolling="no" style="width: <?php echo $width?>px; height: <?php echo $height?>px;"> 
+			<?php } else { ?>
+					<iframe src="<?php echo $url?>" frameborder="0" scrolling="no" style="width: 100%; height: 340px;"> 
+			<?php } ?>
+					<p>You need to activate IFRAMEs to view this content.</p> 
+					</iframe>
+				</div>
+				<?php echo "\n"?> 
+				<?php
+			}
 		}
 		else if($type == 'applet') {
 			?> 
