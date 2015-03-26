@@ -21,8 +21,12 @@ class Scrapbook
 			$content = $article->renderFullArticle();
 			$view->addSingleHTMLColumn($content);
 
-			$linkedContent = Article::renderLinks($linkedArticles);
-			$view->addSingleHTMLColumn($linkedContent);
+			if(count($linkedArticles))
+			{
+				$linkedContent = Article::renderLinks($linkedArticles);
+				$view->addSingleHTMLColumn($linkedContent);
+			}
+
 			$view->render();
 		}
 		else
