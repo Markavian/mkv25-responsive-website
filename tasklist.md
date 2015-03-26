@@ -3,6 +3,7 @@ Task List
 
 Bugs
 ----
+- Article icon not included in page - 404 URL
 
 In progress
 -----------
