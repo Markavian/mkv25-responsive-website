@@ -24,6 +24,10 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: Trebuchet MS,  Helvetica, "HelveticaNeue", "Helvetica Neue", Arial, sans-serif;
 }
 
+heading > a {
+	text-decoration: none;
+}
+
 navigation {
 	font-family: Helvetica, "HelveticaNeue", "Helvetica Neue", Arial, sans-serif;
 }
@@ -378,17 +382,27 @@ iconlist {
 	display: block;
 	height: 100px;
 }
+
 iconlist > a {
 	display: inline-block;
 	margin-right: 10px;
 	padding: 2px;
 }
+
+iconlist > icon,
 iconlist > a > icon {
-	display: block;
+	display: inline-block;
 	width: 96px;
 	height: 96px;
 }
 
 iconlist > a:hover {
 	background: white;
+}
+
+block.right {
+	float: right;
+	text-align: right;
+	margin-left: 10px;
+	margin-bottom: 10px;
 }

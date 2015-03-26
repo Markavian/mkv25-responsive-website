@@ -85,25 +85,7 @@ class Article
 	public function renderFullArticle()
 	{
 		$simple = false;
-		$localUrl = $this->buildUrl($this->contentUrl);
-		return Article::renderArticle($this->name, $this->type, $this->contentWidth, $this->contentHeight, $localUrl, $this->category, $this->description, $this->postdate, $simple, $this->displayIcon);
-	}
-
-	function buildUrl($contentUrl)
-	{
-		global $SHOWCASE;
-
-		if($contentUrl && !$this->startsWith($contentUrl, 'http'))
-		{
-			$contentUrl = $SHOWCASE['baseUrl'] . $this->contentUrl;
-		}
-
-		return $contentUrl;
-	}
-
-	function startsWith($haystack, $needle) {
-	    // search backwards starting from haystack length characters from the end
-	    return $needle === "" || strrpos($haystack, $needle, -strlen($haystack)) !== FALSE;
+		return Article::renderArticle($this->name, $this->type, $this->contentWidth, $this->contentHeight, $this->contentUrl, $this->urlname, $this->category, $this->description, $this->postdate, $simple, $this->displayIcon);
 	}
 
 	public static function renderLinks($articles)
@@ -135,7 +117,8 @@ END;
 		// Remove non-alpha numeric characters from ID
 		$contentId = 'flash-' . removeNonAlphaNumericCharactersFrom($contentId);
 
-		$height = ($height) ? $height . 'px' : '340px';
+		$width = "100%";
+		$height = (is_numeric($height)) ? $height . 'px' : $height;
 
 		ob_start();
 		echo <<<END
@@ -157,99 +140,123 @@ END;
 		return ob_get_clean();
 	}
 
-	public static function renderArticle($name, $type, $width, $height, $url, $category, $description, $postdate=false, $simpleMode=false, $icon_url=false)
+	private static function renderIFrameContent($contentUrl, $width="100%", $height=400)
+	{
+		$width = (is_numeric($width)) ? $width . 'px' : $width;
+		$height = (is_numeric($height)) ? $height . 'px' : $height;
+
+		ob_start();
+		echo <<<END
+		<div class="media">
+			<iframe src="$contentUrl" frameborder="0" scrolling="no" style="width: $width; height: $height;">
+				<p>You need to activate IFRAMEs to view this content.</p> 
+			</iframe>
+		</div>
+END;
+		return ob_get_clean();
+	}
+
+	private static function buildUrl($contentUrl)
+	{
+		global $SHOWCASE;
+
+		if($contentUrl && !startsWith($contentUrl, 'http'))
+		{
+			$contentUrl = $SHOWCASE['baseUrl'] . $contentUrl;
+		}
+
+		return $contentUrl;
+	}
+
+	public static function renderArticle($name, $type, $width, $height, $url, $urlname, $category, $description, $postdate=false, $simpleMode=false, $icon_url=false)
 	{
 		ob_start();
 		$description = stripslashes($description);
 		$posttime = strtotime($postdate);
-		
-		echo "<heading>$name</heading>";
+
+		$localUrl = Article::buildUrl($url);
+
+		echo '<block class="right">';
 
 		if($icon_url)
 		{
-			?>
-			<div class="article icon">
-				<div class="icon holder" style="background: url('<?php echo $icon_url; ?>') no-repeat center center;"></div>
-			</div>
-			<?php
+			echo <<<END
+			<iconlist>
+				<icon style="background: url('//mkv25.net/site/icons/$icon_url') no-repeat center center;"></icon>
+			</iconlist>
+END;
 		}
 		
 		if($posttime)
 		{
-			?>
-		<p class="date">Posted: <?php echo date('Y/m/d H:m:s', $posttime); ?></p>
-			<?php
+			$formattedDate = date('Y/m/d H:m:s', $posttime);
+			echo "<date>$formattedDate</date>";
 		}
+
+		echo '</block>';
+		
+		echo <<<END
+			<heading><a class="permalink" href="scrapbook/$urlname">$name</a></heading>
+END;
+
+		$articleContent = BBCodeOutput::process($description, $simpleMode);
+		echo <<<END
+		<div class="article content">
+			$articleContent
+		</div>
+END;
 
 		if($type == 'iframe')
 		{
+			$width = ($width == 0) ? $width = '100%' : $width;
+			$height = ($height == 0) ? $height = 400 : $height;
+
 			if(endsWith($url, '.swf'))
 			{
-				echo Article::renderFlashContent($url, $name, '100%', $height);
+				echo Article::renderFlashContent($localUrl, $name, $width, $height);
 			}
 			else
 			{
-				?> 
-			<div class="media">
-				<?php
-				if($width > 0 && $height > 0)
-				{
-					$width = '100%';
-					?>
-					<iframe src="<?php echo $url?>" frameborder="0" scrolling="no" style="width: <?php echo $width?>px; height: <?php echo $height?>px;"> 
-			<?php } else { ?>
-					<iframe src="<?php echo $url?>" frameborder="0" scrolling="no" style="width: 100%; height: 340px;"> 
-			<?php } ?>
-					<p>You need to activate IFRAMEs to view this content.</p> 
-					</iframe>
-				</div>
-				<?php echo "\n"?> 
-				<?php
+				echo Article::renderIFrameContent($localUrl, $width, $height);
 			}
 		}
-		else if($type == 'applet') {
-			?> 
+		else if($type == 'applet')
+		{
+			echo <<<END
 			<div class="media">
-				<applet code="<?php echo $url?>" archive="http://mkv25.net/applets/<?php echo $url?>/<?php echo $url?>.jar" width=<?php echo $width?> height=<?php echo $height?>>
-				<p>You need to have Java 1.5 installed for this applet to work correctly.</p>
+				<applet code="$url" archive="//mkv25.net/applets/$url/$url.jar" width="$width" height="$height">
+				<p>You need to have Java installed for this applet to work correctly.</p>
 				</applet>
 			</div>
-			<?php echo "\n"?> 
-			<?php	
+			
+			<p>
+				<a class="tool sourcecode" href="//mkv25.net/applets/$url/$url.pde" target="_blank"><b>Source code</b></a>
+				<a class="tool newwindow" href="//mkv25.net/applets/$url" target="_blank"><b>Open content in new tab</b></a>
+			</p>
+END;
 		}
-		else if($type == 'image') {
-			if($width > 0 && $height > 0) {
-			?> 
-				<div class="media"><img src="<?php echo $url?>" width="<?php echo $width?>" height="<?php echo $height?>" /></div> 
-			<?php
-			} else {
-			?>
-				<div class="media"><img src="<?php echo $url?>" /></div> 
-			<?php
+		else if($type == 'image')
+		{
+			if($width > 0 && $height > 0)
+			{
+				echo <<<END
+				<div class="media"><img src="$localUrl" width="$width" height="$height" /></div> 
+END;
 			}
-			?>
-			<?php echo "\n"?> 
-			<?php
+			else
+			{
+				echo <<<END
+				<div class="media"><img src="$localUrl" /></div> 
+END;
+			}
 		}
 		
-		if($url)
+		if($localUrl)
 		{
-		?> 
-		<p>
-		<?php if($type == 'applet') { ?>
-			<a class="tool sourcecode" href="http://mkv25.net/applets/<?php echo $url?>/<?php echo $url?>.pde" target="_blank"><b>Source code</b></a>
-			<a class="tool newwindow" href="http://mkv25.net/applets/<?php echo $url?>" target="_blank"><b>Open content in new tab</b></a>
-		<?php } else { ?>
-			<a class="tool newwindow" href="<?php echo $url?>" target="_blank"><b>Open content in new tab</b></a>
-		<?php } ?>
-		</p> 
-		<?php
+			echo <<<END
+			<p><a class="tool newwindow" href="$localUrl" target="_blank"><b>Open content in new tab</b></a></p> 
+END;
 		}
-		?>
-		<div class="article content">
-		<?php echo BBCodeOutput::process($description, $simpleMode); ?>
-		</div>
-		<?php
 
 		return ob_get_clean();
 	}
