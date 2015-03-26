@@ -3,7 +3,6 @@ Task List
 
 Bugs
 ----
-- Displaying flash content in an iframe causes an automatic download on Android - convert to SWFObject.
 
 In progress
 -----------
@@ -21,6 +20,7 @@ Improvements
 - Add copyright line to banner photo
 - Embed latest tweets on blog page
 - Add high-resolution icons and logos to support retina quality mobile devices
+- Migrate no adverts page
 
 Missing Features
 ----------------
@@ -37,7 +37,6 @@ Release Tasks
 - Add HTTPS support to website
 - Create CI job to push changes up to live website
 - Switch existing website over to new website
-- Migrate no adverts page
 - Dispose of the comments system
 
 
