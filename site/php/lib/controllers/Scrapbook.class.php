@@ -10,7 +10,7 @@ class Scrapbook
 
 		if($article) 
 		{
-			$linkedArticles = $reader->getArticlesForIdArray($article->linkedArticles);
+			$linkedArticles = $reader->getArticlesForIds($article->id, $article->linkedArticles);
 
 			$view = new TemplateView();
 			$view->baseUrl($request->base);

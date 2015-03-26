@@ -30,9 +30,9 @@ class ArticleReader
 		return $articles;
 	}
 
-	public function getArticlesForIdArray($idArray)
+	public function getArticlesForIds($primaryId, $idArray)
 	{
-		$articles = $this->getContentByIDs($idArray);
+		$articles = $this->getContentByIDs($primaryId, $idArray);
 
 		return $articles;
 	}
@@ -84,7 +84,7 @@ class ArticleReader
 		return $contentItems;
 	}
 
-	function getContentByIDs($idArray)
+	function getContentByIDs($primaryId, $idArray)
 	{
 		$contentItems = array();
 
@@ -95,12 +95,18 @@ class ArticleReader
 			foreach($idArray as $key=>$id)
 			{
 				if($idMatchers != '')
-					$idMatchers .= ' || ';
+					$idMatchers .= ' OR ';
 
 				$idMatchers .= sprintf("id = '%d'", $id);
 			}
 			$limit = 5;
-			$query = sprintf("SELECT * FROM `shw_content` WHERE %s ORDER BY postdate DESC LIMIT %d", $idMatchers, $limit);
+			$query = sprintf("SELECT * FROM `shw_content` WHERE %s
+				OR icon2 = %d
+				OR icon3 = %d
+				OR icon4 = %d
+				OR icon5 = %d
+				ORDER BY postdate DESC LIMIT %d",
+				$idMatchers, $primaryId, $primaryId, $primaryId, $primaryId, $limit);
 			$queryName = "getContentByIDs:" . implode($idArray);
 
 			$contentItems = $this->getContentForQuery($query, $queryName);
