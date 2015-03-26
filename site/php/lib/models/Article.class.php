@@ -229,9 +229,9 @@ END;
 				</applet>
 			</div>
 			
-			<p>
-				<a class="tool sourcecode" href="//mkv25.net/applets/$url/$url.pde" target="_blank"><b>Source code</b></a>
-				<a class="tool newwindow" href="//mkv25.net/applets/$url" target="_blank"><b>Open content in new tab</b></a>
+			<p class="content links">
+				<a class="sourcecode" href="//mkv25.net/applets/$url/$url.pde" target="_blank"><b>Source code</b></a>
+				<a class="newwindow" href="//mkv25.net/applets/$url" target="_blank"><b>Open content in new tab</b></a>
 			</p>
 END;
 		}
@@ -254,7 +254,7 @@ END;
 		if($localUrl)
 		{
 			echo <<<END
-			<p><a class="tool newwindow" href="$localUrl" target="_blank"><b>Open content in new tab</b></a></p> 
+			<p class="content links"><a class="newwindow" href="$localUrl" target="_blank"><b>Open content in new tab</b></a></p> 
 END;
 		}
 

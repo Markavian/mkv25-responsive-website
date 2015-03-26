@@ -380,12 +380,13 @@ a.file > .label { }
 /* Showcase icon links */
 iconlist { 
 	display: block;
-	height: 100px;
+	min-height: 100px;
 }
 
 iconlist > a {
 	display: inline-block;
 	margin-right: 10px;
+	height: 96px;
 	padding: 2px;
 }
 
@@ -405,4 +406,12 @@ block.right {
 	text-align: right;
 	margin-left: 10px;
 	margin-bottom: 10px;
+}
+
+div.media {
+	text-align: center;
+}
+
+p.content.links {
+	text-align: center;
 }
