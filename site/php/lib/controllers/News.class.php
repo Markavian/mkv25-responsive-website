@@ -11,8 +11,20 @@ class News
 		$view->banner('blog short');
 
 		// Get articles from database
-		$reader = new ArticleReader();
-		$articles = $reader->getManyArticles();
+		$articleReader = new ArticleReader();
+		$articles = $articleReader->getManyArticles();
+
+		// Get news from twitter
+		$twitterReader = new TwitterReader();
+		$tweets = $twitterReader->getTweets();
+
+		foreach($tweets as $key=>$tweet)
+		{
+			if(isset($tweet->text))
+			{
+				$view->addSingleHTMLColumn($tweet->text);
+			}
+		}
 
 		foreach($articles as $key=>$article)
 		{

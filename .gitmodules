@@ -1,3 +1,6 @@
 [submodule "site/php/lib/external/parsedown"]
 	path = site/php/lib/external/parsedown
 	url = git@github.com:erusev/parsedown.git
+[submodule "site/php/lib/external/twitteroauth"]
+	path = site/php/lib/external/twitteroauth
+	url = git@github.com:abraham/twitteroauth

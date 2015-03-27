@@ -23,17 +23,6 @@ function autoload_mkv25($className)
 	}
 }
 
-function autoload_parsedown($className)
-{
-	if (load_class('../lib/external/parsedown/', $className, '.php'))
-	{
-		return;
-	}
-}
-
-spl_autoload_register("autoload_mkv25");
-spl_autoload_register("autoload_parsedown");
-
 function load_class($folder, $className, $extention='.class.php')
 {
 	$path = $folder . $className . $extention;
@@ -45,3 +34,16 @@ function load_class($folder, $className, $extention='.class.php')
 	
 	return false;
 }
+
+function autoload_parsedown($className)
+{
+	if (load_class('../lib/external/parsedown/', $className, '.php'))
+	{
+		return;
+	}
+}
+
+spl_autoload_register("autoload_mkv25");
+spl_autoload_register("autoload_parsedown");
+
+require_once('../lib/external/twitteroauth/autoload.php');

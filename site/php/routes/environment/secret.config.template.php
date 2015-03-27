@@ -9,3 +9,10 @@ $CLEF_AUTH = Array(
 );
 
 $SQL_CONNECTION_DETAILS = array('host', 'database', 'username', 'password');
+
+$TWITTER = Array(
+	"CONSUMER_KEY" => false,
+	"CONSUMER_SECRET" => false,
+	"ACCESS_TOKEN" => false,
+	"ACCESS_TOKEN_SECRET" => false
+);
