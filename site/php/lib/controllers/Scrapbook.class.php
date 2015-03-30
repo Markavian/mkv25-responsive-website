@@ -10,7 +10,7 @@ class Scrapbook
 
 		if($request->page == 'scrapbook')
 		{
-			$this->renderArticleList();
+			$this->renderArticleList($request);
 		}
 		else
 		{
@@ -43,7 +43,9 @@ class Scrapbook
 
 		if(count($linkedArticles))
 		{
-			$linkedContent = ArticleFormatter::renderLinks($linkedArticles);
+			$linkedContent = "<heading>Related</heading>";
+			$linkedContent .= ArticleFormatter::renderLinksAsIcons($linkedArticles);
+			
 			$view->addSingleHTMLColumn($linkedContent);
 		}
 
@@ -52,35 +54,31 @@ class Scrapbook
 		ArticleWriter::writeArticleToFile($article);
 	}
 
-	private function renderArticleList()
+	private function renderArticleList($request)
 	{
-		$view = new DefaultView();
-		$view->responseCode(200, 'List of articles');
+		$view = new TemplateView();
+		$view->baseUrl($request->base);
+		$view->title("Scrapbook");
+		$view->eyecatch("Scrapbook", "scrapbook html javascript flash artwork index");
+		$view->banner('scrapbook short');
 
 		// Get articles from database
 		$articles = $this->reader->getAllArticles();
 
 		// Save articles as physical files
-		echo ArticleWriter::writeArticlesToFileSystem($articles);
-
-		// Display an index of links
-		$this->renderLinksForArticles($articles);
-	}
-
-	private function renderLinksForArticles($articles)
-	{
-		global $basePath;
-
-		foreach ($articles as $index => $article)
+		$newFiles = ArticleWriter::writeArticlesToFileSystem($articles);
+		if($newFiles)
 		{
-			$fileName = ArticleWriter::getFileNameFor($article->urlname);
-			$articleFileInfo = ArticleWriter::checkIfArticleExists($article->urlname) ? $fileName : '';
-			$articleUrl = $basePath . 'scrapbook/' . $article->urlname;
-
-			echo <<<END
-			<p><a href="$articleUrl">$article->name</a> - $articleFileInfo</p>
-END;
+			$view->addSingleHTMLColumn($newFiles);
 		}
+
+		$linkList = ArticleFormatter::renderLinksAsList($articles);
+		$view->addSingleHTMLColumn($linkList);
+
+		$iconList = ArticleFormatter::renderLinksAsIcons($articles);
+		$view->addSingleHTMLColumn($iconList);
+
+		$view->render();
 	}
 
 	private function render404Response($article)

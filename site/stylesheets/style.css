@@ -258,6 +258,81 @@ column > content, content > content {
 	background: rgba(0, 0, 0, 0.1);
 }
 
+/* QBB / UBB Code */
+div.article.content > p,
+div.article.content > h2,
+div.article.content > h3,
+div.article.content > h4 {
+	margin-top: 10px;
+}
+div.article.content > h2,
+div.article.content > h3,
+div.article.content > h4 {
+	font-size: 145%;
+}
+blockquote {background-color:#EFEFEF; margin: 0 0 10px 0; padding-bottom: 15px; }
+blockquote pre {background-color:#E0E0E0; border-top:solid 2px #999999; margin:0; padding: 0 0 0 10px; overflow: auto;
+	font-family: Lucida Console, Courier New, sans-serif; 
+	font-style: normal;
+	font-size: 12px;
+	line-height: 1.7em
+ }
+.me   {color:red;     font-weight:bold;}
+.edit {color:#999999; font-weight:normal; font-family:courier new;font-size:12px;}
+a.file { margin: 0; padding: 0; }
+a.file > .icon { display: block; width: 16px; height: 16px; float: left; background: url('../images/file_icons.png') no-repeat top left; margin: 3px 5px 3px 10px; }
+a.file > .icon > b { display: none; }
+a.file > .label { }
+
+/* Showcase icon links */
+iconlist { 
+	display: block;
+	min-height: 100px;
+	margin-right: -10px;
+	text-align: center;
+}
+
+iconlist > a {
+	display: inline-block;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	height: 104px;
+	width: 104px;
+	padding: 2px;
+}
+
+iconlist > icon,
+iconlist > a > icon {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+}
+
+iconlist > a:hover {
+	background: white;
+}
+
+block.right {
+	float: right;
+	text-align: right;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+
+div.media {
+	text-align: center;
+}
+
+p.content.links {
+	text-align: center;
+}
+
+tweet {
+	font-size: 150%;
+	text-align: left;
+}
+
 /* Default box sizes */
 @media only screen {
 	body { }
@@ -349,74 +424,6 @@ column > content, content > content {
 	banner > group > heading { font-size: 36px; padding-top: 40px; }
 	banner > group > p { font-size: 24px; }
 	footer > content > icons { display: block; position: relative; text-align: center; top: 0; left: 0; }
-}
 
-/* QBB / UBB Code */
-div.article.content > p,
-div.article.content > h2,
-div.article.content > h3,
-div.article.content > h4 {
-	margin-top: 10px;
-}
-div.article.content > h2,
-div.article.content > h3,
-div.article.content > h4 {
-	font-size: 145%;
-}
-blockquote {background-color:#EFEFEF; margin: 0 0 10px 0; padding-bottom: 15px; }
-blockquote pre {background-color:#E0E0E0; border-top:solid 2px #999999; margin:0; padding: 0 0 0 10px; overflow: auto;
-	font-family: Lucida Console, Courier New, sans-serif; 
-	font-style: normal;
-	font-size: 12px;
-	line-height: 1.7em
- }
-.me   {color:red;     font-weight:bold;}
-.edit {color:#999999; font-weight:normal; font-family:courier new;font-size:12px;}
-a.file { margin: 0; padding: 0; }
-a.file > .icon { display: block; width: 16px; height: 16px; float: left; background: url('../images/file_icons.png') no-repeat top left; margin: 3px 5px 3px 10px; }
-a.file > .icon > b { display: none; }
-a.file > .label { }
-
-/* Showcase icon links */
-iconlist { 
-	display: block;
-	min-height: 100px;
-}
-
-iconlist > a {
-	display: inline-block;
-	margin-right: 10px;
-	height: 96px;
-	padding: 2px;
-}
-
-iconlist > icon,
-iconlist > a > icon {
-	display: inline-block;
-	width: 96px;
-	height: 96px;
-}
-
-iconlist > a:hover {
-	background: white;
-}
-
-block.right {
-	float: right;
-	text-align: right;
-	margin-left: 10px;
-	margin-bottom: 10px;
-}
-
-div.media {
-	text-align: center;
-}
-
-p.content.links {
-	text-align: center;
-}
-
-tweet {
-	font-size: 150%;
-	text-align: left;
+	iconlist > a { width: 60px; height: 60px; }
 }
