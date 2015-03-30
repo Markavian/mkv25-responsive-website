@@ -30,6 +30,13 @@ class ArticleReader
 		return $articles;
 	}
 
+	public function getAllArticles()
+	{
+		$articles = $this->getAllContent();
+
+		return $articles;
+	}
+
 	public function getArticlesForIds($primaryId, $idArray)
 	{
 		$articles = $this->getContentByIDs($primaryId, $idArray);
@@ -47,6 +54,18 @@ class ArticleReader
 
 		$contentItems = $this->getContentForQuery($query, $queryName);
 	
+		return $contentItems;
+	}
+
+	function getAllContent()
+	{
+		$contentItems = array();
+
+		$query = sprintf("SELECT * FROM `shw_content` ORDER BY urlname ASC");
+		$queryName = "allContent";
+
+		$contentItems = $this->getContentForQuery($query, $queryName);
+
 		return $contentItems;
 	}
 

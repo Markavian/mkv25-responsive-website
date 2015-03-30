@@ -2,8 +2,11 @@
 
 class Scrapbook
 {
+	var $reader;
+
 	public function __construct($request)
 	{
+		$this->reader = new ArticleReader();
 
 		if($request->page == 'scrapbook')
 		{
@@ -12,12 +15,11 @@ class Scrapbook
 		else
 		{
 			// Get article from database
-			$reader = new ArticleReader();
-			$article = $reader->getArticleByUrlName($request->page);
+			$article = $this->reader->getArticleByUrlName($request->page);
 
 			if($article)
 			{
-				$this->renderArticle($article);
+				$this->renderArticle($article, $request);
 			}
 			else
 			{
@@ -26,9 +28,9 @@ class Scrapbook
 		}
 	}
 
-	private function renderArticle($article)
+	private function renderArticle($article, $request)
 	{
-		$linkedArticles = $reader->getArticlesForIds($article->id, $article->linkedArticles);
+		$linkedArticles = $this->reader->getArticlesForIds($article->id, $article->linkedArticles);
 
 		$view = new TemplateView();
 		$view->baseUrl($request->base);
@@ -50,19 +52,32 @@ class Scrapbook
 
 	private function renderArticleList()
 	{
+		global $basePath;
+
 		$view = new DefaultView();
 		$view->responseCode(200, 'List of articles');
 
 		// Get articles from database
-		$articleReader = new ArticleReader();
-		$articles = $articleReader->getManyArticles();
+		$articles = $this->reader->getAllArticles();
 
+		foreach ($articles as $index => $article)
+		{
+			$articleUrl = $basePath . 'scrapbook/' . $article->urlname;
+			echo <<<END
+			<p><a href="$articleUrl">$article->name</a></p>
+END;
+		}
+
+		// $this->exportArticlesAsXHTML($articles);
+	}
+
+	private function exportArticlesAsXHTML($articles)
+	{
 		foreach ($articles as $index => $article)
 		{
 			$xhtml = $article->toXHTML();
 			$xhtml = htmlspecialchars($xhtml);
-			
-			echo "<p>$article->name</p>";
+
 			echo "<pre>$xhtml</pre>";
 		}
 	}
