@@ -87,4 +87,36 @@ class Article
 		$simple = false;
 		return ArticleFormatter::renderArticle($this->name, $this->type, $this->contentWidth, $this->contentHeight, $this->contentUrl, $this->urlname, $this->category, $this->description, $this->postdate, $simple, $this->displayIcon);
 	}
+
+	public function toXHTML()
+	{
+		$article = $this;
+
+		$linkedArticles = implode(",", $article->linkedArticles);
+
+		ob_start();
+
+		echo <<<END
+<article>
+	<id>$article->id</id>
+	<urlname>$article->urlname</urlname>
+	<name>$article->name</name>
+	<hits>$article->hits</hits>
+	<description>$article->description</description>
+	<keywords>$article->keywords</keywords>
+	<type>$article->type</type>
+
+	<contentUrl>$article->contentUrl</contentUrl>
+	<contentWidth>$article->contentWidth</contentWidth>
+	<contentHeight>$article->contentHeight</contentHeight>
+	<category>$article->category</category>
+	<displayIcon>$article->displayIcon</displayIcon>
+
+	<linkedArticles>$linkedArticles</linkedArticles>
+	<postdate>$article->postdate</postdate>
+</article>
+END;
+
+		return ob_get_clean();
+	}
 }
