@@ -18,6 +18,38 @@ class TwitterReader
 		$this->twitterOAuthConnection = new TwitterOAuth($consumerKey, $consumerSecret, $accessToken, $accessTokenSecret);
 	}
 
+	public function getTwitterUser($userId)
+	{
+		$cachedUser = TwitterReader::getCachedUser($userId);
+		if($cachedUser) {
+			$userInfo = $cachedUser;
+		}
+		else
+		{
+			$userInfo = $this->twitterOAuthConnection->get("users/show", array("user_id" => $userId, "trim_user" => 1, "count" => 20));
+			TwitterReader::storeUserInCache($userId, $userInfo);
+		}
+
+		return $userInfo;
+	}
+
+	private static function getCachedUser($userId)
+	{
+		$tweets = false;
+
+		if(FileCache::ageOfCache("user.$userId") < Time::tenMinutes()->inSeconds())
+		{
+			$tweets = FileCache::readDataFromCache("user.$userId");
+		}
+
+		return $tweets;
+	}
+
+	private static function storeUserInCache($userId, $userInfo)
+	{
+		FileCache::storeDataInCache($userInfo, "user.$userId");
+	}
+
 	public function getTweets()
 	{
 		$myUserId = "53020129";

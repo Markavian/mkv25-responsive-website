@@ -18,17 +18,48 @@ class TwitterFormatter
 
 		$media = TwitterFormatter::renderMediaForTweet($tweet);
 
+		$rawUser = false;
+		$iconUrl = '//mkv25.net/site/icons/planets_icon.png';
+		
+		if(isset($tweet->user->id))
+		{
+			$twitterReader = new TwitterReader();
+			$userInfo = $twitterReader->getTwitterUser($tweet->user->id);
+			$iconUrl = $userInfo->profile_image_url_https;
+			$iconUrl = TwitterFormatter::removeProtocolFrom($iconUrl);
+			$iconUrl = TwitterFormatter::removeScaleFromImageName($iconUrl);
+
+			$rawUser = print_r($userInfo, true);
+
+			$screenName = $userInfo->screen_name;
+		}
+
 		echo <<<END
-			<heading>Twitter</heading>
-			<tweet>
+			<block class="right">
+				<iconlist>
+					<icon style="background: url('$iconUrl') no-repeat center center; background-size:cover" title="Posted by $screenName"></icon>
+				</iconlist>
 				<date>$postDate</date>
-				<p>$content</p>
+			</block>
+			<heading>Twitter Update</heading>
+			<tweet>
+				$content
 				$media
 			</tweet>
 END;
 
 		return ob_get_clean();
 
+	}
+
+	private static function removeProtocolFrom($url)
+	{
+		return str_replace("https://", "//", $url);
+	}
+
+	private static function removeScaleFromImageName($url)
+	{
+		return str_replace("_normal.png", ".png", $url);
 	}
 
 	public static function renderMediaForTweet($tweet)

@@ -415,3 +415,8 @@ div.media {
 p.content.links {
 	text-align: center;
 }
+
+tweet {
+	font-size: 150%;
+	text-align: left;
+}
