@@ -119,4 +119,9 @@ END;
 
 		return ob_get_clean();
 	}
+
+	public static function isValidArticle($article)
+	{
+		return (is_numeric($article->id) && $article->urlname);
+	}
 }

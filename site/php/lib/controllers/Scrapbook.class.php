@@ -48,37 +48,38 @@ class Scrapbook
 		}
 
 		$view->render();
+
+		ArticleWriter::writeArticleToFile($article);
 	}
 
 	private function renderArticleList()
 	{
-		global $basePath;
-
 		$view = new DefaultView();
 		$view->responseCode(200, 'List of articles');
 
 		// Get articles from database
 		$articles = $this->reader->getAllArticles();
 
-		foreach ($articles as $index => $article)
-		{
-			$articleUrl = $basePath . 'scrapbook/' . $article->urlname;
-			echo <<<END
-			<p><a href="$articleUrl">$article->name</a></p>
-END;
-		}
+		// Save articles as physical files
+		echo ArticleWriter::writeArticlesToFileSystem($articles);
 
-		// $this->exportArticlesAsXHTML($articles);
+		// Display an index of links
+		$this->renderLinksForArticles($articles);
 	}
 
-	private function exportArticlesAsXHTML($articles)
+	private function renderLinksForArticles($articles)
 	{
+		global $basePath;
+
 		foreach ($articles as $index => $article)
 		{
-			$xhtml = $article->toXHTML();
-			$xhtml = htmlspecialchars($xhtml);
+			$fileName = ArticleWriter::getFileNameFor($article->urlname);
+			$articleFileInfo = ArticleWriter::checkIfArticleExists($article->urlname) ? $fileName : '';
+			$articleUrl = $basePath . 'scrapbook/' . $article->urlname;
 
-			echo "<pre>$xhtml</pre>";
+			echo <<<END
+			<p><a href="$articleUrl">$article->name</a> - $articleFileInfo</p>
+END;
 		}
 	}
 
