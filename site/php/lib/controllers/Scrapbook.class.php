@@ -23,7 +23,7 @@ class Scrapbook
 
 			if(count($linkedArticles))
 			{
-				$linkedContent = Article::renderLinks($linkedArticles);
+				$linkedContent = ArticleFormatter::renderLinks($linkedArticles);
 				$view->addSingleHTMLColumn($linkedContent);
 			}
 
