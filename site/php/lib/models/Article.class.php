@@ -65,14 +65,14 @@ class Article
 		$this->postdate       = $row['postdate'];
 	}
 
-	public function addLinkedArticle($articleId)
+	public function addLinkedArticle($articleLink)
 	{
-		if($articleId && is_array($this->linkedArticles))
+		if($articleLink && is_array($this->linkedArticles))
 		{
-			$this->linkedArticles[] = $articleId;
+			$this->linkedArticles[] = $articleLink;
 		}
 	}
-
+	
 	static public function createFrom($sqlResultArray)
 	{
 		$article = new Article();

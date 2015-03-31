@@ -304,8 +304,8 @@ iconlist > a {
 iconlist > icon,
 iconlist > a > icon {
 	display: inline-block;
-	width: 100%;
-	height: 100%;
+	height: 104px;
+	width: 104px;
 	background-size: cover;
 }
 
@@ -318,6 +318,9 @@ block.right {
 	text-align: right;
 	margin-left: 10px;
 	margin-bottom: 10px;
+}
+block.right > iconlist {
+	margin-right: 0;
 }
 
 div.media {
@@ -357,7 +360,7 @@ tweet {
 	navigation > content > links > a.login { display: none; }
 	navigation > content > links > a.logout { display: none; }
 
-	iconlist > a { width: 110px; height: 110px; }
+	iconlist > a, iconlist > icon { width: 110px; height: 110px; }
 }
 
 /* Portrait design for a width of 320px */
@@ -394,7 +397,7 @@ tweet {
 	banner > group > p { font-size: 24px; }
 	footer > content > icons { display: block; position: relative; text-align: center; top: 0; left: 0; }
 
-	iconlist > a { width: 88px; height: 88px; }
+	iconlist > a, iconlist > icon { width: 88px; height: 88px; }
 }
 
 /* Portrait design for a width of 480px */
@@ -429,5 +432,5 @@ tweet {
 	banner > group > p { font-size: 24px; }
 	footer > content > icons { display: block; position: relative; text-align: center; top: 0; left: 0; }
 
-	iconlist > a { width: 102px; height: 102px; }
+	iconlist > a, iconlist > icon { width: 102px; height: 102px; }
 }

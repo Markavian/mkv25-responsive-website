@@ -37,9 +37,9 @@ class ArticleReader
 		return $articles;
 	}
 
-	public function getArticlesForIds($primaryId, $idArray)
+	public function getArticlesForReferences($primaryId, $refArray)
 	{
-		$articles = $this->getContentByIDs($primaryId, $idArray);
+		$articles = $this->getContentByReferences($primaryId, $refArray);
 
 		return $articles;
 	}
@@ -103,30 +103,42 @@ class ArticleReader
 		return $contentItems;
 	}
 
-	function getContentByIDs($primaryId, $idArray)
+	function getContentByReferences($primaryId, $refArray)
 	{
 		$contentItems = array();
 
-		$allowedCategories = array('flash', 'article', 'artwork', 'experimental', 'java', '');
-		if(count($idArray) > 0)
+		if(is_numeric($primaryId) && is_array($refArray))
 		{
-			$idMatchers = '';
-			foreach($idArray as $key=>$id)
+			$refMatchers = '';
+			foreach($refArray as $key=>$ref)
 			{
-				if($idMatchers != '')
-					$idMatchers .= ' OR ';
+				if($refMatchers != '')
+					$refMatchers .= ' OR ';
 
-				$idMatchers .= sprintf("id = '%d'", $id);
+				if(is_numeric($ref))
+				{
+					$refMatchers .= sprintf("id = '%d'", $ref);
+				}
+				else
+				{
+					$refMatchers .= sprintf("urlname = '%s'", $ref);
+				}
 			}
+
+			if($refMatchers != '')
+				$refMatchers .= ' OR ';
+
 			$limit = 5;
 			$query = sprintf("SELECT * FROM `shw_content` WHERE %s
-				OR icon2 = %d
+				icon2 = %d
 				OR icon3 = %d
 				OR icon4 = %d
 				OR icon5 = %d
 				ORDER BY postdate DESC LIMIT %d",
-				$idMatchers, $primaryId, $primaryId, $primaryId, $primaryId, $limit);
-			$queryName = "getContentByIDs:" . implode($idArray);
+				$refMatchers, $primaryId, $primaryId, $primaryId, $primaryId, $limit);
+			$queryName = "getContentByReferences:$primaryId";
+
+			// echo "<pre>$query</pre>";
 
 			$contentItems = $this->getContentForQuery($query, $queryName);
 		}

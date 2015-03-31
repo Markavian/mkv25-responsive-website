@@ -30,7 +30,7 @@ class Scrapbook
 
 	private function renderArticle($article, $request)
 	{
-		$linkedArticles = $this->reader->getArticlesForIds($article->id, $article->linkedArticles);
+		$linkedArticles = $this->reader->getArticlesForReferences($article->id, $article->linkedArticles);
 
 		$view = new TemplateView();
 		$view->baseUrl($request->base);
