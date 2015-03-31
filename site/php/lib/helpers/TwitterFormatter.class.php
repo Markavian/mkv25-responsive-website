@@ -41,9 +41,7 @@ class TwitterFormatter
 
 		echo <<<END
 			<block class="right">
-				<iconlist>
-					<icon style="background: url('$iconUrl') no-repeat center center; background-size:cover" title="Posted by $screenName"></icon>
-				</iconlist>
+				<icon style="background-image: url('$iconUrl')" title="Posted by $screenName"></icon><br />
 				<date>$postDate</date>
 			</block>
 			<heading>Twitter Update</heading>

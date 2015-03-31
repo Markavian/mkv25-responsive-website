@@ -301,6 +301,14 @@ iconlist > a {
 	padding: 2px;
 }
 
+block > icon {
+	display: inline-block;
+	height: 96px;
+	width: 96px;
+	background-size: cover;
+	clear: right;
+}
+
 iconlist > icon,
 iconlist > a > icon {
 	display: inline-block;
@@ -319,7 +327,7 @@ block.right {
 	margin-left: 10px;
 	margin-bottom: 10px;
 }
-block.right > iconlist {
+block.right > icon {
 	margin-right: 0;
 }
 

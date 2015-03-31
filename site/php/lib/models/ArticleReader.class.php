@@ -128,7 +128,7 @@ class ArticleReader
 				{
 					$refMatchers .= sprintf("id = '%d'", $ref);
 				}
-				else
+				else if($ref)
 				{
 					$refMatchers .= sprintf("urlname = '%s'", $ref);
 				}
@@ -137,7 +137,7 @@ class ArticleReader
 			if($refMatchers != '')
 				$refMatchers .= ' OR ';
 
-			$limit = 5;
+			$limit = 8;
 			$query = sprintf("SELECT * FROM `shw_content` WHERE %s
 				icon2 = %d
 				OR icon3 = %d
@@ -147,7 +147,7 @@ class ArticleReader
 				$refMatchers, $primaryId, $primaryId, $primaryId, $primaryId, $limit);
 			$queryName = "getContentByReferences:$primaryId";
 
-			// echo "<pre>$query</pre>";
+			//echo "<pre>$query</pre>";
 
 			$contentItems = $this->getContentForQuery($query, $queryName);
 		}
