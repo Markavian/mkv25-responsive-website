@@ -73,14 +73,23 @@ class ArticleReader
 	{
 		$content = false;
 
-		$limit = 1;
-		$query = sprintf("SELECT * FROM `shw_content` WHERE urlname = '%s' ORDER BY postdate DESC LIMIT %d", $urlName, $limit);
-		$queryName = "contentByUrlName:$urlName";
-
-		$contentItems = $this->getContentForQuery($query, $queryName);
-		if(count($contentItems) == 1)
+		if(ArticleWriter::checkIfArticleExists($urlName))
 		{
-			$content = $contentItems[0];
+			// Read from file system
+			$content = ArticleWriter::readArticleFromFile($urlName);
+		}
+		else
+		{
+			// Go to database
+			$limit = 1;
+			$query = sprintf("SELECT * FROM `shw_content` WHERE urlname = '%s' ORDER BY postdate DESC LIMIT %d", $urlName, $limit);
+			$queryName = "contentByUrlName:$urlName";
+
+			$contentItems = $this->getContentForQuery($query, $queryName);
+			if(count($contentItems) == 1)
+			{
+				$content = $contentItems[0];
+			}
 		}
 
 		return $content;

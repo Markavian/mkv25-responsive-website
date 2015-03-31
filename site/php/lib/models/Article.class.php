@@ -41,9 +41,9 @@ class Article
 		$this->postdate       = false;
 	}
 
-	public function readFrom($sqlResultArray)
+	public function readFromIndexedArray($indexedArray)
 	{
-		$row = $sqlResultArray;
+		$row = $indexedArray;
 
 		$this->id             = $row['id'];
 		$this->urlname        = $row['urlname'];
@@ -71,6 +71,32 @@ class Article
 		Article::$URLNAME_INDEX[$this->urlname] = $this;
 	}
 
+	public function readFromSimpleXmlDocument($simpleXmlDocument)
+	{
+		$doc = $simpleXmlDocument;
+
+		$this->id             = (string)$doc->id;
+		$this->urlname        = (string)$doc->urlname;
+		$this->name           = (string)$doc->name;
+		$this->hits           = (string)$doc->hits;
+		$this->description    = (string)$doc->description;
+		$this->keywords       = (string)$doc->keywords;
+		$this->type           = (string)$doc->type;
+
+		$this->contentUrl     = (string)$doc->contentUrl;
+		$this->contentWidth   = (string)$doc->contentWidth;
+		$this->contentHeight  = (string)$doc->contentHeight;
+		$this->category       = (string)$doc->category;
+		$this->displayIcon    = (string)$doc->displayIcon;
+
+		$this->linkedArticles = explode(",", (string)$doc->linkedArticles);
+
+		$this->postdate       = (string)$doc->postdate;
+
+		Article::$ID_INDEX[$this->id] = $this;
+		Article::$URLNAME_INDEX[$this->urlname] = $this;
+	}
+
 	public function addLinkedArticle($articleLink)
 	{
 		if($articleLink && is_array($this->linkedArticles))
@@ -83,7 +109,16 @@ class Article
 	{
 		$article = new Article();
 
-		$article->readFrom($sqlResultArray);
+		$article->readFromIndexedArray($sqlResultArray);
+
+		return $article;
+	}
+
+	static public function createFromXHTML($simpleXmlDocument)
+	{
+		$article = new Article();
+
+		$article->readFromSimpleXmlDocument($simpleXmlDocument);
 
 		return $article;
 	}
@@ -109,7 +144,7 @@ class Article
 	<urlname>$article->urlname</urlname>
 	<name>$article->name</name>
 	<hits>$article->hits</hits>
-	<description>$article->description</description>
+	<description><![CDATA[$article->description]]></description>
 	<keywords>$article->keywords</keywords>
 	<type>$article->type</type>
 
@@ -124,7 +159,11 @@ class Article
 </article>
 END;
 
-		return ob_get_clean();
+		$xhtml = ob_get_clean();
+
+		$xhtml = str_replace("&", "&amp;", $xhtml);
+
+		return $xhtml;
 	}
 
 	public static function isValidArticle($article)

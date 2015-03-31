@@ -39,13 +39,17 @@ END;
 
 	public static function readArticleFromFile($articleUrlName)
 	{
+		$article = false;
+
 		if(ArticleWriter::checkIfArticleExists($articleUrlName))
 		{
 			$filePath = ArticleWriter::getFilePathFor($articleUrlName);
 
 			$articleXML = simplexml_load_file($filePath);
-			Article::createFromXHTML($articleXML);
+			$article = Article::createFromXHTML($articleXML);
 		}
+
+		return $article;
 	}
 
 	public static function checkIfArticleExists($articleUrlName)

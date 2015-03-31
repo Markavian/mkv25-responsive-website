@@ -23,7 +23,7 @@ class Scrapbook
 			}
 			else
 			{
-				$this->render404Response();
+				$this->render404Response($request);
 			}
 		}
 	}
@@ -37,12 +37,6 @@ class Scrapbook
 		$view->title($article->name);
 		$view->eyecatch($article->name, $article->keywords);
 		$view->banner('scrapbook short');
-
-		if(ArticleWriter::checkIfArticleExists($article->urlname))
-		{
-			$content = "Local file exists: " . ArticleWriter::getFileNameFor($article->urlname);
-			$view->addSingleHTMLColumn($content);
-		}
 
 		$content = $article->renderFullArticle();
 		$view->addSingleHTMLColumn($content);
@@ -84,7 +78,7 @@ class Scrapbook
 		$view->render();
 	}
 
-	private function render404Response($article)
+	private function render404Response($request)
 	{
 		$view = new DefaultView();
 		$view->responseCode(404, 'Article not found: ' . $request->page);
