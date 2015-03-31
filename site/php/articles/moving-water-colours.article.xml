@@ -3,7 +3,7 @@
 	<urlname>moving-water-colours</urlname>
 	<name>Moving Water Colours</name>
 	<hits>2023</hits>
-	<description>I made this one very late night, it came together wondefully. I sat, and I stared, and I stared... and the colours just reached out to me, facinating.
+	<description><![CDATA[I made this one very late night, it came together wondefully. I sat, and I stared, and I stared... and the colours just reached out to me, facinating.
 
 This animation is very user interactive. Stick with it for a while.
 - The X axis, left - right controls the speed and direction of the movement.
@@ -15,7 +15,7 @@ This animation is very user interactive. Stick with it for a while.
 Control the colourful waves, mix diffent speeds and densities, wave the direction around. The interaction of the new layer, a sort of drawing tool, creates amazing combinations.
 
 The best palettes emerge just as the colour switches, and the new colour layers itself ontop of the previous one.
-</description>
+]]></description>
 	<keywords>mkv25, dot, net, mkv25.net, john, beech, markavian, portfolio, junk, stuff, showcase, artwork, paint shop pro, flash, macromedia, 3dsmax, 3d studio, artwork, digital, design, mkv</keywords>
 	<type>applet</type>
 

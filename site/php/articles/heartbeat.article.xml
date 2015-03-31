@@ -3,12 +3,12 @@
 	<urlname>heartbeat</urlname>
 	<name>Hearbeat</name>
 	<hits>0</hits>
-	<description>A start of a new idea- a heart beat, a central attractor in its own space. What will surround it?
+	<description><![CDATA[A start of a new idea- a heart beat, a central attractor in its own space. What will surround it?
 
 What does the heart beat to?
 When will it stop?
 Will it ever stop?
-</description>
+]]></description>
 	<keywords>heartbeat flash as3 beating heart colour transform</keywords>
 	<type>iframe</type>
 

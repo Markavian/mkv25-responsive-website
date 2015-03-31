@@ -3,9 +3,9 @@
 	<urlname>article-one</urlname>
 	<name>Article One</name>
 	<hits>3</hits>
-	<description>These things have to start somewhere. In this case I have repurposed the scrapbook content system for use in posting articles. 
+	<description><![CDATA[These things have to start somewhere. In this case I have repurposed the scrapbook content system for use in posting articles. 
 
-This has involved a few minor, but important improvements. BBCode support has been added, allowing more flexibility without relying on HTML parsing and fiddly bits. BBCodes or shorttags are very convinient for blogging, and I can add new ones to please myself. A timestamp will track the post date, which was sadly lacking from the original database. Finally, an \"article\" category was added, which is meant to run exclusive to the scrapbook data, but that\'d be silly, so its all wrapped under one umbrella table.</description>
+This has involved a few minor, but important improvements. BBCode support has been added, allowing more flexibility without relying on HTML parsing and fiddly bits. BBCodes or shorttags are very convinient for blogging, and I can add new ones to please myself. A timestamp will track the post date, which was sadly lacking from the original database. Finally, an \"article\" category was added, which is meant to run exclusive to the scrapbook data, but that\'d be silly, so its all wrapped under one umbrella table.]]></description>
 	<keywords>the first article on my new website</keywords>
 	<type></type>
 

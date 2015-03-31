@@ -3,11 +3,11 @@
 	<urlname>souvenir-game</urlname>
 	<name>Souvenir Game</name>
 	<hits>2022</hits>
-	<description>Something I made during the 2006 Easter Holidays!
+	<description><![CDATA[Something I made during the 2006 Easter Holidays!
 
 Press play to begin, simply drag and drop the souvenirs into the respective slots and press the Check button to see if you got the answer right.
 
-The faster you perform, the better you score.</description>
+The faster you perform, the better you score.]]></description>
 	<keywords>souvenir game egypt greece united kingdom turkey easter drag and drop</keywords>
 	<type>iframe</type>
 
@@ -17,6 +17,6 @@ The faster you perform, the better you score.</description>
 	<category>flash</category>
 	<displayIcon>souvenirgame_icon.png</displayIcon>
 
-	<linkedArticles>fun-cruise-quiz,cavern-runner,cairo-panorama,mediterranean-cruise-jigsaw</linkedArticles>
+	<linkedArticles></linkedArticles>
 	<postdate>0000-00-00 00:00:00</postdate>
 </article>

@@ -3,7 +3,7 @@
 	<urlname>distance-(a0)</urlname>
 	<name>Distance (a0)</name>
 	<hits>1874</hits>
-	<description>Mouse over, see the blocks change... thats the mouse reacting with the surroundings, but not just on \'rollover\', it changes based on the distance from the mouse. Its a rather tidy experiment, and has an element of \'exploration\' about it.</description>
+	<description><![CDATA[Mouse over, see the blocks change... thats the mouse reacting with the surroundings, but not just on \'rollover\', it changes based on the distance from the mouse. Its a rather tidy experiment, and has an element of \'exploration\' about it.]]></description>
 	<keywords>distance, mouse, flash, rollover, mouse over, blocks, markavian, </keywords>
 	<type>iframe</type>
 

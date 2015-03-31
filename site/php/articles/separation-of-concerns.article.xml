@@ -3,7 +3,7 @@
 	<urlname>separation-of-concerns</urlname>
 	<name>Separation of Concerns</name>
 	<hits>316</hits>
-	<description>I\'m currently reviewing the backend code to the DFMA (<a href=\"http://mkv25.net/dfma/\">Dwarf Fortress Map Archive</a>), with an aim to improve the site by making it easier to use. To make it easier to use I would like to use AJAX style queries (where applicable) to make it easy for users to add comments and rate submissions without needing to refresh the page and lose their place on the site. Without hacking apart working code, I decided a new data services layer separate from the old procedural code would be the best way to connect AJAX queries from the front end to data actions at the rear.
+	<description><![CDATA[I\'m currently reviewing the backend code to the DFMA (<a href=\"http://mkv25.net/dfma/\">Dwarf Fortress Map Archive</a>), with an aim to improve the site by making it easier to use. To make it easier to use I would like to use AJAX style queries (where applicable) to make it easy for users to add comments and rate submissions without needing to refresh the page and lose their place on the site. Without hacking apart working code, I decided a new data services layer separate from the old procedural code would be the best way to connect AJAX queries from the front end to data actions at the rear.
 
 I started by centralising the data access layer which quickly deteriorated into an internal discussion about where \"spam checks\" and \"user permissions\" should fit into the coding structure. To clarify my ideas I drew a three tier diagram specifying the general features of the site and how they should fit into the new coding.
 
@@ -11,7 +11,7 @@ Such tedium distracted me to add shiny boxes, and then a few animations on top. 
 
 The reuslt - recoding is going well, and I have a shiny \"interactive\" diagram to post on my website.
 
-For reference I used prototype code for the animations, variations of the animation example that I posted on my company\'s website: <a href=\"http://www.elevatorlearning.com/technology/variation-on-as2-prototype-for-animation-code/\">Variation on AS2 Prototype for animation (code)</a></description>
+For reference I used prototype code for the animations, variations of the animation example that I posted on my company\'s website: <a href=\"http://www.elevatorlearning.com/technology/variation-on-as2-prototype-for-animation-code/\">Variation on AS2 Prototype for animation (code)</a>]]></description>
 	<keywords>shiny interactive flash prototype recoding data access layer business logic presentation separation of concerns</keywords>
 	<type>iframe</type>
 

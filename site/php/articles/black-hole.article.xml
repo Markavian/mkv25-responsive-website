@@ -3,7 +3,7 @@
 	<urlname>black-hole</urlname>
 	<name>Black Hole</name>
 	<hits>1862</hits>
-	<description>Thought 1: This website is Part blog part project listing.
+	<description><![CDATA[Thought 1: This website is Part blog part project listing.
 Thought 2: Damnit I just lost the whole of the last article I wrote.
 
 So here goes <i>again</i>.
@@ -19,7 +19,7 @@ The program does a very tight spiral attempting to hit all the pixels in the vic
 In this example, my array is made up of the pixels on the screen. The applet features pressing 1 through to 7 adjusts the speed.
 
 No prizes for guessing why it was called 
-Black hole!</description>
+Black hole!]]></description>
 	<keywords>java processing p5 archimedes spiral array access john beech markavian mkv25  </keywords>
 	<type>applet</type>
 

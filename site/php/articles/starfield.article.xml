@@ -3,14 +3,14 @@
 	<urlname>starfield</urlname>
 	<name>Starfield</name>
 	<hits>1378</hits>
-	<description>Press Create, a starfield of points is generated. Hover over < rotate >, the starfield will rotate around.
+	<description><![CDATA[Press Create, a starfield of points is generated. Hover over < rotate >, the starfield will rotate around.
 
 Before settling on the territory map for the Space Empires: Infinite project, a series of tests were done to visulise a galaxy of points. The above example showed how flash could be used to represent a 3D set of pooints. 
 
 The problem with the above model is that its very difficult to select individual points, and its easy to get lost. This overcomplication of what should be a simple navigational issue for a game meant I had to rethink the presentation.
 
 This also led to the development of the Spiral Galaxy Graph image script for creating realistic looking spiral galaxies. As you can probably tell, the above implementation is quite random and square looking, not ideal.
-</description>
+]]></description>
 	<keywords>flash actionscript starfield 3d rotation of points galaxy spiral graph space infinite</keywords>
 	<type>iframe</type>
 

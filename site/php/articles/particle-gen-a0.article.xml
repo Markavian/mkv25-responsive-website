@@ -3,7 +3,7 @@
 	<urlname>particle-gen-(a0)</urlname>
 	<name>Particle Gen (a0)</name>
 	<hits>10180</hits>
-	<description>Hours of work went into this, and unintentionally it turned out as a pretty spiral graph creator. The colours are a bit washed and green, I was experimenting with fading pixels together.
+	<description><![CDATA[Hours of work went into this, and unintentionally it turned out as a pretty spiral graph creator. The colours are a bit washed and green, I was experimenting with fading pixels together.
 
 I ended up having to use code by Jared Tarbel to fade the pixels together. Apparently set() pixel in processing doesn\'t overlay transparency.
 
@@ -14,7 +14,7 @@ The original aim was infact to build (on my own) a pretty particle generator, si
 
 The type of curve being drawn is actually called a \'Rose\'. I recgonised it from my old spiralgraph set which I had when I was kid (it used cogs with holes which you ran round a sheet of paper to draw pretty patterns).
 
-Mmm, this processing lark seems pretty fun.</description>
+Mmm, this processing lark seems pretty fun.]]></description>
 	<keywords>mkv25, dot, net, mkv25.net, john, beech, markavian, portfolio, junk, stuff, showcase, artwork, paint shop pro, flash, macromedia, 3dsmax, 3d studio, artwork, digital, design, mkv</keywords>
 	<type>applet</type>
 

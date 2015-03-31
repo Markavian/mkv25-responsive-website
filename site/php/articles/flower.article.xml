@@ -3,7 +3,7 @@
 	<urlname>flower</urlname>
 	<name>Flower</name>
 	<hits>2133</hits>
-	<description>The flower program is a very important and interesting design application. Have a play! design yourself a flower, and then save it to the server.
+	<description><![CDATA[The flower program is a very important and interesting design application. Have a play! design yourself a flower, and then save it to the server.
 
 Don\'t be frightened, it doesn\'t bite. I mean, really.. people are afraid to click on things. Ocasionally it spells doom and disaster, losts bits and bytes here and there: but here, no worries. Play to your heart\'s content.
 
@@ -11,7 +11,7 @@ The flash here allows you to modify a single petal, which is duplicated in rotat
 
 The data for each of the control points can be sent to a database by clicking on the Save button. This will keep your designs locked away for all to see under the Gallery. Its all rather nicely put together.
 
-Feel free to contribute!</description>
+Feel free to contribute!]]></description>
 	<keywords>flash flower design designer macromedia mx petal control point actionscript database php rotational symmetry colour flowers</keywords>
 	<type>iframe</type>
 

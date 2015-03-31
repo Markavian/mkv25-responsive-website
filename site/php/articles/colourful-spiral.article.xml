@@ -3,9 +3,9 @@
 	<urlname>colourful-spiral</urlname>
 	<name>Colourful Spiral</name>
 	<hits>2918</hits>
-	<description>My second programming piece in processing, this time I used a bit of Maths to plot a spiral, using previous points to draw cell shaded shapes.
+	<description><![CDATA[My second programming piece in processing, this time I used a bit of Maths to plot a spiral, using previous points to draw cell shaded shapes.
 
-The result of playing around with different numbers for a while can be seen above, it was quite slow generating, (for whatever reason), so I\'ve just uploaded a 25% scaled down screen of the resulting image.</description>
+The result of playing around with different numbers for a while can be seen above, it was quite slow generating, (for whatever reason), so I\'ve just uploaded a 25% scaled down screen of the resulting image.]]></description>
 	<keywords>mkv25, dot, net, mkv25.net, john, beech, markavian, portfolio, junk, stuff, showcase, artwork, paint shop pro, flash, macromedia, 3dsmax, 3d studio, artwork, digital, design, mkv</keywords>
 	<type>image</type>
 

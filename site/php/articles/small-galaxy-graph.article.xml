@@ -3,7 +3,7 @@
 	<urlname>small-galaxy-graph</urlname>
 	<name>Small Galaxy Graph</name>
 	<hits>2997</hits>
-	<description>This clever little script plots a set of random generated three-dimenionsal spiral points. The effect is meant to be a set of galaxies stacked one ontop of each other. To give a sense of height between the layers, they are gradient coloured.
+	<description><![CDATA[This clever little script plots a set of random generated three-dimenionsal spiral points. The effect is meant to be a set of galaxies stacked one ontop of each other. To give a sense of height between the layers, they are gradient coloured.
 
 This project was originally a test piece to see if a 3D galaxy of coordinates, could be suitably and quickly plotted, e.g. Galaxy Generation for an online game.
 
@@ -12,7 +12,7 @@ As that project died away in secret, this was left as a remanent art piece...
 ... until I rewrote it using Processing, instead of PHP. Spot the difference?
 - Thats right: you can click on the Java applet to regenerate it instead of refreshing the page.
 
-This is virtually a 1-1 port of the code, it does exactly the same numerical crunching as the original script.</description>
+This is virtually a 1-1 port of the code, it does exactly the same numerical crunching as the original script.]]></description>
 	<keywords>mkv25, dot, net, mkv25.net, john, beech, markavian, portfolio, junk, stuff, showcase, artwork, paint shop pro, flash, macromedia, 3dsmax, 3d studio, artwork, digital, design, mkv</keywords>
 	<type>applet</type>
 

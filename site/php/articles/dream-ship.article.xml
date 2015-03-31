@@ -3,7 +3,7 @@
 	<urlname>dream-ship</urlname>
 	<name>Dream Ship</name>
 	<hits>1862</hits>
-	<description>This ship is a concept based off an idea I had one morning sleepily lying in bed. After I got up I produced  [link=http://mkv25.net/showcase/dream_portrait.png]a sketch[/link] and a day later began to model the ship.
+	<description><![CDATA[This ship is a concept based off an idea I had one morning sleepily lying in bed. After I got up I produced  [link=http://mkv25.net/showcase/dream_portrait.png]a sketch[/link] and a day later began to model the ship.
 
 My idea revolved around hacking two big holes at the front of the ship. I wasn\'t exactly clear what to put in the holes, perhaps a launching bay or a submerged weapon, but I finalised on a deflector/sensor pod. 
 
@@ -26,7 +26,7 @@ Dream Ship - Rear View
 [img]http://mkv25.net/showcase/dreamship_underneath_text2_lowpoly.png[/img]
 Dream Ship - Underneath[/center]
 
-This render on the left above shows some of the rear detail more clearly along with the engine nacels. The image on the right shows the underbelly for the ship along with lights which glow compared to their surroundings thanks to the illumination map.</description>
+This render on the left above shows some of the rear detail more clearly along with the engine nacels. The image on the right shows the underbelly for the ship along with lights which glow compared to their surroundings thanks to the illumination map.]]></description>
 	<keywords>dream ship mkv25 3dsmax low poly modelling texture bitmap bump map illumination map poltyogn unwrapping uvw game design space ship</keywords>
 	<type>image</type>
 

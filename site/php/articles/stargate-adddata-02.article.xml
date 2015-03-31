@@ -3,9 +3,9 @@
 	<urlname>stargate-(adddata-02)</urlname>
 	<name>Stargate (addData 02)</name>
 	<hits>1938</hits>
-	<description>This is an interface experiment, you can spin the stargate ring around and it picks up and reads the lettering, similar to the stargate... but I\'m no big fan, and don\'t know exactly how it works.
+	<description><![CDATA[This is an interface experiment, you can spin the stargate ring around and it picks up and reads the lettering, similar to the stargate... but I\'m no big fan, and don\'t know exactly how it works.
 
-Anyhow, theres some peculiarities with the way flash rotates objects, notice 180o round, the ring has shifted out of alignment. Thats Macromedia\'s fault, a problem they only half fixed from Flash 4!</description>
+Anyhow, theres some peculiarities with the way flash rotates objects, notice 180o round, the ring has shifted out of alignment. Thats Macromedia\'s fault, a problem they only half fixed from Flash 4!]]></description>
 	<keywords>flash, macromedia, rotation, stargate, add, data, rotate.</keywords>
 	<type>iframe</type>
 

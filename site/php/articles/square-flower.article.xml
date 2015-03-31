@@ -3,7 +3,7 @@
 	<urlname>square-flower</urlname>
 	<name>Square Flower</name>
 	<hits>2276</hits>
-	<description>This piece came out quite nicely. It works on a similar principle to the Ice Crystal piece, but was written using a different script.
+	<description><![CDATA[This piece came out quite nicely. It works on a similar principle to the Ice Crystal piece, but was written using a different script.
 
 It was meant to be an experient using setInterval, but it wouldn\'t work for me, so I went with a traditional frame based loop which did work.
 
@@ -37,7 +37,7 @@ As for the design side of things, I thought about what shape to draw, and decide
 2) 360 degree rotation, in 10 degree blocks (snappy)
 3) Varied colours, biased towards red, moderate blue, little green.
 
-The colours it produces are kinda in wintery/autumn feel again. The shape looks like petals on a flower. I like this piece.</description>
+The colours it produces are kinda in wintery/autumn feel again. The shape looks like petals on a flower. I like this piece.]]></description>
 	<keywords>flower delay actionscript red autumn flash actionscript delay hex colours hexidecimal converstion decimal red blue gree moderation mkv delay setInterval</keywords>
 	<type>iframe</type>
 

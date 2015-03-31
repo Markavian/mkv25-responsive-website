@@ -3,13 +3,13 @@
 	<urlname>uce-escort-(untextured)</urlname>
 	<name>UCE - Escort (Untextured)</name>
 	<hits>1881</hits>
-	<description>A test render which shows what I\'ve learnt to do using 3D Studio Max since I started using it 3 years ago. I\'ve come a long way since I began modelling in that application, and am much more confident about my abilities with it.
+	<description><![CDATA[A test render which shows what I\'ve learnt to do using 3D Studio Max since I started using it 3 years ago. I\'ve come a long way since I began modelling in that application, and am much more confident about my abilities with it.
 
 I wanted this model to have as few polygons as possible so that it could be easily imported into a game. The less polygons each model has, the higher unit count you can have in a game, and that is quite often more impressive then a single highly detailed model.
 
 Using MeshSmooth, I could add extra detail to the curves from the same model, so that people with fast PCs could potentially choose their model quality, with little extra effort from the designer.
 
-The ambient lighting and shadowing is a nice touch, it makes the model look much more realistic. I used the Advanced Lighting plugin and a Sky Light to give a diffuse illumination to each scene rendered.</description>
+The ambient lighting and shadowing is a nice touch, it makes the model look much more realistic. I used the Advanced Lighting plugin and a Sky Light to give a diffuse illumination to each scene rendered.]]></description>
 	<keywords>mkv25, dot, net, mkv25.net, john, beech, markavian, portfolio, junk, stuff, showcase, artwork, paint shop pro, flash, macromedia, 3dsmax, 3d studio, artwork, digital, design, mkv</keywords>
 	<type>image</type>
 

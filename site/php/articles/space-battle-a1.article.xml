@@ -3,7 +3,7 @@
 	<urlname>space-battle-a1</urlname>
 	<name>Space Battle a1</name>
 	<hits>2054</hits>
-	<description>A test I made to see if loaded images could be rotated through different angles using Processing. I want to create a turned based fluid motion battle model, eventually with firing arcs and stuff, but at this stage I intend to work on speed/max turning angle, giving the user a set of choices to decide which direction to send their vessel.</description>
+	<description><![CDATA[A test I made to see if loaded images could be rotated through different angles using Processing. I want to create a turned based fluid motion battle model, eventually with firing arcs and stuff, but at this stage I intend to work on speed/max turning angle, giving the user a set of choices to decide which direction to send their vessel.]]></description>
 	<keywords>test java p5 processing loaded images rotated angles create turned based fluid motion battle model stage speed turning angle choices direction vessel</keywords>
 	<type>applet</type>
 

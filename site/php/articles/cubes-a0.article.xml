@@ -3,11 +3,11 @@
 	<urlname>cubes-(a0)</urlname>
 	<name>Cubes (a0)</name>
 	<hits>1859</hits>
-	<description>This was an idea I had, but never quite saw through. Basically, I separately rendered 8 boxes in 3D Studio Max at different positions in a matrix using a fixed camera. I then imported these into Flash, and traced around them. I then made them into symbols, and gave them different colours.
+	<description><![CDATA[This was an idea I had, but never quite saw through. Basically, I separately rendered 8 boxes in 3D Studio Max at different positions in a matrix using a fixed camera. I then imported these into Flash, and traced around them. I then made them into symbols, and gave them different colours.
 
 After all that effort, the idea was to have them fade in from side to side, I wanted to do a 3x3x3 grid, but that would have taken ages. I was then thinking about 3 sets of opposite poles, kinda lovehate, peacewar, or something... and have the colours change between them, and to either side, and have a related bit of information to each of the 27 blocks.
 
-Still alot of thinking to do on this one.</description>
+Still alot of thinking to do on this one.]]></description>
 	<keywords>3dsmax, 3d, studio, max, boxes, flash, macromedia, peace, war, love, hate, 27, twenty-seven, colours, cubes.</keywords>
 	<type>iframe</type>
 

@@ -3,7 +3,7 @@
 	<urlname>ball-network-4</urlname>
 	<name>Ball Network 4</name>
 	<hits>2959</hits>
-	<description>See Ball Network 3 if you haven\'t already (the green one).
+	<description><![CDATA[See Ball Network 3 if you haven\'t already (the green one).
 
 This orange hued \'project\' was an attempt at a bit more stability within a network, but with some flexibility for movement to make things more interesting.
 
@@ -11,7 +11,7 @@ A bit of brownian motion applied to neighbourless nodes brings the lost ones int
 
 For each new member added, the network shifts slightly to accomodate.
 
-However, as more and more nodes are added to their world, things started to get awfully crowded.</description>
+However, as more and more nodes are added to their world, things started to get awfully crowded.]]></description>
 	<keywords>mkv25, dot, net, mkv25.net, john, beech, markavian, portfolio, junk, stuff, showcase, artwork, paint shop pro, flash, macromedia, 3dsmax, 3d studio, artwork, digital, design, mkv</keywords>
 	<type>applet</type>
 

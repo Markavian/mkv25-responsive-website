@@ -3,9 +3,9 @@
 	<urlname>eightball</urlname>
 	<name>Eightball</name>
 	<hits>1858</hits>
-	<description>I found a very cool 3D modelling plugin by recommendation called Cult3D. www.cult3d.com. Anyhow, I had to test it out, so I created a simple eightball model based on, made up a basic texture to wrap around it... and hey presto, exported it to cult3d designer, and exported as an interactive 3D model.
+	<description><![CDATA[I found a very cool 3D modelling plugin by recommendation called Cult3D. www.cult3d.com. Anyhow, I had to test it out, so I created a simple eightball model based on, made up a basic texture to wrap around it... and hey presto, exported it to cult3d designer, and exported as an interactive 3D model.
 
-All good fun. Have a play.</description>
+All good fun. Have a play.]]></description>
 	<keywords>eight, ball, eight ball, markavian, texture, cult3d, plugin, 3ds, max, 3d studio, paint shop pro, black, 8, blue</keywords>
 	<type>iframe</type>
 

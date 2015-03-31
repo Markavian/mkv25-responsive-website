@@ -3,7 +3,7 @@
 	<urlname>magnify-(a0)</urlname>
 	<name>Magnify (a0)</name>
 	<hits>2677</hits>
-	<description>The idea for this test piece is based off the work done by Jared Tarbel (www.levitated.net). If you hit his website, you\'ll soon see what I was trying to copy.
+	<description><![CDATA[The idea for this test piece is based off the work done by Jared Tarbel (www.levitated.net). If you hit his website, you\'ll soon see what I was trying to copy.
 
 His work is generally open source, which means you can sneak in there and nosey at the code that makes his projects tick, but... wheres the fun in that?!
 
@@ -26,7 +26,7 @@ Second, read the mouse position and divide down:
 x1 = (_parent._x - _xmouse) / 3;
 y1 = (_parent._y -_ymouse) / 3;
 
-This generates a point away from the current mouse position, a third of the actual distance from each node.</description>
+This generates a point away from the current mouse position, a third of the actual distance from each node.]]></description>
 	<keywords>flash action script macromedia line node approach distance react move away lineStyle lineTo moveTo Math sqrt pow base exponent</keywords>
 	<type>iframe</type>
 

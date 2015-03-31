@@ -3,7 +3,7 @@
 	<urlname>monster-components</urlname>
 	<name>Monster Components</name>
 	<hits>1974</hits>
-	<description>Recently I\'ve been designing some organic components for potential use in some \"Space Monster\" based mods for Space Empires IV, Starfury and Space Empires V.
+	<description><![CDATA[Recently I\'ve been designing some organic components for potential use in some \"Space Monster\" based mods for Space Empires IV, Starfury and Space Empires V.
 
 The image above is of a monster heart followed by a monster brain and monster blubber below.
 
@@ -16,7 +16,7 @@ Because of Space Empires V, the quality of the rendering needs to be much higher
 [img]http://mkv25.net/showcase/LargePortrait_Comp_M002.jpg[/img]
 Monster Brain
 [img]http://mkv25.net/showcase/LargePortrait_Comp_M001.jpg[/img]
-Monster Blubber</description>
+Monster Blubber]]></description>
 	<keywords>monster heart brain blubber 3D Studio Max procedural textures</keywords>
 	<type>image</type>
 

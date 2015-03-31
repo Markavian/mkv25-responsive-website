@@ -3,7 +3,7 @@
 	<urlname>scroll-pane</urlname>
 	<name>Scroll Pane</name>
 	<hits>2762</hits>
-	<description>A custom built slider. I did briefly look around for one already made, but I thought, ahh what the heck, I\'ll do my own.
+	<description><![CDATA[A custom built slider. I did briefly look around for one already made, but I thought, ahh what the heck, I\'ll do my own.
 
 The constructor takes several values:
 <i>slider(boolean vertical, int x, int y, int width, int height, int minValue, int maxValue)</i>
@@ -11,7 +11,7 @@ First, is it a vertical slider or horizontal. The x, y position. The width and h
 
 Basic, but funtional. Oh, I drew the picture too... not that its of anything.
 
-This is inevitably linked to my little space ship space battles project, you can see what else I\'ve been working on by following the links below.</description>
+This is inevitably linked to my little space ship space battles project, you can see what else I\'ve been working on by following the links below.]]></description>
 	<keywords>scroll pane slider custom built constructor function processing minimum maximum value width height basic functional</keywords>
 	<type>applet</type>
 

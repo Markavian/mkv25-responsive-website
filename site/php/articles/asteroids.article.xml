@@ -3,7 +3,7 @@
 	<urlname>asteroids</urlname>
 	<name>Asteroids</name>
 	<hits>0</hits>
-	<description>What you see below is a tech test to visually check the new asteroid animations for the space shooter game. The interactive animation below is a test of collisions to see if spawning new asteroids work well together.
+	<description><![CDATA[What you see below is a tech test to visually check the new asteroid animations for the space shooter game. The interactive animation below is a test of collisions to see if spawning new asteroids work well together.
 [flash width=100% height=400 id=asteroids wmode=opaque]http://mkv25.net/showcase/asteroids_v4.swf[/flash]
 
 Each asteroid was rendered using Blobs coated with procedural textures- blobs being a useful proximity based building block for a 3D mesh, creating a soft outline appropriate for organic shapes. Each rendered frame of animation was then imported into flash into a looping sequence. The procedural textures are mathematically generated surfaces using fractal algorithms to create a harsh and varied surface. Procedural textures can be used for diffuse, normals, and displacement, making the micro-details easy to generate and improving the realism of the asteroids.
@@ -11,7 +11,7 @@ Each asteroid was rendered using Blobs coated with procedural textures- blobs be
 
 Initial tests suggested that there weren\'t enough frames in each animation giving the impression that the rocks were spinning too fast. Slower movement suggests larger, heavier, while faster suggests smaller, lighter- Like battleships and speedboats. A large, fast, spinning rock has a worrying amount of momentum- and that looks wrong apparently. Running at 30 frames per second, the large rocks have 36 frames, the mid-sized ones have 24, and the small ones have 16.
 
-So, now the [link=http://mkv25.net/showcase/asteroids_v4.swf]spinning asteroid[/link] test is successful, and I have a new interactive toy to play with.</description>
+So, now the [link=http://mkv25.net/showcase/asteroids_v4.swf]spinning asteroid[/link] test is successful, and I have a new interactive toy to play with.]]></description>
 	<keywords>flash test asteroid spinning 3d renders blob organic shapes as3 space shooter actionscript</keywords>
 	<type></type>
 

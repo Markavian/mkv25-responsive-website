@@ -3,7 +3,7 @@
 	<urlname>colouful-spiral-(live)</urlname>
 	<name>Colouful Spiral (live)</name>
 	<hits>2544</hits>
-	<description>This afternoon I put it to myself to rebuild an applet from scratch based off a picture I made a while a go (and posted on this site) - Colourful Spiral. So, sort of in its honour I made a live version that you can play around with on the web.
+	<description><![CDATA[This afternoon I put it to myself to rebuild an applet from scratch based off a picture I made a while a go (and posted on this site) - Colourful Spiral. So, sort of in its honour I made a live version that you can play around with on the web.
 
 Instructions: 
 - Buttons 1-5 change the drawing style
@@ -13,7 +13,7 @@ Instructions:
 - \'f\' tabs between fill+stroke mode, fill only mode and stroke only mode. 
 
 I also made some pre rendered samples: (<a href=\"applets/colourfulSpiral/mediumColourfulSpirals.png\">mediumColourfulSpirals.png</a>)
-</description>
+]]></description>
 	<keywords>colourful spiral java processing lines arhimedies spiral effect fill customize john beech mkv25 markavian math</keywords>
 	<type>applet</type>
 

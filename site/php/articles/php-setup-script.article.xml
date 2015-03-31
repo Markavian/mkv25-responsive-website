@@ -3,7 +3,7 @@
 	<urlname>php-setup-script</urlname>
 	<name>PHP Setup Script</name>
 	<hits>0</hits>
-	<description>To help deploy several mid-sized projects I\'ve developed a previously half-baked script into a useful, fully resuable, PHP class for writing setup variables from a webform and executing instructions. Its best explained by the code snippets seen below-
+	<description><![CDATA[To help deploy several mid-sized projects I\'ve developed a previously half-baked script into a useful, fully resuable, PHP class for writing setup variables from a webform and executing instructions. Its best explained by the code snippets seen below-
 
 [h3]Sample setup script:[/h3]
 [php]
@@ -124,7 +124,7 @@ If the rest of the application is written correctly it can detect the presence o
 
 Feel free to download and try the script out; setup.class.php is self contained and the sample above is included in the top of its comments. 
 
-[h3]Downloads[/h3][file=http://mkv25.net/code/php/SetupScript_v1.02.zip]SetupScript v1.02[/file]</description>
+[h3]Downloads[/h3][file=http://mkv25.net/code/php/SetupScript_v1.02.zip]SetupScript v1.02[/file]]]></description>
 	<keywords>php deploying setup custom scripts small projects web form configuration constants post install instructions</keywords>
 	<type></type>
 

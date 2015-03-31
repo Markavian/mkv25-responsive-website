@@ -3,7 +3,7 @@
 	<urlname>ringworld</urlname>
 	<name>Ringworld</name>
 	<hits>3259</hits>
-	<description>I\'ve probably been playing Halo too much (that game by microsoft based on a huge ring shaped planet)... but the other night I got talking with people on a Space Empires IRC channel (see http://seirc.spaceempires.net/) and thought it\'d be an ace idea to have giant ring worlds that spanned entire solar systems, just something fun and new to colonise ingame.
+	<description><![CDATA[I\'ve probably been playing Halo too much (that game by microsoft based on a huge ring shaped planet)... but the other night I got talking with people on a Space Empires IRC channel (see http://seirc.spaceempires.net/) and thought it\'d be an ace idea to have giant ring worlds that spanned entire solar systems, just something fun and new to colonise ingame.
 
 And to fuel this idea further, I created my own Ring World graphic. Below is a render from a vague isometric angle showing detail of both the inhabitable earth looking part of the ring, and the outside industrial construction. I didn\'t have time to make a decent outside texture but I put a bit of effort into creating the inside terrain of continent sized geology.
 
@@ -11,7 +11,7 @@ To make it the inside texture I got a really nice image of our very own earth an
 
 The final render was done in 3D Studio Max, with a cylindrical UVW mapping on the inside and the outside. Optimized, it comes in at just under 1000 polygons.
 
-The stars and the sun were added in afterwards using graphics from Space Empires IV ( see http://www.malfador.com ).</description>
+The stars and the sun were added in afterwards using graphics from Space Empires IV ( see http://www.malfador.com ).]]></description>
 	<keywords>mkv25, dot, net, mkv25.net, john, beech, markavian, portfolio, junk, stuff, showcase, artwork, paint shop pro, flash, macromedia, 3dsmax, 3d studio, artwork, digital, design, mkv</keywords>
 	<type>image</type>
 

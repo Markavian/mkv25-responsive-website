@@ -3,13 +3,13 @@
 	<urlname>loading-time</urlname>
 	<name>Loading Time</name>
 	<hits>1850</hits>
-	<description>For one project at work, I stepped up my design gear to produce a pretty fancy preloader system. The whole idea used actionscript to load XML files and images, and I guess I went way over the top creating fancy images to go along with it.
+	<description><![CDATA[For one project at work, I stepped up my design gear to produce a pretty fancy preloader system. The whole idea used actionscript to load XML files and images, and I guess I went way over the top creating fancy images to go along with it.
 
 One of the images I really loved was this one. Two circles with four paddles surrounding them. As the movie loaded, these paddles moved closer to their final position. The whole thing had a very smooth appeal to it.
 
 In this final 100% image, the outside set of paddles has faded and shrunk out of view.
 
-I even inbuilt a delay so that the animation would get chance to play, rather then being skipped over on faster PCs, or preloaded systems. I think people appreciate a little glimpse into the effort put into some of these programs. This preloaded is a great way to show underlying technology for displaying something that on the surface looks really simple.</description>
+I even inbuilt a delay so that the animation would get chance to play, rather then being skipped over on faster PCs, or preloaded systems. I think people appreciate a little glimpse into the effort put into some of these programs. This preloaded is a great way to show underlying technology for displaying something that on the surface looks really simple.]]></description>
 	<keywords>flash preload loading time action script news gear jpeg simple underyling technology macromedia</keywords>
 	<type>image</type>
 

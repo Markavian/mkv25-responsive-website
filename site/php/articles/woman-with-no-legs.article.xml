@@ -3,7 +3,7 @@
 	<urlname>woman-with-no-legs</urlname>
 	<name>Woman with no legs</name>
 	<hits>1882</hits>
-	<description>The lady here is a demo, a test... of my new WACOM Graphire3 drawing tablet. Wooh.
+	<description><![CDATA[The lady here is a demo, a test... of my new WACOM Graphire3 drawing tablet. Wooh.
 
 Having a drawing tablet doesn\'t mean you can draw. Its actually harder to draw on it. Its just a \'different\' way of interacting with a computer. Its better for some things then using a mouse. But most the time using a mouse is faster because you don\'t need to move your hand as far - the reaction of a mouse is faster then a pointing a pen.
 
@@ -11,7 +11,7 @@ The woman, like I said, is just a test. I started with the body/dress, added a h
 
 Software is the key to the success of a drawing tablet in my opinion
 
-</description>
+]]></description>
 	<keywords>wacom graphics tablet graphire3 wooh drawing draw harder different computer mouse faster reaction review woman no body dress realistic features smoothing flash animation success drawing software quality opinion</keywords>
 	<type>iframe</type>
 

@@ -3,13 +3,13 @@
 	<urlname>free-colours</urlname>
 	<name>Free Colours</name>
 	<hits>1850</hits>
-	<description>Colours are free!
+	<description><![CDATA[Colours are free!
 
 Not the most attractive colour palette in the world. Maybe someone can find a use for it.
 
 I think I\'ll go and watch a HD-DVD now...
 
-That last #C0, it could be \'red\' if you make it #C00000, but I figured if its a single value, then it should be a grey value with equal RGB channel distribution.</description>
+That last #C0, it could be \'red\' if you make it #C00000, but I figured if its a single value, then it should be a grey value with equal RGB channel distribution.]]></description>
 	<keywords>HD-DVD colour codes 09 F9 11
 02 9D 74
 E3 5B D8

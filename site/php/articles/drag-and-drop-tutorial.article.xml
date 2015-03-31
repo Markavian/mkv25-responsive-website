@@ -3,7 +3,7 @@
 	<urlname>drag-and-drop-tutorial</urlname>
 	<name>Drag and Drop Tutorial</name>
 	<hits>1860</hits>
-	<description>This was originaly made for a guy at work to help broaden his understanding of Flash objects and actionscript.
+	<description><![CDATA[This was originaly made for a guy at work to help broaden his understanding of Flash objects and actionscript.
 
 Its put together very simply. You click on the object and drag it around until you let go.
 
@@ -24,7 +24,7 @@ Which is really simple if you ask me. Dragging stuff around in flash is great be
 
 I might make something along one of those lines ^ although it\'ll probably include some fancy database link so users can save their \'designs\' online. (I like that sort of thing).
 
-The text boxes simply read off values from the \'something\' object, just checking and updating the positions in a loop.</description>
+The text boxes simply read off values from the \'something\' object, just checking and updating the positions in a loop.]]></description>
 	<keywords>drag and drop tutorial macromedia flash flash mx something button movie clip drag draw code actionscript</keywords>
 	<type>iframe</type>
 

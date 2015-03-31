@@ -3,7 +3,7 @@
 	<urlname>structure-from-soup</urlname>
 	<name>Structure from Soup</name>
 	<hits>1</hits>
-	<description>In my final year at university- I was tasked with creating a software tool designed to render, view, and edit geometric data for the purpose of selecting and grouping semantic structures within a large data set.
+	<description><![CDATA[In my final year at university- I was tasked with creating a software tool designed to render, view, and edit geometric data for the purpose of selecting and grouping semantic structures within a large data set.
 
 This article gives a brief overview to the project based on the final year report - [link=http://mkv25.net/uni/2008-07-08%20Structure%20from%20Soup%20-%20Final%20with%20Ammended%20References.pdf]Structure from Soup[/link] (4.2MB).
 
@@ -29,7 +29,7 @@ To improve the quality of the information identified, it was decided that tools 
 Developing a 3D editor to display and manipulate polygon soup was a challenging one. I felt that I carefully researched and implemented an application that was both useful and cleary demonstrated my ability to plan and build a complex software application. It certainly scored well and secured my degree.
 
 For me, it was interesting test to trial C++ development with the QT Framework and to apply 3D user interface development from my scrapbook to an OpenGL environment. I went into the project with an open mind and a will to learn, and produced a software application better then I first imagined.
- </description>
+ ]]></description>
 	<keywords>polygon soup structure from soup 3d viewer university dissertation</keywords>
 	<type></type>
 

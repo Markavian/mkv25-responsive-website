@@ -3,12 +3,12 @@
 	<urlname>ajax-quotepicker</urlname>
 	<name>AJAX Quotepicker</name>
 	<hits>298</hits>
-	<description>JQuery really does make life easier.
+	<description><![CDATA[JQuery really does make life easier.
 As a prototype for work on the [link=http://mkv25.net/dfma/]DFMA[/link] I prepared an ajax quote picked that gets its content from a PHP service. I posted this on my [link=http://mkv16.mkv25.net]AI Research Blog[/link] as well. Score for keyword density!
 
 The other pleasing thing about this prototype was the mouse button effects. Note the mouse down event that highlights a different colour (reddish) to signify activity.
 
-Come to think of it... flash has allowed for ajax type interactions for years, what with it being its own frame and allowing for multiple HTTP requests to happen in the background, I suppose that wasn\'t much call for doing that kind of thing back in the day. Still, we progress, we make possible the ideas that burn through our heads by understanding and simplifying the commands by wrapping them up in function calls and presenting them in clean well documented APIs. At least, that is what the kindly people of the internet do for us.</description>
+Come to think of it... flash has allowed for ajax type interactions for years, what with it being its own frame and allowing for multiple HTTP requests to happen in the background, I suppose that wasn\'t much call for doing that kind of thing back in the day. Still, we progress, we make possible the ideas that burn through our heads by understanding and simplifying the commands by wrapping them up in function calls and presenting them in clean well documented APIs. At least, that is what the kindly people of the internet do for us.]]></description>
 	<keywords>jquery random quote picker using ajax prototype for work on the dwarf fortress map archive</keywords>
 	<type>iframe</type>
 

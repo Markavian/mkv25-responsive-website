@@ -3,7 +3,7 @@
 	<urlname>arched-fountain</urlname>
 	<name>Arched Fountain</name>
 	<hits>2084</hits>
-	<description>This is my second architectural piece done in google\'s new, freely released 3D modelling tool named <i>Sketchup</i>.
+	<description><![CDATA[This is my second architectural piece done in google\'s new, freely released 3D modelling tool named <i>Sketchup</i>.
 
 <center><img src=\"showcase/arched%20fountain%20textured.png\" alt=\"Textured Version of Arched Fountain\" width=\"478\" height=\"276\"></center>
 
@@ -13,7 +13,7 @@ Still, the end result is what I wanted and the model took shape very quickly - m
 
 I didn\'t see a lathe tool or array-rotation tool in Sketchup though, which rapidly speed up object generation / placement in 3DSMax for rotationally symmetrical objects or grids of objects.
 
-The hefty price on Sketchup pro which contains all the export modes is a heavy price, considering that it only features a limited rendering system and performs sluggishly with no apparent video acceleration, at least none supported by DirectX.</description>
+The hefty price on Sketchup pro which contains all the export modes is a heavy price, considering that it only features a limited rendering system and performs sluggishly with no apparent video acceleration, at least none supported by DirectX.]]></description>
 	<keywords>google sketchup 3dsmax features boolean modelling domed fountain render export rendering acceleration sluggish directx video hefty placement symmetry symmetrical arched curved pattern</keywords>
 	<type>image</type>
 

@@ -3,7 +3,7 @@
 	<urlname>brick-builder</urlname>
 	<name>Brick Builder</name>
 	<hits>2445</hits>
-	<description>This is a simply paint and and build 3D program. Click on a tile to increase its height. My focus for this project was partly on that, but also on the interface - how the user interacts.
+	<description><![CDATA[This is a simply paint and and build 3D program. Click on a tile to increase its height. My focus for this project was partly on that, but also on the interface - how the user interacts.
 
 Also it plays with some mildly complex vector maths to find out where the mouse pointer intersects the 2D grid.
 
@@ -23,7 +23,7 @@ Other keyboard commands include:
 [b]R[/b] - Resets the scene to the centre of the grid
 [b]L[/b] - Moves the directional light in the scene to behind the camera.
 [b]N[/b] - Starts a new scene by clearing all the blocks
-</description>
+]]></description>
 	<keywords>Java brick builder processing 3d interface vector math intersect grid 2d plane click drag right mouse middle button camera controls scene</keywords>
 	<type>applet</type>
 

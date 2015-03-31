@@ -3,7 +3,7 @@
 	<urlname>space-empires-infinite-galaxy</urlname>
 	<name>Space Empires: Infinite - Galaxy</name>
 	<hits>1611</hits>
-	<description>Back in 2005, 2006, I worked hard on a secret community project known as Space Empires: Infinite, or SEi for short. Wasn\'t really much of a community project since I never got many people invovled, but behind the scenes was a fully operational role play forum and the framework game play system to let players control territory across a network of galaxies.
+	<description><![CDATA[Back in 2005, 2006, I worked hard on a secret community project known as Space Empires: Infinite, or SEi for short. Wasn\'t really much of a community project since I never got many people invovled, but behind the scenes was a fully operational role play forum and the framework game play system to let players control territory across a network of galaxies.
 
 Central to this system was a flash based map of the universe. The map displayed territory for players as a circular ring. Rings in the center of the galaxy represented denser, more habitable, zones, where as areas out on the edge were sparser requiring more time to navigate.
 
@@ -17,7 +17,7 @@ Overall, the system was an innovative territory control and gameplay system buil
 
 The site was never finished, but it exists, with a functioning forum and a detailed interactive map for administering the database.
 
-Thanks to Theron Williams, Chris Bok, Fyron, and others for early support. I\'m only sorry we never saw it through to the end. Such is life.</description>
+Thanks to Theron Williams, Chris Bok, Fyron, and others for early support. I\'m only sorry we never saw it through to the end. Such is life.]]></description>
 	<keywords>flash actionscript as2 mysql php territory map space empires space game online turn based game forum</keywords>
 	<type>image</type>
 

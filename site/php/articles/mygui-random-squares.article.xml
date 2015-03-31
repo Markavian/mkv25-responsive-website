@@ -3,11 +3,11 @@
 	<urlname>mygui-random-squares</urlname>
 	<name>MyGUI Random Squares</name>
 	<hits>2569</hits>
-	<description>This has actually swamped my time over the past 3 weeks. The MyGUI library, written by me for <a href=\"http://processing.org\">processing</a> is finally coming together nicely.
+	<description><![CDATA[This has actually swamped my time over the past 3 weeks. The MyGUI library, written by me for <a href=\"http://processing.org\">processing</a> is finally coming together nicely.
 
 This particular example is a brief application of a MyGUI Button and MyGUI Pin Slider. The button lets you randomise the scale and colour of the squares, and the slider effects how fast they are generated. 
 
-Together they add a level of control not available to people using processing in the past. It will certainly assist me developing new test programs as I only need a few lines of code to get a working button into my applet.</description>
+Together they add a level of control not available to people using processing in the past. It will certainly assist me developing new test programs as I only need a few lines of code to get a working button into my applet.]]></description>
 	<keywords>MyGUI processing java MyGUIButton MyGUIPinSlider MyGUIStyle gui easy java width height x y coordinates john beech</keywords>
 	<type>applet</type>
 

@@ -3,7 +3,7 @@
 	<urlname>text-ticker</urlname>
 	<name>Text Ticker</name>
 	<hits>1855</hits>
-	<description>Note, this hasn\'t been connected up to real news feeds. Any news displayed is current as of the 10th of August 2004.
+	<description><![CDATA[Note, this hasn\'t been connected up to real news feeds. Any news displayed is current as of the 10th of August 2004.
 
 A really straight forward bit of code (in the end!). This text ticker, made in flash, scrolls a line of text across the page.
 
@@ -43,7 +43,7 @@ onEnterFrame = function() {
 		md = 1;
 	}
 	
-}</description>
+}]]></description>
 	<keywords>mkv25, dot, net, mkv25.net, john, beech, markavian, portfolio, junk, stuff, showcase, artwork, paint shop pro, flash, macromedia, 3dsmax, 3d studio, artwork, digital, design, mkv</keywords>
 	<type>iframe</type>
 

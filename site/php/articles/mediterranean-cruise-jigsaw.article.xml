@@ -3,11 +3,11 @@
 	<urlname>mediterranean-cruise-jigsaw</urlname>
 	<name>Mediterranean Cruise Jigsaw</name>
 	<hits>2292</hits>
-	<description>Another jigsaw game made in Flash, (based closely to the Powerpuff girl layout) but this time themed with images from the cruise.
+	<description><![CDATA[Another jigsaw game made in Flash, (based closely to the Powerpuff girl layout) but this time themed with images from the cruise.
 
 There are ten different jigsaws pictures to complete. See how fast you can do all of them. 
 
-My personal best is 43 seconds on \"The Pillar of Pompei\" (Alexandria), but my average is about 70 seconds per jigsaw.</description>
+My personal best is 43 seconds on \"The Pillar of Pompei\" (Alexandria), but my average is about 70 seconds per jigsaw.]]></description>
 	<keywords>jigsaw puzzle pillar pompei mediterranean cruise complete fastest flash powerpuff girl cruise image themed seconds alexandria</keywords>
 	<type>iframe</type>
 
@@ -17,6 +17,6 @@ My personal best is 43 seconds on \"The Pillar of Pompei\" (Alexandria), but my 
 	<category>flash</category>
 	<displayIcon>cruise_jigsaw_icon.png</displayIcon>
 
-	<linkedArticles>powerpuff-girl-jigsaw-puzzle,souvenir-game,fun-cruise-quiz,cruise-ship-(vector)</linkedArticles>
+	<linkedArticles></linkedArticles>
 	<postdate>0000-00-00 00:00:00</postdate>
 </article>

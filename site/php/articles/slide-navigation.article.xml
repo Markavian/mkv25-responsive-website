@@ -3,7 +3,7 @@
 	<urlname>slide-navigation</urlname>
 	<name>Slide Navigation</name>
 	<hits>1853</hits>
-	<description>This was something I saw on another website, well, a friend pointed me towards it, and I thought it\'d be a nice challenge to copy it.
+	<description><![CDATA[This was something I saw on another website, well, a friend pointed me towards it, and I thought it\'d be a nice challenge to copy it.
 
 So I copied it. The idea/feature is the grey bar at the back which moves towards the current button.
 
@@ -13,7 +13,7 @@ I really don\'t like it. It makes the navigation feel unresponsive, even though 
 The code I created is quite dururable, you can download the source by following this link:
 http://mkv25.net/flash/2004-07-05%20slidenav/
 
-Note: (The font got messed up, I forgot to export the correct one with the movie)</description>
+Note: (The font got messed up, I forgot to export the correct one with the movie)]]></description>
 	<keywords>mkv25, dot, net, mkv25.net, john, beech, markavian, portfolio, junk, stuff, showcase, artwork, paint shop pro, flash, macromedia, 3dsmax, 3d studio, artwork, digital, design, mkv</keywords>
 	<type>iframe</type>
 

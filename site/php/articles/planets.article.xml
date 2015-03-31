@@ -3,7 +3,7 @@
 	<urlname>planets</urlname>
 	<name>Planets</name>
 	<hits>24117</hits>
-	<description>Once upon a time, way back in 2001, armed with a 3D modeling tool called Moray, and a rendering solution known as Povray - I created planets.
+	<description><![CDATA[Once upon a time, way back in 2001, armed with a 3D modeling tool called Moray, and a rendering solution known as Povray - I created planets.
 
 Not just one or two, hundreds. All of different sizes, colours, shades and styles. Ok, the shapes were all identical, but the colours and textures were varied and detailed.
 
@@ -11,7 +11,7 @@ Moray/Povray had a beautiful texturing system that allowed you to quickly build 
 
 All these planets were put together for Space Empires IV, trying to ensure that the same planets wouldn\'t crop up twice within the same game. They each had their own descriptions, portraits and minis. It was quite an acheivement.
 
-However I managed to lose that collection, I really don\'t know. Such a shame. I managed to hold on to some stragglers which I\'ve packaged into the picture above, but theres nothing left that I can find.</description>
+However I managed to lose that collection, I really don\'t know. Such a shame. I managed to hold on to some stragglers which I\'ve packaged into the picture above, but theres nothing left that I can find.]]></description>
 	<keywords>planets moray move 3d space empires se4 IV styles colours shade alien worlds beautiful texturing system povray procedural texturing pattern portrait mini acheivement loss of collection shame picture nothing left</keywords>
 	<type>image</type>
 

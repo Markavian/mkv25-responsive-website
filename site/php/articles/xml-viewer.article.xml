@@ -3,13 +3,13 @@
 	<urlname>xml-viewer</urlname>
 	<name>XML Viewer</name>
 	<hits>1886</hits>
-	<description>This test piece was my first go ever at dealing with XML files. After it was complete I felt confident I understood a use for XML files.
+	<description><![CDATA[This test piece was my first go ever at dealing with XML files. After it was complete I felt confident I understood a use for XML files.
 
 All it does, it read a specially formatted XML file, and displays the contents in a visual manner.
 
 Its quite good really! I grabbed some auto-parsing code, but also wrote alot of the stuff myself. I couldn\'t possibly comment on how efficient it is, but it does the job.
 
-This project led onto several other important projects, such as my photo viewers.</description>
+This project led onto several other important projects, such as my photo viewers.]]></description>
 	<keywords>xml viewer flash mx script actionscript parsing mkv samurai jack container box folder text notepad</keywords>
 	<type>iframe</type>
 

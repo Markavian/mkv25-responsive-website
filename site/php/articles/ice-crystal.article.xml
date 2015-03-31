@@ -3,11 +3,11 @@
 	<urlname>ice-crystal</urlname>
 	<name>Ice Crystal</name>
 	<hits>2149</hits>
-	<description>Originally a development piece to draw automated label lines, this project soon became an icy project creating transparent crystals.
+	<description><![CDATA[Originally a development piece to draw automated label lines, this project soon became an icy project creating transparent crystals.
 
 All done through actionscript, no symbols, no drawings, just a blank stage. 3 frames, 4 functions, a splodge of Maths.
 
-If you leave it, it\'ll slowly grow. However, to accellerate lightly move your mouse over the image.</description>
+If you leave it, it\'ll slowly grow. However, to accellerate lightly move your mouse over the image.]]></description>
 	<keywords>flash actionscript ice crystal icy transparent alpha parallelagram blue drawing line lineStyle lineTo moveTo createEmptyMovieClip functions macromedia flash</keywords>
 	<type>iframe</type>
 

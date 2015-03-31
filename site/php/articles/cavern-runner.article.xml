@@ -3,7 +3,7 @@
 	<urlname>cavern-runner</urlname>
 	<name>Cavern Runner</name>
 	<hits>3556</hits>
-	<description>Link: [link=http://mkv25.net/showcase/games/cavern/highscore.php]Cavern Runner Highscores - All time top 100[/link]
+	<description><![CDATA[Link: [link=http://mkv25.net/showcase/games/cavern/highscore.php]Cavern Runner Highscores - All time top 100[/link]
 
 [h2]Instructions[\\h2]
 Use the UP and DOWN keys to navigate your way through the cavern without touching the sides. The further into the cavern you go, the more points you can score, but as you go deeper, you travel faster, until you crash and lose your health.
@@ -14,7 +14,7 @@ If you couldn\'t tell, the game was programmed in Flash MX, using my action scri
 
 I probably spent more time working on the scoring system then the game. I\'ve connected the Flash up to some PHP scripts backed by a mySQL database. There are two scripts, one for adding scores, the other for viewing scores. Flash reads the outputs of these scripts and displays the info inside. How cool is that?
 
-Scores are reset weekly, so try your best to come out top!</description>
+Scores are reset weekly, so try your best to come out top!]]></description>
 	<keywords>flash games cavern runner action script fun game addictive markavian john beech mkv25</keywords>
 	<type>iframe</type>
 
