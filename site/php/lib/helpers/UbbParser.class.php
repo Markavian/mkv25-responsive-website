@@ -340,7 +340,13 @@ class UbbParser
   function valid_url($href)
   {
      $lowhref = strtolower($href);
-     return ((substr($lowhref,0,7)=='http://') || (substr($lowhref,0,6)=='ftp://') || (substr($lowhref,0,7)=='mailto:'));
+     return (
+             (substr($lowhref,0,7)=='http://')
+          || (substr($lowhref,0,8)=='https://')
+          || (substr($lowhref,0,2)=='//')
+          || (substr($lowhref,0,6)=='ftp://')
+          || (substr($lowhref,0,7)=='mailto:')
+        );
   }
 	/* Additional custom codes for use on mkv25.net with neuro 21/10/2009 */
 	function parse_link($tree, $params = array()) { return $this->parse_url($tree, $params); }

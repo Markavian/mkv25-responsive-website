@@ -3,11 +3,11 @@
 	<urlname>arched-fountain</urlname>
 	<name>Arched Fountain</name>
 	<hits>2084</hits>
-	<description><![CDATA[This is my second architectural piece done in google\'s new, freely released 3D modelling tool named <i>Sketchup</i>.
-
-<center><img src=\"showcase/arched%20fountain%20textured.png\" alt=\"Textured Version of Arched Fountain\" width=\"478\" height=\"276\"></center>
+	<description><![CDATA[This is my second architectural piece done in google\'s 3D modelling tool named [i]Sketchup[/i].
 
 I decided to make a seven sided arched fountain, probably took me about an hour, but I spent at least 20 mins messing with display settings and textures. Trying to make the dome on the top was the fiddlyest part - Sketchup isn\'t geared up for spherical shapes, I had to make a cross-section of the dome and then rotate-extrude it along a curved path.
+
+[img]//mkv25.net/showcase/arched%20fountain%20textured.png[/img]
 
 Still, the end result is what I wanted and the model took shape very quickly - much faster then anything I could have produced in 3D studio max given the same amount of time. The main limiting factor would have been the complex shape interactions that would have required Boolean intersections in 3DSMax, which are handled seamlessly for you in Sketchup.
 
@@ -19,10 +19,10 @@ The hefty price on Sketchup pro which contains all the export modes is a heavy p
 
 	<contentUrl>showcase/arched%20fountain%20transparent.png</contentUrl>
 	<contentWidth>478</contentWidth>
-	<contentHeight>276</contentHeight>
+	<contentHeight>0</contentHeight>
 	<category>artwork</category>
 	<displayIcon>arched_fountain_icon.png</displayIcon>
 
-	<linkedArticles>oil-party,red-alert-2-buildings,dream-ship</linkedArticles>
+	<linkedArticles></linkedArticles>
 	<postdate>0000-00-00 00:00:00</postdate>
 </article>
