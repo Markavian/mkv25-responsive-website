@@ -1,0 +1,22 @@
+<article>
+	<id>116</id>
+	<urlname>write-your-name-in-phoenician</urlname>
+	<name>Write your name in Phoenician</name>
+	<hits>3493</hits>
+	<description>This is a little tool I wrote based off an information board I found at the Ancient city of Byblos (near Beruit) in Lebanon.
+
+The letters (both Arabic and Phoenician) were traced from photos then I created a simple onscreen keyboard where the user presses letters to add them to a word on the stage.
+
+This completes the mini-game section of the 2006 Mediterranean Cruise photo album that I put together just after Easter 2006.</description>
+	<keywords>phoenician alphabet write your name flash arabic traced photos tool information board lebanon ancient city byblos</keywords>
+	<type>iframe</type>
+
+	<contentUrl>showcase/games/phoenician%20letters%20a1.swf</contentUrl>
+	<contentWidth>550</contentWidth>
+	<contentHeight>410</contentHeight>
+	<category>flash</category>
+	<displayIcon>phn_letters_icon.png</displayIcon>
+
+	<linkedArticles>souvenir-game,fun-cruise-quiz,mediterranean-cruise-jigsaw,cairo-panorama</linkedArticles>
+	<postdate>0000-00-00 00:00:00</postdate>
+</article>

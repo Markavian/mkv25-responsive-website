@@ -1,0 +1,21 @@
+<article>
+	<id>99</id>
+	<urlname>draw-points-to-target-a2</urlname>
+	<name>Draw Points To Target a2</name>
+	<hits>2558</hits>
+	<description>This applet focuses around the method drawPointsToTarget() which draws a series of points towards a target restrained by a maximum turn angle and a steady set of distanced steps. The big acheivement for me in this version is correctly calculating which way (ClockWise or Counter-ClockWise) to turn, based on the current direction and the angle to the target. I\'m just happy it works right now.
+
+Feel free to look over the code and spot any optimizations I can make to the logic.
+</description>
+	<keywords>drawPointsToTarget function method processing p5 steady distance steps big acheivement clockwise anti-clockwise counter-clockwise current direction angle target minimum happy working optimization logic java</keywords>
+	<type>applet</type>
+
+	<contentUrl>drawPointsToTarget_a2</contentUrl>
+	<contentWidth>300</contentWidth>
+	<contentHeight>300</contentHeight>
+	<category>java</category>
+	<displayIcon>drawPointsToTarget_a2_icon.png</displayIcon>
+
+	<linkedArticles>moving-to-target-(a1),space-battle-a1</linkedArticles>
+	<postdate>0000-00-00 00:00:00</postdate>
+</article>

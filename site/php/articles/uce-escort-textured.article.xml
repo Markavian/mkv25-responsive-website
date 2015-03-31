@@ -1,0 +1,27 @@
+<article>
+	<id>82</id>
+	<urlname>uce-escort-(textured)</urlname>
+	<name>UCE - Escort (Textured)</name>
+	<hits>2220</hits>
+	<description>This is a test render of a spaceship. Part of the United Colours Empire, the Escort is the smallest ship in the fleet, capable of carrying about 150KT of equipment.
+
+If you look to the icons below, I had to build this model before texturing it. The texture, although not very detailed, adds a much more uniform character to the model. 
+
+This model is closely based on the United Colours Empire Homefleet, a ship set designed for a game called Space Empires IV. More details about that fleet, and other space fleets created by me can be found at Universal Shipyards:
+http://mkv25.net/USy/
+
+The model is closely optimized for importing into a computer game, with a single texture file, and the ability to quickly export at different polygon resolutions... a feature I think is missing in many modern computer games; model based quality selection.
+
+The different renders show the difference quality that can be used for various purposes.</description>
+	<keywords>mkv25, dot, net, mkv25.net, john, beech, markavian, portfolio, junk, stuff, showcase, artwork, paint shop pro, flash, macromedia, 3dsmax, 3d studio, artwork, digital, design, mkv</keywords>
+	<type>image</type>
+
+	<contentUrl>showcase/uce_homefleet_escort_texture_composite.png</contentUrl>
+	<contentWidth>320</contentWidth>
+	<contentHeight>720</contentHeight>
+	<category>artwork</category>
+	<displayIcon>uce_escort_texture_icon.png</displayIcon>
+
+	<linkedArticles>uce-escort-(untextured)</linkedArticles>
+	<postdate>0000-00-00 00:00:00</postdate>
+</article>

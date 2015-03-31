@@ -1,0 +1,30 @@
+<article>
+	<id>86</id>
+	<urlname>greyed-houses</urlname>
+	<name>Greyed Houses</name>
+	<hits>1848</hits>
+	<description>I drew a picture of a house on a hill, with some clouds and a tree. I then loaded this into processing... pulled out the colour values for each pixel and redrew the images 8 more times.
+
+The results made me think about how the human mind might break down an image in an attempt to identify different parts.
+
+Each of the images provide a different set of contrast for different elements.
+
+The sky shows up in bright blue on the 9th / bright white on the 6th image, leaving a dark siloette of the house on the hill.
+
+The mostly red house shows up well on the green copies 5 and 8, as it contains the least amount of green in the image and has a good contrast with its surroundings.
+
+The same goes for the green tree on the red copies 4 and 6, a distinct lack of red creates a dark contrast. The clouds also show up well (bright) on this image as they contain more red then blue/green and stand out from the sky that surrounds them.
+
+Our eyes can detect red, green blue colours... as well as light and dark. Perhaps for futher experiments these are the five areas that should be compared.</description>
+	<keywords>mkv25, dot, net, mkv25.net, john, beech, markavian, portfolio, junk, stuff, showcase, artwork, paint shop pro, flash, macromedia, 3dsmax, 3d studio, artwork, digital, design, mkv</keywords>
+	<type>applet</type>
+
+	<contentUrl>greyScale</contentUrl>
+	<contentWidth>300</contentWidth>
+	<contentHeight>300</contentHeight>
+	<category></category>
+	<displayIcon>houses_thumb.png</displayIcon>
+
+	<linkedArticles>colourful-spiral,moving-water-colours</linkedArticles>
+	<postdate>0000-00-00 00:00:00</postdate>
+</article>

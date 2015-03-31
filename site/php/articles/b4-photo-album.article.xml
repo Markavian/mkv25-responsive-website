@@ -1,0 +1,22 @@
+<article>
+	<id>7</id>
+	<urlname>b4-photo-album</urlname>
+	<name>b4 Photo Album</name>
+	<hits>1871</hits>
+	<description>This was my second delve into the world of XML, and using Flash as my interpretter produced a website based photo album.
+
+There might be the odd photo floating around that you can see, but the focus is on loading XML, and making menus and stuff.
+
+This isn\'t exactly abandoned.. but its not very distributable, I wasn\'t comfortable with the page layouts in flash, a bit too restraining for the messaging I wanted to put across. HTML/CSS is much more effective and accessible in the majority of cases.</description>
+	<keywords>flash, b4, photo, before, album, orange, colourful, actionscript, XML</keywords>
+	<type>iframe</type>
+
+	<contentUrl>showcase/b4_preview.html</contentUrl>
+	<contentWidth>0</contentWidth>
+	<contentHeight>0</contentHeight>
+	<category>experimental</category>
+	<displayIcon>b4a2.png</displayIcon>
+
+	<linkedArticles>xml-viewer</linkedArticles>
+	<postdate>0000-00-00 00:00:00</postdate>
+</article>

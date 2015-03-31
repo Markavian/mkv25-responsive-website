@@ -1,0 +1,22 @@
+<article>
+	<id>139</id>
+	<urlname>cells</urlname>
+	<name>Cells</name>
+	<hits>413</hits>
+	<description>Blurs and fitlers in flash can create some smart effects, but as I found out with this demo it doesn\'t take much to cause the framerate to die and drop horribly. Five cells with random scaling it can just about handle. Baring in mind its having to redraw and reapply all the blur filters every frame is acceptable I guess.
+
+The problem grows worse when several cells expand at once crossing over. Got to try out the my new improved Animator library, so I can do cool stuff like Animator.scaleClipTo(cell, swellAmount, 3.0).scaleClipTo(cell, start_scale, 2.0); to chain up two tweens and have it bounce between the two statess.
+
+For additional pain open in a new window and maximise. FEEL THE LAG.</description>
+	<keywords>flash as3 cell tweening blur and glow effects causing framerate to drop when scaling</keywords>
+	<type>iframe</type>
+
+	<contentUrl>/showcase/Cells.swf</contentUrl>
+	<contentWidth>400</contentWidth>
+	<contentHeight>400</contentHeight>
+	<category>flash</category>
+	<displayIcon>cells_icon.jpg</displayIcon>
+
+	<linkedArticles>ball-network-6,behaviors-revision</linkedArticles>
+	<postdate>0000-00-00 00:00:00</postdate>
+</article>

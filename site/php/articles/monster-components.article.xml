@@ -1,0 +1,31 @@
+<article>
+	<id>112</id>
+	<urlname>monster-components</urlname>
+	<name>Monster Components</name>
+	<hits>1974</hits>
+	<description>Recently I\'ve been designing some organic components for potential use in some \"Space Monster\" based mods for Space Empires IV, Starfury and Space Empires V.
+
+The image above is of a monster heart followed by a monster brain and monster blubber below.
+
+The images were created in 3D Studio Max using procedural textures and a hefty sampling of mesh smooth. 
+
+I designed the images to be iconic, initially the user would be presented with a 36x36px icon of the image, used for summaries and lists. The higher resolution images you see here are aren\'t required for Space Empires IV or Starfury but provide excellent detail / previews for the upcoming Space Empires V.
+
+Because of Space Empires V, the quality of the rendering needs to be much higher. Components in earlier games were much blander and iconic, lacking realistic detail and lighting; this isn\'t necessarily needed but is quite cool to look at.
+
+[img]http://mkv25.net/showcase/LargePortrait_Comp_M002.jpg[/img]
+Monster Brain
+[img]http://mkv25.net/showcase/LargePortrait_Comp_M001.jpg[/img]
+Monster Blubber</description>
+	<keywords>monster heart brain blubber 3D Studio Max procedural textures</keywords>
+	<type>image</type>
+
+	<contentUrl>showcase/LargePortrait_Comp_M003.jpg</contentUrl>
+	<contentWidth>512</contentWidth>
+	<contentHeight>512</contentHeight>
+	<category>artwork</category>
+	<displayIcon>monster_heart_icon.png</displayIcon>
+
+	<linkedArticles>pepper-flower,tylmai-units</linkedArticles>
+	<postdate>0000-00-00 00:00:00</postdate>
+</article>

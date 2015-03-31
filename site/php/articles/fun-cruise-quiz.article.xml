@@ -1,0 +1,25 @@
+<article>
+	<id>113</id>
+	<urlname>fun-cruise-quiz</urlname>
+	<name>Fun Cruise Quiz</name>
+	<hits>2357</hits>
+	<description>This flash game is something I made for an interactive photo album. The quiz asks ten random multiple choice questions (from 20) which you should try and answer.
+
+<b>Techy bit</b>
+For me, possibly the clevrest bit is the way it loads quiz data in dynamically from a easy to read <a href=\"showcase/games/quiz/quiz.txt\" target=\"_blank\" title=\"The text data file used by the quiz\">text file</a>. I had to write a special parser in Flash to load and parse this, and I think its very fast, since I designed it to be a single pass character-by-character token-by-token parser.
+
+Even the graphics are loaded in externally (although this was designed for running on a PC), so give them chance to load when answering questions (although not all questions have pictures).
+
+The quizical icon was made for this quiz but does not feature in the quiz, its actually found on the cruise album \'<a href=\"showcase/photoAlbum_preview4.jpg\" target=\"_blank\" title=\"See the Games Page for the Photo Album\">games page</a>\'.</description>
+	<keywords>flash fun cruise quiz data quiz file load externally token tokens character quizical icon</keywords>
+	<type>iframe</type>
+
+	<contentUrl>showcase/games/quiz%20a1b.swf</contentUrl>
+	<contentWidth>550</contentWidth>
+	<contentHeight>350</contentHeight>
+	<category>flash</category>
+	<displayIcon>funquiz_icon.png</displayIcon>
+
+	<linkedArticles>souvenir-game,mediterranean-cruise-jigsaw,write-your-name-in-phoenician,image-loader</linkedArticles>
+	<postdate>0000-00-00 00:00:00</postdate>
+</article>

@@ -1,0 +1,18 @@
+<article>
+	<id>108</id>
+	<urlname>gui-test-3</urlname>
+	<name>Gui Test 3</name>
+	<hits>2434</hits>
+	<description>I\'ve been working long and hard on the text field component for the MyGUI class for Processing so that people can design and receive text inputs into their applets. Once I was done with the main features, I then went and did something stupid with it. The result, its above...</description>
+	<keywords>processing MyGUI text field input result stupid features people design john beech</keywords>
+	<type>applet</type>
+
+	<contentUrl>guiTest3</contentUrl>
+	<contentWidth>250</contentWidth>
+	<contentHeight>250</contentHeight>
+	<category>java</category>
+	<displayIcon>guiTest3_icon.png</displayIcon>
+
+	<linkedArticles>mygui-random-squares,scroll-pane</linkedArticles>
+	<postdate>0000-00-00 00:00:00</postdate>
+</article>

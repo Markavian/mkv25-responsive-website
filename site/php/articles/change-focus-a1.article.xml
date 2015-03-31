@@ -1,0 +1,27 @@
+<article>
+	<id>102</id>
+	<urlname>change-focus-(a1)</urlname>
+	<name>Change Focus (a1)</name>
+	<hits>2059</hits>
+	<description>This processing script was designed along my quest to build a mini space battles game. Its called changeFocus, and the idea behind it is to be able to distguish the selection of different objects on the screen, since mouse actions like dragging need this kind of knowledge.
+
+The way I\'ve made it work is to have a stack of objects, with object having its own checkFocus() method. When a mouse action (mousePressed(), mouseReleased()) is triggered in the main code a loop is run to call all the checkFocus() methods of all the objects on the scene and to assign or reassign mouse priority. 
+
+So in this example I have different types of objects, squares, circles, diamonds and images all which can be dragged around (so essentially the same code) but with their own object classes. This is to show that any type of object can be used.
+
+To enable different classes of object to be used in the same array, and access similarly named functions I had to create an interface class called focusObject. This interface class contains methods which are required by all classes that implement it, in this program shapeSquare, shapeCircle, shapeDiamond and focusImage. By typecasting objects with the name of the interface I could access the shared methods in while loops without having to check the exact object type.
+
+The stack isn\'t perfect since you can hover and focus several objects at any time. What I really need in its place is a collection class that contains the objectStack[] array but also tracks which object has focus, and preferrably allow me to set the visual depth of each object (e.g. the focused object jumps to the top of the page above all other elements). Something for the future any how.
+</description>
+	<keywords>change focus java processing object stack implement extends parent super subclass define interface visual depth elements drag drop mouse event</keywords>
+	<type>applet</type>
+
+	<contentUrl>changeFocus_a1</contentUrl>
+	<contentWidth>300</contentWidth>
+	<contentHeight>300</contentHeight>
+	<category>java</category>
+	<displayIcon>changeFocus_a1_icon.png</displayIcon>
+
+	<linkedArticles>moving-to-target-(a1),scroll-pane</linkedArticles>
+	<postdate>0000-00-00 00:00:00</postdate>
+</article>

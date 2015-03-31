@@ -1,0 +1,38 @@
+<article>
+	<id>119</id>
+	<urlname>brick-builder</urlname>
+	<name>Brick Builder</name>
+	<hits>2445</hits>
+	<description>This is a simply paint and and build 3D program. Click on a tile to increase its height. My focus for this project was partly on that, but also on the interface - how the user interacts.
+
+Also it plays with some mildly complex vector maths to find out where the mouse pointer intersects the 2D grid.
+
+Special thanks to [link=\"http://www.millbridge.de\"]David Huebner (aka myT)[/link] for his help with various functions and methods (includnig the whole vector class) which helped to achieve my original goals.
+Created by Markavian (2005|06|05)
+First off, the big feature of this 3D scene are the camera controls, as listed below.
+Right clicking and [b]dragging horizontally[/b] [i]rotates the scene[/i]
+Right clicking and [b]dragging vertically[/b] adjusts the vertical viewing angle
+Clicking the [b]middle button and dragging[/b] vertically allows zooms in and out
+You can pan using the arrow keys.
+To demonstrate proper interactive features with the scene I have implemented a grid that you can
+click to add blocks to different squares. Each time you click on a square it adds a layer.
+[b]Left clicking and dragging[/b] across the grid adds a single layer.
+[b]SHIFT + Clicking[/b] removes a layer.
+Other keyboard commands include:
+[b]C[/b] - Centers the camera to the current mouse position
+[b]R[/b] - Resets the scene to the centre of the grid
+[b]L[/b] - Moves the directional light in the scene to behind the camera.
+[b]N[/b] - Starts a new scene by clearing all the blocks
+</description>
+	<keywords>Java brick builder processing 3d interface vector math intersect grid 2d plane click drag right mouse middle button camera controls scene</keywords>
+	<type>applet</type>
+
+	<contentUrl>brickBuilder</contentUrl>
+	<contentWidth>400</contentWidth>
+	<contentHeight>400</contentHeight>
+	<category>java</category>
+	<displayIcon>brickBuilder_icon.png</displayIcon>
+
+	<linkedArticles>ball-network-6,spiral-array-access</linkedArticles>
+	<postdate>0000-00-00 00:00:00</postdate>
+</article>

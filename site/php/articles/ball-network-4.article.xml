@@ -1,0 +1,26 @@
+<article>
+	<id>73</id>
+	<urlname>ball-network-4</urlname>
+	<name>Ball Network 4</name>
+	<hits>2959</hits>
+	<description>See Ball Network 3 if you haven\'t already (the green one).
+
+This orange hued \'project\' was an attempt at a bit more stability within a network, but with some flexibility for movement to make things more interesting.
+
+A bit of brownian motion applied to neighbourless nodes brings the lost ones into the self serving network, where each node strives for a bit of personal space just far enough away from \'society\'. 
+
+For each new member added, the network shifts slightly to accomodate.
+
+However, as more and more nodes are added to their world, things started to get awfully crowded.</description>
+	<keywords>mkv25, dot, net, mkv25.net, john, beech, markavian, portfolio, junk, stuff, showcase, artwork, paint shop pro, flash, macromedia, 3dsmax, 3d studio, artwork, digital, design, mkv</keywords>
+	<type>applet</type>
+
+	<contentUrl>ball_network_4</contentUrl>
+	<contentWidth>400</contentWidth>
+	<contentHeight>200</contentHeight>
+	<category>java</category>
+	<displayIcon>ball_network_4_icon.png</displayIcon>
+
+	<linkedArticles>ball-network-3,ball-network-6</linkedArticles>
+	<postdate>0000-00-00 00:00:00</postdate>
+</article>

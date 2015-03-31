@@ -1,0 +1,32 @@
+<article>
+	<id>135</id>
+	<urlname>space-empires-infinite-galaxy</urlname>
+	<name>Space Empires: Infinite - Galaxy</name>
+	<hits>1611</hits>
+	<description>Back in 2005, 2006, I worked hard on a secret community project known as Space Empires: Infinite, or SEi for short. Wasn\'t really much of a community project since I never got many people invovled, but behind the scenes was a fully operational role play forum and the framework game play system to let players control territory across a network of galaxies.
+
+Central to this system was a flash based map of the universe. The map displayed territory for players as a circular ring. Rings in the center of the galaxy represented denser, more habitable, zones, where as areas out on the edge were sparser requiring more time to navigate.
+
+Each territority was represented by an entry in a database, tracking development, defence and production values. A description and name for each section could be entered in by the player building up a lively and detailed map of the game universe.
+
+Ontop of this, fleets, groups of space ships, could be created and moved between adjacent tiles. The workings of a battle system were put together (but never fully implemented) allowing randomised turn-by-turn attacks to be made on other player territories.
+
+The flash map was full database driven, refreshing information between each page. Blue galatic warp points allowed hotlinking between galaxies.
+
+Overall, the system was an innovative territory control and gameplay system built on the pattern of online web games that give users daily/weekly control over their empires in order to interact with other players.
+
+The site was never finished, but it exists, with a functioning forum and a detailed interactive map for administering the database.
+
+Thanks to Theron Williams, Chris Bok, Fyron, and others for early support. I\'m only sorry we never saw it through to the end. Such is life.</description>
+	<keywords>flash actionscript as2 mysql php territory map space empires space game online turn based game forum</keywords>
+	<type>image</type>
+
+	<contentUrl>http://mkv25.net/showcase/sei_map2.png</contentUrl>
+	<contentWidth>400</contentWidth>
+	<contentHeight>280</contentHeight>
+	<category>flash</category>
+	<displayIcon>sei_map2_icon.png</displayIcon>
+
+	<linkedArticles>small-galaxy-graph,starfield,territory-battle-system</linkedArticles>
+	<postdate>0000-00-00 00:00:00</postdate>
+</article>

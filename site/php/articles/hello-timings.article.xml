@@ -1,0 +1,28 @@
+<article>
+	<id>87</id>
+	<urlname>hello-timings</urlname>
+	<name>Hello Timings</name>
+	<hits>1852</hits>
+	<description>I\'ve got a message for you, just press play.
+
+
+Watched it? Wasn\'t my best message ever. This thing RECORDS text, and the timings used to type it. Its not a perfect reproduction of your keyboard activities - it only works in a linear fashion, but enter some backspaces in and it\'ll even process those.
+
+Its a little something I\'ve developed for telling a story... a story that I felt required pacing on the text, a few delays on certain words. I thought the best way to record these timings was to make a program that would allow me to type them myself.
+
+The next stage is to record recordings for long term playback. As you can see I\'ve already done \'one\' embedded into the flash movie, but thats not totally portable. I\'m guessing a database string will be the easiest method... but I\'ll look into that another day.
+
+Oh, and references! A big shout goes out to Ariel Malka for his \"the text time curvature\" which was a great inspiration, you can find out about that from his website http://www.chronotext.org/
+He originally publised it months and months ago on http://processing.org, and it spawned a few ideas. I\'m glad I had an opportunity to look into those ideas today.</description>
+	<keywords>mkv25, dot, net, mkv25.net, john, beech, markavian, portfolio, junk, stuff, showcase, artwork, paint shop pro, flash, macromedia, 3dsmax, 3d studio, artwork, digital, design, mkv</keywords>
+	<type>iframe</type>
+
+	<contentUrl>showcase/hello_timings%20a1.swf</contentUrl>
+	<contentWidth>0</contentWidth>
+	<contentHeight>0</contentHeight>
+	<category>flash</category>
+	<displayIcon>hello_timings.png</displayIcon>
+
+	<linkedArticles>text-ticker,slide-navigation,xml-viewer</linkedArticles>
+	<postdate>0000-00-00 00:00:00</postdate>
+</article>

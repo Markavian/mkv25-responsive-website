@@ -1,0 +1,24 @@
+<article>
+	<id>78</id>
+	<urlname>pattern-grower</urlname>
+	<name>Pattern Grower</name>
+	<hits>1849</hits>
+	<description>Subtle and relaxing to watch, colours face in out like a splotchy painting constantly moving.
+
+A processing/java applet that draws concentric circles across a grid to create a dynamic fading colour pattern.
+
+There is a line of symettry from top left > bottom right on the image.
+
+I\'ve tried to add dozens of random/noise based elements to the image, trying to make each pattern as unique as possible.  The size of the circles is one of the main limiting factors however.</description>
+	<keywords>mkv25, dot, net, mkv25.net, john, beech, markavian, portfolio, junk, stuff, showcase, artwork, paint shop pro, flash, macromedia, 3dsmax, 3d studio, artwork, digital, design, mkv</keywords>
+	<type>applet</type>
+
+	<contentUrl>patternGrower_a0</contentUrl>
+	<contentWidth>300</contentWidth>
+	<contentHeight>300</contentHeight>
+	<category>tests</category>
+	<displayIcon>patterGrower_a0_icon.png</displayIcon>
+
+	<linkedArticles>particle-gen-(a0),square-flower-2</linkedArticles>
+	<postdate>0000-00-00 00:00:00</postdate>
+</article>

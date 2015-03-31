@@ -1,0 +1,24 @@
+<article>
+	<id>25</id>
+	<urlname>mkv25net-splash-(archive)</urlname>
+	<name>mkv25.net splash (archive)</name>
+	<hits>1862</hits>
+	<description>When I gave my website a recolouring from its previous light flimsy grey... I pushed on with a crayola coloured blue, which adorned everything.
+
+I left it there along with the archive.
+
+mkv25.net archive was my second major attempt at a full Content Management System (CMS). All the original files and articles are left there for people to view, and should come up on google searches next month.
+
+Thanks to all who submitted articles! They helped the site a great deal, even though things never really took off. It was a fun thing to create, the CMS is still in full operation too...</description>
+	<keywords>cms, mkv, 25, mkv25, archive, blue, crayloa, blue, flimsy, articles, content, management, php, text, upload, news, splash.</keywords>
+	<type>iframe</type>
+
+	<contentUrl>archive/</contentUrl>
+	<contentWidth>0</contentWidth>
+	<contentHeight>0</contentHeight>
+	<category>experimental</category>
+	<displayIcon>mkv25splash.png</displayIcon>
+
+	<linkedArticles></linkedArticles>
+	<postdate>0000-00-00 00:00:00</postdate>
+</article>

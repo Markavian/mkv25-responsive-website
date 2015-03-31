@@ -1,0 +1,28 @@
+<article>
+	<id>74</id>
+	<urlname>ball-network-6</urlname>
+	<name>Ball Network 6</name>
+	<hits>3344</hits>
+	<description>Ahh, pink. Great. (it was the next hue around from orange/red, honest!).
+
+So, this version was built from version 5. Wheres version 5 I hear thee ask?
+
+Well, technically that was recoded by Charles Hinshaw. (If your not following, go back to the green one. The new code focused on a class for the network, instead of a class for each node. I don\'t know whats more efficient, or straightforward, but I quickly modified his code to produce what you see above.
+
+Brownian motion was deftly replaced with perlin noise motion (much smoother) by Charles. My additions included reforming the network links (lots of for loops), and representing these connections using lines and a scaled circle surrounding each node.
+
+To add some tang to the swaying particles, I coded each network so that the more neighbours each node had, the faster it processed its local (perlin) \'noise\', kinda like speeding up its personal time. As each node speeds up, it tends to leave the crowded area in the centre, moving away from other nodes, and slowing down again.
+
+Fascinating.</description>
+	<keywords>mkv25, dot, net, mkv25.net, john, beech, markavian, portfolio, junk, stuff, showcase, artwork, paint shop pro, flash, macromedia, 3dsmax, 3d studio, artwork, digital, design, mkv</keywords>
+	<type>applet</type>
+
+	<contentUrl>ball_network_6</contentUrl>
+	<contentWidth>400</contentWidth>
+	<contentHeight>200</contentHeight>
+	<category>java</category>
+	<displayIcon>ball_network_6_icon.png</displayIcon>
+
+	<linkedArticles>ball-network-3,ball-network-4</linkedArticles>
+	<postdate>0000-00-00 00:00:00</postdate>
+</article>

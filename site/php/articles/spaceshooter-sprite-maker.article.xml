@@ -1,0 +1,50 @@
+<article>
+	<id>149</id>
+	<urlname>spaceshooter-sprite-maker</urlname>
+	<name>Spaceshooter - Sprite Maker</name>
+	<hits>0</hits>
+	<description>To highlight one of the many innovations in my new game, I\'m posting here to preview a technical mockup of the Solar Collector level; a cavernous construct harvesting energy from a close orbit to the sun.
+[center][link=http://mkv25.net/showcase/spritemaker_tester_v2.swf][img]http://mkv25.net/showcase/solarcollector_level_preview_60pc.png[/img][/link][/center]
+
+What you see in the preview is a static render of the scene made from a handful of sprites (bitmaps) that have been positioned, flipped, rotated, blurred and recoloured to fit.
+
+What\'s special about this preview is the SpriteMaker class which processes embedded assets, in the game, by applying filters and effects, before flattening the information back to bitmap data.
+
+Alternatively I could have used the AS3 [b]cacheAsBitmap[/b] flag, but if I used that I would lose some control over when elements are drawn to screen, which could in turn impact the performance of the game. With the sprite maker I can control when images get flattened (rendered). 
+
+Also, by centralising and containing the creation of assets, I\'m able to apply a series of consistent effects, such as BackgroundTint, ForegroundTint, without having to manually regenerate images. Methods such as HueShift, TintToColor and BlendToColor also allow me to \"set the mood\" of different assets to create different landscapes- as in the example above each layer has a yellowish tint to heat up the scene.
+
+[code]/* Background */
+CreateGraphic(SolarCollector.Pillar02, [Rotate180, BackgroundTint], ImageAlign.LEFT, -20, 0);
+CreateGraphic(SolarCollector.Pillar01, [FlipVertical, BackgroundTint], ImageAlign.LEFT, 100, 0);
+CreateGraphic(SolarCollector.Pillar01, BackgroundTint, ImageAlign.RIGHT, 20, 0);
+CreateGraphic(SolarCollector.Pillar02, [FlipVertical, BackgroundTint], ImageAlign.RIGHT, -200, 0);
+CreateGraphic(SolarCollector.Energyblock03, [Rotate180, BackgroundTint], ImageAlign.MIDDLE, 240, -10);
+CreateGraphic(SolarCollector.Strata01, BackgroundTint, ImageAlign.TOP, 180, -5);
+CreateGraphic(SolarCollector.Strata01, [FlipHorizontal, BackgroundTint], ImageAlign.TOP, -180, -5);
+
+/* Midground */
+CreateGraphic(SolarCollector.Energyblock01, Rotate90CCW, ImageAlign.MIDDLE, -170, -80);
+CreateGraphic(SolarCollector.Energyblock02, Rotate180, ImageAlign.MIDDLE, 0, 70);
+CreateGraphic(SolarCollector.Energyblock03, null, ImageAlign.MIDDLE, 220, -100);
+CreateGraphic(SolarCollector.Solarcollector, FlipVertical, ImageAlign.TOP);
+
+/* Foreground */
+CreateGraphic(SolarCollector.Pillar01, ForegroundTint, ImageAlign.LEFT, 40, 0);
+CreateGraphic(SolarCollector.Pillar02, [FlipHorizontal, ForegroundTint], ImageAlign.RIGHT, 40, 0);
+CreateGraphic(SolarCollector.Solarcollector, ForegroundTint, ImageAlign.BOTTOM, -180, 20);
+CreateGraphic(SolarCollector.Energypillar, [ForegroundTint], ImageAlign.BOTTOM, 150, 0);
+CreateGraphic(SolarCollector.Strata02, [FlipVertical, ForegroundTint], ImageAlign.BOTTOM_RIGHT);
+[/code]</description>
+	<keywords>solar collector space shooter sprite maker rotation foreground tint background tint bitmap bitmapdata as3 flash</keywords>
+	<type></type>
+
+	<contentUrl></contentUrl>
+	<contentWidth>0</contentWidth>
+	<contentHeight>0</contentHeight>
+	<category>article</category>
+	<displayIcon>solarcollector_level_icon.png</displayIcon>
+
+	<linkedArticles></linkedArticles>
+	<postdate>2009-10-13 13:27:51</postdate>
+</article>

@@ -1,0 +1,32 @@
+<article>
+	<id>91</id>
+	<urlname>low-poly-space-transport</urlname>
+	<name>Low-Poly Space Transport</name>
+	<hits>1853</hits>
+	<description>Furthering my research / practice into low-polygon 3D modelling is this attempt at a space faring transport vessel.
+
+Actually, it was originally intended as a combat cruiser, but it doesn\'t look anywhere near menacing enough.
+
+Its loosely based off a fleet I made for Space Empires IV, a set of designs that ended up as the \'Neo Utopian Brotherhood\', or [i]NUB[/i].
+
+The Nub were first conceived on holiday across the sea when I had nothing but pen and paper to keep me amused. The fleet was created using Moray, and the vessels constructed from four intersecting spheres. Complicated.
+
+This newer model was built up point by point, face by face, joining extra bits on as I went. Actually, thats not true. It has rotational symmetry of 3, I drew the outline from the side, and then rotated it along nose-to-tail padding out the points.
+
+After putting the model together, I then extracted and positioned all the faces on a texture map, (called a UVW mapping). I then exported the wire-frame mapping (the outlines) as a guide for texturing the model.
+
+I ran out of stuff to put on the texture, I\'m a bit limited at that stage - never quite sure what I want or how to go about adding it.
+
+Anyhow, the model is highly optimized I guess, it has only 388 polys and looks much better from the rear. The gormless back-section really needs livening up, I\'ll see if I can compact the design to make it more sleek, menacing, interesting and purposeful.</description>
+	<keywords>3ds max direct x model optimized 3d model game se5 space empires fleet neo utopian brothergood cruiser combat texturing uvw unwrap  extract position low polygon polys sleek menaching gormless</keywords>
+	<type>image</type>
+
+	<contentUrl>showcase/nub_portrait_cruiser.png</contentUrl>
+	<contentWidth>0</contentWidth>
+	<contentHeight>0</contentHeight>
+	<category>artwork</category>
+	<displayIcon>nub_portrait_cruiser_icon.png</displayIcon>
+
+	<linkedArticles>uce-escort-(textured)</linkedArticles>
+	<postdate>0000-00-00 00:00:00</postdate>
+</article>

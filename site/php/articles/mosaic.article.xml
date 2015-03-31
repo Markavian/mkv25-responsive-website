@@ -1,0 +1,26 @@
+<article>
+	<id>50</id>
+	<urlname>mosaic</urlname>
+	<name>Mosaic</name>
+	<hits>1857</hits>
+	<description>This mosaic is an interactive piece created using Flash Actionscript. A grid of buttons are activated as you rollover them looping through a set animation of expanding (light) and contracting (dark).
+
+Each cell is given a random colour (which can be changed by clicking). This breaks up the pattern giving it an autumnal feel. (fixed amounts  of red, varying levels of green).
+
+The effect can be compared to Chameleons expanding and contracting the pours/pigment sacks around their bodies.
+
+The autumn effect as mentioned used a fixed amount of Red and varying levels of green. Leaves turn brown because the chlorophyll (green stuff) breaks down in autumn/winter leaving behind the browny structure of the leaves (which was there anyway).
+
+As you sway the mouse around the page, the blocks play catch-up creating dazzling watery patterns. The whole system works better on faster computers.</description>
+	<keywords>mosaic autumn chlorophyll chameleon flash action script mouse interactivity movie rollover pigment sacks green red</keywords>
+	<type>iframe</type>
+
+	<contentUrl>showcase/mosaic.swf</contentUrl>
+	<contentWidth>0</contentWidth>
+	<contentHeight>0</contentHeight>
+	<category>flash</category>
+	<displayIcon>mosaic.png</displayIcon>
+
+	<linkedArticles>mendomic</linkedArticles>
+	<postdate>0000-00-00 00:00:00</postdate>
+</article>

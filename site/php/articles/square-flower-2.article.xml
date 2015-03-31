@@ -1,0 +1,28 @@
+<article>
+	<id>76</id>
+	<urlname>square-flower-2</urlname>
+	<name>Square Flower 2</name>
+	<hits>2215</hits>
+	<description>Moving to programming in Processing, from Flash, has been really fun. However, Processing lacks the drawing environment that Flash exceeds in. Making something simple and colourful as Square Flower in Flahs was a quick easy, colourful process.
+
+Trying to do the same thing in Processing seemed quite a bit more difficult. For a start, I have no idea how to draw a rotated square onto a pixel grid. In the end, I made do without.
+
+This version of \'Square Flower\' draws different sized parallegram shaped quads around in a a circle. 
+
+It has a random palette generator based of three colour modes... biased towards red/purple, green/blue, and green/yellow. Of course, it depends how the dice falls exactly how the colours come out, but I feel this is a good progression on the autumnal colours of the original.
+
+I also added a random max/min ring size, and adjusted the angle, all chosen on epoch. I\'m sure you\'ve found this out already: click to regenerate.
+
+The draw speed is far faster then on Flash, and speed is not lost after x\'number of blocks are drawn to screen, because they simply merge into the background and are \'forgotten\' about my the script. Easy to make colourful patterns very quickly.</description>
+	<keywords>mkv25, dot, net, mkv25.net, john, beech, markavian, portfolio, junk, stuff, showcase, artwork, paint shop pro, flash, macromedia, 3dsmax, 3d studio, artwork, digital, design, mkv</keywords>
+	<type>applet</type>
+
+	<contentUrl>squareFlower_b0</contentUrl>
+	<contentWidth>300</contentWidth>
+	<contentHeight>300</contentHeight>
+	<category>artwork</category>
+	<displayIcon>squareFlower_b0.png</displayIcon>
+
+	<linkedArticles>square-flower,spiral-graph</linkedArticles>
+	<postdate>0000-00-00 00:00:00</postdate>
+</article>

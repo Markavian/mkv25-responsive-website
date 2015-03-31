@@ -1,0 +1,22 @@
+<article>
+	<id>128</id>
+	<urlname>europe-north-africa-16-colours</urlname>
+	<name>Europe + North Africa 16 Colours</name>
+	<hits>1855</hits>
+	<description>This image was the base for the Flash animation of the same name. The map is a simplifed colour image of the Europe and North African continents. The colours are an average / nearest colour match of the ground based on satellite imagery from <a href=\"http://local.live.com\">local.live.com</a>.
+
+The sixteen colours used were hand picked from a high-colour blurred version of the map. Directly reducing the colours to 16 resulted in extreme unnatural colours.
+
+The map shows the vastness of the North African desert and the dryness of the middle-east. It also shows how very green Europe is, depite all those roads and concrete and cities and things.</description>
+	<keywords>map blur sixteen 16 colour low satellite map desert</keywords>
+	<type>image</type>
+
+	<contentUrl>showcase/europe-nafrica-in-16-colours.png</contentUrl>
+	<contentWidth>400</contentWidth>
+	<contentHeight>281</contentHeight>
+	<category>flash</category>
+	<displayIcon>eur-nafrica-16-icon.png</displayIcon>
+
+	<linkedArticles>europe-north-africa,praetoria-map</linkedArticles>
+	<postdate>0000-00-00 00:00:00</postdate>
+</article>

@@ -1,0 +1,34 @@
+<article>
+	<id>104</id>
+	<urlname>black-hole</urlname>
+	<name>Black Hole</name>
+	<hits>1862</hits>
+	<description>Thought 1: This website is Part blog part project listing.
+Thought 2: Damnit I just lost the whole of the last article I wrote.
+
+So here goes <i>again</i>.
+
+After seeing a <a href=\"http://processing.org/discourse/yabb_beta/YaBB.cgi?board=Programs;action=display;num=1119147851;\">problem</a> on the processing message board to do with accessing an array from the centre and spiraling outwards I decided that <a href=\"http://mathworld.wolfram.com/ArchimedesSpiral.html\">Archimedes Spiral</a> was the best solution.
+
+The equation for Archimedes Spiral is very simple:
+<b>radius = constant * theta;</b>
+So as theta (the angle) increases the radius gets bigger and bigger. The distance between two points on the curve 360o away from each other is always the same, this is useful for converting constant rotary motion into constant linear motion. (<i>useful fact??</i>)
+
+The program does a very tight spiral attempting to hit all the pixels in the vicinity. To reduce redundancy I put a few crafty bits of logic in.
+
+In this example, my array is made up of the pixels on the screen. The applet features pressing 1 through to 7 adjusts the speed.
+
+No prizes for guessing why it was called 
+Black hole!</description>
+	<keywords>java processing p5 archimedes spiral array access john beech markavian mkv25  </keywords>
+	<type>applet</type>
+
+	<contentUrl>blackHole</contentUrl>
+	<contentWidth>400</contentWidth>
+	<contentHeight>400</contentHeight>
+	<category>java</category>
+	<displayIcon>blackHole_icon.png</displayIcon>
+
+	<linkedArticles>spiral-array-access,my-first-script-(a1)</linkedArticles>
+	<postdate>0000-00-00 00:00:00</postdate>
+</article>

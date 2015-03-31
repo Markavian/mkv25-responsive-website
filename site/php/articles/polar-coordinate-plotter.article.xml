@@ -1,0 +1,33 @@
+<article>
+	<id>54</id>
+	<urlname>polar-coordinate-plotter</urlname>
+	<name>Polar Coordinate Plotter</name>
+	<hits>3422</hits>
+	<description>Take an Angle, in degrees, and a Radius, a distance of some number... and the two form a Polar Coordinate. I suppose the third thing you need to know is the central point for plotting this information.
+
+On paper I\'d take the angle 45, and the radius 50, and use a compas to plot it. However, can\'t really do that on my computer without scratching the screen... soo, need to do some Maths, and convert polar coordinates to cartesean, or X,Y coordinates.
+
+Not hard:
+x = radius * cos(theta)
+y = radius * sin(theta)
+
+Note, theta is measured in Radians, so if you have an angle in Degrees, it needs converting.
+
+radian = degree * PI / 180
+degree = radian * 180 / PI
+
+So, thats the Maths behind my little flash thingy.
+
+I made it to show someone how easy it is to do. They were talking about modifying a Microwave Oven to use a slightly different frequency for use as a Radar. The pulses returned by the Radar would need plotting on something, either one of those fancy cathode ray thingies (requiring thousands of volts), or maybe a handy laptop computer...</description>
+	<keywords>radar polar coordinates plotting data theta converting numbers changing everything the world space time continuum flash macromedia mx action script functions</keywords>
+	<type>iframe</type>
+
+	<contentUrl>showcase/polar_plotter.swf</contentUrl>
+	<contentWidth>0</contentWidth>
+	<contentHeight>0</contentHeight>
+	<category>flash</category>
+	<displayIcon>polar_icon.png</displayIcon>
+
+	<linkedArticles></linkedArticles>
+	<postdate>0000-00-00 00:00:00</postdate>
+</article>

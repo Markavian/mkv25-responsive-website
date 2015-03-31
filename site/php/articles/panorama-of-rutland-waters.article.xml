@@ -1,0 +1,22 @@
+<article>
+	<id>67</id>
+	<urlname>panorama-of-rutland-waters</urlname>
+	<name>Panorama of Rutland Waters</name>
+	<hits>1860</hits>
+	<description>This panorama program was made for a project at work... but I decided it had other uses, so I took some photos at my local resevoir, and began snapping.
+
+The lighting changed drasticly between each photo, I had to do a lot of colour adjustment to get them to match, and its still not perfect. You get a nice view of the carpark though.
+
+The viewer is made in flash, using actionscript to track the position of the mouse. Theres also a complicated bit of code that works out the zoom... but that isn\'t perfect either. Zooming was a big problem in creating the panorama, but it was a worthwhile addition.</description>
+	<keywords>rutland waters water sports panorama photo flash actionscript drag rotate interactive 360 degree images image sticher</keywords>
+	<type>iframe</type>
+
+	<contentUrl>showcase/rutland_waters_panorama%20a0.swf</contentUrl>
+	<contentWidth>0</contentWidth>
+	<contentHeight>0</contentHeight>
+	<category>flash</category>
+	<displayIcon>panoramaRutlandWaters.jpg</displayIcon>
+
+	<linkedArticles></linkedArticles>
+	<postdate>0000-00-00 00:00:00</postdate>
+</article>

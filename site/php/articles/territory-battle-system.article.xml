@@ -1,0 +1,28 @@
+<article>
+	<id>137</id>
+	<urlname>territory-battle-system</urlname>
+	<name>Territory Battle System</name>
+	<hits>1460</hits>
+	<description>To handle turn based attacks on enemy territory, some number crunching needed to be performed between the number and strength of the attacking fleets and the defensive power and development of the territory. 
+
+So, the above script runs a random sequence of battles on each page refresh. The idea was to integrate this into the terrority system so that every day / week when turns were officially updated the results of battles could be calculated. This was the test bed for that process.
+
+Battles are either won, drawn, or lost, by the attackers. The bar along the top predicts the result of the game based on the strengths of the two sides. A number of battles (5 by default) are then run, and the result of the battles are recorded.
+
+For a win, the attacker destroys a point of the defenders strength (either a ship or a point of territory).
+For a draw, no damage is done to either side.
+For a lose, the attack loses a ship. (Since the attacker has no territory).
+
+The system is stacked in favour of a defender, but there is nothing to stop an attacker flying straight through a heavily defender territory and destroying a weaker inner territory, making for various tactics for attack and territory development possible.</description>
+	<keywords>territory battle system php random number crunching</keywords>
+	<type>iframe</type>
+
+	<contentUrl>http://server.mkv25.net/SEi_ms2/development/battle.php</contentUrl>
+	<contentWidth>550</contentWidth>
+	<contentHeight>500</contentHeight>
+	<category>experimental</category>
+	<displayIcon>sei_dev_battlesystem_icon.png</displayIcon>
+
+	<linkedArticles>space-empires-infinite-galaxy,starfield</linkedArticles>
+	<postdate>0000-00-00 00:00:00</postdate>
+</article>

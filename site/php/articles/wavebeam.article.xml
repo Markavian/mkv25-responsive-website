@@ -1,0 +1,33 @@
+<article>
+	<id>143</id>
+	<urlname>wavebeam</urlname>
+	<name>Wavebeam</name>
+	<hits>326</hits>
+	<description>Finally, something fun! A game that\'ve been putting together since Thursday night. Spent well over a full day on it today, and I\'m so very pleased with the results. I get to shoot stuff, and stuff explodes.
+
+Story line in development, got some friends helping me on that, and I\'ve put some <a href=\"showcase/storyboards.png\" target=\"_blank\">storyboards doodled</a> out to help me think.
+
+Movement:
+ UP/DOWN/LEFT/RIGHT for movement.
+Weapons:
+ a - Evil Red Laser
+ s - Torpedo / Bullets
+ z - Plasma Charge
+ x - Wave Beam
+
+Weapons are likely to change, I just smacked on four hardpoints so I could try out a variety of weapons. Have fun.
+
+Update: v3 has a key mapping system that saves between goes (using SharedObject), and a planned feature for ship rotation... 
+</description>
+	<keywords>flash game side shooter scroller fun blowing wavebeam stuff up</keywords>
+	<type>iframe</type>
+
+	<contentUrl>showcase/mkv_shooter_v3.swf</contentUrl>
+	<contentWidth>0</contentWidth>
+	<contentHeight>0</contentHeight>
+	<category>flash</category>
+	<displayIcon>wavebeam_icon.png</displayIcon>
+
+	<linkedArticles>cavern-runner,separation-of-concerns</linkedArticles>
+	<postdate>0000-00-00 00:00:00</postdate>
+</article>

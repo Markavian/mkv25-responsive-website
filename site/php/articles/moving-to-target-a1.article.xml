@@ -1,0 +1,22 @@
+<article>
+	<id>100</id>
+	<urlname>moving-to-target-(a1)</urlname>
+	<name>Moving To Target (a1)</name>
+	<hits>2167</hits>
+	<description>Based on the method drawPointsToTarget() this builds upon fuctions already derived to simulate the movement of a ship through space. The ship has a minimum turning angle and will animate between its current position and the target position signified by clicking the mouse.
+
+So basically, click on the screen and the space ship (the red thing) will follow the path until it reaches the target or runs out of movement for that click.
+
+This applet also draws on the initial work from \'Space Battle a1\' where I tested that it was possible to rotate loaded graphics on the screen.</description>
+	<keywords>moving to target processing p5 drawPointsToTarget functions minimum ship turning simulate screen mouse clicking position initial work space battle a1 rotate load graphic</keywords>
+	<type>applet</type>
+
+	<contentUrl>movingToTarget_a1</contentUrl>
+	<contentWidth>400</contentWidth>
+	<contentHeight>400</contentHeight>
+	<category>java</category>
+	<displayIcon>movingToTarget_a1_icon.png</displayIcon>
+
+	<linkedArticles>draw-points-to-target-a2,space-battle-a1</linkedArticles>
+	<postdate>0000-00-00 00:00:00</postdate>
+</article>

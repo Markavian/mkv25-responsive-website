@@ -1,0 +1,30 @@
+<article>
+	<id>151</id>
+	<urlname>OpenID</urlname>
+	<name>OpenID and OpenComments</name>
+	<hits>0</hits>
+	<description>OpenID is an authentication system that uses a single point of login to authorise a user across a range of websites. Users trust an OpenID provider to store and protect their details.
+
+To login to a compatable OpenID website the user supplies the provider\'s authentication URL and the website they\'re on requests access. Users are usually redirected to a login page with their provider where they authenticate themselves, and this authentication is communicated back to the 3rd party website.
+
+[h2]Advantages[/h2]
+The big advantage is that OpenID provides a single point of login- the user authenticates once with their trusted provider and that\'s it. Subsequent \"logins\" to other sites are handled automatically because the user has already authenticated with their provider, and for the duration of their session the provider will support the login.
+
+From a developer perspective; having an OpenID compatable login means that I no longer have to store login details for each individual visiting my site. Chances are they\'ve already registered with an OpenId provider, and I\'ve always been uncomfortable with forcing people to register to participate in online discussion. By providing an OpenID login instead- users can identify themselves and gain full access to manage their own posts after submitting content to the site
+
+[h2]OpenComments[/h2]
+OpenComments is a project I\'m working on to produce an OpenID enabled comments system that uses JQuery remote $.get and $.post calls to bring comments onto static HTML pages using javascript. Quite often comments are superfluous to the contents of an article, but do provide useful feedback. The main drawback of comments as I see it, which may also arguably be an advantage, is their draw for comments to rank in SEO- for good and for bad. On the whole people have little control over what people post and the target of most spam is to promote search result rankings on other sites. By bringing comments in using javascript requests there\'s a chance search engines will ignore them, and the focus of the page load is on the main content not the comments.
+
+For now you can see the OpenComments system in action across articles and scrapbook entries on this site, but in future hopefully there will be a project page where you can find out more information and try it out on your own site- prebuilt, just three lines of code. Stay tuned.</description>
+	<keywords>opencomments open comments jquery javascript distributed comments system </keywords>
+	<type></type>
+
+	<contentUrl></contentUrl>
+	<contentWidth>0</contentWidth>
+	<contentHeight>0</contentHeight>
+	<category>article</category>
+	<displayIcon>opencomments_icon.png</displayIcon>
+
+	<linkedArticles>ajax-quotepicker</linkedArticles>
+	<postdate>2009-11-19 17:26:01</postdate>
+</article>

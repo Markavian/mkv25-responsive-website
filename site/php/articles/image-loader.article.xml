@@ -1,0 +1,21 @@
+<article>
+	<id>35</id>
+	<urlname>image-loader</urlname>
+	<name>Image Loader</name>
+	<hits>1981</hits>
+	<description>The Flash Image Loader. A definite test piece designed for the sole purpose of loading Jpeg images using flash, and displaying them in a little box as proof!
+
+Try it out, type \'maximum.jpg\' and load it...
+This technology is very useful for providing dynamic information into flash, without requiring macromedia flash itself. For example, for use in a photo album...</description>
+	<keywords>loader flash mx jpg jpeg into flash colour interface mkv25 type input macromedia </keywords>
+	<type>iframe</type>
+
+	<contentUrl>showcase/loader.html</contentUrl>
+	<contentWidth>0</contentWidth>
+	<contentHeight>0</contentHeight>
+	<category>flash</category>
+	<displayIcon>loader.png</displayIcon>
+
+	<linkedArticles>b4-photo-album,mediterranean-cruise-jigsaw</linkedArticles>
+	<postdate>0000-00-00 00:00:00</postdate>
+</article>

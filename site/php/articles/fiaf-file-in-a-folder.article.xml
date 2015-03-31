@@ -1,0 +1,26 @@
+<article>
+	<id>24</id>
+	<urlname>fiaf-file-in-a-folder</urlname>
+	<name>FIAF - File In A Folder</name>
+	<hits>1858</hits>
+	<description>The description: File management system, for the folder, where the file is.
+
+In more detailed words, this scripts lets one admin user securely add and remove files from a folder on their webserver. It also provides a list of files in the folder for all who view it. This allows an administrator to do all their uploading / deleting through their webbrowser, which they may find faster and more convinient then using an FTP Utility.
+
+The script was written using PHP, taking advantage of functions including Sessions, Secure Login, File Upload, Mime Type Checking, Directory Functions, Server Variables and Plenty of misuse error reports.
+
+Configuring the script involves changing a few variables near the top of the source code, and chmodding the directory that holds the script to 777. Annoying, but necessary.
+
+If you want a copy, email me.</description>
+	<keywords>FIAF, file, folder, php, management, upload, images, markavian, contact, list, session, secure, mkv, 25, dot, net.</keywords>
+	<type>iframe</type>
+
+	<contentUrl>showcase/index.php</contentUrl>
+	<contentWidth>0</contentWidth>
+	<contentHeight>0</contentHeight>
+	<category>experimental</category>
+	<displayIcon>fiaf.png</displayIcon>
+
+	<linkedArticles></linkedArticles>
+	<postdate>0000-00-00 00:00:00</postdate>
+</article>

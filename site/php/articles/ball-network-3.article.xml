@@ -1,0 +1,23 @@
+<article>
+	<id>72</id>
+	<urlname>ball-network-3</urlname>
+	<name>Ball Network 3</name>
+	<hits>2812</hits>
+	<description>As mini projects go, this one has been interesting so far.
+
+Finding myself reading http://processing.org/discourse/yabb/YaBB.cgi?board=Contribution_Responsive;action=display;num=1081800865;start=0
+I found myself editing Charles Hinshaw\'s code, to create something a bit different, possibly even new.
+
+With no particular aim in mind, you can play around with this one, it does all sorts of weird things, mostly grouping all the nodes into a big fat chaotic ball, and shifting around your screen.</description>
+	<keywords>mkv25, dot, net, mkv25.net, john, beech, markavian, portfolio, junk, stuff, showcase, artwork, paint shop pro, flash, macromedia, 3dsmax, 3d studio, artwork, digital, design, mkv</keywords>
+	<type>applet</type>
+
+	<contentUrl>ch_ball3</contentUrl>
+	<contentWidth>400</contentWidth>
+	<contentHeight>200</contentHeight>
+	<category>java</category>
+	<displayIcon>ch_ball3_icon.png</displayIcon>
+
+	<linkedArticles>ball-network-4,ball-network-6</linkedArticles>
+	<postdate>0000-00-00 00:00:00</postdate>
+</article>

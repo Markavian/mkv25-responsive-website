@@ -1,0 +1,28 @@
+<article>
+	<id>70</id>
+	<urlname>my-first-script-(a1)</urlname>
+	<name>My First Script (a1)</name>
+	<hits>2791</hits>
+	<description>I found a new programming language/software based on Java called Processing.
+
+My first script written using this new fangled lingo is shown above. A single black pixel in the centre checks its surroundings based on a set of rules, and expands. The expansion length is based on the width of the stage. Each new layer is temporarily coloured red to differ it from the previous layer.
+
+In a constant loop, every pixel on the stage is checked to see if expansion is possible.
+
+Maybe I should change the next script to have two, maybe three starting points, and keep the rest of the ruleset the same...
+
+* Note surveys say 1/10 people don\'t have Java pre-installed.
+
+This applet was created using the same technology behind another project / image that I named Polka Dot De Jong... follow the link below to find out more.</description>
+	<keywords>mkv25, dot, net, mkv25.net, john, beech, markavian, portfolio, junk, stuff, showcase, artwork, paint shop pro, flash, macromedia, 3dsmax, 3d studio, artwork, digital, design, mkv</keywords>
+	<type>applet</type>
+
+	<contentUrl>myFirstScripta1</contentUrl>
+	<contentWidth>280</contentWidth>
+	<contentHeight>280</contentHeight>
+	<category>java</category>
+	<displayIcon>myFirstAppleta1_icon.png</displayIcon>
+
+	<linkedArticles>polka-dot-de-jong,colourful-spiral</linkedArticles>
+	<postdate>0000-00-00 00:00:00</postdate>
+</article>

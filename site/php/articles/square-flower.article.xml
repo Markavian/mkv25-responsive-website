@@ -1,0 +1,52 @@
+<article>
+	<id>55</id>
+	<urlname>square-flower</urlname>
+	<name>Square Flower</name>
+	<hits>2276</hits>
+	<description>This piece came out quite nicely. It works on a similar principle to the Ice Crystal piece, but was written using a different script.
+
+It was meant to be an experient using setInterval, but it wouldn\'t work for me, so I went with a traditional frame based loop which did work.
+
+Another big feature thing that I figured out was how to generate HEX numbers/colours. I wasn\'t sure how to do it before, and was wondering if there was a function within Flash... there probably is, but what I did was make an array from 0 to 15, and assigned the equivalent hex number to each entry... and then accessed the number from the array.
+
+e.g.:
+[code]
+// Array colours
+hexColours  = new Array();
+hexColours[0] = \"00\";
+hexColours[1] = \"11\";
+hexColours[2] = \"22\";
+hexColours[3] = \"33\";
+hexColours[4] = \"44\";
+hexColours[5] = \"55\";
+hexColours[6] = \"66\";
+hexColours[7] = \"77\";
+hexColours[8] = \"88\";
+hexColours[9] = \"99\";
+hexColours[10] = \"AA\";
+hexColours[11] = \"BB\";
+hexColours[12] = \"CC\";
+hexColours[13] = \"DD\";
+hexColours[14] = \"EE\";
+hexColours[15] = \"FF\";[/code]
+
+Very functional in the right environment!
+
+As for the design side of things, I thought about what shape to draw, and decided a square would be the simplest. I\'ve applied three transformations to each square:
+1) x/y scale of the object
+2) 360 degree rotation, in 10 degree blocks (snappy)
+3) Varied colours, biased towards red, moderate blue, little green.
+
+The colours it produces are kinda in wintery/autumn feel again. The shape looks like petals on a flower. I like this piece.</description>
+	<keywords>flower delay actionscript red autumn flash actionscript delay hex colours hexidecimal converstion decimal red blue gree moderation mkv delay setInterval</keywords>
+	<type>iframe</type>
+
+	<contentUrl>showcase/flower_delay.swf</contentUrl>
+	<contentWidth>0</contentWidth>
+	<contentHeight>0</contentHeight>
+	<category>artwork</category>
+	<displayIcon>flower_icon.png</displayIcon>
+
+	<linkedArticles>ice-crystal</linkedArticles>
+	<postdate>0000-00-00 00:00:00</postdate>
+</article>

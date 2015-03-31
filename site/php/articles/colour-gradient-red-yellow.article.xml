@@ -1,0 +1,20 @@
+<article>
+	<id>17</id>
+	<urlname>colour-gradient-(red-yellow)</urlname>
+	<name>Colour Gradient (Red Yellow)</name>
+	<hits>1978</hits>
+	<description>As the title says, this was infact a random number generator, I think a lottery number generator. However, I retuned it for generating a set of colour gradients. I\'m not sure how I did it exactly, but the exact weighting of the colour gradient varies by increasing a colour channel by a max/min value until it reaches the other end.
+
+The other part is using CSS and numerical colour selection, rather then trying to use Hex websafe codes. It creates a nice effect.</description>
+	<keywords>colour, gradient, red, yellow, php, script, random, number, generator, shading, weights.</keywords>
+	<type>iframe</type>
+
+	<contentUrl>showcase/colour_gradients.php</contentUrl>
+	<contentWidth>0</contentWidth>
+	<contentHeight>0</contentHeight>
+	<category>artwork</category>
+	<displayIcon>colour_gradients.png</displayIcon>
+
+	<linkedArticles>colour-gradient-(green-blue)</linkedArticles>
+	<postdate>0000-00-00 00:00:00</postdate>
+</article>

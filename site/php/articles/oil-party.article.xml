@@ -1,0 +1,26 @@
+<article>
+	<id>29</id>
+	<urlname>oil-party</urlname>
+	<name>Oil Party</name>
+	<hits>2094</hits>
+	<description>A tea party scene, with a difference... backed by an oil storage unit. Or something.
+
+This 3D render is the acomplishment of an idea I\'ve had for a while now. I spent ages on the lighting, creating a bright scene, with vague shadows. I wanted soft, blurry shadows, but couldn\'t find the right options.
+
+I went with 5 scene lights, 3 providing all round illumination, 1 vertical spot light facing straight down, and a 5th offset shadow up top right from the camera.
+
+The result is a semi-realistic scene, that looks more detailed and alive then a basic render. Adding detail to the scene created extra depth to the objects, providing minor shading to the different elements.
+
+I especially like the designer chairs around the table; so simple to put together, and so appealing... I want one for my room! Maybe in blue tho, not white.</description>
+	<keywords>3ds max, render, tea, oil, cheese, lighting, realistic, realism, shadows, maps, shadow maps, raytracing, raytraced, colourless, pale, plastic, imperfection, perfection.</keywords>
+	<type>image</type>
+
+	<contentUrl>showcase/oil_party.png</contentUrl>
+	<contentWidth>0</contentWidth>
+	<contentHeight>0</contentHeight>
+	<category>artwork</category>
+	<displayIcon>oil_party_icon.png</displayIcon>
+
+	<linkedArticles>oil-party-dreamy-haze</linkedArticles>
+	<postdate>0000-00-00 00:00:00</postdate>
+</article>

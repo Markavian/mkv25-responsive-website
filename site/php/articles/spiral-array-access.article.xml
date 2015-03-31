@@ -1,0 +1,22 @@
+<article>
+	<id>105</id>
+	<urlname>spiral-array-access</urlname>
+	<name>Spiral Array Access</name>
+	<hits>2119</hits>
+	<description>Based on Black Hole, this aplet builds on the spiral drawing algorithm I put together. Instead of using screen pixels, this one uses an actual array and visualises each block of the array as the spiral iterates through it.
+
+I thought it looked a bit more impressive then just drawing a big black hole on the screen. I also overcame the limits of the program usually stopping when a x,y value was generated that was out of range. There is a basic check to see that the value generated lies within the boundaries of the array, but it would continue to calculate positions until arrayWidth*1.5 and arrayHeight*1.5 so that the corners of the array were properly filled out. I\'m not sure what the exact value would be, but its like trying to cram a square inside a circle - whats the minimum radius should the circle be?
+
+I added a check that turns the array blue when the x,y values generated are completely out of range assuming that the all the array elements have been set/checked.</description>
+	<keywords>processing java spiral array access visulation blue red set checked x y coordinates john beech mkv25 markavian</keywords>
+	<type>applet</type>
+
+	<contentUrl>accessArray</contentUrl>
+	<contentWidth>300</contentWidth>
+	<contentHeight>300</contentHeight>
+	<category>java</category>
+	<displayIcon>accessArray_icon.png</displayIcon>
+
+	<linkedArticles>black-hole</linkedArticles>
+	<postdate>0000-00-00 00:00:00</postdate>
+</article>

@@ -1,0 +1,22 @@
+<article>
+	<id>120</id>
+	<urlname>spheres</urlname>
+	<name>Spheres</name>
+	<hits>1857</hits>
+	<description>Compare, Flash file displaying spheres (above) 403 bytes. Icon displaying preview of Spheres (below) 4.13 KBytes.
+
+This is a good example of why vector graphics are useful for displaying graphics over the web using a minimal amount of bandwidth.
+
+To produce the effect I used a circle with a circular gradient, then used flash colour filters to recolour the movie clips by adjusting the hue and saturation. The grey ball at the back has had its brightness/contrast adjusted - but they all source from the same symbol in the library.</description>
+	<keywords>spheres flash vectors gradient colour filter movie clip contrast library brightness hue saturation low bandwidth</keywords>
+	<type>iframe</type>
+
+	<contentUrl>showcase/spheres.swf</contentUrl>
+	<contentWidth>300</contentWidth>
+	<contentHeight>300</contentHeight>
+	<category>flash</category>
+	<displayIcon>spheres_icon.png</displayIcon>
+
+	<linkedArticles>mendomic,square-flower</linkedArticles>
+	<postdate>0000-00-00 00:00:00</postdate>
+</article>

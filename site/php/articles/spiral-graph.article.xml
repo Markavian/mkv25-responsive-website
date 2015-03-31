@@ -1,0 +1,22 @@
+<article>
+	<id>39</id>
+	<urlname>spiral-graph</urlname>
+	<name>Spiral Graph</name>
+	<hits>8211</hits>
+	<description>A test piece designed previously to the Galaxy Graph. This script generates a random number of points in a spiral, and joins them up as it goes.
+
+The result: Pretty patterns. I guess there are many interesting and fun things you can do with the PHP image functions.
+
+Simply [i]refresh[/i] the page to generate a new graphic.</description>
+	<keywords>image functions php graph spiral random number points line draw image png</keywords>
+	<type>image</type>
+
+	<contentUrl>showcase/spiralgraph.php</contentUrl>
+	<contentWidth>0</contentWidth>
+	<contentHeight>0</contentHeight>
+	<category>experimental</category>
+	<displayIcon>spiralgraph_2.png</displayIcon>
+
+	<linkedArticles>small-galaxy-graph</linkedArticles>
+	<postdate>0000-00-00 00:00:00</postdate>
+</article>

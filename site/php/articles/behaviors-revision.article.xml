@@ -1,0 +1,18 @@
+<article>
+	<id>132</id>
+	<urlname>behaviors-revision</urlname>
+	<name>Behaviors Revision</name>
+	<hits>1535</hits>
+	<description>Visulise: A pale white and blue gradiented background, a black pentagon with a thick green border. To the right of the pentagon, there are three yellow hexagons with black borders, each a different size. Below the pentagon is a red hexagon. Black dashed lines connect the shapes together. When the user hovers over the pentagon its border turns a brighter green. Clicking on the petagon makes the hexagons begin to spin. Two of the yellow hexagons spin clockwise, the middle one, the smallest, spins the fastest counter-clockwise. The motion of these yellow hexagons is akin to cogs turning each other, but not so polished. To red hexagon spins clockwise, but after about a second of turning it stops. Clicking the pentagon again makes the red hexagon spin again, but it eventually stops, again. You could visulise this, but you don\'t need to if you have Flash installed.</description>
+	<keywords>I didn't write a thousand words flash behaviors add rotation to symbols on button release actionscript templates</keywords>
+	<type>iframe</type>
+
+	<contentUrl>showcase/behaviors/revision behaviors.swf</contentUrl>
+	<contentWidth>520</contentWidth>
+	<contentHeight>380</contentHeight>
+	<category>flash</category>
+	<displayIcon>revision_behaviors_icon.png</displayIcon>
+
+	<linkedArticles>maginfy-(b1),brick-builder,ice-crystal</linkedArticles>
+	<postdate>0000-00-00 00:00:00</postdate>
+</article>

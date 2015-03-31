@@ -1,0 +1,28 @@
+<article>
+	<id>106</id>
+	<urlname>colouful-spiral-(live)</urlname>
+	<name>Colouful Spiral (live)</name>
+	<hits>2544</hits>
+	<description>This afternoon I put it to myself to rebuild an applet from scratch based off a picture I made a while a go (and posted on this site) - Colourful Spiral. So, sort of in its honour I made a live version that you can play around with on the web.
+
+Instructions: 
+- Buttons 1-5 change the drawing style
+- \'i\' alternates drawing inwards, or outwards. 
+- \'s\' enabled/disables smoothing. Smoothing looks better. 
+- + and - increase and decrease the detail. Try reducing it down to the minimum.
+- \'f\' tabs between fill+stroke mode, fill only mode and stroke only mode. 
+
+I also made some pre rendered samples: (<a href=\"applets/colourfulSpiral/mediumColourfulSpirals.png\">mediumColourfulSpirals.png</a>)
+</description>
+	<keywords>colourful spiral java processing lines arhimedies spiral effect fill customize john beech mkv25 markavian math</keywords>
+	<type>applet</type>
+
+	<contentUrl>colourfulSpiral</contentUrl>
+	<contentWidth>350</contentWidth>
+	<contentHeight>350</contentHeight>
+	<category>artwork</category>
+	<displayIcon>colourfulSpiral_logo.png</displayIcon>
+
+	<linkedArticles>colourful-spiral</linkedArticles>
+	<postdate>0000-00-00 00:00:00</postdate>
+</article>

@@ -1,0 +1,39 @@
+<article>
+	<id>90</id>
+	<urlname>drag-and-drop-tutorial</urlname>
+	<name>Drag and Drop Tutorial</name>
+	<hits>1860</hits>
+	<description>This was originaly made for a guy at work to help broaden his understanding of Flash objects and actionscript.
+
+Its put together very simply. You click on the object and drag it around until you let go.
+
+The layout of the scene is basic. A set of text boxes. Then a movie clip called \"something\" with a button object inside.
+
+Assigned to the actions of the button, inside the movie clip, is the following code:
+[code]on (press) {
+	tellTarget (this) {
+		startDrag(this, true);
+	}
+}
+on (release) {
+	tellTarget (this) {
+		stopDrag();
+	}
+}[/code]
+Which is really simple if you ask me. Dragging stuff around in flash is great because it gives the user so much apparent control. Theres only so much you can do with dragging objects around the page, but its rather fun. Simple applications might be a \'fridge magnet\' website with lots of dijointed words that you can shape together, or a <em>virtual doll</em>, where you dress up a model using layered clothing elements... maybe a set designer? Somethnig where you have lots of shapes that can be positioned anyway the user sees fit.
+
+I might make something along one of those lines ^ although it\'ll probably include some fancy database link so users can save their \'designs\' online. (I like that sort of thing).
+
+The text boxes simply read off values from the \'something\' object, just checking and updating the positions in a loop.</description>
+	<keywords>drag and drop tutorial macromedia flash flash mx something button movie clip drag draw code actionscript</keywords>
+	<type>iframe</type>
+
+	<contentUrl>showcase/dragAndDrop_tutorial_1.swf</contentUrl>
+	<contentWidth>0</contentWidth>
+	<contentHeight>0</contentHeight>
+	<category>flash</category>
+	<displayIcon>dragIcon_tutorial_1_icon.png</displayIcon>
+
+	<linkedArticles>powerpuff-girl-jigsaw-puzzle,flower</linkedArticles>
+	<postdate>0000-00-00 00:00:00</postdate>
+</article>

@@ -1,0 +1,22 @@
+<article>
+	<id>52</id>
+	<urlname>colour-bleeding</urlname>
+	<name>Colour Bleeding</name>
+	<hits>1856</hits>
+	<description>This is a test render that I did as an example of better looking renders. By finding and using the Advanced Lighting features in 3D Studio Max, I managed to render this after much tweaking.
+
+I decided to keep the scene as simple as possible, only using the generic teapot for testing. The reason this looks so much better then other basic renders is because light from every face is bounced around the scene several times affecting the colour and shading of nearby objects.
+
+Its took ages to render though, looks much better then basic shading though!</description>
+	<keywords>orange teapot radiosity advanced lighting realistic render rendering models texture realism 3d studio max modelling</keywords>
+	<type>image</type>
+
+	<contentUrl>showcase/orange_teapot.jpg</contentUrl>
+	<contentWidth>0</contentWidth>
+	<contentHeight>0</contentHeight>
+	<category>artwork</category>
+	<displayIcon>orange_teapot_icon.png</displayIcon>
+
+	<linkedArticles></linkedArticles>
+	<postdate>0000-00-00 00:00:00</postdate>
+</article>

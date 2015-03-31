@@ -1,0 +1,41 @@
+<article>
+	<id>61</id>
+	<urlname>magnify-(a0)</urlname>
+	<name>Magnify (a0)</name>
+	<hits>2677</hits>
+	<description>The idea for this test piece is based off the work done by Jared Tarbel (www.levitated.net). If you hit his website, you\'ll soon see what I was trying to copy.
+
+His work is generally open source, which means you can sneak in there and nosey at the code that makes his projects tick, but... wheres the fun in that?!
+
+No, for me working out how the project is put together, and developing your own ideas to produce a solution is the fun bit. Simply plucking someone elses code and dumping it on your site is no more then stealing someone else\'s ideas.
+
+Thats not to say that if you need to use technology that is far beyond your understanding you shouldn\'t, but people should be more aware of how things are constructed for their own learning.
+
+Reading through Jared\'s source code is a learning process in its self I guess.
+
+Two bits of maths, and some simple frame based drawing functions are what drive this flash piece.
+
+First, a bit of pythag:
+// Calculate mouse distance
+distance = Math.sqrt(Math.pow(_xmouse, 2) + Math.pow(_ymouse, 2));
+
+The distance is used to deterimine when to stop moving points, \'locking\' them into position.
+	
+Second, read the mouse position and divide down:
+// Calculate x, y
+x1 = (_parent._x - _xmouse) / 3;
+y1 = (_parent._y -_ymouse) / 3;
+
+This generates a point away from the current mouse position, a third of the actual distance from each node.</description>
+	<keywords>flash action script macromedia line node approach distance react move away lineStyle lineTo moveTo Math sqrt pow base exponent</keywords>
+	<type>iframe</type>
+
+	<contentUrl>showcase/magnify a0.swf</contentUrl>
+	<contentWidth>0</contentWidth>
+	<contentHeight>0</contentHeight>
+	<category>flash</category>
+	<displayIcon>magnify a0.png</displayIcon>
+
+	<linkedArticles>maginfy-(b1),distance-(a0)</linkedArticles>
+	<postdate>0000-00-00 00:00:00</postdate>
+</article>

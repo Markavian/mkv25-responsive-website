@@ -1,0 +1,26 @@
+<article>
+	<id>44</id>
+	<urlname>table</urlname>
+	<name>Table</name>
+	<hits>1852</hits>
+	<description>This is the XML file used in my first ever Flash Based XML viewer file. It should give you an idea of why XML files are so useful for storing data.
+
+The datafile can be easily read by humans, you can see how there is a [table] which contains [containers] and [items]. The file can be easily editied with any text editor (such as notepad) and doesn\'t require any proprietry encoding software to trasmit data across networks.
+
+The main disadvantage over other data formats is the increase in filesize, but we don\'t complain about HTML download speeds do we?
+
+The most proficient use of XML files is in a special format known as RSS, a coding standard designed for carrying News information that can be shared between websites. Very handy.
+
+Take a look at the Flash XML Viewer, second icon below.</description>
+	<keywords>table xml code container item rss flash viewer parsing news notepad text editor what is xml</keywords>
+	<type>iframe</type>
+
+	<contentUrl>showcase/table.xml</contentUrl>
+	<contentWidth>0</contentWidth>
+	<contentHeight>0</contentHeight>
+	<category>experimental</category>
+	<displayIcon>table_1.png</displayIcon>
+
+	<linkedArticles>xml-viewer</linkedArticles>
+	<postdate>0000-00-00 00:00:00</postdate>
+</article>

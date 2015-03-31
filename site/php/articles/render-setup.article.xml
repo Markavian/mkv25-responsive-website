@@ -1,0 +1,20 @@
+<article>
+	<id>85</id>
+	<urlname>render-setup</urlname>
+	<name>Render Setup</name>
+	<hits>2143</hits>
+	<description>This script revolves around a particle generator core created by TomC, but a lot of the code is definitely mine, I rewrote TomC\'s functions into a rendering script that allows scaling and positioning of the image so that high res images can be produced from the rendering elements.
+
+It still requires some work, I don\'t consider it perfect, but its a handy step forward in making apparently big things using the processing power of a PC.</description>
+	<keywords>mkv25, dot, net, mkv25.net, john, beech, markavian, portfolio, junk, stuff, showcase, artwork, paint shop pro, flash, macromedia, 3dsmax, 3d studio, artwork, digital, design, mkv</keywords>
+	<type>applet</type>
+
+	<contentUrl>renderSetup_b1</contentUrl>
+	<contentWidth>500</contentWidth>
+	<contentHeight>400</contentHeight>
+	<category>java</category>
+	<displayIcon>renderSetup_b1_icon.png</displayIcon>
+
+	<linkedArticles>polka-dot-de-jong,square-flower-2</linkedArticles>
+	<postdate>0000-00-00 00:00:00</postdate>
+</article>
