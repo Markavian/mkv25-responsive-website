@@ -356,39 +356,8 @@ tweet {
 	navigation > content > links > a { }
 	navigation > content > links > a.login { display: none; }
 	navigation > content > links > a.logout { display: none; }
-}
 
-/* Portrait design for a width of 480px */
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-	body { }
-	column.double > content { height: auto; }
-	column.triple > content { height: auto; }
-	column.quad > content { height: auto; }
-	
-	column.quad > content > heading { font-size: 130%; }
-	logo { height: 70px; }
-	
-	navigation { height: auto; }
-	navigation > content { height: auto; }
-	navigation > content > links {
-		display: block;
-		position: relative;
-		height: auto;
-		padding: 5px 0;
-		margin-bottom: 5px;
-		top: auto;
-		left: auto;
-		background: none;
-		border-top: 1px solid #CCC;
-	}
-	navigation > content > navicon { display: block; position: absolute; top: 10px; right: 0; width: 50px; height: 50px; background: url('../images/navigation.png') no-repeat center center; cursor: pointer; }
-	navigation > content > links { background: #FEFEFE; }
-	navigation > content > links > a { display: block; text-align: left; border-radius: 8px; margin: 10px 0; }
-	navigation > content > links.collapsed { display: none; }
-	
-	banner > group > heading { font-size: 36px; padding-top: 60px; }
-	banner > group > p { font-size: 24px; }
-	footer > content > icons { display: block; position: relative; text-align: center; top: 0; left: 0; }
+	iconlist > a { width: 110px; height: 110px; }
 }
 
 /* Portrait design for a width of 320px */
@@ -425,5 +394,40 @@ tweet {
 	banner > group > p { font-size: 24px; }
 	footer > content > icons { display: block; position: relative; text-align: center; top: 0; left: 0; }
 
-	iconlist > a { width: 60px; height: 60px; }
+	iconlist > a { width: 88px; height: 88px; }
+}
+
+/* Portrait design for a width of 480px */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	body { }
+	column.double > content { height: auto; }
+	column.triple > content { height: auto; }
+	column.quad > content { height: auto; }
+	
+	column.quad > content > heading { font-size: 130%; }
+	logo { height: 70px; }
+	
+	navigation { height: auto; }
+	navigation > content { height: auto; }
+	navigation > content > links {
+		display: block;
+		position: relative;
+		height: auto;
+		padding: 5px 0;
+		margin-bottom: 5px;
+		top: auto;
+		left: auto;
+		background: none;
+		border-top: 1px solid #CCC;
+	}
+	navigation > content > navicon { display: block; position: absolute; top: 10px; right: 0; width: 50px; height: 50px; background: url('../images/navigation.png') no-repeat center center; cursor: pointer; }
+	navigation > content > links { background: #FEFEFE; }
+	navigation > content > links > a { display: block; text-align: left; border-radius: 8px; margin: 10px 0; }
+	navigation > content > links.collapsed { display: none; }
+	
+	banner > group > heading { font-size: 36px; padding-top: 60px; }
+	banner > group > p { font-size: 24px; }
+	footer > content > icons { display: block; position: relative; text-align: center; top: 0; left: 0; }
+
+	iconlist > a { width: 102px; height: 102px; }
 }

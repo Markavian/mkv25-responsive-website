@@ -2,35 +2,12 @@
 
 class ArticleFormatter
 {
-
-	public static function renderLinksAsList($articles)
-	{
-		global $basePath;
-
-		ob_start();
-
-		echo "<ul>";
-		foreach ($articles as $index => $article)
-		{
-			$fileName = ArticleWriter::getFileNameFor($article->urlname);
-			$articleFileInfo = ArticleWriter::checkIfArticleExists($article->urlname) ? $fileName : '';
-			$articleUrl = $basePath . 'scrapbook/' . $article->urlname;
-
-			echo <<<END
-			<li><a href="$articleUrl">$article->name</a> - $articleFileInfo</li>
-END;
-		}
-		echo "</ul>";
-
-		return ob_get_clean();
-	}
-
 	public static function renderLinksAsIcons($articles)
 	{
 		global $SHOWCASE, $basePath;
 
 		ob_start();
-		
+
 		echo "<iconlist>";
 		
 		foreach ($articles as $key=>$article)

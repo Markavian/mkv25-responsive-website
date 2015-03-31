@@ -45,7 +45,7 @@ class Scrapbook
 		{
 			$linkedContent = "<heading>Related</heading>";
 			$linkedContent .= ArticleFormatter::renderLinksAsIcons($linkedArticles);
-			
+
 			$view->addSingleHTMLColumn($linkedContent);
 		}
 
@@ -71,9 +71,6 @@ class Scrapbook
 		{
 			$view->addSingleHTMLColumn($newFiles);
 		}
-
-		$linkList = ArticleFormatter::renderLinksAsList($articles);
-		$view->addSingleHTMLColumn($linkList);
 
 		$iconList = ArticleFormatter::renderLinksAsIcons($articles);
 		$view->addSingleHTMLColumn($iconList);
