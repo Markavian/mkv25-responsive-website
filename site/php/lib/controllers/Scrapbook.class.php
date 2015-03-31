@@ -38,6 +38,12 @@ class Scrapbook
 		$view->eyecatch($article->name, $article->keywords);
 		$view->banner('scrapbook short');
 
+		if(ArticleWriter::checkIfArticleExists($article->urlname))
+		{
+			$content = "Local file exists: " . ArticleWriter::getFileNameFor($article->urlname);
+			$view->addSingleHTMLColumn($content);
+		}
+
 		$content = $article->renderFullArticle();
 		$view->addSingleHTMLColumn($content);
 

@@ -2,6 +2,9 @@
 
 class Article
 {	
+	static $ID_INDEX = array();
+	static $URLNAME_INDEX = array();
+
 	var $id;
 	var $urlname;
 	var $name;
@@ -63,6 +66,9 @@ class Article
 		$this->addLinkedArticle($row['icon5']);
 
 		$this->postdate       = $row['postdate'];
+
+		Article::$ID_INDEX[$this->id] = $this;
+		Article::$URLNAME_INDEX[$this->urlname] = $this;
 	}
 
 	public function addLinkedArticle($articleLink)
@@ -72,7 +78,7 @@ class Article
 			$this->linkedArticles[] = $articleLink;
 		}
 	}
-	
+
 	static public function createFrom($sqlResultArray)
 	{
 		$article = new Article();
@@ -92,7 +98,8 @@ class Article
 	{
 		$article = $this;
 
-		$linkedArticles = implode(",", $article->linkedArticles);
+		$linkedArticles = Article::convertIDArrayToRefArray($article->linkedArticles);
+		$linkedArticles = implode(",", $linkedArticles);
 
 		ob_start();
 
@@ -123,5 +130,21 @@ END;
 	public static function isValidArticle($article)
 	{
 		return (is_numeric($article->id) && $article->urlname);
+	}
+
+	public static function convertIDArrayToRefArray($idArray)
+	{
+		$refArray = array();
+
+		foreach($idArray as $key=>$value)
+		{
+			if(isset(Article::$ID_INDEX[$value]))
+			{
+				$refArticle = Article::$ID_INDEX[$value];
+				$refArray[] = $refArticle->urlname;
+			}
+		}
+
+		return $refArray;
 	}
 }
