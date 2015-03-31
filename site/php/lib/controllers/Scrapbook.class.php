@@ -50,8 +50,6 @@ class Scrapbook
 		}
 
 		$view->render();
-
-		ArticleWriter::writeArticleToFile($article);
 	}
 
 	private function renderArticleList($request)

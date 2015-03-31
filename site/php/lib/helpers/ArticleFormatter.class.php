@@ -96,6 +96,7 @@ END;
 		{
 			echo <<<END
 			<icon style="background: url('//mkv25.net/site/icons/$icon_url') no-repeat center center;"></icon>
+			<br/>
 END;
 		}
 		

@@ -30,9 +30,11 @@ END;
 		if(Article::isValidArticle($article))
 		{
 			$storagePath = ArticleWriter::getFilePathFor($article->urlname);
+			$contentToWrite = $article->toXHTML();
+			$contentToWrite = mb_convert_encoding($contentToWrite, "UTF-8");
 
 			$file = fopen($storagePath, "w");
-			fwrite($file, $article->toXHTML());
+			fwrite($file, $contentToWrite);
 			fclose($file);
 		}
 	}

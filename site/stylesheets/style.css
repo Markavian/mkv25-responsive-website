@@ -3,11 +3,11 @@ html, body {
 	font-family: Verdana, Arial, sans-serif;
 	font-size: 90%;
 	
-	background: #FEFEFE;
+	background: #FEFEFE url('../images/pixel_background.png');
 }
 
 content {
-	background: #FEFEFE;
+	/*background: #FEFEFE;*/
 }
 
 hidden {
@@ -133,7 +133,7 @@ banner {
 banner.home { background-image: url('../images/banner_war.jpg'); }
 banner.blog { background-image: url('../images/banner_raindrops.jpg'); }
 banner.showcase { background-image: url('../images/banner_showcase.png'); background-size: auto; background-repeat: repeat-x; }
-banner.open-source { background-image: url('../images/banner_vines.jpg'); }
+banner.open-source { background-image: url('../images/banner_vines_pixeled.png'); }
 banner.forums { background-image: url('../images/banner_wier.jpg'); }
 banner.store { background-image: url('../images/banner_splash.jpg'); }
 banner.about { background-image: url('../images/banner_fate.jpg'); }

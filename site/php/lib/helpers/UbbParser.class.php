@@ -214,7 +214,7 @@ class UbbParser
 
   function parse($text)
   {
-     if(strpos(strtolower($text), '/me') > 0) $text = eregi_replace("([^[])/me([^\n\r$]*)([\n\r$])", "\\1[me=".$this->username."]\\2[/me]\\3", $text);
+     if(strpos(strtolower($text), '/me') > 0) $text = preg_replace("/([^[])\/me([^\n\r$]*)([\n\r$])/i", "/\\1[me=$this->username]\\2[\/me]\\3/i", $text);
      $text = str_replace('[*]','[li]', $text);
      $text = str_replace('[/*]','[/li]', $text);
 		 
