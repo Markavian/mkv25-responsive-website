@@ -130,15 +130,15 @@ banner {
 	margin-bottom: 10px;
 }
 
-banner.home { background-image: url('../images/banner_war.jpg'); }
-banner.blog { background-image: url('../images/banner_raindrops.jpg'); }
+banner.home { background-image: url('../images/banner_war_pixeled.png'); }
+banner.blog { background-image: url('../images/banner_raindrops_pixeled.png'); }
 banner.showcase { background-image: url('../images/banner_showcase.png'); background-size: auto; background-repeat: repeat-x; }
 banner.open-source { background-image: url('../images/banner_vines_pixeled.png'); }
-banner.forums { background-image: url('../images/banner_wier.jpg'); }
-banner.store { background-image: url('../images/banner_splash.jpg'); }
-banner.about { background-image: url('../images/banner_fate.jpg'); }
-banner.history { background-image: url('../images/banner_doorway.jpg'); }
-banner.scrapbook { background-image: url('../images/banner_scrapbook.png'); }
+banner.forums { background-image: url('../images/banner_wier_pixeled.png'); }
+banner.store { background-image: url('../images/banner_splash_pixeled.png'); }
+banner.about { background-image: url('../images/banner_fate_pixeled.png'); }
+banner.history { background-image: url('../images/banner_doorway_pixeled.png'); }
+banner.scrapbook { background-image: url('../images/banner_scrapbook_pixeled.png'); }
 
 banner > tint {
 	display: block;

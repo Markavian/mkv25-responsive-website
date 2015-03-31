@@ -12,9 +12,9 @@ class About
 		
 		$view->addSingleColumn("mkv25.net is the personal and professional site of John Beech, my alter ego Markavian, and the site's mascot Fate. Websites have been built on this domain since 2002, and to this day the site continues to promote innovations, digital artwork, and games.");
 		$view->addTripleColumns(
-			'<img src="site/images/about_markavian.png"/> <center>Lucy Markavian - virtual family maid</center>',
-			'<img src="site/images/about_johnbeech.png"/> <center>John Beech - self-portrait</center>',
-			'<img src="site/images/about_fate.jpg"/> <center>Fate - friend and mascot</center>'
+			'<img src="site/images/about_markavian.png"/> <center>Lucy Markavian - Family Maid</center>',
+			'<img src="site/images/about_johnbeech.png"/> <center>John Beech - Site Editor</center>',
+			'<img src="site/images/about_fate.jpg"/> <center>Fate - Friend and Mascot</center>'
 		);
 		$view->addDoubleColumns(
 			'<heading>Where</heading><p>We are based out of Manchester, UK.</p><p>The site is hosted from a server in the USA to best serve traffic needs.</p>',
