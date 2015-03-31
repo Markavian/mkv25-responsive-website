@@ -344,6 +344,11 @@ tweet {
 	text-align: left;
 }
 
+call-to-action {
+	display: block;
+	margin-top: 5px;
+}
+
 /* Default box sizes */
 @media only screen {
 	body { }

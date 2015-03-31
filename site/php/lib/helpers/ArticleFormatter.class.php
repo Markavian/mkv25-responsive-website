@@ -95,9 +95,7 @@ END;
 		if($icon_url)
 		{
 			echo <<<END
-			<iconlist>
-				<icon style="background: url('//mkv25.net/site/icons/$icon_url') no-repeat center center;"></icon>
-			</iconlist>
+			<icon style="background: url('//mkv25.net/site/icons/$icon_url') no-repeat center center;"></icon>
 END;
 		}
 		

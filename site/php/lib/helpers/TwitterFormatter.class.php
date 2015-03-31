@@ -18,6 +18,7 @@ class TwitterFormatter
 
 		$rawUser = false;
 		$iconUrl = '//mkv25.net/site/icons/planets_icon.png';
+		$tweetUrl = 'https://twitter.com/statuses/' . $tweet->id_str;
 		
 		if(isset($tweet->user->id))
 		{
@@ -43,6 +44,9 @@ class TwitterFormatter
 			<block class="right">
 				<icon style="background-image: url('$iconUrl')" title="Posted by $screenName"></icon><br />
 				<date>$postDate</date>
+				<call-to-action>
+					<a href="$tweetUrl">View on Twitter</a>
+				</call-to-action>
 			</block>
 			<heading>Twitter Update</heading>
 			<tweet>
