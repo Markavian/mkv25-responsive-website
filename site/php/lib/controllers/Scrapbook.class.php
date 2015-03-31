@@ -8,7 +8,7 @@ class Scrapbook
 	{
 		$this->reader = new ArticleReader();
 
-		if($request->page == 'scrapbook')
+		if($request->page == 'scrapbook' || !$request->page)
 		{
 			$this->renderArticleList($request);
 		}

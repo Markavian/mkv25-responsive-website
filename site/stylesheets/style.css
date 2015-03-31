@@ -124,7 +124,7 @@ navigation > content > links > a.login {
 banner {
 	display: block;
 	position: relative;
-	background: #538830 no-repeat center center;
+	background: #B9C0B4 no-repeat center center;
 	background-size: cover;
 	height: 300px;
 	margin-bottom: 10px;
@@ -138,6 +138,7 @@ banner.forums { background-image: url('../images/banner_wier.jpg'); }
 banner.store { background-image: url('../images/banner_splash.jpg'); }
 banner.about { background-image: url('../images/banner_fate.jpg'); }
 banner.history { background-image: url('../images/banner_doorway.jpg'); }
+banner.scrapbook { background-image: url('../images/banner_scrapbook.png'); }
 
 banner > tint {
 	display: block;
@@ -290,6 +291,7 @@ iconlist {
 	min-height: 100px;
 	margin-right: -10px;
 	text-align: center;
+	line-height: 0;
 }
 
 iconlist > a {
@@ -373,7 +375,7 @@ call-to-action {
 	navigation > content > links > a.login { display: none; }
 	navigation > content > links > a.logout { display: none; }
 
-	iconlist > a, iconlist > icon { width: 110px; height: 110px; }
+	iconlist > a, iconlist > a > icon, iconlist > icon { width: 110px; height: 110px; }
 }
 
 /* Portrait design for a width of 320px */
@@ -410,7 +412,7 @@ call-to-action {
 	banner > group > p { font-size: 24px; }
 	footer > content > icons { display: block; position: relative; text-align: center; top: 0; left: 0; }
 
-	iconlist > a, iconlist > icon { width: 88px; height: 88px; }
+	iconlist > a, iconlist > a > icon, iconlist > icon { width: 88px; height: 88px; }
 }
 
 /* Portrait design for a width of 480px */
@@ -445,5 +447,5 @@ call-to-action {
 	banner > group > p { font-size: 24px; }
 	footer > content > icons { display: block; position: relative; text-align: center; top: 0; left: 0; }
 
-	iconlist > a, iconlist > icon { width: 102px; height: 102px; }
+	iconlist > a, iconlist > a > icon, iconlist > icon { width: 102px; height: 102px; }
 }
