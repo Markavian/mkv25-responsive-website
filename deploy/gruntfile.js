@@ -43,6 +43,16 @@ module.exports = function(grunt) {
 				exclusions: FTP_EXCLUSIONS_NON_IMAGES,
 				verbose: true
 			},
+			"stage-articles": {
+				auth: {
+					host: FTP_HOST,
+					port: 21,
+					authKey: FTP_USER_STAGE
+				},
+				src: FTP_LOCAL_FOLDER + 'site/php/articles/',
+				dest: FTP_DEST_FOLDER + 'site/php/articles/',
+				verbose: true
+			},
 			"live": {
 				auth: {
 					host: FTP_HOST,
@@ -60,6 +70,7 @@ module.exports = function(grunt) {
 	// Default task(s).
 	grunt.registerTask('stage-code', ['ftp-deploy:stage-code']);
 	grunt.registerTask('stage-assets', ['ftp-deploy:stage-assets']);
+	grunt.registerTask('stage-articles', ['ftp-deploy:stage-articles']);
 	grunt.registerTask('stage-full', ['stage-code', 'stage-assets']);
 	grunt.registerTask('release', ['ftp-deploy:live']);
 }
