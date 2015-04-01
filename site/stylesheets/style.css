@@ -243,6 +243,10 @@ content > h1 {
 	text-transform: uppercase;
 }
 
+content > h2 {
+	font-size: 135%;
+}
+
 column > p, content {
 	text-align: justify;
 }
@@ -253,6 +257,15 @@ column > content > ul.square {
 
 column > content, content > content {
 	background: rgba(0, 0, 0, 0.1);
+}
+
+content > ul {
+	list-style: disc;
+	padding-left: 20px;
+}
+
+content > ul > li {
+	margin-bottom: 6px;
 }
 
 /* QBB / UBB Code */
