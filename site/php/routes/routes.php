@@ -14,3 +14,5 @@ $routes['history'] = 'History';
 $routes['scrapbook'] = 'Scrapbook';
 $routes['auth/logout'] = 'AuthLogout';
 $routes['auth/login'] = 'AuthLogin';
+$routes['auth/signout'] = 'AuthLogout';
+$routes['auth/signin'] = 'AuthLogin';
