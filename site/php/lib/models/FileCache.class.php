@@ -52,7 +52,7 @@ class FileCache
 
 	private static function getFilePathFor($cacheId)
 	{
-		global $CACHED_CONTENT_DIRECTORY;
+		$CACHED_CONTENT_DIRECTORY = Environment::get('CACHED_CONTENT_DIRECTORY');
 
 		return __DIR__ . '/../../' . $CACHED_CONTENT_DIRECTORY . '/' . $cacheId . '.cache';
 	}

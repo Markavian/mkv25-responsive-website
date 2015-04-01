@@ -1,18 +1,17 @@
 <?php
 
-$routes = array();
-$routes['subpath/test'] = 'Home';
+Routes::addRoute('subpath/test', 'Home');
 
-$routes['home'] = 'Home';
-$routes['news'] = 'News';
-$routes['showcase'] = 'Showcase';
-$routes['open-source'] = 'OpenSource';
-$routes['forums'] = 'Forums';
-$routes['store'] = 'Store';
-$routes['about'] = 'About';
-$routes['history'] = 'History';
-$routes['scrapbook'] = 'Scrapbook';
-$routes['auth/logout'] = 'AuthLogout';
-$routes['auth/login'] = 'AuthLogin';
-$routes['auth/signout'] = 'AuthLogout';
-$routes['auth/signin'] = 'AuthLogin';
+Routes::addRoute('home', 'Home');
+Routes::addRoute('news', 'News');
+Routes::addRoute('showcase', 'Showcase');
+Routes::addRoute('open-source', 'OpenSource');
+Routes::addRoute('forums', 'Forums');
+Routes::addRoute('store', 'Store');
+Routes::addRoute('about', 'About');
+Routes::addRoute('history', 'History');
+Routes::addRoute('scrapbook', 'Scrapbook');
+Routes::addRoute('auth/logout', 'AuthLogout');
+Routes::addRoute('auth/login', 'AuthLogin');
+Routes::addRoute('auth/signout', 'AuthLogout');
+Routes::addRoute('auth/signin', 'AuthLogin');

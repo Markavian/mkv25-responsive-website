@@ -38,7 +38,7 @@ class AuthLogout
 
 	function handleClefLogout()
 	{
-		global $CLEF_AUTH;
+		$CLEF_AUTH = Environment::get('CLEF_AUTH');
 
 		$app_id = $CLEF_AUTH['appId'];
 		$app_secret = $CLEF_AUTH['appSecret'];

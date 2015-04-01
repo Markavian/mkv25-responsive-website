@@ -4,7 +4,7 @@ class ArticleWriter
 {
 	public static function writeArticlesToFileSystem($articles)
 	{
-		global $basePath;
+		$SITE_ROOT_URL = Environment::get('SITE_ROOT_URL');
 
 		ob_start();
 
@@ -14,7 +14,7 @@ class ArticleWriter
 			{
 				ArticleWriter::writeArticleToFile($article);
 
-				$articleUrl = $basePath . 'scrapbook/' . $article->urlname;
+				$articleUrl = $SITE_ROOT_URL . 'scrapbook/' . $article->urlname;
 
 				echo <<<END
 			<p>Saved article as file: <a href="$articleUrl">$article->name</a></p>
@@ -63,7 +63,7 @@ END;
 
 	public static function getFilePathFor($articleUrlName)
 	{
-		global $ARTICLE_CONTENT_DIRECTORY;
+		$ARTICLE_CONTENT_DIRECTORY = Environment::get('ARTICLE_CONTENT_DIRECTORY');
 
 		$fileName = ArticleWriter::getFileNameFor($articleUrlName);
 

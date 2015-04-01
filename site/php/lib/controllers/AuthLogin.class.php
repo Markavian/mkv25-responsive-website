@@ -14,7 +14,8 @@ class AuthLogin
 		{
 			$this->handleClefLogin($auth);
 		}
-		else {
+		else
+		{
 			$this->clefResult = false;
 		}
 
@@ -51,15 +52,16 @@ class AuthLogin
 	}
 
 	function renderLoginOptions()
-	{		
-		global $CLEF_AUTH, $CLEF_PATHS;
+	{
+		$CLEF_AUTH = Environment::get('CLEF_AUTH');
+		$CLEF_REDIRECT_URL = Environment::get('CLEF_REDIRECT_URL');
 
 		$options = '<heading>Ways to sign in</heading>';
 
 		$template = new Template('site/templates/clef-login-link.template.html');
 
 		$template->set('{CLEF_APP_ID}', $CLEF_AUTH['appId']);
-		$template->set('{CLEF_REDIRECT_URL}', $CLEF_PATHS['redirectUrl']);
+		$template->set('{CLEF_REDIRECT_URL}', $CLEF_REDIRECT_URL);
 
 		$options .= $template->expand();
 
@@ -81,7 +83,7 @@ class AuthLogin
 
 	function handleClefLogin($siteAuth)
 	{
-		global $CLEF_AUTH;
+		$CLEF_AUTH = Environment::get('CLEF_AUTH');
 
 		// Clef OAuth authorisation
 		// Taken from: http://docs.getclef.com/v1.0/docs/quick-setup
@@ -119,8 +121,10 @@ class AuthLogin
 
 		restore_error_handler();
 
-		if ($response) {
-			if($response['success']) {
+		if ($response)
+		{
+			if($response['success'])
+			{
 				$access_token = $response['access_token'];
 
 				$opts = array('http' =>

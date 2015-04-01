@@ -4,11 +4,11 @@ class Home
 {
 	public function __construct($request)
 	{
-		global $HOME;
+		$TITLE = Environment::get('TITLE');
 
 		$view = new TemplateView();
 		$view->baseUrl($request->base);
-		$view->title($HOME['title']);
+		$view->title($TITLE);
 		$view->eyecatch('Coding at the core', 'Making games, discussing software, sharing source.');
 		$view->banner('home');
 

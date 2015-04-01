@@ -4,7 +4,8 @@ class ArticleFormatter
 {
 	public static function renderLinksAsIcons($articles)
 	{
-		global $SHOWCASE, $basePath;
+		$SITE_ROOT_URL = Environment::get('SITE_ROOT_URL');
+		$SHOWCASE_ICON_URL = Environment::get('SHOWCASE_ICON_URL');
 
 		ob_start();
 
@@ -12,8 +13,8 @@ class ArticleFormatter
 		
 		foreach ($articles as $key=>$article)
 		{
-			$iconUrl = $SHOWCASE['iconPath'] . $article->displayIcon;
-			$articleUrl = $basePath . 'scrapbook/' . $article->urlname;
+			$iconUrl = $SHOWCASE_ICON_URL . $article->displayIcon;
+			$articleUrl = $SITE_ROOT_URL . 'scrapbook/' . $article->urlname;
 			$articleTitle = $article->name;
 
 			echo <<<END
@@ -72,11 +73,11 @@ END;
 
 	private static function buildUrl($contentUrl)
 	{
-		global $SHOWCASE;
+		$SHOWCASE_BASE_URL = Environment::get('SHOWCASE_BASE_URL');
 
 		if($contentUrl && !startsWith($contentUrl, 'http'))
 		{
-			$contentUrl = $SHOWCASE['baseUrl'] . $contentUrl;
+			$contentUrl = $SHOWCASE_BASE_URL . $contentUrl;
 		}
 
 		return $contentUrl;

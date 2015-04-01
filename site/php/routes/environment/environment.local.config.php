@@ -4,6 +4,5 @@ require('common.config.php');
 
 // Local environment specific config
 
-$HOME['title'] = 'Local Home';
-
-$CLEF_PATHS['redirectUrl'] = 'http://localhost/mkv25/auth/login';
+Environment::register('TITLE', 'Local Home');
+Environment::register('CLEF_REDIRECT_URL', 'http://localhost/mkv25/auth/login');

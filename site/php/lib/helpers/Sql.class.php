@@ -26,7 +26,7 @@ class Sql
 	public static function getInstance() {
 		if(!Sql::$singleton) {
 
-			global $SQL_CONNECTION_DETAILS;
+			$SQL_CONNECTION_DETAILS = Environment::get('SQL_CONNECTION_DETAILS');
 
 			$host     = $SQL_CONNECTION_DETAILS[0];
 			$database = $SQL_CONNECTION_DETAILS[1];

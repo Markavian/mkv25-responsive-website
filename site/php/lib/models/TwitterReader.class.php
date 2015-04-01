@@ -8,7 +8,7 @@ class TwitterReader
 
 	public function __construct()
 	{
-		global $TWITTER;
+		$TWITTER = Environment::get('TWITTER');
 
 		$consumerKey = $TWITTER['CONSUMER_KEY'];
 		$consumerSecret = $TWITTER['CONSUMER_SECRET'];

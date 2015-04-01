@@ -3,16 +3,27 @@
 // Secret environment config template
 // Should be named: "secret.config.php"
 
-$CLEF_AUTH = Array(
-	"appId" => 'not set',
-	"appSecret" => 'not set'
+Environment::register('CLEF_AUTH',
+	Array(
+		"appId" => false,
+		"appSecret" => false
+	)
 );
 
-$SQL_CONNECTION_DETAILS = array('host', 'database', 'username', 'password');
+Environment::register('SQL_CONNECTION_DETAILS',
+	Array(
+		'host',
+		'database',
+		'username',
+		'password'
+	)
+);
 
-$TWITTER = Array(
-	"CONSUMER_KEY" => false,
-	"CONSUMER_SECRET" => false,
-	"ACCESS_TOKEN" => false,
-	"ACCESS_TOKEN_SECRET" => false
+Environment::register('TWITTER', 
+	Array(
+		"CONSUMER_KEY" => false,
+		"CONSUMER_SECRET" => false,
+		"ACCESS_TOKEN" => false,
+		"ACCESS_TOKEN_SECRET" => false
+	)
 );
