@@ -26,11 +26,11 @@ class AuthLogout
 		
 		$view = new TemplateView();
 		$view->baseUrl($request->base);
-		$view->title('Logout');
-		$view->eyecatch('Logout', "Thanks for visiting...");
-		$view->banner('logout');
+		$view->title('Sign Out');
+		$view->eyecatch('Sign Out', "Thanks for visiting...");
+		$view->banner('signout');
 		
-		$view->addSingleColumn('Right, lets get you logged out...');
+		$view->addSingleColumn('Right, lets get you signed out...');
 		$view->addSingleColumn($logoutResult);
 		
 		$view->render();

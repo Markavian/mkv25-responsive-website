@@ -7,23 +7,23 @@ class Template
 	var $template;
 	var $keys;
 	
-	public function __construct($name)
+	public function __construct($path)
 	{
 		$keys = array();
 		
-		$this->load($name);
+		$this->loadTemplate($path);
 	}
 	
-	function load($name)
+	private function loadTemplate($path)
 	{
-		$path = Template::TEMPLATE_DIRECTORY . $name;
-		if (file_exists($path))
+		$fullPath = Template::TEMPLATE_DIRECTORY . $path;
+		if (file_exists($fullPath))
 		{
-			$this->template = file_get_contents($path);
+			$this->template = file_get_contents($fullPath);
 		}
 		else
 		{
-			throw new Exception('Template not found: ' . $name);
+			throw new Exception('Template not found on path: ' . $fullPath);
 		}
 	}
 	
@@ -37,9 +37,12 @@ class Template
 		$output = $this->template;
 		$output = Template::removeTabs($output);
 		
-		foreach($this->keys as $key => $value)
+		if(count($this->keys) > 0)
 		{
-			$output = str_replace($key, $value, $output);
+			foreach($this->keys as $key => $value)
+			{
+				$output = str_replace($key, $value, $output);
+			}
 		}
 		
 		return $output;
@@ -48,5 +51,20 @@ class Template
 	public static function removeTabs($string)
 	{
 		return str_replace("\t", "  ", $string);
+	}
+
+	public static function load($path, $keys=false)
+	{
+		$template = new Template($path);
+
+		if($keys && count($keys) > 0)
+		{
+			foreach($keys as $key => $value)
+			{
+				$template->set($key, $value);
+			}
+		}
+
+		return $template->expand();
 	}
 }

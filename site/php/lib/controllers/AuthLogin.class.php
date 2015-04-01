@@ -24,9 +24,9 @@ class AuthLogin
 		// Start building page response
 		$view = new TemplateView();
 		$view->baseUrl($request->base);
-		$view->title('Login');
-		$view->eyecatch('Login', "Right, lets get you logged in...");
-		$view->banner('login');
+		$view->title('Sign In');
+		$view->eyecatch('Sign In', "Right, lets get you signed in...");
+		$view->banner('signin');
 
 		// Build up page body
 		if($this->clefResult)
@@ -40,10 +40,30 @@ class AuthLogin
 		}
 		else
 		{
-			$view->addSingleColumn('TODO: Provide login form.');
+			$loginOptions = $this->renderLoginOptions();
+			$view->addSingleColumn($loginOptions);
+
+			$whySignIn = Template::load('site/templates/why-sign-in.template.html');
+			$view->addSingleColumn($whySignIn);
 		}
 
 		$view->render();
+	}
+
+	function renderLoginOptions()
+	{		
+		global $CLEF_AUTH, $CLEF_PATHS;
+
+		$options = '<heading>Ways to sign in</heading>';
+
+		$template = new Template('site/templates/clef-login-link.template.html');
+
+		$template->set('{CLEF_APP_ID}', $CLEF_AUTH['appId']);
+		$template->set('{CLEF_REDIRECT_URL}', $CLEF_PATHS['redirectUrl']);
+
+		$options .= $template->expand();
+
+		return $options;
 	}
 
 	function handleNormalAuth($siteAuth)
