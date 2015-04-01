@@ -23,14 +23,14 @@ class News
 			if(isset($tweet->text))
 			{
 				$tweetHtml = TwitterFormatter::renderTweet($tweet);
-				$view->addSingleHTMLColumn($tweetHtml);
+				$view->addSingleColumn($tweetHtml);
 			}
 		}
 
 		foreach($articles as $key=>$article)
 		{
 			$content = $article->renderFullArticle();
-			$view->addSingleHTMLColumn($content);
+			$view->addSingleColumn($content);
 		}
 		
 		$view->render();

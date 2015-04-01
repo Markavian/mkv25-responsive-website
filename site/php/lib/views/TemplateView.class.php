@@ -49,15 +49,9 @@ class TemplateView
 		$this->template->set('{BASE_URL}', $value);
 	}
 	
-	public function addSingleHTMLColumn($content)
-	{
-		$column = new ContentColumn($content, 'single', true);
-		$this->columns[] = $column;
-	}
-	
 	public function addSingleColumn($content)
 	{
-		$this->addColumn($content, 'single');
+		$this->addColumn($content, 'single', true);
 	}
 	
 	public function addDoubleColumns($first, $second)
@@ -83,9 +77,7 @@ class TemplateView
 	
 	private function addColumn($content, $type, $first=false)
 	{
-		$parsedown = new Parsedown();
-		$markdownHtml = $parsedown->text($content);
-		$column = new ContentColumn($markdownHtml, $type, $first);
+		$column = new ContentColumn($content, $type, $first);
 		$this->columns[] = $column;
 	}
 	

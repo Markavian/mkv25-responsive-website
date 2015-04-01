@@ -11,6 +11,9 @@ class Showcase
 		$view->banner('showcase short');
 		
 		$view->addSingleColumn('Showcase is waiting for the editor to do a write up.');
+
+		$scrapbookLink = Content::load('site/content/scrapbook-link.content.md');
+		$view->addSingleColumn($scrapbookLink);
 		
 		$view->render();
 	}

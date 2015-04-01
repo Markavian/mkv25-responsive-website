@@ -14,17 +14,13 @@ hidden {
 	display: none;
 }
 
-heading {
-	text-transform: uppercase;
-}
-
 /* Fonts */
 heading, version, copyright,
 h1, h2, h3, h4, h5, h6 {
 	font-family: Trebuchet MS,  Helvetica, "HelveticaNeue", "Helvetica Neue", Arial, sans-serif;
 }
 
-heading > a {
+heading > a, h1 > a {
 	text-decoration: none;
 }
 
@@ -240,8 +236,11 @@ ul > li {
 }
 
 /* Column styling */
-column > heading, content > heading {
+column > heading,
+content > heading,
+content > h1 {
 	font-size: 150%;
+	text-transform: uppercase;
 }
 
 column > p, content {

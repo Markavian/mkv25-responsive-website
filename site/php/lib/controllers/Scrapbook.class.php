@@ -39,14 +39,14 @@ class Scrapbook
 		$view->banner('scrapbook short');
 
 		$content = $article->renderFullArticle();
-		$view->addSingleHTMLColumn($content);
+		$view->addSingleColumn($content);
 
 		if(count($linkedArticles))
 		{
 			$linkedContent = "<heading>Related</heading>";
 			$linkedContent .= ArticleFormatter::renderLinksAsIcons($linkedArticles);
 
-			$view->addSingleHTMLColumn($linkedContent);
+			$view->addSingleColumn($linkedContent);
 		}
 
 		$view->render();
@@ -67,11 +67,11 @@ class Scrapbook
 		$newFiles = ArticleWriter::writeArticlesToFileSystem($articles);
 		if($newFiles)
 		{
-			$view->addSingleHTMLColumn($newFiles);
+			$view->addSingleColumn($newFiles);
 		}
 
 		$iconList = ArticleFormatter::renderLinksAsIcons($articles);
-		$view->addSingleHTMLColumn($iconList);
+		$view->addSingleColumn($iconList);
 
 		$view->render();
 	}
