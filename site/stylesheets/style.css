@@ -139,6 +139,7 @@ banner.store { background-image: url('../images/banner_splash_pixeled.png'); }
 banner.about { background-image: url('../images/banner_fate_pixeled.png'); }
 banner.history { background-image: url('../images/banner_doorway_pixeled.png'); }
 banner.scrapbook { background-image: url('../images/banner_scrapbook.png'); }
+banner.login { background-image: url('../images/banner_lock_and_key.png'); }
 
 banner > tint {
 	display: block;

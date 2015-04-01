@@ -2,41 +2,65 @@
 
 class AuthLogin
 {
+	var $clefResult;
+	var $authResult;
+
 	public function __construct($request)
 	{
 		$auth = new Auth();
 
 		// Do a special Clef login if a code is set:
-		if(isset($_GET['code'])) {
+		if(isset($_GET['code']))
+		{
 			$this->handleClefLogin($auth);
 		}
 		else {
-			$this->clefResult = 'Nothing to tune in to.';
+			$this->clefResult = false;
 		}
 
 		// Do a normal login check:
-		$user = $auth->getCurrentUser();
-		if($user->isValidSession()) {
-			$authResult = $user->username . ', Email: ' . $user->email . ', Last login: ' . $user->dateLastLogin . ', Access level: ' . $user->accessLevel;
-		}
-		else {
-			$authResult = 'User is not logged in. TODO: provide username and password form?';
-		}
+		$this->handleNormalAuth($auth);
 
+		// Start building page response
 		$view = new TemplateView();
 		$view->baseUrl($request->base);
 		$view->title('Login');
 		$view->eyecatch('Login', "Right, lets get you logged in...");
 		$view->banner('login');
 
-		$view->addSingleColumn('Clef Result: ' . $this->clefResult);
-		$view->addSingleColumn('Auth Result: ' . $authResult);
-		
+		// Build up page body
+		if($this->clefResult)
+		{
+			$view->addSingleColumn('Clef Result: ' . $this->clefResult);
+		}
+
+		if($this->authResult)
+		{
+			$view->addSingleColumn('Auth Result: ' . $this->authResult);
+		}
+		else
+		{
+			$view->addSingleColumn('TODO: Provide login form.');
+		}
+
 		$view->render();
 	}
 
-	function handleClefLogin($siteAuth) {
+	function handleNormalAuth($siteAuth)
+	{
+		$user = $siteAuth->getCurrentUser();
+		if($user->isValidSession())
+		{
+			$this->authResult = $user->username . ', Email: ' . $user->email . ', Last login: ' . $user->dateLastLogin . ', Access level: ' . $user->accessLevel;
+		}
+		else
+		{
+			$this->authResult = false;
+		}
+	}
 
+	function handleClefLogin($siteAuth)
+	{
 		global $CLEF_AUTH;
 
 		// Clef OAuth authorisation
@@ -68,10 +92,11 @@ class AuthLogin
 		$context  = stream_context_create($opts);
 		$response = false;
 
-		set_error_handler(function ($errno, $errstr, $errfile, $errline, array $errcontext) {
-		});
+		set_error_handler(function ($errno, $errstr, $errfile, $errline, array $errcontext) {});
+
 		$response = file_get_contents($url, false, $context);
 		$response = json_decode($response, true);
+
 		restore_error_handler();
 
 		if ($response) {
