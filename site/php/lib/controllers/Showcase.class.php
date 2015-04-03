@@ -10,10 +10,10 @@ class Showcase
 		$view->eyecatch('Showcase', 'Games, prototypes, and fun things...');
 		$view->banner('showcase short');
 		
-		$showcaseContent = Content::load('site/content/showcase.content.md');
+		$showcaseContent = Content::load('content/showcase.content.md');
 		$view->addSingleColumn($showcaseContent);
 
-		$scrapbookLink = Content::load('site/content/scrapbook-link.content.md');
+		$scrapbookLink = Content::load('content/scrapbook-link.content.md');
 		$view->addSingleColumn($scrapbookLink);
 		
 		$view->render();

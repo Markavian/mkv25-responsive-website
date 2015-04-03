@@ -7,6 +7,8 @@ class TemplateView
 	
 	public function __construct()
 	{
+		$REQUEST = Environment::get('REQUEST');
+
 		$this->keys = array();
 		$this->columns = array();
 		
@@ -14,7 +16,7 @@ class TemplateView
 		
 		$this->title();
 		$this->description();
-		$this->baseUrl();
+		$this->baseUrl($REQUEST->base);
 		$this->banner();
 
 		$auth = new Auth();

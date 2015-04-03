@@ -268,6 +268,10 @@ content > ul > li {
 	margin-bottom: 6px;
 }
 
+content > img, content > p > img {
+	margin: auto;
+}
+
 /* QBB / UBB Code */
 div.article.content > p,
 div.article.content > h2,
