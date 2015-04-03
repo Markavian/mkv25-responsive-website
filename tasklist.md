@@ -6,14 +6,17 @@ Bugs
 
 In progress
 -----------
++ Migrate scrapbook content over to new layout
++ Migrate Ludum Dare games over to new layout
++ Link Ludum Dare games from Showcase
 + Populate news with relevant content
++ Disconnect scrapbook content from database
 
 Improvements based on User Feedback
 -----------------------------------
 
 Missing Features
 ----------------
-+ History Page - reassure visitors that we've been doing this for a while
 + Showcase - promote our existing games and prototypes
 + Open source section - promote the good work that mkv25.net does
 + Store - enable a sale of a game
@@ -40,3 +43,6 @@ Release Tasks
 - Dispose of the comments system
 
 
+Completed features
+------------------
++ History Page - reassure visitors that we've been doing this for a while
