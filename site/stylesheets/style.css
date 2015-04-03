@@ -275,8 +275,10 @@ content > ul > li {
 	margin-bottom: 6px;
 }
 
-content > img, content > p > img {
+content > img, content > p > img,
+content > object, content > p > object {
 	margin: auto;
+	display: block;
 }
 
 /* Tables */
@@ -289,12 +291,12 @@ content > table {
 
 content > table > thead > tr > th {
 	font-weight: bold;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.7);
 	padding: 3px;
 }
 
 content > table > tbody > tr > td {
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.9);
 	padding: 3px;
 }
 

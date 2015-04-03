@@ -32,7 +32,7 @@ END;
 		// Remove non-alpha numeric characters from ID
 		$contentId = 'flash-' . removeNonAlphaNumericCharactersFrom($contentId);
 
-		$width = "100%";
+		$width = (is_numeric($width)) ? $width . 'px' : $width;
 		$height = (is_numeric($height)) ? $height . 'px' : $height;
 
 		ob_start();
