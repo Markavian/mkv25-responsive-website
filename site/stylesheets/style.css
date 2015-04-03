@@ -28,6 +28,11 @@ navigation {
 	font-family: Helvetica, "HelveticaNeue", "Helvetica Neue", Arial, sans-serif;
 }
 
+p, table {
+	font-family: Helvetica, "HelveticaNeue", "Helvetica Neue", Arial, sans-serif;
+	font-size: 110%;
+}
+
 /* The site logo */
 logo {
 	display: block;
@@ -239,12 +244,13 @@ ul > li {
 column > heading,
 content > heading,
 content > h1 {
-	font-size: 150%;
+	font-size: 160%;
 	text-transform: uppercase;
 }
 
 content > h2 {
 	font-size: 135%;
+	text-transform: uppercase;
 }
 
 column > p, content {
@@ -256,7 +262,8 @@ column > content > ul.square {
 }
 
 column > content, content > content {
-	background: rgba(0, 0, 0, 0.1);
+	/* background: rgba(0, 0, 0, 0.1); */
+	background: rgba(255, 255, 255, 0.7);
 }
 
 content > ul {
@@ -270,6 +277,25 @@ content > ul > li {
 
 content > img, content > p > img {
 	margin: auto;
+}
+
+/* Tables */
+content > table {
+	border-spacing: 2px;
+    border-collapse: separate;
+    background: rgba(0, 0, 0, 0.1);
+    margin-bottom: 12px;
+}
+
+content > table > thead > tr > th {
+	font-weight: bold;
+    background: rgba(255, 255, 255, 0.5);
+	padding: 3px;
+}
+
+content > table > tbody > tr > td {
+    background: rgba(255, 255, 255, 0.5);
+	padding: 3px;
 }
 
 /* QBB / UBB Code */

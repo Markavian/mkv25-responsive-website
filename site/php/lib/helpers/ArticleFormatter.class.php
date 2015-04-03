@@ -27,7 +27,7 @@ END;
 		return ob_get_clean();
 	}
 
-	private static function renderFlashContent($contentUrl, $contentId='flash', $width="100%", $height=400)
+	public static function renderFlashContent($contentUrl, $contentId='flash', $width="100%", $height=400)
 	{
 		// Remove non-alpha numeric characters from ID
 		$contentId = 'flash-' . removeNonAlphaNumericCharactersFrom($contentId);

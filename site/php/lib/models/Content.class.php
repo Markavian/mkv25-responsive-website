@@ -29,10 +29,18 @@ class Content
 	
 	public function render()
 	{
+		// Find and escape media tags
+		$mediaFormatter = new MediaFormatter();
+		$escapedMediaContent = $mediaFormatter->createMediaKeys($this->content);
+
+		// Parse remaining content using Parsedown rules
 		$parsedown = new Parsedown();
-		$markdownHtml = $parsedown->text($this->content);
+		$markdownHtml = $parsedown->text($escapedMediaContent);
 		
-		$output = $markdownHtml;
+		// Reinsert media tags as HTML blocks
+		$replacedMediaHTML = $mediaFormatter->replaceMediaKeys($markdownHtml);
+
+		$output = $replacedMediaHTML;
 
 		return $output;
 	}
