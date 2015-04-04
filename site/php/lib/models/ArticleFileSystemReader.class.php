@@ -11,9 +11,7 @@ class ArticleFileSystemReader
 
 	public function getAllContent()
 	{
-		$contentItems = array();
-		
-		return $contentItems;
+		return ArticleIO::readAllArticles();
 	}
 
 	public function getContentByUrlName($urlName)

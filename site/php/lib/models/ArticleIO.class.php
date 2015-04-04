@@ -53,6 +53,32 @@ END;
 
 		return $article;
 	}
+	
+	public static function readAllArticles()
+	{
+		$articles = Array();
+		
+		$directoryPath = ArticleIO::getDirectoryPath();
+		
+		$fileList = scandir($directoryPath);
+		
+		foreach($fileList as $key => $fileName)
+		{
+			if (endsWith($fileName, 'article.xml'))
+			{
+				$filePath = $directoryPath . $fileName;
+				$articleXML = simplexml_load_file($filePath);
+				$article = Article::createFromXHTML($articleXML);
+			
+				if ($article)
+				{
+					$articles[] = $article;
+				}
+			}
+		}
+		
+		return $articles;
+	}
 
 	public static function checkIfArticleExists($articleUrlName)
 	{
@@ -61,13 +87,20 @@ END;
 		return file_exists($filePath);
 	}
 
-	public static function getFilePathFor($articleUrlName)
+	private static function getFilePathFor($articleUrlName)
 	{
 		$ARTICLE_CONTENT_DIRECTORY = Environment::get('ARTICLE_CONTENT_DIRECTORY');
 
 		$fileName = ArticleIO::getFileNameFor($articleUrlName);
 
 		return __DIR__ . '/../../' . $ARTICLE_CONTENT_DIRECTORY . '/' . $fileName;
+	}
+
+	private static function getDirectoryPath()
+	{
+		$ARTICLE_CONTENT_DIRECTORY = Environment::get('ARTICLE_CONTENT_DIRECTORY');
+
+		return __DIR__ . '/../../' . $ARTICLE_CONTENT_DIRECTORY . '/';
 	}
 
 	public static function getFileNameFor($articleUrlName)
