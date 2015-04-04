@@ -64,14 +64,21 @@ class Scrapbook
 		$articles = $this->reader->getAllArticles();
 
 		// Save articles as physical files
-		$newFiles = ArticleWriter::writeArticlesToFileSystem($articles);
-		if($newFiles)
+		if ($articles)
 		{
-			$view->addSingleColumn($newFiles);
-		}
+			$newFiles = ArticleIO::writeArticlesToFileSystem($articles);
+			if($newFiles)
+			{
+				$view->addSingleColumn($newFiles);
+			}
 
-		$iconList = ArticleFormatter::renderLinksAsIcons($articles);
-		$view->addSingleColumn($iconList);
+			$iconList = ArticleFormatter::renderLinksAsIcons($articles);
+			$view->addSingleColumn($iconList);
+		}
+		else
+		{
+			$view->addSingleColumn("No articles found.");
+		}
 
 		$view->render();
 	}

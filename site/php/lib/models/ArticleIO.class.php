@@ -1,6 +1,6 @@
 <?php
 
-class ArticleWriter
+class ArticleIO
 {
 	public static function writeArticlesToFileSystem($articles)
 	{
@@ -10,9 +10,9 @@ class ArticleWriter
 
 		foreach ($articles as $index => $article)
 		{
-			if(ArticleWriter::checkIfArticleExists($article->urlname) == false)
+			if(ArticleIO::checkIfArticleExists($article->urlname) == false)
 			{
-				ArticleWriter::writeArticleToFile($article);
+				ArticleIO::writeArticleToFile($article);
 
 				$articleUrl = $SITE_ROOT_URL . 'scrapbook/' . $article->urlname;
 
@@ -29,7 +29,7 @@ END;
 	{
 		if(Article::isValidArticle($article))
 		{
-			$storagePath = ArticleWriter::getFilePathFor($article->urlname);
+			$storagePath = ArticleIO::getFilePathFor($article->urlname);
 			$contentToWrite = $article->toXHTML();
 			$contentToWrite = mb_convert_encoding($contentToWrite, "UTF-8");
 
@@ -43,9 +43,9 @@ END;
 	{
 		$article = false;
 
-		if(ArticleWriter::checkIfArticleExists($articleUrlName))
+		if(ArticleIO::checkIfArticleExists($articleUrlName))
 		{
-			$filePath = ArticleWriter::getFilePathFor($articleUrlName);
+			$filePath = ArticleIO::getFilePathFor($articleUrlName);
 
 			$articleXML = simplexml_load_file($filePath);
 			$article = Article::createFromXHTML($articleXML);
@@ -56,7 +56,7 @@ END;
 
 	public static function checkIfArticleExists($articleUrlName)
 	{
-		$filePath = ArticleWriter::getFilePathFor($articleUrlName);
+		$filePath = ArticleIO::getFilePathFor($articleUrlName);
 
 		return file_exists($filePath);
 	}
@@ -65,7 +65,7 @@ END;
 	{
 		$ARTICLE_CONTENT_DIRECTORY = Environment::get('ARTICLE_CONTENT_DIRECTORY');
 
-		$fileName = ArticleWriter::getFileNameFor($articleUrlName);
+		$fileName = ArticleIO::getFileNameFor($articleUrlName);
 
 		return __DIR__ . '/../../' . $ARTICLE_CONTENT_DIRECTORY . '/' . $fileName;
 	}

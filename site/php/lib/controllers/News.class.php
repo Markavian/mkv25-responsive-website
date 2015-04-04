@@ -17,20 +17,37 @@ class News
 		// Get news from twitter
 		$twitterReader = new TwitterReader();
 		$tweets = $twitterReader->getTweets();
-
-		foreach($tweets as $key=>$tweet)
+		
+		$numberOfArticles = 0;
+		$numberOfTweets = 0;
+		
+		if (is_array($tweets))
 		{
-			if(isset($tweet->text))
+			foreach($tweets as $key=>$tweet)
 			{
-				$tweetHtml = TwitterFormatter::renderTweet($tweet);
-				$view->addSingleColumn($tweetHtml);
+				if(isset($tweet->text))
+				{
+					$tweetHtml = TwitterFormatter::renderTweet($tweet);
+					$view->addSingleColumn($tweetHtml);
+				}
+				$numberOfTweets++;
 			}
 		}
 
-		foreach($articles as $key=>$article)
+		if (is_array($articles))
 		{
-			$content = $article->renderFullArticle();
-			$view->addSingleColumn($content);
+			foreach($articles as $key=>$article)
+			{
+				$content = $article->renderFullArticle();
+				$view->addSingleColumn($content);
+				
+				$numberOfArticles++;
+			}
+		}
+		
+		if ($numberOfTweets == 0 && $numberOfArticles == 0)
+		{
+			$view->addSingleColumn("No news available at this time.");
 		}
 		
 		$view->render();

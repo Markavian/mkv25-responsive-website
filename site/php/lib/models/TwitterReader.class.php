@@ -15,7 +15,10 @@ class TwitterReader
 		$accessToken = $TWITTER['ACCESS_TOKEN'];
 		$accessTokenSecret = $TWITTER['ACCESS_TOKEN_SECRET'];
 
-		$this->twitterOAuthConnection = new TwitterOAuth($consumerKey, $consumerSecret, $accessToken, $accessTokenSecret);
+		if ($consumerKey && $consumerSecret && $accessToken && $accessTokenSecret)
+		{
+			$this->twitterOAuthConnection = new TwitterOAuth($consumerKey, $consumerSecret, $accessToken, $accessTokenSecret);
+		}
 	}
 
 	public function getTwitterUser($userId)
@@ -26,6 +29,8 @@ class TwitterReader
 		}
 		else
 		{
+			if (!$this->twitterOAuthConnection) return false;
+			
 			$userInfo = $this->twitterOAuthConnection->get("users/show", array("user_id" => $userId, "trim_user" => 1, "count" => 20));
 			TwitterReader::storeUserInCache($userId, $userInfo);
 		}
@@ -60,6 +65,8 @@ class TwitterReader
 		}
 		else
 		{
+			if (!$this->twitterOAuthConnection) return false;
+		
 			$tweets = $this->twitterOAuthConnection->get("statuses/user_timeline", array("user_id" => $myUserId, "trim_user" => 1, "count" => 20));
 			TwitterReader::storeTweetsInCache($tweets);
 		}
