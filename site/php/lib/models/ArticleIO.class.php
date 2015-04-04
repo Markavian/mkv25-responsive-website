@@ -2,6 +2,8 @@
 
 class ArticleIO
 {
+	static $FILE_INDEX = array();
+	
 	public static function writeArticlesToFileSystem($articles)
 	{
 		$SITE_ROOT_URL = Environment::get('SITE_ROOT_URL');
@@ -66,9 +68,18 @@ END;
 		{
 			if (endsWith($fileName, 'article.xml'))
 			{
-				$filePath = $directoryPath . $fileName;
-				$articleXML = simplexml_load_file($filePath);
-				$article = Article::createFromXHTML($articleXML);
+				if (isset(ArticleIO::$FILE_INDEX[$fileName]))
+				{
+					$article = ArticleIO::$FILE_INDEX[$fileName];
+				}
+				else
+				{
+					$filePath = $directoryPath . $fileName;
+					$articleXML = simplexml_load_file($filePath);
+					$article = Article::createFromXHTML($articleXML);
+					
+					ArticleIO::$FILE_INDEX[$fileName] = $article;
+				}
 			
 				if ($article)
 				{
