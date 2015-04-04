@@ -41,7 +41,7 @@ class Scrapbook
 		$content = $article->renderFullArticle();
 		$view->addSingleColumn($content);
 
-		if(count($linkedArticles))
+		if(is_array($linkedArticles))
 		{
 			$linkedContent = "<heading>Related</heading>";
 			$linkedContent .= ArticleFormatter::renderLinksAsIcons($linkedArticles);
