@@ -1,15 +1,18 @@
 <?php	
 
 # title		:	SQL Class
-# version	:	1.25
+# version	:	1.26
 # author	:	Markavian
-# last edit	:	24/02/2015
+# last edit	:	04/04/2015
 # function	:	MySQL abstraction layer, custom set of MySQL functions by Markavian
 # contact	:	johnbeech@mkv25.net
 
 class Sql
 {
 	static $singleton;
+	
+	static $errorReportsOn = true;
+	static $errorReportsVisible = true;
 
 	var $host;
 	var $database;
@@ -40,7 +43,8 @@ class Sql
 	}
 
 	// Connect using environment variables
-	public function __construct($host, $database, $user, $password) {
+	public function __construct($host, $database, $user, $password)
+	{
 		$this->host     = $host;
 	    $this->database = $database;
 	    $this->user     = $user;
@@ -51,41 +55,66 @@ class Sql
 
 	// Error display formatting
 	// Feel free to write in error logging on server file (append file, date/time, etc.)
-	function error($title, $type, $file, $line, $error, $explained, $suggestion) {
-		echo "<pre>$title<br>";
-		echo "_________________________<br>";
-		echo "$type<br>";
-		echo "$error<br>";
-		echo "$explained<br>";
-		echo "$suggestion</pre>";
+	function error($title, $type, $file, $line, $error, $explanation, $suggestion)
+	{
+		$visible = (self::$errorReportsVisible);
+	
+		if (self::$errorReportsOn)
+		{
+			if (!$visible) echo "<!--\n";
+			
+			echo <<< END
+<sqlerror>
+	<errorTitle>$title</errorTitle>
+	<errorType>$type</errorType>
+	<errorMessage>$error</errorMessage>
+	<errorExplanation>$explanation</errorExplanation>
+	<errorSuggestion>$suggestion</errorSuggestion>
+</sqlerror>
+
+<style>
+sqlerror, sqlerror > * {
+	display: block;
+	padding: 4px;
+}
+sqlerror > errorTitle { font-weight: bold; }
+sqlerror > errorMessage { font-weight: bold; color: red; }
+</style>
+
+END;
+			if (!$visible) echo "!-->";
+		}
 	}
 
 	// Connect to database
-	function connect() {
-	
-		if($this->connect == 0) {
-			$this->connect = mysql_connect($this->host, $this->user, $this->password);
-
-			if(!$this->connect) {
+	function connect()
+	{
+		if ($this->connect == 0)
+		{
+			$this->connect = @mysql_connect($this->host, $this->user, $this->password);
+			
+			if (!$this->connect)
+			{
 				$this->error
 				(
-					"MySQL Error",
-					"Unable to connect",
+					"SQL Error",
+					"Unable to connect.",
 					__FILE__,
 					__LINE__,
 					mysql_error(),
-					"Unauthorized access.",
+					"Unable to establish database connection.",
 					"Check to make sure you have the correct mysql information entered into this file. Such as password and username. \nThe host is usually localhost or localhost:/tmp/mysql5.sock."
 				);
-			} else {
-
+			}
+			else
+			{
 				@mysql_select_db($this->database,$this->connect);
 
 				if(!$this->connect) {
 					$this->error
 					(
-						"MySQL Error",
-						"Unable to connect",
+						"SQL Error",
+						"Unable to connect.",
 						__FILE__,
 						__LINE__,
 						mysql_error(),
@@ -129,7 +158,7 @@ class Sql
 		if ( !$this->result[$name] ) {
 			
 			$this->error(
-				"MySQL Error",
+				"SQL Error",
 				"Could not run the query: $query",
 				__FILE__,
 				__LINE__,

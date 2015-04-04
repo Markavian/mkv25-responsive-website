@@ -22,7 +22,7 @@ class MediaFormatter
 		$lines = explode($NL, $content);
 		foreach($lines as $line)
 		{
-			if($line[0] == '{')
+			if($line && $line[0] == '{')
 			{
 				$line = rtrim($line);
 				$result .= $this->escape($line) . $NL;
