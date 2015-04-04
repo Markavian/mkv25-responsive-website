@@ -6,7 +6,32 @@ class ArticleFileSystemReader
 	{
 		$contentItems = array();
 		
+		$limit = 10;
+		$articles = $this->getAllContent();
+		usort($articles, array('ArticleFileSystemReader', 'sortByDate'));
+		
+		$i = 0;
+		foreach($articles as $article)
+		{
+			if ($i < $limit)
+			{
+				$contentItems[] = $article;
+				$i++;
+			}
+		}
+			
 		return $contentItems;
+	}
+	
+	private static function sortByDate($a, $b)
+	{
+		$dateA = strtotime($a->postdate);
+		$dateB = strtotime($b->postdate);
+	
+		if ($a == $b) {
+			return 0;
+		}
+		return ($a > $b) ? -1 : 1;
 	}
 
 	public function getAllContent()
