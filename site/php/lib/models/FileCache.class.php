@@ -2,6 +2,9 @@
 
 class FileCache 
 {
+	static $reads = 0;
+	static $writes = 0;
+
 	public static function ageOfCache($cacheId)
 	{
 		$age = false;
@@ -26,6 +29,8 @@ class FileCache
 		{
 			$cacheContents = file_get_contents($path);
 			$data = unserialize($cacheContents);
+			
+			FileCache::$reads++;
 		}
 
 		return $data;
@@ -44,6 +49,8 @@ class FileCache
 			@fwrite($file, $cacheContents);
 			@fclose($file);
 
+			FileCache::$writes++;
+			
 			$success = true;
 		}
 
