@@ -27,6 +27,8 @@ class Router
 			$view = new DefaultView();
 			$view->responseCode(404, 'File not found, no route set');
 			$view->routeInfo();
+			
+			print $view->render();
 		}
 	}
 
@@ -44,13 +46,18 @@ class Router
 		{
 			$controller = Routes::getControllerForRoute($route);
 			
+			// Buffer render statement to capture stray print and echo statements
 			ob_start();
-			$controlledResponse = $controller->render($request);
+			$pageContent = $controller->render($request);
 			$echoedContent = ob_get_clean();
 			
+			// Add additional page headers after render has completed
 			PageStatsView::addPageStats();
 			
-			print $controlledResponse;
+			// Return the page content to the user
+			print $pageContent;
+			
+			// Include stray content as a comment at end of response
 			if ($echoedContent)
 			{
 				print "<!-- $echoedContent -->";
@@ -62,6 +69,8 @@ class Router
 			$view->responseCode(501, 'Error creating controller for route: ' . $route);
 			$view->displayException($exception);
 			$view->routeInfo();
+			
+			print $view->render();
 		}
 	}
 }

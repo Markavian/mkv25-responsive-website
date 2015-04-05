@@ -92,5 +92,7 @@ class Scrapbook
 		$view = new DefaultView();
 		$view->responseCode(404, 'Article not found: ' . $request->page);
 		$view->routeInfo();
+		
+		return $view->render();
 	}
 }

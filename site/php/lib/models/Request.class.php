@@ -207,7 +207,7 @@ class Request
 		$_SERVER['REQUEST_URI'] = $uri;
 		$request = new Request($base);
 		
-		echo '<pre>' . $request->toString() . '</pre>';
+		return '<pre>' . $request->toString() . '</pre>';
 	}
 }
 ?>
