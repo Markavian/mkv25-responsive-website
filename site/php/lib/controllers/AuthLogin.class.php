@@ -5,7 +5,7 @@ class AuthLogin
 	var $clefResult;
 	var $authResult;
 
-	public function __construct($request)
+	public function render($request)
 	{
 		$auth = new Auth();
 

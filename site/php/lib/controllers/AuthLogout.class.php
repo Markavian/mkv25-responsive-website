@@ -2,7 +2,7 @@
 
 class AuthLogout
 {
-	public function __construct($request)
+	public function render($request)
 	{
 		if (isset($_POST['logout_token']))
 		{

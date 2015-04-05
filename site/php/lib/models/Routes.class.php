@@ -16,7 +16,7 @@ class Routes
 		return isset(Routes::$routes[$route]);
 	}
 
-	public static function getControllerForRoute($route, $request)
+	public static function getControllerForRoute($route)
 	{
 		$controller = false;
 		$controllerClass = false;
@@ -29,7 +29,7 @@ class Routes
 			// Try and create instance of controller
 			if($controllerClass)
 			{
-				$controller = new $controllerClass($request);
+				$controller = new $controllerClass();
 			}
 		}
 

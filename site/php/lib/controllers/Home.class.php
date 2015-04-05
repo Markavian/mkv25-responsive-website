@@ -2,7 +2,7 @@
 
 class Home
 {
-	public function __construct($request)
+	public function render($request)
 	{
 		$TITLE = Environment::get('TITLE');
 

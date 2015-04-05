@@ -28,9 +28,6 @@ class Router
 			$view->responseCode(404, 'File not found, no route set');
 			$view->routeInfo();
 		}
-
-		$pageStats = new PageStatsView();
-		echo $pageStats->render();
 	}
 
 	private static function renderPath($route, $request)
@@ -40,7 +37,12 @@ class Router
 		
 		try
 		{
-			$controller = Routes::getControllerForRoute($route, $request);
+			$controller = Routes::getControllerForRoute($route);
+			$output = $controller->render($request);
+			
+			PageStatsView::addPageStats();
+			
+			print $output;
 		}
 		catch (Exception $exception)
 		{

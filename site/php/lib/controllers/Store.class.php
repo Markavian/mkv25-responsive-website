@@ -2,7 +2,7 @@
 
 class Store
 {
-	public function __construct($request)
+	public function render($request)
 	{
 		$view = new TemplateView();
 		$view->baseUrl($request->base);

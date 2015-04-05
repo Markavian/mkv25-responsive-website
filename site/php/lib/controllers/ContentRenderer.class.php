@@ -2,7 +2,7 @@
 
 class ContentRenderer
 {
-	public function __construct($request)
+	public function render($request)
 	{
 		$route = $request->path;
 		$file = sprintf("%s.content.md", $route);

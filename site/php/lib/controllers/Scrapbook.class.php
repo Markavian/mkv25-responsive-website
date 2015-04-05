@@ -4,7 +4,7 @@ class Scrapbook
 {
 	var $reader;
 
-	public function __construct($request)
+	public function render($request)
 	{
 		$this->reader = new ArticleReader();
 

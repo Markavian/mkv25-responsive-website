@@ -2,24 +2,18 @@
 
 class PageStatsView
 {
-	var $template;
-	
-	public function __construct()
+	public static function addPageStats()
 	{
-		$this->template = new Template('site/templates/page-stats.template.html');
-	}
-	
-	private function addPageStats()
-	{
-		$this->template->set('{EXECUTION_TIME}', reportExecutionTime());
-		$this->template->set('{CACHE_READS}', FileCache::$reads);
-		$this->template->set('{CACHE_WRITES}', FileCache::$writes);
-	}
-	
-	public function render()
-	{
-		$this->addPageStats();
+		$executionTime = reportExecutionTime();
 		
-		return $this->template->expand();
+		PageStatsView::setHeader("mkv25-page-execution-time", $executionTime);
+		PageStatsView::setHeader("mkv25-filecache-reads", FileCache::$reads);
+		PageStatsView::setHeader("mkv25-filecache-writes", FileCache::$writes);
+	}
+	
+	private static function setHeader($key, $value)
+	{
+		$string = sprintf("%s: %s", $key, $value);
+		header($string);
 	}
 }
