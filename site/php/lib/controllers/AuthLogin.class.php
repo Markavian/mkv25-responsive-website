@@ -48,7 +48,7 @@ class AuthLogin
 			$view->addSingleColumn($whySignIn);
 		}
 
-		$view->render();
+		echo $view->render();
 	}
 
 	function renderLoginOptions()

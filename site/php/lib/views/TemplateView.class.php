@@ -86,12 +86,17 @@ class TemplateView
 	public function render()
 	{
 		$this->template->set('{COLUMN_BODY}', $this->renderColumns());
+
+		$this->addPageStats();
 		
+		return $this->template->expand();
+	}
+	
+	private function addPageStats()
+	{
 		$this->template->set('{EXECUTION_TIME}', reportExecutionTime());
 		$this->template->set('{CACHE_READS}', FileCache::$reads);
 		$this->template->set('{CACHE_WRITES}', FileCache::$writes);
-		
-		echo $this->template->expand();
 	}
 	
 	function renderColumns()

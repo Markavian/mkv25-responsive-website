@@ -22,7 +22,7 @@ class ContentRenderer
 
 			$view->addSingleColumn($content);
 
-			$view->render();
+			echo $view->render();
 		}
 		else
 		{

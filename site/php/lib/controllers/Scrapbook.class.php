@@ -10,7 +10,8 @@ class Scrapbook
 
 		if($request->page == 'scrapbook' || !$request->page)
 		{
-			$this->renderArticleList($request);
+			$proxyCache = ProxyCache::create($this, Time::oneMinute()->inSeconds());
+			echo $proxyCache->renderArticleList($request);
 		}
 		else
 		{
@@ -19,7 +20,7 @@ class Scrapbook
 
 			if($article)
 			{
-				$this->renderArticle($article, $request);
+				echo $this->renderArticle($article, $request);
 			}
 			else
 			{
@@ -49,10 +50,10 @@ class Scrapbook
 			$view->addSingleColumn($linkedContent);
 		}
 
-		$view->render();
+		return $view->render();
 	}
 
-	private function renderArticleList($request)
+	public function renderArticleList($request)
 	{
 		$view = new TemplateView();
 		$view->baseUrl($request->base);
@@ -80,7 +81,7 @@ class Scrapbook
 			$view->addSingleColumn("No articles found.");
 		}
 
-		$view->render();
+		return $view->render();
 	}
 
 	private function render404Response($request)

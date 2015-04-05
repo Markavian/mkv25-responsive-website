@@ -31,7 +31,7 @@ class History
 		$this->addSection($view, '2002 April', 'The website <a href="http://mkv25.net/USy/">Universal Shipyards</a>, built around Space Empires IV graphics and modding, which was previously hosted on Tripod and other places for the previous 3 years, was finally moved to my new server. The site was already handling thousands of visits a day which eventually dwindled as the game aged. USy was my first site, and a major hobby, leading me to learn programming, webdesign, and 3D graphics.');
 		$this->addSection($view, 'Epilogue', "You can read more about the history of mkv25.net by searching for mkv25.net on the wayback when machine. mkv25.net has always been a showcase of sorts, its my way of collecting ideas and memes together and passing them onwards to my friends. May that continue for many years to come...");
 
-		$view->render();
+		echo $view->render();
 	}
 	
 	function addSection($view, $title, $content)

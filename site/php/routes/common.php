@@ -17,7 +17,17 @@ function removeNonAlphaNumericCharactersFrom($string)
 	return preg_replace("/[^A-Za-z0-9 ]/", '', $string);
 }
 
-function reportExecutionTime()
+function reportExecutionTime($message=false)
 {
-	return microtime(true) - $_SERVER["REQUEST_TIME_FLOAT"];
+	$time = microtime(true) - $_SERVER["REQUEST_TIME_FLOAT"];
+	if($message)
+	{
+		$result = "<label>$message</label> <value>$time</value> <unit>seconds</unit>";
+	}
+	else
+	{
+		$result = $time;
+	}
+	
+	return $result;
 }

@@ -4,6 +4,8 @@ class Router
 {
 	public static function handleRouting()
 	{
+		echo reportExecutionTime("Router::handleRouting()");
+		
 		Environment::initialise();
 
 		$siteRootUrl = Environment::getEnvironmentVariable('MKV25_SITE_BASE', '/');
@@ -14,7 +16,6 @@ class Router
 
 		Environment::register('REQUEST', $request);
 		Environment::register('SITE_ROOT_URL', $siteRootUrl);
-
 		if(Routes::isRouteConfigured($path))
 		{
 			Router::renderPath($path, $request);
@@ -29,10 +30,15 @@ class Router
 			$view->responseCode(404, 'File not found, no route set');
 			$view->routeInfo();
 		}
+
+		$pageStats = new PageStatsView();
+		echo $pageStats->render();
 	}
 
 	private static function renderPath($route, $request)
 	{
+		echo reportExecutionTime("Router::renderPath(route, request) start");
+		
 		session_start();
 		$auth = new Auth();
 		

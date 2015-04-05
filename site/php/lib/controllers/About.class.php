@@ -24,6 +24,6 @@ class About
 		
 		$view->addSingleColumn('For more information about mkv25.net check out the <a href="history">history</a> page.');
 		
-		$view->render();
+		echo $view->render();
 	}
 }

@@ -12,6 +12,6 @@ class OpenSource
 		
 		$view->addSingleColumn('The open source section is waiting for the editor to do a write up.');
 		
-		$view->render();
+		echo $view->render();
 	}
 }
