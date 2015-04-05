@@ -30,7 +30,7 @@ module.exports = function(grunt) {
 				src: FTP_LOCAL_FOLDER,
 				dest: FTP_DEST_FOLDER,
 				exclusions: FTP_EXCLUSIONS_IMAGES,
-				verbose: true
+				forceVerbose: true
 			},
 			"stage-assets": {
 				auth: {
@@ -41,7 +41,7 @@ module.exports = function(grunt) {
 				src: FTP_LOCAL_FOLDER,
 				dest: FTP_DEST_FOLDER,
 				exclusions: FTP_EXCLUSIONS_NON_IMAGES,
-				verbose: true
+				forceVerbose: true
 			},
 			"stage-articles": {
 				auth: {
@@ -51,7 +51,7 @@ module.exports = function(grunt) {
 				},
 				src: FTP_LOCAL_FOLDER + 'site/php/articles/',
 				dest: FTP_DEST_FOLDER + 'site/php/articles/',
-				verbose: true
+				forceVerbose: true
 			},
 			"live": {
 				auth: {
@@ -62,7 +62,7 @@ module.exports = function(grunt) {
 				src: FTP_LOCAL_FOLDER,
 				dest: FTP_DEST_FOLDER,
 				exclusions: FTP_EXCLUSIONS_COMMON,
-				verbose: true
+				forceVerbose: true
 			}
 		}
 	});
