@@ -56,6 +56,18 @@ class ArticleFileSystemReader
 	{
 		$contentItems = array();
 		
+		$limit = 10;
+		$articles = $this->getAllContent();
+		usort($articles, array('ArticleFileSystemReader', 'sortByDate'));
+		
+		foreach($articles as $article)
+		{
+			if ($article->category == $category)
+			{
+				$contentItems[] = $article;
+			}
+		}
+			
 		return $contentItems;
 	}
 
