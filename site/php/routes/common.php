@@ -19,7 +19,7 @@ function removeNonAlphaNumericCharactersFrom($string)
 
 function reportExecutionTime($message=false)
 {
-	$time = microtime(true) - $_SERVER["REQUEST_TIME_FLOAT"];
+	$time = microtime(true) - Environment::get('REQUEST_TIME_FLOAT');
 	if($message)
 	{
 		$result = "<label>$message</label> <value>$time</value> <unit>seconds</unit>";

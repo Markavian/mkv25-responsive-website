@@ -7,6 +7,8 @@ class Environment
 	public static function initialise()
 	{
 		Environment::$variables = array();
+		
+		Environment::register('REQUEST_TIME_FLOAT', microtime(true));
 
 		$environment = Environment::getEnvironmentVariable('SERVER_ENV', 'stage');
 
