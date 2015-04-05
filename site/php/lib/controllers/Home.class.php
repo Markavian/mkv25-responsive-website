@@ -17,6 +17,6 @@ class Home
 		$view->addTripleColumns('Priorities', 'Requests', 'Rewards');
 		$view->addQuadColumns('Luminosity', 'Glare', 'Bloom', 'Potent');
 
-		echo $view->render();
+		return $view->render();
 	}
 }

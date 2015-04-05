@@ -35,14 +35,26 @@ class Router
 		session_start();
 		$auth = new Auth();
 		
+		/* TODO: Wrap render in proxy file cache - if appropriate - careful about
+		$proxyCache = ProxyCache::create($this, Time::oneMinute()->inSeconds());
+		$proxyCache-> render($request);
+		*/
+			
 		try
 		{
 			$controller = Routes::getControllerForRoute($route);
-			$output = $controller->render($request);
+			
+			ob_start();
+			$controlledResponse = $controller->render($request);
+			$echoedContent = ob_get_clean();
 			
 			PageStatsView::addPageStats();
 			
-			print $output;
+			print $controlledResponse;
+			if ($echoedContent)
+			{
+				print "<!-- $echoedContent -->";
+			}
 		}
 		catch (Exception $exception)
 		{

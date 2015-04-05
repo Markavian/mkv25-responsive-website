@@ -7,11 +7,12 @@ class Scrapbook
 	public function render($request)
 	{
 		$this->reader = new ArticleReader();
+		
+		$response = false;
 
 		if($request->page == 'scrapbook' || !$request->page)
 		{
-			$proxyCache = ProxyCache::create($this, Time::oneMinute()->inSeconds());
-			echo $proxyCache->renderArticleList($request);
+			$response = $this->renderArticleList($request);
 		}
 		else
 		{
@@ -20,13 +21,15 @@ class Scrapbook
 
 			if($article)
 			{
-				echo $this->renderArticle($article, $request);
+				$response = $this->renderArticle($article, $request);
 			}
 			else
 			{
-				$this->render404Response($request);
+				$response = $this->render404Response($request);
 			}
 		}
+		
+		return $response;
 	}
 
 	private function renderArticle($article, $request)

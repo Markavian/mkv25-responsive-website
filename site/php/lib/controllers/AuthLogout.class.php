@@ -33,7 +33,7 @@ class AuthLogout
 		$view->addSingleColumn('Right, lets get you signed out...');
 		$view->addSingleColumn($logoutResult);
 		
-		echo $view->render();
+		return $view->render();
 	}
 
 	function handleClefLogout()

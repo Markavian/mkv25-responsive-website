@@ -16,6 +16,8 @@ class Showcase
 		$scrapbookLink = Content::load('content/scrapbook-link.content.md');
 		$view->addSingleColumn($scrapbookLink);
 		
-		echo $view->render();
+		echo "Testing for echoed content to appear in the correct place";
+		
+		return $view->render();
 	}
 }

@@ -50,6 +50,6 @@ class News
 			$view->addSingleColumn("No news available at this time.");
 		}
 		
-		echo $view->render();
+		return $view->render();
 	}
 }
