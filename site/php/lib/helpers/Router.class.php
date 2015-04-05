@@ -34,6 +34,9 @@ class Router
 
 	private static function renderPath($route, $request)
 	{
+		// Buffer command to capture stray print and echo statements
+		ob_start();
+			
 		session_start();
 		$auth = new Auth();
 		
@@ -46,22 +49,10 @@ class Router
 		{
 			$controller = Routes::getControllerForRoute($route);
 			
-			// Buffer render statement to capture stray print and echo statements
-			ob_start();
 			$pageContent = $controller->render($request);
-			$echoedContent = ob_get_clean();
 			
 			// Add additional page headers after render has completed
 			PageStatsView::addPageStats();
-			
-			// Return the page content to the user
-			print $pageContent;
-			
-			// Include stray content as a comment at end of response
-			if ($echoedContent)
-			{
-				print "<!-- $echoedContent -->";
-			}
 		}
 		catch (Exception $exception)
 		{
@@ -70,7 +61,18 @@ class Router
 			$view->displayException($exception);
 			$view->routeInfo();
 			
-			print $view->render();
+			$pageContent = $view->render();
+		}
+			
+		$echoedContent = ob_get_clean();
+			
+		// Return the page content to the user
+		print $pageContent;
+		
+		// Include stray content as a comment at end of response
+		if ($echoedContent)
+		{
+			print "<!-- $echoedContent -->";
 		}
 	}
 }
