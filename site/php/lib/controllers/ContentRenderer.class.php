@@ -29,6 +29,8 @@ class ContentRenderer
 			$view = new DefaultView();
 			$view->responseCode(404, "Content not found for $route");
 			$view->routeInfo();
+
+			return $view->render();
 		}
 	}
 }

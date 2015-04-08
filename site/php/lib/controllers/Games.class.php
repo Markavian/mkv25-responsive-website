@@ -10,21 +10,21 @@ class Games
 		$view->eyecatch('Games', 'Games, prototypes, and fun things...');
 		$view->banner('games short');
 
-		$firstFeature = 'Featured game 1';
-		$secondFeature = 'Featured game 2';
+		$firstFeature = Content::load('content/features/featured-game-1.content.md');
+		$secondFeature = Content::load('content/features/featured-game-2.content.md');
 		$view->addColumns($firstFeature, $secondFeature);
 		
 		$showcaseContent = Content::load('content/games.content.md');
 		$view->addColumns($showcaseContent);
 
-		$thirdFeature = 'Featured game 3';
-		$fourthFeature = 'Featured game 4';
-		$fifthFeature = 'Featured game 5';
+		$thirdFeature = Content::load('content/features/featured-game-3.content.md');
+		$fourthFeature = Content::load('content/features/featured-game-4.content.md');
+		$fifthFeature = Content::load('content/features/featured-game-5.content.md');
 		$view->addColumns($thirdFeature, $fourthFeature, $fifthFeature);
 
-		$sixthFeature = 'Featured game 6';
-		$seventhFeature = 'Featured game 7';
-		$eighthFeature = 'Featured game 8';
+		$sixthFeature = Content::load('content/features/featured-game-6.content.md');
+		$seventhFeature = Content::load('content/features/featured-game-7.content.md');
+		$eighthFeature = Content::load('content/features/featured-game-8.content.md');
 		$view->addColumns($sixthFeature, $seventhFeature, $eighthFeature);
 
 		$scrapbookLink = Content::load('content/scrapbook-link.content.md');

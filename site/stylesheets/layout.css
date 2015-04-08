@@ -35,6 +35,7 @@ heading {
 	display: block;
 	font-weight: bold;
 	margin: 0 0 12px 0;
+	overflow: hidden;
 }
 
 img {

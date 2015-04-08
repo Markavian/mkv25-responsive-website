@@ -28,7 +28,7 @@ navigation {
 	font-family: Helvetica, "HelveticaNeue", "Helvetica Neue", Arial, sans-serif;
 }
 
-p, table {
+p, table, li {
 	font-family: Helvetica, "HelveticaNeue", "Helvetica Neue", Arial, sans-serif;
 	font-size: 110%;
 }
