@@ -128,6 +128,7 @@ banner {
 
 banner.home { background-image: url('../images/banner_war_pixeled.png'); }
 banner.blog { background-image: url('../images/banner_raindrops_pixeled.png'); }
+banner.games { background-image: url('../images/banner_games_pixeled.png'); }
 banner.showcase { background-image: url('../images/banner_showcase.png'); background-size: auto; background-repeat: repeat-x; }
 banner.open-source { background-image: url('../images/banner_vines_pixeled.png'); }
 banner.forums { background-image: url('../images/banner_wier_pixeled.png'); }

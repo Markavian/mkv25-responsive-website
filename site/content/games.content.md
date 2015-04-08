@@ -1,7 +1,7 @@
-Showcase
+Games
 ========
 
-Showcase is waiting for the editor to do a write up.
+The games section is waiting for the editor to do a write up.
 
 ... but at least its wired in now!
 

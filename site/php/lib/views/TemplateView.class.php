@@ -50,6 +50,46 @@ class TemplateView
 	{
 		$this->template->set('{BASE_URL}', $value);
 	}
+
+	public function addColumns()
+	{
+		$columns = func_get_args();
+
+		if(!is_array($columns))
+		{
+			$content = $columns;
+			$this->addSingleColumn($content);
+		}
+		else
+		{
+			$columnCount = count($columns);
+			$cssClass = TemplateView::getCssClassForNumberOfColumns($columnCount);
+
+			$count = 0;
+			foreach($columns as $content)
+			{
+				$first = ($count == 0);
+
+				$this->addColumn($content, $cssClass, $first);
+
+				$count++;
+			}
+		}
+	}
+
+	private static function getCssClassForNumberOfColumns($number)
+	{
+		$classes = array(
+			1 => 'single',
+			2 => 'double',
+			3 => 'triple',
+			4 => 'quad'
+		);
+
+		$result = (isset($classes[$number])) ? $classes[$number] : 'single';
+
+		return $result;
+	}
 	
 	public function addSingleColumn($content)
 	{
@@ -58,23 +98,20 @@ class TemplateView
 	
 	public function addDoubleColumns($first, $second)
 	{
-		$this->addColumn($first,  'double', true);
-		$this->addColumn($second, 'double');
+		$columns = array($first, $second);
+		$this->addColumns($columns);
 	}
 	
 	public function addTripleColumns($first, $second, $third)
 	{
-		$this->addColumn($first,  'triple', true);
-		$this->addColumn($second, 'triple');
-		$this->addColumn($third,  'triple');
+		$columns = array($first, $second, $third);
+		$this->addColumns($columns);
 	}
 	
 	public function addQuadColumns($first, $second, $third, $fourth)
 	{
-		$this->addColumn($first,  'quad', true);
-		$this->addColumn($second, 'quad');
-		$this->addColumn($third,  'quad');
-		$this->addColumn($fourth, 'quad');
+		$columns = array($first, $second, $third, $fourth);
+		$this->addColumns($columns);
 	}
 	
 	private function addColumn($content, $type, $first=false)

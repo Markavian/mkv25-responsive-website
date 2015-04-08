@@ -4,7 +4,7 @@ Routes::addRoute('subpath/test', 'Home');
 
 Routes::addRoute('home', 'Home');
 Routes::addRoute('news', 'News');
-Routes::addRoute('showcase', 'Showcase');
+Routes::addRoute('games', 'Games');
 Routes::addRoute('open-source', 'OpenSource');
 Routes::addRoute('forums', 'Forums');
 Routes::addRoute('store', 'Store');
