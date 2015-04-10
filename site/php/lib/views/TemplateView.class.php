@@ -98,20 +98,17 @@ class TemplateView
 	
 	public function addDoubleColumns($first, $second)
 	{
-		$columns = array($first, $second);
-		$this->addColumns($columns);
+		$this->addColumns($first, $second);
 	}
 	
 	public function addTripleColumns($first, $second, $third)
 	{
-		$columns = array($first, $second, $third);
-		$this->addColumns($columns);
+		$this->addColumns($first, $second, $third);
 	}
 	
 	public function addQuadColumns($first, $second, $third, $fourth)
 	{
-		$columns = array($first, $second, $third, $fourth);
-		$this->addColumns($columns);
+		$this->addColumns($first, $second, $third, $fourth);
 	}
 	
 	private function addColumn($content, $type, $first=false)
