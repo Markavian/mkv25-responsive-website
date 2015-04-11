@@ -9,7 +9,7 @@ class Router
 		$siteRootUrl = Environment::getEnvironmentVariable('MKV25_SITE_BASE', '/');
 
 		$request = new Request($siteRootUrl);
-		$section = $request->section;
+		$folder = $request->folder;
 		$path = $request->path ? $request->path : 'home';
 
 		Environment::register('REQUEST', $request);
@@ -18,9 +18,9 @@ class Router
 		{
 			Router::renderPath($path, $request);
 		}
-		else if(Routes::isRouteConfigured($section))
+		else if(Routes::isRouteConfigured($folder))
 		{
-			Router::renderPath($section, $request);
+			Router::renderPath($folder, $request);
 		}
 		else
 		{

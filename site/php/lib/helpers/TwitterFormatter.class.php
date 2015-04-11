@@ -19,18 +19,22 @@ class TwitterFormatter
 		$rawUser = false;
 		$iconUrl = '//mkv25.net/site/icons/planets_icon.png';
 		$tweetUrl = 'https://twitter.com/statuses/' . $tweet->id_str;
+		$screenName = false;
 		
 		if(isset($tweet->user->id))
 		{
 			$twitterReader = new TwitterReader();
 			$userInfo = $twitterReader->getTwitterUser($tweet->user->id);
-			$iconUrl = $userInfo->profile_image_url_https;
-			$iconUrl = TwitterFormatter::removeProtocolFrom($iconUrl);
-			$iconUrl = TwitterFormatter::removeScaleFromImageName($iconUrl);
+			if($userInfo)
+			{
+				$iconUrl = $userInfo->profile_image_url_https;
+				$iconUrl = TwitterFormatter::removeProtocolFrom($iconUrl);
+				$iconUrl = TwitterFormatter::removeScaleFromImageName($iconUrl);
 
-			$rawUser = print_r($userInfo, true);
+				$rawUser = print_r($userInfo, true);
 
-			$screenName = $userInfo->screen_name;
+				$screenName = $userInfo->screen_name;
+			}
 		}
 
 		$mediaItems = TwitterFormatter::getMediaForTweet($tweet);

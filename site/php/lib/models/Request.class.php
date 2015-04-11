@@ -50,6 +50,12 @@ class Request
 	 */
 	var $subpath;
 	
+	/**
+	 * Folder contains the path, including the section and the subpath, without the file part
+	 * e.g. images/places/prague/
+	 */
+	var $folder;
+	
 	/** 
 	 * Sections is an array that contains all parts of the URL separated by forward slash /
 	 * e.g. array('images', 'places', 'prague', '001.jpg');
@@ -107,6 +113,7 @@ class Request
 		$this->page = $s[count($s) - 1];
 		$this->base = $base;
 		$this->subpath = substr($this->path, strlen($this->section . '/'));
+		$this->folder = $this->path;
 		$this->sections = $s;
 		
 		$s = $this->path;
@@ -118,6 +125,7 @@ class Request
 		{
 			$this->file = $this->page;
 			$this->subpath = substr($this->subpath, 0, strlen($this->subpath) - strlen($this->file));
+			$this->folder = substr($this->path, 0, strlen($this->path) - strlen($this->file));
 		}
 		
 		if(($pos = strpos($this->page, '-', 0)) > 0)
@@ -168,6 +176,7 @@ class Request
 		
 		$output .= ' section: (' . $this->section . ')' . $NL;
 		$output .= ' subpath: (' . $this->subpath . ')' . $NL;
+		$output .= ' folder: (' . $this->folder . ')' . $NL;
 		
 		$output .= ' sections: Array(';
 		for ($i=0; $i<count($this->sections); $i++)

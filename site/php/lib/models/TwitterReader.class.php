@@ -4,10 +4,39 @@ use Abraham\TwitterOAuth\TwitterOAuth;
 
 class TwitterReader
 {
-	var $twitterOAuthConnection;
-
-	public function __construct()
+	public function getTwitterUser($userId)
 	{
+		$cacheName = "user.$userId";
+		if(FileCache::doesNotExist($cacheName) || FileCache::ageOfCache($cacheName) > Time::oneHour()->inSeconds())
+		{
+			RemoteProcedureCall::makeRemoteCall("getTwitterUser", array($userId));
+		}
+
+		$userInfo = FileCache::readDataFromCache($cacheName);
+
+		return $userInfo;
+	}
+
+	public function getTweets($userId="53020129")
+	{
+		$cacheName = "tweets";
+		if(FileCache::doesNotExist($cacheName) || FileCache::ageOfCache($cacheName) > Time::tenMinutes()->inSeconds())
+		{
+			$connection = TwitterReader::createTwitterOAuthConnection();
+			if(!$connection) return false;
+
+			RemoteProcedureCall::makeRemoteCall("getTweetsForUser", array($userId));
+		}
+
+		$tweets = FileCache::readDataFromCache($cacheName);
+
+		return $tweets;
+	}
+
+	public static function createTwitterOAuthConnection()
+	{
+		$connection = false;
+
 		$TWITTER = Environment::get('TWITTER');
 
 		$consumerKey = $TWITTER['CONSUMER_KEY'];
@@ -17,77 +46,9 @@ class TwitterReader
 
 		if ($consumerKey && $consumerSecret && $accessToken && $accessTokenSecret)
 		{
-			$this->twitterOAuthConnection = new TwitterOAuth($consumerKey, $consumerSecret, $accessToken, $accessTokenSecret);
-		}
-	}
-
-	public function getTwitterUser($userId)
-	{
-		$cachedUser = TwitterReader::getCachedUser($userId);
-		if($cachedUser) {
-			$userInfo = $cachedUser;
-		}
-		else
-		{
-			if (!$this->twitterOAuthConnection) return false;
-			
-			$userInfo = $this->twitterOAuthConnection->get("users/show", array("user_id" => $userId, "trim_user" => 1, "count" => 20));
-			TwitterReader::storeUserInCache($userId, $userInfo);
+			$connection = new TwitterOAuth($consumerKey, $consumerSecret, $accessToken, $accessTokenSecret);
 		}
 
-		return $userInfo;
-	}
-
-	private static function getCachedUser($userId)
-	{
-		$tweets = false;
-
-		if(FileCache::ageOfCache("user.$userId") < Time::tenMinutes()->inSeconds())
-		{
-			$tweets = FileCache::readDataFromCache("user.$userId");
-		}
-
-		return $tweets;
-	}
-
-	private static function storeUserInCache($userId, $userInfo)
-	{
-		FileCache::storeDataInCache($userInfo, "user.$userId");
-	}
-
-	public function getTweets()
-	{
-		$myUserId = "53020129";
-
-		$cachedTweets = TwitterReader::getCachedTweets();
-		if($cachedTweets) {
-			$tweets = $cachedTweets;
-		}
-		else
-		{
-			if (!$this->twitterOAuthConnection) return false;
-		
-			$tweets = $this->twitterOAuthConnection->get("statuses/user_timeline", array("user_id" => $myUserId, "trim_user" => 1, "count" => 20));
-			TwitterReader::storeTweetsInCache($tweets);
-		}
-
-		return $tweets;
-	}
-
-	private static function getCachedTweets()
-	{
-		$tweets = false;
-
-		if(FileCache::ageOfCache('tweets') < Time::tenMinutes()->inSeconds())
-		{
-			$tweets = FileCache::readDataFromCache('tweets');
-		}
-
-		return $tweets;
-	}
-
-	private static function storeTweetsInCache($tweets)
-	{
-		FileCache::storeDataInCache($tweets, 'tweets');
+		return $connection;
 	}
 }

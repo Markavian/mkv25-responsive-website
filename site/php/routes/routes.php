@@ -16,3 +16,4 @@ Routes::addRoute('auth/logout', 'AuthLogout');
 Routes::addRoute('auth/login', 'AuthLogin');
 Routes::addRoute('auth/signout', 'AuthLogout');
 Routes::addRoute('auth/signin', 'AuthLogin');
+Routes::addRoute('remote/procedure/', 'RemoteProcedureCall');

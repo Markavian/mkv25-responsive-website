@@ -5,6 +5,17 @@ class FileCache
 	static $reads = 0;
 	static $writes = 0;
 
+	public static function doesNotExist($cacheId)
+	{
+		return !FileCache::exists($cacheId);
+	}
+
+	public static function exists($cacheId)
+	{
+		$path = FileCache::getFilePathFor($cacheId);
+		return file_exists($path);
+	}
+
 	public static function ageOfCache($cacheId)
 	{
 		$age = false;
@@ -55,6 +66,16 @@ class FileCache
 		}
 
 		return $success;
+	}
+
+	public static function removeCache($cacheId)
+	{
+		$path = FileCache::getFilePathFor($cacheId);
+
+		if(file_exists($path))
+		{
+			unlink($path);
+		}
 	}
 
 	private static function getFilePathFor($cacheId)
