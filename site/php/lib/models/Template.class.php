@@ -2,7 +2,7 @@
 
 class Template
 {
-	const TEMPLATE_DIRECTORY = '../../../';
+	const TEMPLATE_DIRECTORY = '../../../templates/';
 
 	var $template;
 	var $keys;
@@ -16,7 +16,7 @@ class Template
 	
 	private function loadTemplate($path)
 	{
-		$fullPath = Template::TEMPLATE_DIRECTORY . $path;
+		$fullPath = __DIR__ . '/' . Template::TEMPLATE_DIRECTORY . $path;
 		if (file_exists($fullPath))
 		{
 			$this->template = file_get_contents($fullPath);

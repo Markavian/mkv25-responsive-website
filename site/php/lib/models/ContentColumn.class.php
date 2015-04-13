@@ -15,7 +15,7 @@ class ContentColumn
 	
 	public function render()
 	{
-		$template = new Template('site/templates/column.template.html');
+		$template = new Template('column.template.html');
 		$cssClass = $this->type;
 		$cssClass = ($this->first) ? $cssClass . ' first' : $cssClass;
 		

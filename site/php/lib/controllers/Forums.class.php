@@ -21,6 +21,9 @@ class Forums
 			$view->banner('forums short');
 			
 			$view->addSingleColumn('Forums are not yet open, come back soon!');
+
+			$forumIndex = new Template('forum/forum-index.template.html');
+			$view->addSingleColumn($forumIndex->expand());
 			$view->addSingleColumn('If you need to get in touch urgently, email at <a href="mailto:games@mkv25.net" >games@mkv25.net</a> or send a tweet to <a href="https://twitter.com/Markavian">@Markavian</a>.');
 			
 			return $view->render();
