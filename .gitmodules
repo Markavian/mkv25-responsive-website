@@ -4,7 +4,3 @@
 [submodule "site/php/lib/external/twitteroauth"]
 	path = site/php/lib/external/twitteroauth
 	url = git@github.com:abraham/twitteroauth
-[submodule "site/forum"]
-	path = site/forum
-	url = git@github.com:fluxbb/fluxbb.git
-	tag = fluxbb-1.5.8
