@@ -15,7 +15,8 @@ class ContentColumn
 	
 	public function render()
 	{
-		$template = new Template('column.template.html');
+		$template = ContentColumn::defineTemplate();
+
 		$cssClass = $this->type;
 		$cssClass = ($this->first) ? $cssClass . ' first' : $cssClass;
 		
@@ -23,5 +24,19 @@ class ContentColumn
 		$template->set('{CONTENT}', $this->content);
 		
 		return $template->expand();
+	}
+
+	private static function defineTemplate()
+	{
+		$template = Template::create(
+<<<TEMPLATE
+<column class="{CSS_CLASS}">
+	<content>
+		{CONTENT}
+	</content>
+</column>
+TEMPLATE
+);
+		return $template;
 	}
 }

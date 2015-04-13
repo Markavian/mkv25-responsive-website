@@ -7,11 +7,14 @@ class Template
 	var $template;
 	var $keys;
 	
-	public function __construct($path)
+	public function __construct($path=false)
 	{
 		$keys = array();
 		
-		$this->loadTemplate($path);
+		if($path)
+		{
+			$this->loadTemplate($path);
+		}
 	}
 	
 	private function loadTemplate($path)
@@ -66,5 +69,14 @@ class Template
 		}
 
 		return $template->expand();
+	}
+
+	public static function create($content)
+	{
+		$template = new Template();
+
+		$template->template = $content;
+		
+		return $template;
 	}
 }
