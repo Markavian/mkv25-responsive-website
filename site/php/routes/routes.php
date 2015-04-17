@@ -12,6 +12,7 @@ Routes::addRoute('store', 'Store');
 Routes::addRoute('about', 'About');
 Routes::addRoute('history', 'History');
 Routes::addRoute('scrapbook', 'Scrapbook');
+Routes::addRoute('scrapbook/', 'Scrapbook');
 Routes::addRoute('content', 'ContentRenderer');
 Routes::addRoute('auth/logout', 'AuthLogout');
 Routes::addRoute('auth/login', 'AuthLogin');
