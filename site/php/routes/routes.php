@@ -8,6 +8,7 @@ Routes::addRoute('games', 'Games');
 Routes::addRoute('open-source', 'OpenSource');
 Routes::addRoute('forums', 'Forums');
 Routes::addRoute('forums/', 'Forums');
+Routes::addRoute('forums/topic/', 'Forums');
 Routes::addRoute('store', 'Store');
 Routes::addRoute('about', 'About');
 Routes::addRoute('history', 'History');
