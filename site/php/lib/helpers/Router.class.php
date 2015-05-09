@@ -27,7 +27,7 @@ class Router
 			$view = new DefaultView();
 			$view->responseCode(404, 'File not found, no route set');
 			$view->routeInfo();
-			
+
 			print $view->render();
 		}
 	}
@@ -36,21 +36,16 @@ class Router
 	{
 		// Buffer command to capture stray print and echo statements
 		ob_start();
-			
+
 		session_start();
 		$auth = new Auth();
-		
-		/* TODO: Wrap render in proxy file cache - if appropriate - careful about
-		$proxyCache = ProxyCache::create($this, Time::oneMinute()->inSeconds());
-		$proxyCache-> render($request);
-		*/
-			
+
 		try
 		{
 			$controller = Routes::getControllerForRoute($route);
-			
+
 			$pageContent = $controller->render($request);
-			
+
 			// Add additional page headers after render has completed
 			PageStatsView::addPageStats();
 		}
@@ -60,15 +55,15 @@ class Router
 			$view->responseCode(501, 'Error creating controller for route: ' . $route);
 			$view->displayException($exception);
 			$view->routeInfo();
-			
+
 			$pageContent = $view->render();
 		}
-			
+
 		$echoedContent = ob_get_clean();
-			
+
 		// Return the page content to the user
 		print $pageContent;
-		
+
 		// Include stray content as a comment at end of response
 		if ($echoedContent)
 		{
