@@ -17,12 +17,14 @@ class News
 		// Get news from twitter
 		$twitterReader = new TwitterReader();
 		$tweets = $twitterReader->getTweets();
-		
+
 		$numberOfArticles = 0;
 		$numberOfTweets = 0;
-		
+
 		if (is_array($tweets))
 		{
+			$tweets = News::filterPersonalTweets($tweets);
+
 			foreach($tweets as $key=>$tweet)
 			{
 				if(isset($tweet->text))
@@ -40,16 +42,34 @@ class News
 			{
 				$content = $article->renderFullArticle();
 				$view->addSingleColumn($content);
-				
+
 				$numberOfArticles++;
 			}
 		}
-		
+
 		if ($numberOfTweets == 0 && $numberOfArticles == 0)
 		{
 			$view->addSingleColumn("No news available at this time.");
 		}
-		
+
 		return $view->render();
+	}
+
+	public static function filterPersonalTweets($tweets)
+	{
+		$filtered = array();
+		foreach($tweets as $tweet)
+		{
+			if(startsWith($tweet->text, '@'))
+			{
+				// throw away
+			}
+			else
+			{
+				$filtered[] = $tweet;
+			}
+		}
+
+		return $filtered;
 	}
 }
