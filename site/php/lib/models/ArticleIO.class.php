@@ -3,7 +3,7 @@
 class ArticleIO
 {
 	static $FILE_INDEX = array();
-	
+
 	public static function writeArticlesToFileSystem($articles)
 	{
 		$SITE_ROOT_URL = Environment::get('SITE_ROOT_URL');
@@ -55,15 +55,15 @@ END;
 
 		return $article;
 	}
-	
+
 	public static function readAllArticles()
 	{
 		$articles = Array();
-		
+
 		$directoryPath = ArticleIO::getDirectoryPath();
-		
+
 		$fileList = scandir($directoryPath);
-		
+
 		foreach($fileList as $key => $fileName)
 		{
 			if (endsWith($fileName, 'article.xml'))
@@ -77,17 +77,17 @@ END;
 					$filePath = $directoryPath . $fileName;
 					$articleXML = simplexml_load_file($filePath);
 					$article = Article::createFromXHTML($articleXML);
-					
+
 					ArticleIO::$FILE_INDEX[$fileName] = $article;
 				}
-			
+
 				if ($article)
 				{
 					$articles[] = $article;
 				}
 			}
 		}
-		
+
 		return $articles;
 	}
 
@@ -100,18 +100,17 @@ END;
 
 	private static function getFilePathFor($articleUrlName)
 	{
-		$ARTICLE_CONTENT_DIRECTORY = Environment::get('ARTICLE_CONTENT_DIRECTORY');
-
 		$fileName = ArticleIO::getFileNameFor($articleUrlName);
+		$directoryPath = ArticleIO::getDirectoryPath();
 
-		return __DIR__ . '/../../' . $ARTICLE_CONTENT_DIRECTORY . '/' . $fileName;
+		return $directoryPath . $fileName;
 	}
 
 	private static function getDirectoryPath()
 	{
 		$ARTICLE_CONTENT_DIRECTORY = Environment::get('ARTICLE_CONTENT_DIRECTORY');
 
-		return __DIR__ . '/../../' . $ARTICLE_CONTENT_DIRECTORY . '/';
+		return __DIR__ . '/../../../' . $ARTICLE_CONTENT_DIRECTORY . '/';
 	}
 
 	public static function getFileNameFor($articleUrlName)

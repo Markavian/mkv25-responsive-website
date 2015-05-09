@@ -1,10 +1,10 @@
 module.exports = function(grunt) {
-	
+
 	// ftp host
 	var FTP_HOST = 'ftp.mkv25.net';
 	var FTP_USER_LIVE = 'mkv25-live'
 	var FTP_USER_STAGE = 'mkv25-stage'
-	
+
 	// files to upload and exclude
 	var FTP_LOCAL_FOLDER = "../";
 	var FTP_DEST_FOLDER = "";
@@ -29,6 +29,28 @@ module.exports = function(grunt) {
 				},
 				src: FTP_LOCAL_FOLDER,
 				dest: FTP_DEST_FOLDER,
+				exclusions: FTP_EXCLUSIONS_IMAGES,
+				forceVerbose: true
+			},
+			"stage-code-php": {
+				auth: {
+					host: FTP_HOST,
+					port: 21,
+					authKey: FTP_USER_STAGE
+				},
+				src: FTP_LOCAL_FOLDER + 'site/php/',
+				dest: FTP_DEST_FOLDER + 'site/php/',
+				exclusions: FTP_EXCLUSIONS_IMAGES,
+				forceVerbose: true
+			},
+			"stage-content": {
+				auth: {
+					host: FTP_HOST,
+					port: 21,
+					authKey: FTP_USER_STAGE
+				},
+				src: FTP_LOCAL_FOLDER + 'site/content/',
+				dest: FTP_DEST_FOLDER + 'site/content/',
 				exclusions: FTP_EXCLUSIONS_IMAGES,
 				forceVerbose: true
 			},
@@ -66,9 +88,10 @@ module.exports = function(grunt) {
 			}
 		}
 	});
-	
+
 	// Default task(s).
 	grunt.registerTask('stage-code', ['ftp-deploy:stage-code']);
+	grunt.registerTask('stage-code-php', ['ftp-deploy:stage-code-php']);
 	grunt.registerTask('stage-assets', ['ftp-deploy:stage-assets']);
 	grunt.registerTask('stage-articles', ['ftp-deploy:stage-articles']);
 	grunt.registerTask('stage-full', ['stage-code', 'stage-assets']);
