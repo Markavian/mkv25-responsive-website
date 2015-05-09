@@ -35,6 +35,10 @@ class News
 		{
 			$view->addSingleColumn("No news available at this time.");
 		}
+		else
+		{
+			$view->addSingleColumn('View older news, or get in touch by <a href="https://twitter.com/Markavian">visiting twitter @Markavian</a>.');
+		}
 
 		return $view->render();
 	}
