@@ -10,15 +10,10 @@ class News
 		$view->eyecatch('News', 'A blog about game development, software, and technology.');
 		$view->banner('blog short');
 
-		// Get articles from database
-		$articleReader = new ArticleReader();
-		$articles = $articleReader->getManyArticles();
-
 		// Get news from twitter
 		$twitterReader = new TwitterReader();
 		$tweets = $twitterReader->getTweets();
 
-		$numberOfArticles = 0;
 		$numberOfTweets = 0;
 
 		if (is_array($tweets))
@@ -36,18 +31,7 @@ class News
 			}
 		}
 
-		if (is_array($articles))
-		{
-			foreach($articles as $key=>$article)
-			{
-				$content = $article->renderFullArticle();
-				$view->addSingleColumn($content);
-
-				$numberOfArticles++;
-			}
-		}
-
-		if ($numberOfTweets == 0 && $numberOfArticles == 0)
+		if ($numberOfTweets == 0)
 		{
 			$view->addSingleColumn("No news available at this time.");
 		}
