@@ -31,21 +31,25 @@ class Forums
 		else if($request->folder == 'forums/topic/')
 		{
 			$topicId = $request->page;
+			$topicName = ucfirst($topicId);
+			$topicName = str_replace('-', ' ', $topicName);
 
 			$view = new TemplateView();
 			$view->baseUrl($request->base);
-			$view->title($topicId);
-			$view->eyecatch($topicId, "");
+			$view->title($topicName);
+			$view->eyecatch($topicName, "");
 			$view->banner('forums short');
 
-			$breadcrumbs = <<<END
-<breadcrumb>
-	<a href="forums/index">Forums</a> / Topic / <a href="forums/topic/$topicId">$topicId</a>
-</breadcrumb>
-END;
+			$breadcrumbs = array(
+				'Forums' => 'forums/index',
+				'Topic' => '',
+				$topicName => 'forums/topic/' . $topicId
+			);
 
-			$view->addSingleColumn($breadcrumbs);
-			$view->addSingleColumn('Topic title: ' . $topicId);
+			$breadcrumbTrail = BreadcrumbFormatter::renderBreadcrumbTrail($breadcrumbs);
+
+			$view->addSingleColumn($breadcrumbTrail);
+			$view->addSingleColumn('Topic name: ' . $topicName);
 
 			return $view->render();
 		}
