@@ -7,7 +7,7 @@ class Scrapbook
 	public function render($request)
 	{
 		$this->reader = new ArticleReader();
-		
+
 		$response = false;
 
 		if($request->page == 'scrapbook' || !$request->page)
@@ -28,7 +28,7 @@ class Scrapbook
 				$response = $this->render404Response($request);
 			}
 		}
-		
+
 		return $response;
 	}
 
@@ -41,6 +41,15 @@ class Scrapbook
 		$view->title($article->name);
 		$view->eyecatch($article->name, $article->keywords);
 		$view->banner('scrapbook short');
+
+		$breadcrumbs = array(
+			'Scrapbook' => 'scrapbook',
+			$article->name => ''
+		);
+
+		$breadcrumbTrail = BreadcrumbFormatter::renderBreadcrumbTrail($breadcrumbs);
+
+		$view->addSingleColumn($breadcrumbTrail);
 
 		$content = $article->renderFullArticle();
 		$view->addSingleColumn($content);
@@ -92,7 +101,7 @@ class Scrapbook
 		$view = new DefaultView();
 		$view->responseCode(404, 'Article not found: ' . $request->page);
 		$view->routeInfo();
-		
+
 		return $view->render();
 	}
 }
