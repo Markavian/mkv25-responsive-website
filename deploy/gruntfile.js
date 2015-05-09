@@ -9,78 +9,49 @@ module.exports = function(grunt) {
 	var FTP_LOCAL_FOLDER = "../";
 	var FTP_DEST_FOLDER = "";
 	var FTP_EXCLUSIONS_COMMON = ['.ftp*', '.git*', '.hta*', 'deploy', '*.fdproj', 'tasklist.md', 'readme.md', '.sublime'];
-	var FTP_EXCLUSIONS_IMAGES = FTP_EXCLUSIONS_COMMON.concat(['*.png', '*.jpg', '*.psp']);
-	var FTP_EXCLUSIONS_NON_IMAGES = FTP_EXCLUSIONS_COMMON.concat(['*.php', '*.md', '*.css', '*.html']);
+
+	// auth details for stage
+	var FTP_STAGE_AUTH = {
+		host: FTP_HOST,
+		port: 21,
+		authKey: FTP_USER_STAGE
+	};
+
+	// auth details for live
+	var FTP_LIVE_AUTH = {
+		host: FTP_HOST,
+		port: 21,
+		authKey: FTP_USER_LIVE
+	};
 
 	// load plugins
 	grunt.loadNpmTasks('grunt-ftp-deploy');
 	grunt.loadNpmTasks('grunt-debug-task');
+
+	function ftpStageConfigFor(path) {
+		return {
+			auth: FTP_STAGE_AUTH,
+			src: FTP_LOCAL_FOLDER + path,
+			dest: FTP_DEST_FOLDER + path,
+			exclusions: FTP_EXCLUSIONS_COMMON,
+			forceVerbose: true
+		};
+	}
 
 	// Project configuration.
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 
 		"ftp-deploy": {
-			"stage-code": {
-				auth: {
-					host: FTP_HOST,
-					port: 21,
-					authKey: FTP_USER_STAGE
-				},
-				src: FTP_LOCAL_FOLDER,
-				dest: FTP_DEST_FOLDER,
-				exclusions: FTP_EXCLUSIONS_IMAGES,
-				forceVerbose: true
-			},
-			"stage-code-php": {
-				auth: {
-					host: FTP_HOST,
-					port: 21,
-					authKey: FTP_USER_STAGE
-				},
-				src: FTP_LOCAL_FOLDER + 'site/php/',
-				dest: FTP_DEST_FOLDER + 'site/php/',
-				exclusions: FTP_EXCLUSIONS_IMAGES,
-				forceVerbose: true
-			},
-			"stage-content": {
-				auth: {
-					host: FTP_HOST,
-					port: 21,
-					authKey: FTP_USER_STAGE
-				},
-				src: FTP_LOCAL_FOLDER + 'site/content/',
-				dest: FTP_DEST_FOLDER + 'site/content/',
-				exclusions: FTP_EXCLUSIONS_IMAGES,
-				forceVerbose: true
-			},
-			"stage-assets": {
-				auth: {
-					host: FTP_HOST,
-					port: 21,
-					authKey: FTP_USER_STAGE
-				},
-				src: FTP_LOCAL_FOLDER,
-				dest: FTP_DEST_FOLDER,
-				exclusions: FTP_EXCLUSIONS_NON_IMAGES,
-				forceVerbose: true
-			},
-			"stage-articles": {
-				auth: {
-					host: FTP_HOST,
-					port: 21,
-					authKey: FTP_USER_STAGE
-				},
-				src: FTP_LOCAL_FOLDER + 'site/php/articles/',
-				dest: FTP_DEST_FOLDER + 'site/php/articles/',
-				forceVerbose: true
-			},
+			"stage-articles": ftpStageConfigFor('site/articles/'),
+			"stage-content": ftpStageConfigFor('site/content/'),
+			"stage-images": ftpStageConfigFor('site/images/'),
+			"stage-php": ftpStageConfigFor('site/php/'),
+			"stage-scripts": ftpStageConfigFor('site/scripts/'),
+			"stage-stylesheets": ftpStageConfigFor('site/stylesheets/'),
+			"stage-templates": ftpStageConfigFor('site/templates/'),
 			"live": {
-				auth: {
-					host: FTP_HOST,
-					port: 21,
-					authKey: FTP_USER_LIVE
-				},
+				auth: FTP_LIVE_AUTH,
 				src: FTP_LOCAL_FOLDER,
 				dest: FTP_DEST_FOLDER,
 				exclusions: FTP_EXCLUSIONS_COMMON,
@@ -90,10 +61,17 @@ module.exports = function(grunt) {
 	});
 
 	// Default task(s).
-	grunt.registerTask('stage-code', ['ftp-deploy:stage-code']);
-	grunt.registerTask('stage-code-php', ['ftp-deploy:stage-code-php']);
-	grunt.registerTask('stage-assets', ['ftp-deploy:stage-assets']);
+	grunt.registerTask('stage-php', ['ftp-deploy:stage-php']);
+	grunt.registerTask('stage-scripts', ['ftp-deploy:stage-scripts']);
+	grunt.registerTask('stage-stylesheets', ['ftp-deploy:stage-stylesheets']);
+	grunt.registerTask('stage-templates', ['ftp-deploy:stage-templates']);
+
+	grunt.registerTask('stage-content', ['ftp-deploy:stage-content']);
 	grunt.registerTask('stage-articles', ['ftp-deploy:stage-articles']);
-	grunt.registerTask('stage-full', ['stage-code', 'stage-assets']);
+	grunt.registerTask('stage-images', ['ftp-deploy:stage-images']);
+
+	grunt.registerTask('stage-code', ['stage-php', 'stage-scripts', 'stage-stylesheets', 'stage-templates']);
+	grunt.registerTask('stage-all', ['stage-code', 'stage-content', 'stage-articles', 'stage-images']);
+
 	grunt.registerTask('release', ['ftp-deploy:live']);
 }
