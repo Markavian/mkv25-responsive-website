@@ -11,12 +11,17 @@ class Router
 		$request = new Request($siteRootUrl);
 		$section = $request->section;
 		$path = $request->path ? $request->path : 'home';
+        $folder = $request->folder;
 
 		Environment::register('REQUEST', $request);
 		Environment::register('SITE_ROOT_URL', $siteRootUrl);
 		if(Routes::isRouteConfigured($path))
 		{
 			Router::renderPath($path, $request);
+		}
+		else if(Routes::isRouteConfigured($folder))
+		{
+			Router::renderPath($folder, $request);
 		}
 		else if(Routes::isRouteConfigured($section))
 		{
