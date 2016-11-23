@@ -31,9 +31,10 @@ class News
 			}
 		}
 
-		if ($numberOfTweets == 0)
+		if ($numberOfTweets === 0)
 		{
 			$view->addSingleColumn("No news available at this time.");
+			$view->addSingleColumn('Check the twitter feed by <a href="https://twitter.com/Markavian">visiting twitter @Markavian</a>.');
 		}
 		else
 		{
