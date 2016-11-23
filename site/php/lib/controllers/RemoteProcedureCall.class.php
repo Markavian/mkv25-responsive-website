@@ -4,6 +4,8 @@ class RemoteProcedureCall
 {
 	public function render($request)
 	{
+		header('mkv25-rpc-render: ' . $request->page_field . ' ' . $request->page_value);
+
 		$remoteProcedureName = $request->page_field;
 		$token = $request->page_value;
 
@@ -54,7 +56,7 @@ class RemoteProcedureCall
 	{
 		$connection = TwitterReader::createTwitterOAuthConnection();
 		if (!$connection) return false;
-		
+
 		$userInfo = $connection->get("users/show", array("user_id" => $userId, "trim_user" => 1, "count" => 20));
 		FileCache::storeDataInCache($userInfo, "user.$userId");
 	}
@@ -72,7 +74,7 @@ class RemoteProcedureCall
 	{
 		$view = new DefaultView();
 		$view->responseCode(202, $message);
-		
+
 		return $view->render();
 	}
 
@@ -80,7 +82,7 @@ class RemoteProcedureCall
 	{
 		$view = new DefaultView();
 		$view->responseCode(501, $message);
-		
+
 		return $view->render();
 	}
 
@@ -96,6 +98,8 @@ class RemoteProcedureCall
 			$rpcUrl = implode("", $urlParts);
 
 			RemoteProcedureCall::curlPostAsync($rpcUrl);
+
+			header('mkv25-rpc-make-call: url ' . $rpcUrl);
 		}
 	}
 
@@ -138,10 +142,12 @@ class RemoteProcedureCall
 		// Check for evidence of existing RPC token for this specific method name and arguments
 		if(FileCache::ageOfCache($cacheName))
 		{
+			header("mkv25-rpc-cached-$methodName:" . ' ' . $token . FileCache::ageOfCache($cacheName));
 			$token = false;
 		}
 		else
 		{
+			header("mkv25-rpc-stored-$cacheName:" . ' ' . $token);
 			FileCache::storeDataInCache($argsArray, $cacheName);
 		}
 
