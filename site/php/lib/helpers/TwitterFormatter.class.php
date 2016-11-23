@@ -6,8 +6,11 @@ class TwitterFormatter
 	{
 		ob_start();
 
+		TwitterFormatter::expandUrlsInTweet($tweet);
 		$displayContent = $tweet->text;
+
 		$postTime = strtotime($tweet->created_at);
+		$dayOfTheWeek = date("l", $postTime);
 		$postDate = date("Y/m/d h:i:s", $postTime);
 		$rawTweet = print_r($tweet, true);
 
@@ -20,7 +23,7 @@ class TwitterFormatter
 		$iconUrl = '//mkv25.net/site/icons/planets_icon.png';
 		$tweetUrl = 'https://twitter.com/statuses/' . $tweet->id_str;
 		$screenName = false;
-		
+
 		if(isset($tweet->user->id))
 		{
 			$twitterReader = new TwitterReader();
@@ -44,6 +47,9 @@ class TwitterFormatter
 			$iconUrl = $mediaItems[0]->media_url_https;
 		}
 
+		// Write individual tweets to cache
+		// FileCache::storeDataInCache(json_encode($tweet, JSON_PRETTY_PRINT), 'tweet-' . $tweet->id);
+
 		echo <<<END
 			<block class="right">
 				<icon style="background-image: url('$iconUrl')" title="Posted by $screenName"></icon><br />
@@ -52,7 +58,7 @@ class TwitterFormatter
 					<a href="$tweetUrl">View on Twitter</a>
 				</call-to-action>
 			</block>
-			<heading>Twitter Update</heading>
+			<heading>$dayOfTheWeek</heading>
 			<tweet>
 				$displayContent
 				$displayMedia
@@ -101,6 +107,20 @@ END;
 		}
 
 		return $media;
+	}
+
+	public static function expandUrlsInTweet($tweet)
+	{
+		if(isset($tweet->entities))
+		{
+			$urlEntities = $tweet->entities->urls;
+			foreach($urlEntities as $key=>$entity)
+			{
+				$expanded_url = $entity->expanded_url;
+				$url = $entity->url;
+				$tweet->text = str_replace($url, $expanded_url, $tweet->text);
+			}
+		}
 	}
 
 	private static function preserveHashTags($content) {
