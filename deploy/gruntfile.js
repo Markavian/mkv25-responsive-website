@@ -28,12 +28,13 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-ftp-deploy');
 	grunt.loadNpmTasks('grunt-debug-task');
 
-	function ftpStageConfigFor(path) {
+	function ftpStageConfigFor(path, exclusions) {
+        exclusions = exclusions || [];
 		return {
 			auth: FTP_STAGE_AUTH,
 			src: FTP_LOCAL_FOLDER + path,
 			dest: FTP_DEST_FOLDER + path,
-			exclusions: FTP_EXCLUSIONS_COMMON,
+			exclusions: [].concat(FTP_EXCLUSIONS_COMMON, exclusions),
 			forceVerbose: true
 		};
 	}
@@ -46,7 +47,8 @@ module.exports = function(grunt) {
 			"stage-articles": ftpStageConfigFor('site/articles/'),
 			"stage-content": ftpStageConfigFor('site/content/'),
 			"stage-images": ftpStageConfigFor('site/images/'),
-			"stage-php": ftpStageConfigFor('site/php/'),
+			"stage-php": ftpStageConfigFor('site/php/', ['external']),
+			"stage-php-lib": ftpStageConfigFor('site/php/lib'),
 			"stage-scripts": ftpStageConfigFor('site/scripts/'),
 			"stage-stylesheets": ftpStageConfigFor('site/stylesheets/'),
 			"stage-templates": ftpStageConfigFor('site/templates/'),
@@ -62,6 +64,7 @@ module.exports = function(grunt) {
 
 	// Default task(s).
 	grunt.registerTask('stage-php', ['ftp-deploy:stage-php']);
+	grunt.registerTask('stage-php-lib', ['ftp-deploy:stage-php-lib']);
 	grunt.registerTask('stage-scripts', ['ftp-deploy:stage-scripts']);
 	grunt.registerTask('stage-stylesheets', ['ftp-deploy:stage-stylesheets']);
 	grunt.registerTask('stage-templates', ['ftp-deploy:stage-templates']);
