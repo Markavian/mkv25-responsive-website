@@ -24,6 +24,23 @@ class Home
 		$fourthFeature = Content::load('content/features/featured-game-4.content.md');
 		$view->addColumns($firstFeature, $secondFeature, $thirdFeature, $fourthFeature);
 
+		// Get news item from twitter
+		$twitterReader = new TwitterReader();
+		$tweets = $twitterReader->getTweets();
+
+		$numberOfTweets = 0;
+
+		if (is_array($tweets))
+		{
+			$tweets = News::filterPersonalTweets($tweets);
+			$tweet = $tweets[0];
+			if(isset($tweet->text))
+			{
+				$tweetHtml = TwitterFormatter::renderTweet($tweet);
+				$view->addSingleColumn('<heading>Latest News</heading>' . $tweetHtml);
+			}
+		}
+
 		$homeDiscussingSoftware = Content::load('content/home/discussing-software.content.md');
 		$view->addSingleColumn($homeDiscussingSoftware);
 
