@@ -37,9 +37,10 @@ class Auth
 		$query = sprintf("SELECT * FROM `dfma_users` WHERE clefId='%s' LIMIT 1", $clefId);
 		$result = $this->sql->fetch_query($query, 'clefLogin:' . $clefId);
 
-		if($this->sql->num_rows('clefLogin:' . $clefId) == 1)
+		if($this->sql->num_rows('clefLogin:' . $clefId) === 1)
 		{
 			$user = $this->createUserFromDatabaseResult($result);
+			header('mkv25-auth-clef-user: ' . $clefId);
 		}
 
 		return $user;
@@ -59,6 +60,7 @@ class Auth
 			$username, $clefId, $nickname, $accessLevel, $email);
 
 		$result = $this->sql->query($query, 'clefSignup:' . $clefId);
+		header('mkv25-auth-clef-create-account: ' . $clefId);
 		if($this->sql->insert_id() == $username) {
 			$user = $this->getUserByClefId($clefId);
 		}
@@ -143,7 +145,7 @@ class Auth
 		return Auth::$currentUser;
 	}
 
-	public function logIn($user) 
+	public function logIn($user)
 	{
 		if(!$user) {
 			return;
@@ -191,7 +193,7 @@ class Auth
 		Auth::$currentUser = new User();
 	}
 
-	public static function sanitizeId($id) 
+	public static function sanitizeId($id)
 	{
 		return preg_replace("/[^a-zA-Z0-9@\._-]+/", "", $id);
 	}
