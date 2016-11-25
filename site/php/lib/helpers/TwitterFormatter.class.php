@@ -50,6 +50,8 @@ class TwitterFormatter
 		// Write individual tweets to cache
 		// FileCache::storeDataInCache(json_encode($tweet, JSON_PRETTY_PRINT), 'tweet-' . $tweet->id);
 
+        $displayPreview = TwitterFormatter::createPreviewFromUrlsInTweeet($tweet);
+
 		echo <<<END
 			<block class="right">
 				<icon style="background-image: url('$iconUrl')" title="Posted by $screenName"></icon><br />
@@ -63,6 +65,9 @@ class TwitterFormatter
 				$displayContent
 				$displayMedia
 			</tweet>
+            <preview>
+                $displayPreview
+            </preview>
 END;
 
 		return ob_get_clean();
@@ -122,6 +127,47 @@ END;
 			}
 		}
 	}
+
+    public static function createPreviewFromUrlsInTweeet($tweet)
+    {
+        $result = '';
+		if(isset($tweet->entities))
+		{
+			$urlEntities = $tweet->entities->urls;
+			foreach($urlEntities as $key=>$entity)
+			{
+				$expanded_url = $entity->expanded_url;
+				$url = $entity->url;
+				$tweet->text = str_replace($url, $expanded_url, $tweet->text);
+                $type = TwitterFormatter::detectUrlType($expanded_url);
+                $result .= sprintf('<li>%s : <a href="%s">%s</a></li>', $type, $expanded_url, $expanded_url);
+			}
+		}
+
+        if(strlen($result) > 0) {
+            $result = '<heading>Links:</heading><ul>' . $result . '</ul>';
+        }
+
+        return $result;
+    }
+
+    public static function detectUrlType($url) {
+        $matchers = Array(
+            'Youtube' => '/youtube\.com/',
+            'Imgur Album' => '/imgur\.com\/a/',
+            'Twitter Status' => '/twitter\.com.*status\/[\d]+/',
+            'mkv25.net' => '/mkv25\.net/',
+            'Github Project' => '/github\.com/'
+    	);
+
+        foreach($matchers as $type=>$matcher) {
+            if(preg_match($matcher, $url) === 1) {
+                return $type;
+            }
+        }
+
+        return 'External website';
+    }
 
 	private static function preserveHashTags($content) {
 		return str_replace("#", "[HASH]", $content);

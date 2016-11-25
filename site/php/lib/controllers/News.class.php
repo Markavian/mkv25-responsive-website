@@ -26,6 +26,7 @@ class News
 				{
 					$tweetHtml = TwitterFormatter::renderTweet($tweet);
 					$view->addSingleColumn($tweetHtml);
+                    // $view->addSingleColumn('<code><pre>' .  htmlspecialchars(json_encode($tweet, JSON_PRETTY_PRINT)) . '</pre></code>');
 				}
 				$numberOfTweets++;
 			}

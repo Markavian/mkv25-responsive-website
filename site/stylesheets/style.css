@@ -2,7 +2,7 @@
 html, body {
 	font-family: Verdana, Arial, sans-serif;
 	font-size: 90%;
-	
+
 	background: #FEFEFE url('../images/pixel_background.png');
 }
 
@@ -95,7 +95,7 @@ navigation > content > links > a.store {
 	font-size: 15px;
 	color: white;
 	text-transform: none;
-	
+
 	padding: 5px 10px;
 	background: #FF6611;
 	background-image: linear-gradient(to bottom, #FF6611, #FF6655);
@@ -213,7 +213,7 @@ a.icon {
 	display: inline-block;
 	width: 48px;
 	height: 48px;
-	background: transparent no-repeat center center; 
+	background: transparent no-repeat center center;
 	margin-bottom: 2px;
 }
 
@@ -315,7 +315,7 @@ div.article.content > h4 {
 }
 blockquote {background-color:#EFEFEF; margin: 0 0 10px 0; padding-bottom: 15px; }
 blockquote pre {background-color:#E0E0E0; border-top:solid 2px #999999; margin:0; padding: 0 0 0 10px; overflow: auto;
-	font-family: Lucida Console, Courier New, sans-serif; 
+	font-family: Lucida Console, Courier New, sans-serif;
 	font-style: normal;
 	font-size: 12px;
 	line-height: 1.7em
@@ -328,7 +328,7 @@ a.file > .icon > b { display: none; }
 a.file > .label { }
 
 /* Showcase icon links */
-iconlist { 
+iconlist {
 	display: block;
 	min-height: 100px;
 	margin-right: -10px;
@@ -388,6 +388,16 @@ tweet {
 	text-align: left;
 }
 
+preview {
+    display: block;
+    margin: 10px;
+}
+
+preview > ul > li {
+    margin-left: 20px;
+    list-style-type: circle;
+}
+
 call-to-action {
 	display: block;
 	margin-top: 5px;
@@ -400,7 +410,7 @@ call-to-action {
 	column.triple > content { height: auto; }
 	column.quad > content { height: auto; }
 	column > content { overflow: hidden; }
-	
+
 	column.quad > content > heading { text-align: center; }
 }
 
@@ -410,9 +420,9 @@ call-to-action {
 	column.double > content { height: auto; }
 	column.triple > content { height: auto; }
 	column.quad > content { height: auto; }
-	
+
 	column.quad > content > heading { font-size: 130%; }
-	
+
 	navigation > content > links > a { }
 	navigation > content > links > a.login { display: none; }
 	navigation > content > links > a.logout { display: none; }
@@ -426,10 +436,10 @@ call-to-action {
 	column.double > content { height: auto; }
 	column.triple > content { height: auto; }
 	column.quad > content { height: auto; }
-	
+
 	column.quad > content > heading { font-size: 130%; }
 	logo { height: 70px; }
-	
+
 	navigation { height: auto; }
 	navigation > content { height: auto; }
 	navigation > content > links {
@@ -449,7 +459,7 @@ call-to-action {
 	navigation > content > links > a { display: block; text-align: left; border-radius: 8px; margin: 10px 0; }
 	navigation > content > links > a.login { float: none; }
 	navigation > content > links.collapsed { display: none; }
-	
+
 	banner > group > heading { font-size: 36px; padding-top: 40px; }
 	banner > group > p { font-size: 24px; }
 	footer > content > icons { display: block; position: relative; text-align: center; top: 0; left: 0; }
@@ -463,10 +473,10 @@ call-to-action {
 	column.double > content { height: auto; }
 	column.triple > content { height: auto; }
 	column.quad > content { height: auto; }
-	
+
 	column.quad > content > heading { font-size: 130%; }
 	logo { height: 70px; }
-	
+
 	navigation { height: auto; }
 	navigation > content { height: auto; }
 	navigation > content > links {
@@ -484,7 +494,7 @@ call-to-action {
 	navigation > content > links { background: #FEFEFE; }
 	navigation > content > links > a { display: block; text-align: left; border-radius: 8px; margin: 10px 0; }
 	navigation > content > links.collapsed { display: none; }
-	
+
 	banner > group > heading { font-size: 36px; padding-top: 60px; }
 	banner > group > p { font-size: 24px; }
 	footer > content > icons { display: block; position: relative; text-align: center; top: 0; left: 0; }
