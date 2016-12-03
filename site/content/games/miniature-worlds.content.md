@@ -1,6 +1,6 @@
 # Miniature Worlds
 
-{EMBED_FLASH://mkv25.net/ludum/ld23/preview/MinatureWorlds_LD23_r7.swf:flashGame:640:320}
+[![Title Screen](//mkv25.net/ludum/ld23/preview/screenshots/s01_title_screen.png)][flash]
 
 ## Builds
 
@@ -47,8 +47,6 @@ Special thanks to the guys on IRC (afternet.org/#ludumdare #ludumdaredev), and t
 ## Screenshots
 
 Some screenshots of the game:
-
-![Title Screen](//mkv25.net/ludum/ld23/preview/screenshots/s01_title_screen.png)
 
 ![First Run](//mkv25.net/ludum/ld23/preview/screenshots/s02_first_run.png)
 
