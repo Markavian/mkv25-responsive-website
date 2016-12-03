@@ -1,6 +1,10 @@
 <?php
 
+ // Test case
+
 Routes::addRoute('subpath/test', 'Home');
+
+// Routes::addRoute(ROUTE, CONTROLLER);
 
 Routes::addRoute('home', 'Home');
 Routes::addRoute('news', 'News');
