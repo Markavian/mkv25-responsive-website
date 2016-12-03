@@ -2,51 +2,51 @@
 
 class ArticleReader
 {
-	var $dao;
+    var $dao;
 
-	public function __construct()
-	{
-		$fallbacks = Array(
-			new ArticleFileSystemReader(),
-			new ArticleDatabaseReader()
-		);
+    public function __construct()
+    {
+        $fallbacks = Array(
+            new ArticleFileSystemReader(),
+            new ArticleDatabaseReader()
+        );
 
-		// Setup the DAO object using a proxy to access both the Database and the File System
-		$this->dao = new ProxyFallback($fallbacks);
-	}
+        // Setup the DAO object using a proxy to access both the Database and the File System
+        $this->dao = new ProxyFallback($fallbacks);
+    }
 
-	public function getArticleByUrlName($urlName)
-	{
-		$article = $this->dao->getContentByUrlName($urlName);
+    public function getArticleByUrlName($urlName)
+    {
+        $article = $this->dao->getContentByUrlName($urlName);
 
-		return $article;
-	}
+        return $article;
+    }
 
-	public function getArticles()
-	{
-		$articles = $this->dao->getContentByCategory('article', 5);
+    public function getArticles()
+    {
+        $articles = $this->dao->getContentByCategory('article', 5);
 
-		return $articles;
-	}
+        return $articles;
+    }
 
-	public function getManyArticles()
-	{
-		$articles = $this->dao->getLatestContent();
+    public function getManyArticles()
+    {
+        $articles = $this->dao->getLatestContent();
 
-		return $articles;
-	}
+        return $articles;
+    }
 
-	public function getAllArticles()
-	{
-		$articles = $this->dao->getAllContent();
+    public function getAllArticles()
+    {
+        $articles = $this->dao->getAllContent();
 
-		return $articles;
-	}
+        return $articles;
+    }
 
-	public function getArticlesForReferences($primaryId, $refArray)
-	{
-		$articles = $this->dao->getContentByReferences($primaryId, $refArray);
+    public function getArticlesForReferences($primaryId, $refArray)
+    {
+        $articles = $this->dao->getContentByReferences($primaryId, $refArray);
 
-		return $articles;
-	}
+        return $articles;
+    }
 }
