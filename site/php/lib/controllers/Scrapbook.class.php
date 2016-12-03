@@ -72,6 +72,8 @@ class Scrapbook
 		$view->title("Scrapbook");
 		$view->eyecatch("Scrapbook", "scrapbook html javascript flash artwork index");
 		$view->banner('scrapbook short');
+        
+        $view->addSingleColumn('Various artwork and experiments from June 2002 until present day, present time.');
 
 		// Get articles from database
 		$articles = $this->reader->getAllArticles();
