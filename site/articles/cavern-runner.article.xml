@@ -5,7 +5,7 @@
 	<hits>3556</hits>
 	<description><![CDATA[Link: [link=//mkv25.net/showcase/games/cavern/highscore.php]Cavern Runner Highscores - All time top 100[/link]
 
-[h2]Instructions[\\h2]
+[h2]Instructions[/h2]
 Use the UP and DOWN keys to navigate your way through the cavern without touching the sides. The further into the cavern you go, the more points you can score, but as you go deeper, you travel faster, until you crash and lose your health.
 
 Cavern Runner, my first ever proper game! Wooh. (Any other attempt failed miserably, this is the only one I\'ve seen through to the end.) For this project though, the end was clearly in sight, it took me 24 hours to produce the core game, and I\'m very pleased with it.
@@ -19,8 +19,8 @@ Scores are reset weekly, so try your best to come out top!]]></description>
 	<type>iframe</type>
 
 	<contentUrl>showcase/games/cavern/cavern.html</contentUrl>
-	<contentWidth>0</contentWidth>
-	<contentHeight>0</contentHeight>
+	<contentWidth>420</contentWidth>
+	<contentHeight>240</contentHeight>
 	<category>flash</category>
 	<displayIcon>cavern_runner.png</displayIcon>
 
