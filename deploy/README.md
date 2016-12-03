@@ -13,6 +13,14 @@ To get going:
 - Copy and rename .ftppass-template to .ftppass
 - Populate .ftppass with FTP Username and Password details
 
+Then run: `npm install`
+
+Provided the FTP details are correct, you can then run the stage and live release commands:
+- stage-code
+- stage-images
+- stage-all
+- live-release
+
 ## Configuration
 
 Other variables you might want to change, include:
