@@ -44,7 +44,7 @@ class AuthLogout
 		$app_secret = $CLEF_AUTH['appSecret'];
 
 		// Clef OAuth webhook for logout
-		// Taken from: http://docs.getclef.com/v1.0/docs/handling-the-logout-webhook
+		// Taken from: //docs.getclef.com/v1.0/docs/handling-the-logout-webhook
 
 		$url = "https://clef.io/api/v1/logout";
 

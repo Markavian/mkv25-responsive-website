@@ -7,10 +7,10 @@
 
 I ended up having to use code by Jared Tarbel to fade the pixels together. Apparently set() pixel in processing doesn\'t overlay transparency.
 
-I found a brilliant resource for curves at http://www.xahlee.org/SpecialPlaneCurves_dir/Intro_dir/familyIndex.html
+I found a brilliant resource for curves at //www.xahlee.org/SpecialPlaneCurves_dir/Intro_dir/familyIndex.html
 which contains all the useful Math and pretty pictures for building your own.
 
-The original aim was infact to build (on my own) a pretty particle generator, similar to ones by Jared Tarbel and also as seen at http://www.processing.org
+The original aim was infact to build (on my own) a pretty particle generator, similar to ones by Jared Tarbel and also as seen at //www.processing.org
 
 The type of curve being drawn is actually called a \'Rose\'. I recgonised it from my old spiralgraph set which I had when I was kid (it used cogs with holes which you ran round a sheet of paper to draw pretty patterns).
 

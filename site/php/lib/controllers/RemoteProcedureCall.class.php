@@ -94,7 +94,8 @@ class RemoteProcedureCall
 		$token = RemoteProcedureCall::registerCallback($methodName, $argsArray);
 		if($token)
 		{
-			$urlParts = array('http://', $_SERVER['SERVER_NAME'], $baseUrl, 'remote/procedure/', $methodName, '-', $token);
+            $protocol = isset($_SERVER['HTTPS']) ? 'https://' : 'http://';
+			$urlParts = array($protocol, $_SERVER['SERVER_NAME'], $baseUrl, 'remote/procedure/', $methodName, '-', $token);
 			$rpcUrl = implode("", $urlParts);
 
 			RemoteProcedureCall::curlPostAsync($rpcUrl);

@@ -18,7 +18,7 @@ class About
 		);
 		$view->addDoubleColumns(
 			'<heading>Where</heading><p>We are based out of Manchester, UK.</p><p>The site is hosted from a server in the USA to best serve traffic needs.</p>',
-			'<heading>Why</heading><p>This site exists to promote games development, software development, digital artwork, and games communities - such as the <a href="http://mkv25.net/dfma/">Dwarf Fortress Map Archive</a>, <a href="http://mkv25.net/USy/">Universal Shipyards</a>, and <a href="http://tfc.mkv25.net/">The Fake Clan</a>.</p>'
+			'<heading>Why</heading><p>This site exists to promote games development, software development, digital artwork, and games communities - such as the <a href="//mkv25.net/dfma/">Dwarf Fortress Map Archive</a>, <a href="//mkv25.net/USy/">Universal Shipyards</a>, and <a href="//tfc.mkv25.net/">The Fake Clan</a>.</p>'
 		);
 		$view->addSingleColumn('<heading>Contact</heading><p>If you need to get in touch, send an email to <a href="mailto:johnbeech@mkv25.net">johnbeech@mkv25.net</a> or send a tweet to <a href="https://twitter.com/Markavian">@Markavian</a>.</p>');
 		

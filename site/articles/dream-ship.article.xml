@@ -3,7 +3,7 @@
 	<urlname>dream-ship</urlname>
 	<name>Dream Ship</name>
 	<hits>1862</hits>
-	<description><![CDATA[This ship is a concept based off an idea I had one morning sleepily lying in bed. After I got up I produced  [link=http://mkv25.net/showcase/dream_portrait.png]a sketch[/link] and a day later began to model the ship.
+	<description><![CDATA[This ship is a concept based off an idea I had one morning sleepily lying in bed. After I got up I produced  [link=//mkv25.net/showcase/dream_portrait.png]a sketch[/link] and a day later began to model the ship.
 
 My idea revolved around hacking two big holes at the front of the ship. I wasn\'t exactly clear what to put in the holes, perhaps a launching bay or a submerged weapon, but I finalised on a deflector/sensor pod. 
 
@@ -11,7 +11,7 @@ The other feature I had in mind to give some detail to the ship were the embedde
 
 Using a low polygon model also makes it easier to unwrap and produce the textures. The image shown at the top of this page is the mesh smoothed version which weighs in at around 1500 polys, but the low poly version shown below is around the 520 mark, much more acceptable for use in modern computer games.
 
-[center][img]http://mkv25.net/showcase/dreamship_text2_lowpoly.png[/img]
+[center][img]//mkv25.net/showcase/dreamship_text2_lowpoly.png[/img]
 Dream Ship - Low Poly[/center]
 
 I was keen to keep the hull smooth and futuristic. The colours were a bit hit and miss, I originally intended for a mostly grey metalic finish, but after adding some linear panels to the design I realised I could put a striped finish to the design and so added a deep blue and beige finish.
@@ -20,10 +20,10 @@ Originally I used red glow lights on the surface and the deflectors (the cutout 
 
 I created a custom bump map to ehance the surface texture and deflector details and also an illumination map so that the light sections should shine out even when in shadow.
 
-[center][img]http://mkv25.net/showcase/dreamship_rear_text2_lowpoly.png[/img]
+[center][img]//mkv25.net/showcase/dreamship_rear_text2_lowpoly.png[/img]
 Dream Ship - Rear View 
 
-[img]http://mkv25.net/showcase/dreamship_underneath_text2_lowpoly.png[/img]
+[img]//mkv25.net/showcase/dreamship_underneath_text2_lowpoly.png[/img]
 Dream Ship - Underneath[/center]
 
 This render on the left above shows some of the rear detail more clearly along with the engine nacels. The image on the right shows the underbelly for the ship along with lights which glow compared to their surroundings thanks to the illumination map.]]></description>

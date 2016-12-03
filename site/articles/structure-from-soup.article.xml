@@ -5,14 +5,14 @@
 	<hits>1</hits>
 	<description><![CDATA[In my final year at university- I was tasked with creating a software tool designed to render, view, and edit geometric data for the purpose of selecting and grouping semantic structures within a large data set.
 
-This article gives a brief overview to the project based on the final year report - [link=http://mkv25.net/uni/2008-07-08%20Structure%20from%20Soup%20-%20Final%20with%20Ammended%20References.pdf]Structure from Soup[/link] (4.2MB).
+This article gives a brief overview to the project based on the final year report - [link=//mkv25.net/uni/2008-07-08%20Structure%20from%20Soup%20-%20Final%20with%20Ammended%20References.pdf]Structure from Soup[/link] (4.2MB).
 
 [h2]Polygon soup[/h2]
 Polygon soup is any set of unstructured 3D data containing vertices and primitives. A vertex is a 3D point in space, described as a vector with three numeric values. A primitive is a collection of vertices with instructions on how to connect those vertices, such as in a line, a triangle, a triangle fan, or a triangle strip. 
 
 Large unstructured sets of polygon data are considered as polygon soup when there is no discernible grouping, naming, or hierarchy in place to describe the set of data. To understand the meaning of a raw set of vertices the data must either be rendered into an image or analysed to find enclosed spaces. The aim of this project was to use the human ability to visually distinguish shapes in order to quickly build up a structured selection.
 
-[img]http://mkv25.net/showcase/2008-03-11%20SFS%20Editor%20b9%20Desk%20unit.png[/img]
+[img]//mkv25.net/showcase/2008-03-11%20SFS%20Editor%20b9%20Desk%20unit.png[/img]
 
 [h2]Sources of polygon soup[/h2]
 Sources of polygon soup can be found from laser scanning devices, optimized scenes with no source files, and unstructured VRML (Virtual Reality Modelling Language) files from the web. When created, the structure of these datasets may have been included, but when published, structural data is often stripped out. In some sense, optimization is necessary for gaining performance, but as data sources grow older, and source files are lost, the task of managing these information sources becomes more difficult.

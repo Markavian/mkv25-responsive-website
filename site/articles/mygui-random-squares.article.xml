@@ -3,7 +3,7 @@
 	<urlname>mygui-random-squares</urlname>
 	<name>MyGUI Random Squares</name>
 	<hits>2569</hits>
-	<description><![CDATA[This has actually swamped my time over the past 3 weeks. The MyGUI library, written by me for <a href=\"http://processing.org\">processing</a> is finally coming together nicely.
+	<description><![CDATA[This has actually swamped my time over the past 3 weeks. The MyGUI library, written by me for <a href=\"//processing.org\">processing</a> is finally coming together nicely.
 
 This particular example is a brief application of a MyGUI Button and MyGUI Pin Slider. The button lets you randomise the scale and colour of the squares, and the slider effects how fast they are generated. 
 
