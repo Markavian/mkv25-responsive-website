@@ -1,6 +1,19 @@
 {
   "name": "mkv25-site-deployment",
   "version": "0.1.0",
+  "scripts": {
+    "stage-images": "grunt ftp-deploy:stage-images",
+    "stage-code": "grunt stage-code",
+    "stage-all": "grunt stage-all",
+    "live-release": "grunt release",
+    "stage-php": "grunt ftp-deploy:stage-php",
+    "stage-php-lib": "grunt ftp-deploy:stage-php-lib",
+    "stage-scripts": "grunt ftp-deploy:stage-scripts",
+    "stage-stylesheets": "grunt ftp-deploy:stage-stylesheets",
+    "stage-templates": "grunt ftp-deploy:stage-templates",
+    "stage-content": "grunt ftp-deploy:stage-content",
+    "stage-articles": "grunt ftp-deploy:stage-articles"
+  },
   "devDependencies": {
     "grunt": "~0.4.2",
     "grunt-debug-task": "^0.1.5",
