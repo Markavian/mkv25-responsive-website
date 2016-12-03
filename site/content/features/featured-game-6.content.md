@@ -1,3 +1,3 @@
-[![A Medieval Story][Featured Image]](content/games/a-medieval-story)
+[![A Medieval Story][featured image]](content/games/a-medieval-story)
 
-[Featured Image]: //mkv25.net/ludum/ld27/release/screenshot_02_gameplay.png
+[featured image]: //mkv25.net/ludum/ld27/release/screenshot_02_gameplay.png

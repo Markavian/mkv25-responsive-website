@@ -1,3 +1,3 @@
-[![Test Subject Gamma][Featured Image]](content/games/test-subject-gamma)
+[![Test Subject Gamma][featured image]](content/games/test-subject-gamma)
 
-[Featured Image]: //mkv25.net/ludum/ld25/release/screenshot_gamestart.png
+[featured image]: //mkv25.net/ludum/ld25/release/screenshot_gamestart.png

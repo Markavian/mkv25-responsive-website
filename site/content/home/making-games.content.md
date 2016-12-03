@@ -1,5 +1,4 @@
-Making Games
-============
+# Making Games
 
 A big part about mkv25.net is making games - experimenting with ideas, and publishing playable prototypes.
 

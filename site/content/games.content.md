@@ -1,9 +1,8 @@
-Featured games
---------------
+# Featured games
 
-+ [Miniature Worlds][1] - biome simulator and materials game
-+ [Connected Worlds][2] - turn-based strategy game
-+ [Project Maid][3] - recruitment and house-hold management simulator
+- [Miniature Worlds][1] - biome simulator and materials game
+- [Connected Worlds][2] - turn-based strategy game
+- [Project Maid][3] - recruitment and house-hold management simulator
 - [Test Subject Gamma][4] - drag-and-drop secret lab game
 - [Tamborine Man][5] - short puzzle exploration game
 - [A Medieval Story][6] - short top-trumps based adventure game
@@ -12,7 +11,7 @@ Featured games
 
 All games have online previews (Flash based). We're very keen to hear your feedback about what you like, and what you want to see more of.
 
-Most of our games are prototypes, but if you see something you enjoy please get in touch through the [forums](forums).
+Most of our games are prototypes, but if you see something you enjoy please get in touch through the <forums>.
 
 [1]: content/games/miniature-worlds
 [2]: content/games/connected-worlds
