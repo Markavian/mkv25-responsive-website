@@ -16,10 +16,12 @@ To get going:
 Then run: `npm install`
 
 Provided the FTP details are correct, you can then run the stage and live release commands:
-- stage-code
-- stage-images
-- stage-all
-- live-release
+- npm run stage-code
+- npm run stage-images
+- npm run stage-content
+- npm run stage-articles
+- npm run stage-all
+- npm run live-release
 
 ## Configuration
 
