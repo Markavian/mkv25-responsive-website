@@ -18,8 +18,8 @@ Builds
 | Neko         | Not available             |                                                                              |
 | Linux        | Not available             | Should work, no way of testing                                               |
 
-[Android]: http://mkv25.net/ludum/ld30/release/android/LudumDareGame-debug.apk
-[Flash]: http://mkv25.net/ludum/ld30/preview/
+[Android]: //mkv25.net/ludum/ld30/release/android/LudumDareGame-debug.apk
+[Flash]: //mkv25.net/ludum/ld30/preview/
 
 Player Mode
 -----------
@@ -66,10 +66,10 @@ Screenshots
 
 Some screenshots of the game:
 
-![Title Screen](http://mkv25.net/ludum/ld30/preview/screenshots/screenshot_01_title_screen.png)
+![Title Screen](//mkv25.net/ludum/ld30/preview/screenshots/screenshot_01_title_screen.png)
 
-![Map Indicators](http://mkv25.net/ludum/ld30/preview/screenshots/screenshot_02_map-indicators.png)
+![Map Indicators](//mkv25.net/ludum/ld30/preview/screenshots/screenshot_02_map-indicators.png)
 
-![Movement into Space](http://mkv25.net/ludum/ld30/preview/screenshots/screenshot_03_movement-into-space.png)
+![Movement into Space](//mkv25.net/ludum/ld30/preview/screenshots/screenshot_03_movement-into-space.png)
 
-![Research Technology](http://mkv25.net/ludum/ld30/preview/screenshots/screenshot_04_research-technology.png)
+![Research Technology](//mkv25.net/ludum/ld30/preview/screenshots/screenshot_04_research-technology.png)

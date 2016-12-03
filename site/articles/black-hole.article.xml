@@ -8,7 +8,7 @@ Thought 2: Damnit I just lost the whole of the last article I wrote.
 
 So here goes <i>again</i>.
 
-After seeing a <a href=\"http://processing.org/discourse/yabb_beta/YaBB.cgi?board=Programs;action=display;num=1119147851;\">problem</a> on the processing message board to do with accessing an array from the centre and spiraling outwards I decided that <a href=\"http://mathworld.wolfram.com/ArchimedesSpiral.html\">Archimedes Spiral</a> was the best solution.
+After seeing a <a href=\"//processing.org/discourse/yabb_beta/YaBB.cgi?board=Programs;action=display;num=1119147851;\">problem</a> on the processing message board to do with accessing an array from the centre and spiraling outwards I decided that <a href=\"//mathworld.wolfram.com/ArchimedesSpiral.html\">Archimedes Spiral</a> was the best solution.
 
 The equation for Archimedes Spiral is very simple:
 <b>radius = constant * theta;</b>

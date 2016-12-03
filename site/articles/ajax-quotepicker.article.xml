@@ -4,7 +4,7 @@
 	<name>AJAX Quotepicker</name>
 	<hits>298</hits>
 	<description><![CDATA[JQuery really does make life easier.
-As a prototype for work on the [link=http://mkv25.net/dfma/]DFMA[/link] I prepared an ajax quote picked that gets its content from a PHP service. I posted this on my [link=http://mkv16.mkv25.net]AI Research Blog[/link] as well. Score for keyword density!
+As a prototype for work on the [link=//mkv25.net/dfma/]DFMA[/link] I prepared an ajax quote picked that gets its content from a PHP service. I posted this on my [link=//mkv16.mkv25.net]AI Research Blog[/link] as well. Score for keyword density!
 
 The other pleasing thing about this prototype was the mouse button effects. Note the mouse down event that highlights a different colour (reddish) to signify activity.
 

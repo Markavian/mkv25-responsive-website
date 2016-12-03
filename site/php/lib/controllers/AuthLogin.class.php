@@ -86,7 +86,7 @@ class AuthLogin
 		$CLEF_AUTH = Environment::get('CLEF_AUTH');
 
 		// Clef OAuth authorisation
-		// Taken from: http://docs.getclef.com/v1.0/docs/quick-setup
+		// Taken from: //docs.getclef.com/v1.0/docs/quick-setup
 		
 		$app_id = $CLEF_AUTH['appId'];
 		$app_secret = $CLEF_AUTH['appSecret'];

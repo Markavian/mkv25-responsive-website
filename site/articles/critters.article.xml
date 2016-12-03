@@ -3,7 +3,7 @@
 	<urlname>critters</urlname>
 	<name>Critters</name>
 	<hits>1811</hits>
-	<description><![CDATA[Click on the critter, it generates a new random one. Random critter. Based entirely on the work by Jared Tarbel, from <a href=\"http://www.levitated.net\">levitated.net</a>, because he has such great ideas.
+	<description><![CDATA[Click on the critter, it generates a new random one. Random critter. Based entirely on the work by Jared Tarbel, from <a href=\"//www.levitated.net\">levitated.net</a>, because he has such great ideas.
 
 I made this a long long time ago, and found it recently for publishing. Random character generation could be useful for providing games with infinite variety of creatures that change every time a user plays.]]></description>
 	<keywords>Flash actionscript critter random generated character game</keywords>

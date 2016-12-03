@@ -21,7 +21,7 @@ Thanks to Theron Williams, Chris Bok, Fyron, and others for early support. I\'m 
 	<keywords>flash actionscript as2 mysql php territory map space empires space game online turn based game forum</keywords>
 	<type>image</type>
 
-	<contentUrl>http://mkv25.net/showcase/sei_map2.png</contentUrl>
+	<contentUrl>//mkv25.net/showcase/sei_map2.png</contentUrl>
 	<contentWidth>400</contentWidth>
 	<contentHeight>280</contentHeight>
 	<category>flash</category>
