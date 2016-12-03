@@ -30,8 +30,8 @@ _Competion rules_ - all artwork, sound, and music were created by myself using p
 Many thanks to the respective authors and companies behind the software:
 
 Tools               | Technologies
-------------------- | ----------------------------------------------
-Music | Atrk-Bu.py - modified with a few custom instruments (source included)   
+------------------- | ---------------------------------------------------------------------
+Music               | Atrk-Bu.py - modified with a few custom instruments (source included)
 Sound Effects       | Audacity, microphone, a Table Spoon, and a Pint of Tea. (tink)
 Graphics            | Paint Shop Pro 7
 Compiler / Language | Haxe + NME
