@@ -3,14 +3,14 @@
 class ArticleReader
 {
 	var $dao;
-	
+
 	public function __construct()
 	{
 		$fallbacks = Array(
-			new ArticleDatabaseReader(),
-			new ArticleFileSystemReader()
+			new ArticleFileSystemReader(),
+			new ArticleDatabaseReader()
 		);
-		
+
 		// Setup the DAO object using a proxy to access both the Database and the File System
 		$this->dao = new ProxyFallback($fallbacks);
 	}
