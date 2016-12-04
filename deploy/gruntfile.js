@@ -45,6 +45,7 @@ module.exports = function(grunt) {
 
 		"ftp-deploy": {
 			"stage-articles": ftpStageConfigFor('site/articles/'),
+			"stage-projects": ftpStageConfigFor('site/projects/'),
 			"stage-content": ftpStageConfigFor('site/content/'),
 			"stage-images": ftpStageConfigFor('site/images/'),
 			"stage-php": ftpStageConfigFor('site/php/', ['external']),
@@ -71,10 +72,11 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('stage-content', ['ftp-deploy:stage-content']);
 	grunt.registerTask('stage-articles', ['ftp-deploy:stage-articles']);
+	grunt.registerTask('stage-projects', ['ftp-deploy:stage-projects']);
 	grunt.registerTask('stage-images', ['ftp-deploy:stage-images']);
 
 	grunt.registerTask('stage-code', ['stage-php', 'stage-scripts', 'stage-stylesheets', 'stage-templates']);
-	grunt.registerTask('stage-all', ['stage-code', 'stage-content', 'stage-articles', 'stage-images']);
+	grunt.registerTask('stage-all', ['stage-code', 'stage-content', 'stage-articles', 'stage-projects', 'stage-images']);
 
 	grunt.registerTask('release', ['ftp-deploy:live']);
 }

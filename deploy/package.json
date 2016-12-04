@@ -12,7 +12,8 @@
     "stage-stylesheets": "grunt ftp-deploy:stage-stylesheets",
     "stage-templates": "grunt ftp-deploy:stage-templates",
     "stage-content": "grunt ftp-deploy:stage-content",
-    "stage-articles": "grunt ftp-deploy:stage-articles"
+    "stage-articles": "grunt ftp-deploy:stage-articles",
+    "stage-projects": "grunt ftp-deploy:stage-projects"
   },
   "devDependencies": {
     "grunt": "~0.4.2",
