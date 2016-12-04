@@ -82,6 +82,24 @@ END;
 	}
 
     public function render() {
-        return $this->toXHTML();
+
+		$project = $this;
+
+		$languages = '';
+        foreach($project->languages as $key => $language) {
+            $languages .= '<li class="' . $language . '">' . $language . '</li>';
+        }
+
+		ob_start();
+
+		echo <<<END
+<h3>$project->name</h3>
+<p>$project->description</p>
+<ul><li><a href="$project->link">$project->link</a></li></ul>
+<p>Languages:</p>
+<ul>$languages</ul>
+END;
+
+        return ob_get_clean();
     }
 }
