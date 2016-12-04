@@ -1,0 +1,7 @@
+<project>
+	<name>tile-merger</name>
+    <organization>markavian</organization>
+    <description>A tile merger, for merging multiple images into a single image. Written in C# for the .NET framework for Windows operating systems.</description>
+    <link>https://github.com/Markavian/tile-merger</link>
+    <languages>C#</languages>
+</project>

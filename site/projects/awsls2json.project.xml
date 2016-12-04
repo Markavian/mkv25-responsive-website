@@ -1,0 +1,7 @@
+<project>
+	<name>awsls2json</name>
+    <organization>connected-web</organization>
+    <description>Converts AWS LS format to a JSON file</description>
+    <link>https://github.com/connected-web/awsls2json</link>
+    <languages>JavaScript</languages>
+</project>

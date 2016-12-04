@@ -9,6 +9,7 @@ Environment::register('CLEF_REDIRECT_URL', 'https://mkv25.net/auth/login');
 
 Environment::register('CACHED_CONTENT_DIRECTORY', 'cache');
 Environment::register('ARTICLE_CONTENT_DIRECTORY', 'articles');
+Environment::register('PROJECT_CONTENT_DIRECTORY', 'projects');
 
 Sql::$errorReportsOn = true;
 Sql::$errorReportsVisible = false;
