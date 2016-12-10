@@ -1,0 +1,7 @@
+<project>
+	<name>Promise Path</name>
+    <organization>connected-web</organization>
+    <description>Promise based path operations, such as read, write, find, fetch, and clean.</description>
+    <link>https://github.com/connected-web/promise-path</link>
+    <languages>JavaScript</languages>
+</project>

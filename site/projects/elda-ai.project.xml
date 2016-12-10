@@ -1,0 +1,7 @@
+<project>
+	<name>Elda AI</name>
+    <organization>connected-web</organization>
+    <description>A natural language interface for storing and retrieving information</description>
+    <link>https://github.com/connected-web/elda-ai</link>
+    <languages>JavaScript</languages>
+</project>

@@ -1,0 +1,7 @@
+<project>
+	<name>Remote Test</name>
+    <organization>connected-web</organization>
+    <description>A test repository for connecting to remote repos.</description>
+    <link>https://github.com/connected-web/remote-test</link>
+    <languages>Text</languages>
+</project>

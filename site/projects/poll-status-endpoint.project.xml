@@ -1,0 +1,7 @@
+<project>
+	<name>Poll Status Endpoint</name>
+    <organization>connected-web</organization>
+    <description>Utility to test if a status endpoint is working by polling it every 10 seconds for 2 minutes.</description>
+    <link>https://github.com/connected-web/poll-status-endpoint</link>
+    <languages>JavaScript</languages>
+</project>

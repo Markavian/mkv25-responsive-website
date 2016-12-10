@@ -1,0 +1,7 @@
+<project>
+	<name>PAWS</name>
+    <organization>connected-web</organization>
+    <description>Automated web-based exploration tool for interacting with key based navigation systems</description>
+    <link>https://github.com/connected-web/paws</link>
+    <languages>JavaScript</languages>
+</project>
