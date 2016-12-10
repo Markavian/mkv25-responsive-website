@@ -1,0 +1,7 @@
+<project>
+	<name>Easy Mail</name>
+    <organization>markavian</organization>
+    <description>Neko based command line tool written in Haxe for sending mail to an SMTP server.</description>
+    <link>https://github.com/Markavian/EasyMail</link>
+    <languages>Haxe,Neko,Bat</languages>
+</project>

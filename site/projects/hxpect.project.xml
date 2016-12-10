@@ -1,0 +1,7 @@
+<project>
+	<name>hxpect</name>
+    <organization>markavian</organization>
+    <description>Haxe based test framework for writing tests in a more natural language kind of way.</description>
+    <link>https://github.com/Markavian/hxpect</link>
+    <languages>Haxe,Shell</languages>
+</project>

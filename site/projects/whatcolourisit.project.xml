@@ -1,0 +1,7 @@
+<project>
+	<name>What Colour is it?</name>
+    <organization>markavian</organization>
+    <description>Based on an existing idea, but with scaled colour values: http://whatcolourisit.scn9a.org/</description>
+    <link>https://github.com/Markavian/whatcolourisit</link>
+    <languages>HTML,JavaScript</languages>
+</project>

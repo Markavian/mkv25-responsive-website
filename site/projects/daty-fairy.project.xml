@@ -1,0 +1,7 @@
+<project>
+	<name>Data Fairy</name>
+    <organization>markavian</organization>
+    <description>An XML Relational Table Editor with code generation!</description>
+    <link>https://github.com/Markavian/data-fairy</link>
+    <languages>C#,Winform</languages>
+</project>

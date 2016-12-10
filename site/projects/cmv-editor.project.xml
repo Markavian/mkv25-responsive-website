@@ -1,0 +1,7 @@
+<project>
+	<name>CMV Editor</name>
+    <organization>markavian</organization>
+    <description>CMV Editor for Dwarf Fortress movie files, written in C# as a Windows Form Application</description>
+    <link>https://github.com/Markavian/CMV-Editor</link>
+    <languages>C#,Winform</languages>
+</project>

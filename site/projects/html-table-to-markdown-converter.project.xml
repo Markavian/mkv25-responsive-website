@@ -1,0 +1,7 @@
+<project>
+	<name>HTML Table to Markdown Converter</name>
+    <organization>markavian</organization>
+    <description>Converts HTML tables to Markdown. Paste in, click Convert.</description>
+    <link>https://github.com/Markavian/html-table-to-markdown-converter</link>
+    <languages>HTML,JavaScript</languages>
+</project>

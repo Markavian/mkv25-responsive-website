@@ -1,0 +1,7 @@
+<project>
+	<name>Advent of Code Solutions 2015</name>
+    <organization>markavian</organization>
+    <description>My solutions to the 2015 Advent of Code http://www.adventofcode.com</description>
+    <link>https://github.com/Markavian/advent-of-code-solutions-2015</link>
+    <languages>JavaScript</languages>
+</project>
