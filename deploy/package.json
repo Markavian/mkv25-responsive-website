@@ -1,24 +1,22 @@
 {
   "name": "mkv25-site-deployment",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "scripts": {
-    "stage-images": "grunt ftp-deploy:stage-images",
-    "stage-code": "grunt stage-code",
-    "stage-all": "grunt stage-all",
-    "live-release": "grunt release",
-    "stage-php": "grunt ftp-deploy:stage-php",
-    "stage-php-lib": "grunt ftp-deploy:stage-php-lib",
-    "stage-scripts": "grunt ftp-deploy:stage-scripts",
-    "stage-stylesheets": "grunt ftp-deploy:stage-stylesheets",
-    "stage-templates": "grunt ftp-deploy:stage-templates",
-    "stage-content": "grunt ftp-deploy:stage-content",
-    "stage-articles": "grunt ftp-deploy:stage-articles",
-    "stage-projects": "grunt ftp-deploy:stage-projects"
+    "stage-images": "node deploy stage-images",
+    "stage-code": "node deploy stage-code",
+    "stage-all": "node deploy stage-all",
+    "stage-php": "node deploy stage-php",
+    "stage-php-lib": "node deploy stage-php-lib",
+    "stage-scripts": "node deploy stage-scripts",
+    "stage-stylesheets": "node deploy stage-stylesheets",
+    "stage-templates": "node deploy stage-templates",
+    "stage-content": "node deploy stage-content",
+    "stage-articles": "node deploy stage-articles",
+    "stage-projects": "node deploy stage-projects",
+    "live-release": "node deploy release"
   },
   "devDependencies": {
-    "grunt": "~0.4.2",
-    "grunt-debug-task": "^0.1.5",
-    "grunt-ftp-deploy": ""
+    "ftp-deploy": "^2.3.0"
   },
   "repository": {
     "type": "git",

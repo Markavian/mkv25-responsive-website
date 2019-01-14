@@ -1,10 +1,10 @@
 {
   "mkv25-stage": {
     "username": "",
-	"password": ""
+	  "password": ""
   },
   "mkv25-live": {
     "username": "",
-	"password": ""
+	  "password": ""
   }
 }
