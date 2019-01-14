@@ -13,7 +13,7 @@
     "stage-content": "node deploy stage-content",
     "stage-articles": "node deploy stage-articles",
     "stage-projects": "node deploy stage-projects",
-    "live-release": "node deploy release"
+    "live-release": "node deploy live-release"
   },
   "devDependencies": {
     "ftp-deploy": "^2.3.0"
