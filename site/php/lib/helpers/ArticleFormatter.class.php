@@ -10,7 +10,7 @@ class ArticleFormatter
 		ob_start();
 
 		echo "<iconlist>";
-		
+
 		foreach ($articles as $key=>$article)
 		{
 			$iconUrl = $SHOWCASE_ICON_URL . $article->displayIcon;
@@ -47,7 +47,7 @@ END;
 	        </object>
 	        <!--<![endif]-->
      	</object>
-    	
+
     	<script type="text/javascript">
     		swfobject.registerObject("$contentId", "9.0.115", "site/scripts/expressInstall.swf");
     	</script>
@@ -64,7 +64,7 @@ END;
 		echo <<<END
 		<div class="media">
 			<iframe src="$contentUrl" frameborder="0" scrolling="no" style="width: $width; height: $height;">
-				<p>You need to activate IFRAMEs to view this content.</p> 
+				<p>You need to activate IFRAMEs to view this content.</p>
 			</iframe>
 		</div>
 END;
@@ -75,12 +75,18 @@ END;
 	{
 		$SHOWCASE_BASE_URL = Environment::get('SHOWCASE_BASE_URL');
 
-		if($contentUrl && !startsWith($contentUrl, 'http'))
+		if(startsWith($contentUrl, 'http'))
 		{
-			$contentUrl = $SHOWCASE_BASE_URL . $contentUrl;
+			return $contentUrl;
 		}
-
-		return $contentUrl;
+		else if (startsWith($contentUrl, '//'))
+		{
+			return $contentUrl;
+		}
+		else
+		{
+			return $SHOWCASE_BASE_URL . $contentUrl;
+		}
 	}
 
 	public static function renderArticle($name, $type, $width, $height, $url, $urlname, $category, $description, $postdate=false, $simpleMode=false, $icon_url=false)
@@ -100,7 +106,7 @@ END;
 			<br/>
 END;
 		}
-		
+
 		if($posttime)
 		{
 			$formattedDate = date('Y/m/d H:m:s', $posttime);
@@ -108,7 +114,7 @@ END;
 		}
 
 		echo '</block>';
-		
+
 		echo <<<END
 			<heading><a class="permalink" href="scrapbook/$urlname">$name</a></heading>
 END;
@@ -142,7 +148,7 @@ END;
 				<p>You need to have Java installed for this applet to work correctly.</p>
 				</applet>
 			</div>
-			
+
 			<p class="content links">
 				<a class="sourcecode" href="//mkv25.net/applets/$url/$url.pde" target="_blank"><b>Source code</b></a>
 				<a class="newwindow" href="//mkv25.net/applets/$url" target="_blank"><b>Open content in new tab</b></a>
@@ -154,21 +160,21 @@ END;
 			if($width > 0 && $height > 0)
 			{
 				echo <<<END
-				<div class="media"><img src="$localUrl" width="$width" height="$height" /></div> 
+				<div class="media"><img src="$localUrl" width="$width" height="$height" /></div>
 END;
 			}
 			else
 			{
 				echo <<<END
-				<div class="media"><img src="$localUrl" /></div> 
+				<div class="media"><img src="$localUrl" /></div>
 END;
 			}
 		}
-		
+
 		if($localUrl)
 		{
 			echo <<<END
-			<p class="content links"><a class="newwindow" href="$localUrl" target="_blank"><b>Open content in new tab</b></a></p> 
+			<p class="content links"><a class="newwindow" href="$localUrl" target="_blank"><b>Open content in new tab</b></a></p>
 END;
 		}
 
