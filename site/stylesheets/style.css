@@ -362,6 +362,8 @@ iconlist > a > icon {
 	height: 104px;
 	width: 104px;
 	background-size: cover;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 iconlist > a:hover {
