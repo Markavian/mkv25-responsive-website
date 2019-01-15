@@ -68,7 +68,7 @@ img {
 
 /* Portrait design for a width of 320px */
 @media only screen and (max-width: 767px) {
-	body > content, footer > content, navigation > content, .page-block { width: 320px; }
+	body > content, footer > content, navigation > content, .page-block { width: 95%; }
 	column,
 	column.single,
 	column.double,
@@ -78,7 +78,7 @@ img {
 
 /* Portrait design for a width of 480px */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-	body > content, footer > content, navigation > content, .page-block { width: 480px; }
+	body > content, footer > content, navigation > content, .page-block { width: 97%; }
 	column,
 	column.single,
 	column.double,
