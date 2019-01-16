@@ -11,6 +11,7 @@ class Home
 		$view->title($TITLE);
 		$view->eyecatch('Coding at the core', 'Making games, discussing software, sharing source.');
 		$view->banner('home short');
+		$view->description('mkv25.net is a game and software development site - turning bits and bytes into logical blocks, in order to produce interesting, meaningful user experiences.');
 
 		$homeCodingAtTheCore = Content::load('content/home/coding-at-the-core.content.md');
 		$view->addSingleColumn($homeCodingAtTheCore);
