@@ -1,3 +1,3 @@
 # Sharing Source
 
-More and more now, you can find our software and tools online in github. This makes them available to a much wider audience, and can be supported beyond just this site alone. Check out our open source projects on [github](https://github.com/mkv25-games) to learn more.
+The source code for the projects and tools on this website can be found on [github/mkv25-games](https://github.com/mkv25-games). Go there to learn more about the projects and look at the code that makes them tick.
