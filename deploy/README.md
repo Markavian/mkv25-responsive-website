@@ -27,13 +27,13 @@ Provided the FTP details are correct, you can then run the stage and live releas
 
 Other variables you might want to change, include:
 
-gruntfile.js:
+deploy.js:
 
 ```javasrcipt
-    var FTP_HOST = 'ftp.mkv25.net';
-    var FTP_USER_STAGE = 'mkv25-stage';
-    var FTP_USER_LIVE = 'mkv25-live';
-    var FTP_PATH = '';
+    const FTP_HOST = 'ftp.mkv25.net'
+    const FTP_USER_STAGE = 'mkv25-stage'
+    const FTP_USER_LIVE = 'mkv25-live'
+    const FTP_ROOT_PATH = ''
 ```
 
 ## Wishlist

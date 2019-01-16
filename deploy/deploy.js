@@ -5,10 +5,18 @@ const path = require('path')
 const passwords = JSON.parse(fs.readFileSync(path.join(__dirname, '.ftppass')))
 const mode = process.argv[2] || false
 
+const FTP_HOST = 'ftp.mkv25.net'
+const FTP_USER_STAGE = 'mkv25-stage'
+const FTP_USER_LIVE = 'mkv25-live'
+const FTP_ROOT_PATH = ''
+
+const stageUser = passwords[FTP_USER_STAGE]
+const liveUser = passwords[FTP_USER_LIVE]
+
 const defaultConfig = {
-  user: passwords['mkv25-stage'].username,
-  password: passwords['mkv25-stage'].password, // optional, prompted if none given
-  host: 'ftp.mkv25.net',
+  user: stageUser.username,
+  password: stageUser.password, // optional, prompted if none given
+  host: FTP_HOST,
   port: 21,
   localRoot: path.join(__dirname, '../site'),
   remoteRoot: '/site',
@@ -52,8 +60,8 @@ const modes = {
   }),
   'live-release': () => deploy({
     include: ['**/*'],
-    user: passwords['mkv25-live'].username,
-    password: passwords['mkv25-live'].password
+    user: liveUser.username,
+    password: liveUser.password
   })
 }
 
