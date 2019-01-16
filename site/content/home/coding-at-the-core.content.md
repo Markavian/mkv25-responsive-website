@@ -1,1 +1,1 @@
-Here at mkv25.net we're all about the code - turning bits and bytes into logical, meaningful blocks, to produce interesting, meaningful user experiences.
+**mkv25.net** is a game and software development site - turning bits and bytes into logical blocks, in order to produce interesting, meaningful user experiences. Please browse around and see what you can *discover*.
