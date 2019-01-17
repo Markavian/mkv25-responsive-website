@@ -49,7 +49,7 @@ END;
      	</object>
 
     	<script type="text/javascript">
-    		swfobject.registerObject("$contentId", "9.0.115", "site/scripts/expressInstall.swf");
+    		swfobject.registerObject("$contentId", "9.0.115");
     	</script>
 END;
 		return ob_get_clean();
