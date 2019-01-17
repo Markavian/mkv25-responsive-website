@@ -60,15 +60,14 @@ const modes = {
   }),
   'live-php': () => deploy({
     include: ['php/**/*'],
-    exclude: ['php/lib/external/**/*'],
-    user: liveUser.username,
-    password: liveUser.password
-  }),
+    exclude: ['php/lib/external/**/*']
+  }, FTP_USER_LIVE),
+  'live-articles': () => deploy({
+    include: ['articles/**/*']
+  }, FTP_USER_LIVE),
   'live-release': () => deploy({
-    include: ['**/*'],
-    user: liveUser.username,
-    password: liveUser.password
-  })
+    include: ['**/*']
+  }, FTP_USER_LIVE)
 }
 
 function createDeployer() {
@@ -88,12 +87,20 @@ function createDeployer() {
   return deployer
 }
 
-async function deploy(variation) {
-  const deployer = createDeployer()
-  const ftpConfig = Object.assign({}, defaultConfig, variation)
+async function deploy(variation, passwordId) {
   try {
     console.log('[Deploy]', mode, ':', variation)
+
+    // add password after logging the variation
+    const user = passwords[passwordId] || stageUser
+    variation.user = user.username
+    variation.password = user.password
+
+    // create and configure deployer
+    const deployer = createDeployer()
+    const ftpConfig = Object.assign({}, defaultConfig, variation)
     const result = await deployer.deploy(ftpConfig)
+
     console.log('[Deploy] Finished:', result)
   }
   catch (ex) {
