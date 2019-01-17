@@ -81,7 +81,7 @@ END;
 
 	private static function removeScaleFromImageName($url)
 	{
-		return str_replace("_normal.png", ".png", $url);
+		return str_replace("_normal.", ".", $url);
 	}
 
 	public static function renderMedia($media)
