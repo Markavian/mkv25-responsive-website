@@ -1,7 +1,7 @@
 <?php
 
 class Article
-{	
+{
 	static $ID_INDEX = array();
 	static $URLNAME_INDEX = array();
 
@@ -77,7 +77,7 @@ class Article
 
 		$this->id             = (string)$doc->id;
 		$this->urlname        = (string)$doc->urlname;
-		$this->name           = (string)$doc->name;
+		$this->name           = stripslashes((string)$doc->name);
 		$this->hits           = (string)$doc->hits;
 		$this->description    = (string)$doc->description;
 		$this->keywords       = (string)$doc->keywords;
