@@ -1,6 +1,6 @@
 # mkv25.net deployment system
 
-This grunt plugin manages the release and deployment of the main mkv25.net website, managing stage and live releases. It contains a scripts to automate the release procedure, including:
+This part of the project manages the release and deployment of the main mkv25.net website, managing stage and live releases. It contains a scripts to automate the release procedure, including:
 
 - Uploading files via FTP to a web server
 

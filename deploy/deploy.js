@@ -58,6 +58,12 @@ const modes = {
   'stage-projects': () => deploy({
     include: ['projects/**/*']
   }),
+  'live-php': () => deploy({
+    include: ['php/**/*'],
+    exclude: ['php/lib/external/**/*'],
+    user: liveUser.username,
+    password: liveUser.password
+  }),
   'live-release': () => deploy({
     include: ['**/*'],
     user: liveUser.username,
