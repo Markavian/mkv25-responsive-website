@@ -7,7 +7,7 @@
 
 I started by centralising the data access layer which quickly deteriorated into an internal discussion about where \"spam checks\" and \"user permissions\" should fit into the coding structure. To clarify my ideas I drew a three tier diagram specifying the general features of the site and how they should fit into the new coding.
 
-Such tedium distracted me to add shiny boxes, and then a few animations on top. Since, I can\'t forget myself as a flash programmer, even though I\'m so heavily involved with backend coding. 
+Such tedium distracted me to add shiny boxes, and then a few animations on top. Since, I can\'t forget myself as a flash programmer, even though I\'m so heavily involved with backend coding.
 
 The reuslt - recoding is going well, and I have a shiny \"interactive\" diagram to post on my website.
 
@@ -16,11 +16,11 @@ For reference I used prototype code for the animations, variations of the animat
 	<type>iframe</type>
 
 	<contentUrl>showcase/separation_of_concerns.swf</contentUrl>
-	<contentWidth>550</contentWidth>
-	<contentHeight>400</contentHeight>
+	<contentWidth>0</contentWidth>
+	<contentHeight>550</contentHeight>
 	<category>artwork</category>
 	<displayIcon>dal_icon.png</displayIcon>
 
 	<linkedArticles>cluedo-people,ajax-quotepicker</linkedArticles>
-	<postdate>0000-00-00 00:00:00</postdate>
+	<postdate>2009-05-25 00:00:00</postdate>
 </article>
