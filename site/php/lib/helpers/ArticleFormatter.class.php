@@ -36,10 +36,10 @@ END;
 		$height = (is_numeric($height)) ? $height . 'px' : $height;
 
 		if ($alternativeContent) {
-			$alternativeContent = '<img src="'. $alternativeContent . '" width="100%" alt="Flash disabled: image displaying alternative content" title="Please enable flash player to view this content"'>
+			$alternativeContent = '<img src="'. $alternativeContent . '" width="100%" alt="Flash disabled: image displaying alternative content" title="Please enable flash player to view this content">';
 		}
 		else {
-			$alternativeContent = '<heading>Flash Disabled</heading><p>Please enable flash player to view this content.</p>'
+			$alternativeContent = '<heading>Flash Disabled</heading><p>Please enable flash player to view this content.</p>';
 		}
 
 		ob_start();
