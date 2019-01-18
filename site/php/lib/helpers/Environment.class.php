@@ -10,7 +10,7 @@ class Environment
 
 		Environment::register('REQUEST_TIME_FLOAT', microtime(true));
 
-		$environment = Environment::getEnvironmentVariable('SERVER_ENV', 'stage');
+		$environment = Environment::getEnvironmentVariable('SERVER_ENV', 'live');
 
 		require('./environment/environment.' . $environment . '.config.php');
 	}
