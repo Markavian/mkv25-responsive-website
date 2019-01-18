@@ -65,6 +65,9 @@ const modes = {
     include: ['php/**/*'],
     exclude: ['php/lib/external/**/*']
   }, FTP_USER_LIVE),
+  'live-content': () => deploy({
+    include: ['content/**/*']
+  }, FTP_USER_LIVE),
   'live-articles': () => deploy({
     include: ['articles/**/*']
   }, FTP_USER_LIVE),
