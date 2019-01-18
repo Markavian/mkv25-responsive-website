@@ -33,7 +33,7 @@ Outdated architecture. CI servers no longer running. Game design needs a rethink
 
 ## Screenshots
 
-![Project Maid Feature](http://mkv25.net/g/maid/alpha/images/project-maid-feature.png)
+![Project Maid Feature](//mkv25.net/g/maid/alpha/images/project-maid-feature.png)
 
 [android]: //mkv25.net/g/maid/alpha/android/MaidGame-release.apk
 [flash]: //mkv25.net/g/maid/alpha/flash/

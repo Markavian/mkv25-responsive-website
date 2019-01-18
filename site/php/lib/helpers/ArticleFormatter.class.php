@@ -44,17 +44,19 @@ END;
 
 		ob_start();
 		echo <<<END
-		<div style="background: url('//mkv25.net/site/images/flash_disabled_tile.png');">
-			<object id="$contentId" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="$width" height="$height">
-        <param name="movie" value="$contentUrl" />
-        <!--[if !IE]>-->
-        <object type="application/x-shockwave-flash" data="$contentUrl" width="$width" height="$height">
-        <!--<![endif]-->
-        	<div style="background: rgba(255,255,255,0.7); margin: 20px;">$alternativeContent</div>
-        <!--[if !IE]>-->
-        </object>
-        <!--<![endif]-->
-	   	</object>
+		<div style="text-align: center;">
+			<div style="display: inline-block; background: url('//mkv25.net/site/images/flash_disabled_tile.png');">
+				<object id="$contentId" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="$width" height="$height">
+	        <param name="movie" value="$contentUrl" />
+	        <!--[if !IE]>-->
+	        <object type="application/x-shockwave-flash" data="$contentUrl" width="$width" height="$height">
+	        <!--<![endif]-->
+	        	<div style="background: rgba(255,255,255,0.7); margin: 20px;">$alternativeContent</div>
+	        <!--[if !IE]>-->
+	        </object>
+	        <!--<![endif]-->
+		   	</object>
+			</div>
 		</div>
 
     	<script type="text/javascript">
