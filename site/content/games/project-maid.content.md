@@ -1,6 +1,6 @@
 # Project Maid
 
-{EMBED_FLASH://mkv25.net/g/maid/alpha/flash/MaidGame.swf:flashGame:100%:540}
+{EMBED_FLASH://mkv25.net/g/maid/alpha/flash/MaidGame.swf:flashGame:100%:540://mkv25.net/g/maid/alpha/images/project-maid-title-screen.png}
 
 ## Builds
 

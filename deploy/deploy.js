@@ -58,6 +58,9 @@ const modes = {
   'stage-projects': () => deploy({
     include: ['projects/**/*']
   }),
+  'live-images': () => deploy({
+    include: ['images/**/*']
+  }, FTP_USER_LIVE),
   'live-php': () => deploy({
     include: ['php/**/*'],
     exclude: ['php/lib/external/**/*']

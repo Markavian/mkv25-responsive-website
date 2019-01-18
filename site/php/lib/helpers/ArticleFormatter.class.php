@@ -27,13 +27,20 @@ END;
 		return ob_get_clean();
 	}
 
-	public static function renderFlashContent($contentUrl, $contentId='flash', $width="100%", $height=400)
+	public static function renderFlashContent($contentUrl, $contentId='flash', $width="100%", $height=400, $alternativeContent=false)
 	{
 		// Remove non-alpha numeric characters from ID
 		$contentId = 'flash-' . removeNonAlphaNumericCharactersFrom($contentId);
 
 		$width = (is_numeric($width)) ? $width . 'px' : $width;
 		$height = (is_numeric($height)) ? $height . 'px' : $height;
+
+		if ($alternativeContent) {
+			$alternativeContent = '<img src="'. $alternativeContent . '" width="100%" alt="Flash disabled: image displaying alternative content" title="Please enable flash player to view this content"'>
+		}
+		else {
+			$alternativeContent = '<heading>Flash Disabled</heading><p>Please enable flash player to view this content.</p>'
+		}
 
 		ob_start();
 		echo <<<END
@@ -42,7 +49,7 @@ END;
 	        <!--[if !IE]>-->
 	        <object type="application/x-shockwave-flash" data="$contentUrl" width="$width" height="$height">
 	        <!--<![endif]-->
-	        	<p>Alternative content</p>
+	        	<div style="background: rgba(255,255,255,0.7); margin: 20px;">$alternativeContent</div>
 	        <!--[if !IE]>-->
 	        </object>
 	        <!--<![endif]-->
