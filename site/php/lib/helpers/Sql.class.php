@@ -46,6 +46,17 @@ class Sql
   // Connect using environment variables
   public function __construct($host, $database, $user, $password)
   {
+    $this->error
+    (
+      "SQL Error",
+      "Unable to connect.",
+      __FILE__,
+      __LINE__,
+      '',
+      "Unable to establish database connection.",
+      "Check to make sure you have the correct mysql information entered into this file. Such as password and username. \nThe host is usually localhost or localhost:/tmp/mysql5.sock."
+    );
+
     $this->host     = $host;
     $this->database = $database;
     $this->user     = $user;
@@ -87,7 +98,7 @@ END;
   // Connect to database
   function connect()
   {
-    if ($this->connect == 0)
+    if ($this->connect === 0)
     {
       $this->connect = new mysqli($this->host, $this->user, $this->password, $this->database);
 
