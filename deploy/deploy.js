@@ -38,7 +38,7 @@ const modes = {
     exclude: ['php/lib/external/**/*']
   }),
   'stage-php-lib': () => deploy({
-    include: ['images/**/*']
+    include: ['php/lib/external/**/*']
   }),
   'stage-scripts': () => deploy({
     include: ['scripts/**/*']
