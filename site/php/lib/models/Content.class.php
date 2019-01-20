@@ -5,14 +5,14 @@ class Content
 	const CONTENT_BASE_DIRECTORY = '../../';
 
 	var $content;
-	
+
 	public function __construct($name)
 	{
 		$keys = array();
-		
+
 		$this->loadContent($name);
 	}
-	
+
 	private function loadContent($name)
 	{
 		$fullPath = Content::generatePath($name);
@@ -26,7 +26,7 @@ class Content
 			throw new Exception("Content '$name' not found on path: $fullPath");
 		}
 	}
-	
+
 	public function render()
 	{
 		// Find and escape media tags
@@ -36,7 +36,7 @@ class Content
 		// Parse remaining content using Parsedown rules
 		$parsedown = new Parsedown();
 		$markdownHtml = $parsedown->text($escapedMediaContent);
-		
+
 		// Reinsert media tags as HTML blocks
 		$replacedMediaHTML = $mediaFormatter->replaceMediaKeys($markdownHtml);
 

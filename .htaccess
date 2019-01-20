@@ -1,16 +1,21 @@
+SetEnv SERVER_ENV stage
+
+# Start Force SSL directives
+RewriteEngine On
+RewriteCond %{HTTPS} !on
+RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L]
+# End Force SSL directives
+
 DirectoryIndex site/php/routes/index.php
 
-SetEnv SERVER_ENV "local"
+Options +FollowSymLinks -MultiViews
 
-Require all granted
+RewriteEngine On
 
-RewriteEngine on
-RewriteBase /mkv25/
+RewriteCond %{HTTP_HOST} ^stage.mkv25.net|mkv25.net|mkv25.dev$
+RewriteCond %{REQUEST_FILENAME} -f [NC,OR]
+RewriteCond %{REQUEST_FILENAME} -d [NC]
+RewriteRule .* - [L]
 
-RewriteCond %{HTTP_HOST} ^localhost|chii|192.168.1.76$
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^([^?]*)$ site/php/routes/index.php [NC,L,QSA]
-
-RewriteCond %{HTTP_HOST} ^localhost|chii|192.168.1.76$
-RewriteRule .* - [E=MKV25_SITE_BASE:/mkv25/]
+RewriteCond %{HTTP_HOST} ^stage.mkv25.net|mkv25.net|mkv25.dev$
+RewriteRule .* site/php/routes/index.php [NC]

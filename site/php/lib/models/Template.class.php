@@ -5,18 +5,18 @@ class Template
 	const TEMPLATE_DIRECTORY = '../../../templates/';
 
 	var $template;
-	var $keys;
-	
+	var $keys = array();
+
 	public function __construct($path=false)
 	{
 		$keys = array();
-		
+
 		if($path)
 		{
 			$this->loadTemplate($path);
 		}
 	}
-	
+
 	private function loadTemplate($path)
 	{
 		$fullPath = __DIR__ . '/' . Template::TEMPLATE_DIRECTORY . $path;
@@ -29,17 +29,17 @@ class Template
 			throw new Exception('Template not found on path: ' . $fullPath);
 		}
 	}
-	
+
 	public function set($key, $value)
 	{
 		$this->keys[$key] = $value;
 	}
-	
+
 	public function expand()
 	{
 		$output = $this->template;
 		$output = Template::removeTabs($output);
-		
+
 		if(count($this->keys) > 0)
 		{
 			foreach($this->keys as $key => $value)
@@ -47,10 +47,10 @@ class Template
 				$output = str_replace($key, $value, $output);
 			}
 		}
-		
+
 		return $output;
 	}
-	
+
 	public static function removeTabs($string)
 	{
 		return str_replace("\t", "  ", $string);
@@ -76,7 +76,7 @@ class Template
 		$template = new Template();
 
 		$template->template = $content;
-		
+
 		return $template;
 	}
 }

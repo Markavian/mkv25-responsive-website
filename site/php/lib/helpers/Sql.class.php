@@ -1,4 +1,4 @@
-<?php  
+<?php
 
 # title     :  SQL Class
 # version   :  1.28
@@ -10,7 +10,7 @@
 class Sql
 {
   static $singleton;
-  
+
   static $errorReportsOn = true;
   static $errorReportsVisible = true;
 
@@ -47,10 +47,10 @@ class Sql
   public function __construct($host, $database, $user, $password)
   {
     $this->host     = $host;
-      $this->database = $database;
-      $this->user     = $user;
-      $this->password = $password;
-    
+    $this->database = $database;
+    $this->user     = $user;
+    $this->password = $password;
+
     $this->connect();
   }
 
@@ -59,7 +59,7 @@ class Sql
   function error($title, $type, $file, $line, $error, $explanation, $suggestion)
   {
     $visible = (self::$errorReportsVisible) ? 'block' : 'none';
-  
+
     if (self::$errorReportsOn)
     {
       echo <<< END
@@ -89,8 +89,8 @@ END;
   {
     if ($this->connect == 0)
     {
-      $this->connect = @mysql_connect($this->host, $this->user, $this->password);
-      
+      $this->connect = new mysqli($this->host, $this->user, $this->password, $this->database);
+
       if (!$this->connect)
       {
         $this->error
@@ -104,38 +104,21 @@ END;
           "Check to make sure you have the correct mysql information entered into this file. Such as password and username. \nThe host is usually localhost or localhost:/tmp/mysql5.sock."
         );
       }
-      else
-      {
-        @mysql_select_db($this->database,$this->connect);
-
-        if(!$this->connect) {
-          $this->error
-          (
-            "SQL Error",
-            "Unable to connect.",
-            __FILE__,
-            __LINE__,
-            mysql_error(),
-            "Able to connect, but unable to select a database.",
-            "Check to make sure you have the correct mysql database entered into this file."
-          );
-        }        
-      }
     }
-    }
+  }
 
   // Close connection, free results
   function close($freeresults=1)
   {
     $result = false;
-    
+
     if ($this->connect)
     {
       if ($freeresults !== 1)
       {
         @mysql_free_result($this->result);
       }
-      
+
       $result = @mysql_close($this->connect);
     }
     return $result;
@@ -145,9 +128,9 @@ END;
   function query($query, $name = "")
   {
     if (!$this->connect) return false;
-    
+
     $result = false;
-    
+
      // Increment number of queries executed in this script
     $this->queries++;
 
@@ -159,7 +142,7 @@ END;
 
     // Run query
     $this->result[$name] = mysql_query($query, $this->connect);
-    
+
     if (!$this->result[$name])
     {
       $this->error(
@@ -176,19 +159,19 @@ END;
     {
       $result = $this->result[$name];
     }
-    
+
     return $result;
   }
-  
+
   // Run query on database, with identifier
   function multiquery($querytext, $namePrefix)
   {
      // Separate querys, based on ';'s
     $queryArray = explode(";", $querytext);
- 
+
      // Reset counter
-    $n = 0;    
-    
+    $n = 0;
+
      // Run separate queries
      foreach($queryArray as $query)
     {
@@ -201,39 +184,39 @@ END;
   function fetch($name = "")
   {
     $result = false;
-    
+
     // Fetch array
     $this->record[$name] = mysql_fetch_array($this->result[$name]);
-    
+
     // Return array, or false if non existant
     if (is_array($this->record[$name]))
     {
       $result = $this->record[$name];
     }
-    
+
     return $result;
   }
-  
+
   // Execute query $query and fetch an associate array from result set $name
   function fetch_query($query, $name)
   {
     if (!$this->connect) return false;
-    
+
     $result = false;
-  
+
     // Execute query
     if ($this->query($query, $name) != false)
     {
       // Fetch array
       $this->record[$name] = @mysql_fetch_array($this->result[$name]);
-      
+
       // Return array, or false if non existant
       if (is_array($this->record[$name]))
       {
         $result = $this->record[$name];
       }
     }
-    
+
     return $result;
   }
 
@@ -248,17 +231,17 @@ END;
   {
     return @mysql_num_fields($this->result[$name]);
   }
-  
+
   // Return an array of field names in the result set $name
   function field_names($name = "")
   {
     if (!$this->connect) return false;
-    
+
     $result = false;
-    
+
     // Get number of fields
     $num_fields = $this->num_fields($name);
-    
+
     // Create array
     if ($num_fields > 0)
     {
@@ -269,20 +252,20 @@ END;
       }
       $result = $data;
     }
-    
+
     return $result;
   }
-  
+
   // Return array of field types from result set $name
   function field_types($name = "")
   {
     if (!$this->connect) return false;
-    
+
     $result = false;
-    
+
     // Get num fields
     $num_fields = $this->num_fields($name, 1);
-    
+
     // Create array
     if ($num_fields > 0)
     {
@@ -295,20 +278,20 @@ END;
       }
       $result = $data;
     }
-    
+
     return $result;
   }
-  
+
   // Return array of field lengths from result set $name
   function field_lengths($name = "")
   {
     if (!$this->connect) return false;
-    
+
     $result = false;
-    
+
     // Get num fields
     $num_fields = $this->num_fields($name, 1);
-    
+
     // Create array
     if ($num_fields > 0)
     {
@@ -321,21 +304,21 @@ END;
       }
       $result = $data;
     }
-    
+
     return $result;
   }
-  
-  // Return array of named fields, usually with the properties: Field, Type, Null, Key, Default, Extra  
+
+  // Return array of named fields, usually with the properties: Field, Type, Null, Key, Default, Extra
   function table_info($tableName = "")
   {
     if (!$this->connect) return false;
-    
+
     $result = false;
-    
+
     $data = array();
     $resultName = 'table_info_'.$tableName;
     $this->query('SHOW COLUMNS FROM '.$tableName, $resultName);
-    
+
     if($this->num_rows($resultName) > 0)
     {
       while ($field = $this->fetch($resultName))
@@ -344,21 +327,21 @@ END;
       }
       $result = $data;
     }
-    
+
     return $result;
   }
-  
-  // Return array of key properties, usually with the properties: Table, Non_unique, Key_name, Seq_in_index, Column_name, Collation, Cardinality, Sub_part, Packed, Null, Index_type, Comment    
+
+  // Return array of key properties, usually with the properties: Table, Non_unique, Key_name, Seq_in_index, Column_name, Collation, Cardinality, Sub_part, Packed, Null, Index_type, Comment
   function table_keys($tableName = "")
   {
     if (!$this->connect) return false;
-    
+
     $result = false;
-    
+
     $data = array();
     $resultName = 'table_info_'.$tableName;
     $this->query('SHOW KEYS FROM '.$tableName, $resultName);
-    
+
     if($this->num_rows($resultName) > 0)
     {
       while ($field = $this->fetch($resultName))
@@ -367,10 +350,10 @@ END;
       }
       $result = $data;
     }
-    
+
     return $result;
   }
-  
+
   // Return number of affected rows from the last query
   function affected()
   {
@@ -381,18 +364,18 @@ END;
   function free($name = "")
   {
     $result = false;
-    
+
     // Destroy stored data
     unset($this->record);
     unset($this->row);
-    
+
     // Free result set
     if ($this->result[$name])
     {
       @mysql_free_result($this->result[$name]);
       $result = true;
     }
-    
+
     return $result;
   }
 
@@ -400,31 +383,31 @@ END;
   function move_pointer($name = "", $number)
   {
     $result = false;
-    
+
     if (mysql_data_seek($this->result[$name], $number))
     {
       $result = true;
     }
-    
+
     return $result;
   }
-  
+
   // Return last INSERT ID from query link $name
   function insert_id()
   {
     return @mysql_insert_id();
   }
-  
+
   function table_names($filter='')
   {
     if (!$this->connect) return false;
-    
+
     $result = false;
-    
+
     $data = array();
     $resultName = 'database_tables_'.$this->database;
     $this->query('SHOW TABLES FROM `'.$this->database.'`', $resultName);
-    
+
     if($this->num_rows($resultName) > 0)
     {
       while ($field = $this->fetch($resultName))
@@ -437,7 +420,7 @@ END;
       }
       $result = $data;
     }
-    
+
     return $result;
   }
 }
