@@ -102,7 +102,7 @@ END;
     {
       $this->connect = new mysqli($this->host, $this->user, $this->password, $this->database);
 
-      if (!$this->connect)
+      if ($mysqli->connect_errno)
       {
         $this->error
         (
@@ -110,7 +110,7 @@ END;
           "Unable to connect.",
           __FILE__,
           __LINE__,
-          mysql_error(),
+          $mysqli->connect_error,
           "Unable to establish database connection.",
           "Check to make sure you have the correct mysql information entered into this file. Such as password and username. \nThe host is usually localhost or localhost:/tmp/mysql5.sock."
         );
@@ -127,7 +127,7 @@ END;
     {
       if ($freeresults !== 1)
       {
-        @mysql_free_result($this->result);
+        @mysqli_stmt::free_result($this->result);
       }
 
       $result = @mysql_close($this->connect);
@@ -148,11 +148,11 @@ END;
     // Free result
     if (@$this->result[$name])
     {
-      @mysql_free_result($this->result);
+      @mysqli_stmt::free_result($this->result);
     }
 
     // Run query
-    $this->result[$name] = mysql_query($query, $this->connect);
+    $this->result[$name] = mysqli_query($query, $this->connect);
 
     if (!$this->result[$name])
     {
@@ -161,7 +161,7 @@ END;
         "Could not run the query: $query",
         __FILE__,
         __LINE__,
-        mysql_error(),
+        $mysqli->error,
         "There was an error with the query string.",
         "Check the query string to make sure there are no syntax errors."
       );
@@ -197,7 +197,7 @@ END;
     $result = false;
 
     // Fetch array
-    $this->record[$name] = mysql_fetch_array($this->result[$name]);
+    $this->record[$name] = mysqli_result::fetch_array($this->result[$name]);
 
     // Return array, or false if non existant
     if (is_array($this->record[$name]))
@@ -219,7 +219,7 @@ END;
     if ($this->query($query, $name) != false)
     {
       // Fetch array
-      $this->record[$name] = @mysql_fetch_array($this->result[$name]);
+      $this->record[$name] = @mysqli_result::fetch_array($this->result[$name]);
 
       // Return array, or false if non existant
       if (is_array($this->record[$name]))
@@ -234,7 +234,7 @@ END;
   // Returns the number of rows in the result set $name
   function num_rows($name = "")
   {
-    return @mysql_num_rows($this->result[$name]);
+    return @mysqli_num_rows($this->result[$name]);
   }
 
   // Returns the number of fields in the result set $name
@@ -383,7 +383,7 @@ END;
     // Free result set
     if ($this->result[$name])
     {
-      @mysql_free_result($this->result[$name]);
+      @mysqli_stmt::free_result($this->result[$name]);
       $result = true;
     }
 
