@@ -62,8 +62,9 @@ END;
 		}
 		</script>
 		<div style="text-align: center;">
-			<object id="$contentId" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="$width" height="$height">
+			<object id="$contentId" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" height="$height" width="$width" >
         <param name="movie" value="$contentUrl" />
+				<param name="align" value="middle" />
         <!--[if !IE]>-->
         <object type="application/x-shockwave-flash" data="$contentUrl" width="$width" height="$height">
         <!--<![endif]-->

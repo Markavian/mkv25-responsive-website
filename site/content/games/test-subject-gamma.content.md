@@ -1,6 +1,6 @@
 # Test Subject Gamma
 
-{EMBED_FLASH://mkv25.net/ludum/ld25/preview/LD25TestSubjectGamma_r1.swf:flashGame:800:500://mkv25.net/ludum/ld25/release/screenshot_gamestart.png}
+{EMBED_FLASH://mkv25.net/ludum/ld25/preview/LD25TestSubjectGamma_r1.swf:flashGame:100%:500://mkv25.net/ludum/ld25/release/screenshot_gamestart.png}
 
 ## Builds
 
