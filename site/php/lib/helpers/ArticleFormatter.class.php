@@ -39,7 +39,7 @@ END;
 			$alternativeContent = '<img src="'. $alternativeContent . '" alt="Flash disabled: image displaying alternative content" title="Please enable flash player to view this content">';
 		}
 		else {
-			$alternativeContent = '<heading>Flash Disabled</heading><p>Please enable flash player to view this content.</p>';
+			$alternativeContent = '<div style="background: url(\'//mkv25.net/site/images/flash_disabled_tile.png\'); padding: 20px;"><heading>Flash Disabled</heading><p>Please enable flash player to view this content.</p></div>';
 		}
 
 		ob_start();
