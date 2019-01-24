@@ -2,7 +2,7 @@
 
 ## ... rule the universe
 
-{EMBED_FLASH://mkv25.net/ludum/ld30/release/flash/LudumDareGame.swf:flashGame:500:800}
+{EMBED_FLASH://mkv25.net/ludum/ld30/release/flash/LudumDareGame.swf:flashGame:100%:800://mkv25.net/ludum/ld30/preview/screenshots/screenshot_03_movement-into-space.png}
 
 ## Builds
 
@@ -12,7 +12,7 @@ Android  | [APK File][android]  | This is a debug build, will need special permi
 IOS      | Not available        | Not currently in development - test build froze at start screen
 Flash    | [Web version][flash] | Available through this website
 Windows  | Not available        | Works, but not part of the automated build process
-Neko     | Not available        |
+Neko     | Not available        | -
 Linux    | Not available        | Should work, no way of testing
 
 ## Player Mode
