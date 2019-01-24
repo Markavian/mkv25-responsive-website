@@ -2,7 +2,7 @@
 
 ## ... in 10 seconds
 
-{EMBED_FLASH://mkv25.net/ludum/ld27/preview/LD2710Seconds_r2.swf:flashGame:800:500}
+{EMBED_FLASH://mkv25.net/ludum/ld27/preview/LD2710Seconds_r2.swf:flashGame:800:500://mkv25.net/ludum/ld27/release/screenshot_02_gameplay.png}
 
 ## Builds
 

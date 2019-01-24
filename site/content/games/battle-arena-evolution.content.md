@@ -1,6 +1,6 @@
 # Battle Arena Evolution
 
-{EMBED_FLASH://mkv25.net/ludum/ld24/preview/LD24BattleArenaEvolution_r1.swf:flashGame:800:500}
+{EMBED_FLASH://mkv25.net/ludum/ld24/preview/LD24BattleArenaEvolution_r1.swf:flashGame:800:600://mkv25.net/ludum/ld24/preview/screenshots/s01_title_screen.png}
 
 ## Builds
 
@@ -47,4 +47,4 @@ Screenshots of the game:
 
 ![Title Screen](//mkv25.net/ludum/ld24/preview/screenshots/s01_title_screen.png)
 
-[flash]: //mkv25.net/ludum/ld30/preview/
+[flash]: //mkv25.net/ludum/ld24/preview/index.html

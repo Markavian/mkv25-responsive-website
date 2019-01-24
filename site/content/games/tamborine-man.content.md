@@ -1,6 +1,6 @@
 # Tamborine Man
 
-{EMBED_FLASH://mkv25.net/ludum/ld26/preview/LD26TamborineMan_r1.swf:flashGame:800:400}
+{EMBED_FLASH://mkv25.net/ludum/ld26/preview/LD26TamborineMan_r1.swf:flashGame:800:400://mkv25.net/ludum/ld26/release/screenshot_reprocessing_plant.png}
 
 ## Builds
 

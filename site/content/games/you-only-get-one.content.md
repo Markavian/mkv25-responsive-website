@@ -1,6 +1,6 @@
 # You only get one...
 
-{EMBED_FLASH://mkv25.net/ludum/ld28/preview/LudumDareGame.swf:flashGame:800:500}
+{EMBED_FLASH://mkv25.net/ludum/ld28/preview/LudumDareGame.swf:flashGame:800:500://mkv25.net/ludum/ld28/release/screenshot_02_gameplay.png}
 
 ## Builds
 
@@ -53,4 +53,4 @@ Some screenshots of the game:
 
 ![Gameplay](//mkv25.net/ludum/ld28/release/screenshot_02_gameplay.png)
 
-[flash]: //mkv25.net/ludum/ld28/preview/
+[flash]: //mkv25.net/ludum/ld28/preview/index.html
