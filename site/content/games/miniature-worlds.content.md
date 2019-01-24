@@ -1,6 +1,6 @@
 # Miniature Worlds
 
-[![Title Screen](//mkv25.net/ludum/ld23/preview/screenshots/s01_title_screen.png)][flash]
+{EMBED_FLASH://mkv25.net/ludum/ld23/preview/MinatureWorlds_LD23_r7.swf:flashGame:640:320://mkv25.net/ludum/ld23/preview/screenshots/s01_title_screen.png}
 
 ## Builds
 
@@ -59,4 +59,4 @@ Some screenshots of the game:
 ![Crafting](//mkv25.net/ludum/ld23/preview/screenshots/s06_crafting.png)
 
 [android]: //mkv25.net/ludum/ld23/release/LD23-release-r7.apk
-[flash]: //mkv25.net/ludum/ld23/preview/
+[flash]: //mkv25.net/ludum/ld23/preview/index.html

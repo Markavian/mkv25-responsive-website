@@ -2,7 +2,7 @@
 
 ## ... rule the universe
 
-{EMBED_FLASH://mkv25.net/ludum/ld30/release/flash/LudumDareGame.swf:flashGame:100%:800://mkv25.net/ludum/ld30/preview/screenshots/screenshot_03_movement-into-space.png}
+{EMBED_FLASH://mkv25.net/ludum/ld30/release/flash/LudumDareGame.swf:flashGame:500:800://mkv25.net/ludum/ld30/preview/screenshots/screenshot_03_movement-into-space.png}
 
 ## Builds
 

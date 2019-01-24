@@ -36,7 +36,7 @@ END;
 		$height = (is_numeric($height)) ? $height . 'px' : $height;
 
 		if ($alternativeContent) {
-			$alternativeContent = '<img src="'. $alternativeContent . '" width="100%" alt="Flash disabled: image displaying alternative content" title="Please enable flash player to view this content">';
+			$alternativeContent = '<img src="'. $alternativeContent . '" alt="Flash disabled: image displaying alternative content" title="Please enable flash player to view this content">';
 		}
 		else {
 			$alternativeContent = '<heading>Flash Disabled</heading><p>Please enable flash player to view this content.</p>';
@@ -44,24 +44,35 @@ END;
 
 		ob_start();
 		echo <<<END
+		<script>
+		function embedFlash() {
+			const embedTarget = document.getElementById('$contentId')
+			embedTarget.innerHTML = `
+				<embed src="$contentUrl"
+					 background="transparent"
+					 width="$width"
+					 height="$height"
+					 name="$contentId"
+					 quality="high"
+					 align="middle"
+					 allowScriptAccess="always"
+					 type="application/x-shockwave-flash"
+					 pluginspage="https://get.adobe.com/flashplayer/"
+				/>`
+		}
+		</script>
 		<div style="text-align: center;">
-			<div style="display: inline-block; background: url('//mkv25.net/site/images/flash_disabled_tile.png');">
-				<object id="$contentId" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="$width" height="$height">
-	        <param name="movie" value="$contentUrl" />
-	        <!--[if !IE]>-->
-	        <object type="application/x-shockwave-flash" data="$contentUrl" width="$width" height="$height">
-	        <!--<![endif]-->
-	        	<div style="background: rgba(255,255,255,0.7); margin: 20px;">$alternativeContent</div>
-	        <!--[if !IE]>-->
-	        </object>
-	        <!--<![endif]-->
-		   	</object>
-			</div>
+			<object id="$contentId" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="$width" height="$height">
+        <param name="movie" value="$contentUrl" />
+        <!--[if !IE]>-->
+        <object type="application/x-shockwave-flash" data="$contentUrl" width="$width" height="$height">
+        <!--<![endif]-->
+	        <div style="background: rgba(255,255,255,0.7);" onclick="embedFlash()">$alternativeContent</div>
+        <!--[if !IE]>-->
+        </object>
+        <!--<![endif]-->
+	   	</object>
 		</div>
-
-    	<script type="text/javascript">
-    		swfobject.registerObject("$contentId", "9.0.115");
-    	</script>
 END;
 		return ob_get_clean();
 	}
