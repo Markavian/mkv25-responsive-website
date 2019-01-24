@@ -22,7 +22,7 @@ const defaultConfig = {
   remoteRoot: '/site',
   // include: ['*', '**/*'],      // this would upload everything except dot files
   include: [], // ['*.php', 'dist/*'],
-  exclude: ['.ftp*', '.git*', '.hta*', 'deploy', '*.fdproj', 'tasklist.md', 'readme.md', '.sublime'], // ['dist/**/*.map'], // e.g. exclude sourcemaps - ** exclude: [] if nothing to exclude **
+  exclude: ['.ftp*', '.git*', '.hta*', 'deploy', '*.fdproj', 'tasklist.md', 'readme.md', '.sublime', 'secret.config.php'], // ['dist/**/*.map'], // e.g. exclude sourcemaps - ** exclude: [] if nothing to exclude **
   deleteRemote: false, // delete existing files at destination before uploading
   forcePasv: true // Passive mode is forced (EPSV command is not sent)
 }
@@ -105,6 +105,7 @@ async function deploy(variation, passwordId) {
     // create and configure deployer
     const deployer = createDeployer()
     const ftpConfig = Object.assign({}, defaultConfig, variation)
+    ftpConfig.exclude = [].concat(defaultConfig.exclude, variation.exclude)
     const result = await deployer.deploy(ftpConfig)
 
     console.log('[Deploy] Finished:', result)
