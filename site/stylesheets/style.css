@@ -36,7 +36,8 @@ p, table, li {
 /* The site logo */
 logo {
 	display: block;
-	background: url('../images/mkv25-logo.png') no-repeat transparent center center;
+	background: url('../images/mkv25-logo-white.png') no-repeat transparent center center;
+	background-size: contain;
 	width: 200px;
 	height: 80px;
 }
