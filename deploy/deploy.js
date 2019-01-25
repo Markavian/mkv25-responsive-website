@@ -105,7 +105,8 @@ async function deploy(variation, passwordId) {
     // create and configure deployer
     const deployer = createDeployer()
     const ftpConfig = Object.assign({}, defaultConfig, variation)
-    ftpConfig.exclude = [].concat(defaultConfig.exclude, variation.exclude)
+    ftpConfig.exclude = [].concat(defaultConfig.exclude, variation.exclude || [])
+
     const result = await deployer.deploy(ftpConfig)
 
     console.log('[Deploy] Finished:', result)
