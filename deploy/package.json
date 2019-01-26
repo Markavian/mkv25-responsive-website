@@ -1,6 +1,7 @@
 {
   "name": "mkv25-site-deployment",
   "version": "0.2.0",
+  "main": "deploy.js",
   "scripts": {
     "stage-images": "node deploy stage-images",
     "stage-code": "node deploy stage-code",
