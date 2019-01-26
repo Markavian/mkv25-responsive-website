@@ -3,5 +3,5 @@
     <organization>connected-web</organization>
     <description>A utility that converts HTML and CSS templates into rendered Image assets, and can also produce Text and JSON assets.</description>
     <link>https://github.com/connected-web/html-asset-generator</link>
-    <languages>JavaScript,JSON</languages>
+    <languages>Node.js,JavaScript,JSON</languages>
 </project>

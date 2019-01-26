@@ -3,5 +3,5 @@
     <organization>connected-web</organization>
     <description>A slackbot for board games and games channels. Responds to gameplay related chatter.</description>
     <link>https://github.com/connected-web/gamebot</link>
-    <languages>JavaScript</languages>
+    <languages>Node.js,JavaScript</languages>
 </project>
